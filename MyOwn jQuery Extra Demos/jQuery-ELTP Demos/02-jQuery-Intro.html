@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>jQuery Intro</title>
+</head>
+<body>
+</body>
+<script src="./scripts/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		alert('DOM IS ready. jquery can start the work');
+		var kk = $.noConflict();
+		alert(jQuery === $);
+		$ = kk.noConflict();
+		alert(jQuery === $);
+	});
+</script>
+</html>

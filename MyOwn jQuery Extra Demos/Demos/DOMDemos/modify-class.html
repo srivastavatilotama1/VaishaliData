@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Input Selectors</title>
+<style type="text/css">
+.highlight{background-color:yellow;};
+</style>
+<script type="text/javascript" src="../Scripts/jquery-1.6.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	//$('input[type="text"]').addClass('highlight');
+	//$('#txtLastName').removeClass('highlight');
+});
+
+function FocusBlur(element)
+{
+	$(element).toggleClass('highlight');
+}
+</script>
+</head>
+<body>
+<table>
+<tr>
+<td>FirstName : </td>
+<td><input id="txtFirstName" type="text" onFocus="FocusBlur(this)" onBlur="FocusBlur(this)" /></td>
+</tr>
+<tr>
+<td>LastName : </td>
+<td><input id="txtLastName" type="text" onFocus="FocusBlur(this)" onBlur="FocusBlur(this)"/></td>
+</tr>
+<tr>
+<td>About ME : </td>
+<td><textarea id="comments" onFocus="FocusBlur(this)" onBlur="FocusBlur(this)">Comments</textarea></td>
+</tr>
+<tr>
+<td colspan="2"><input type="submit" value="Submit"/></td>
+</tr>
+</table>
+</body>
+</html>

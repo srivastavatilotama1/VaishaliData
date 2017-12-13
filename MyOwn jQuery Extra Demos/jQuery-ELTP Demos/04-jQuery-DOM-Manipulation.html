@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>jQuery-DOM-Manipulation</title>
+<style>
+	.custom{
+		color:red;
+		background:yellow;
+		font-size:30pt;
+		font-weight:bold
+	}
+</style>
+</head>
+<body>
+	<div>
+		<input id="btn" type="button" value="Button"/>
+		<input id="splBtn" type="button" value="Special Button"/>
+	</div>
+	<div id="main">
+		<div id="child">
+			<span>Span-1</span>
+			<span>Span-2</span>
+			<span>Span-3</span>
+		</div>
+	</div>
+	<div id="mainDiv">
+		<p>Para-1</p>
+		<p>Para-2</p>
+		<p>Para-3</p>
+		<p>Para-4</p>
+	</div>
+	<div>
+		<input type="text" id="txtSample"/>
+	</div>
+	<div id="target">
+	</div>
+</body>
+<script src="./scripts/jquery.js"></script>
+<script>
+	jQuery(document).ready(function(){
+		var $paragraphs = $('#mainDiv p');
+		var result = "";
+		$paragraphs.each(function(index,element){
+			//element is a RAW DOM Object
+			result+=index+':'+$(element).text()+"<br/>";
+		});
+		$('#target').html(result);
+	});
+</script>
+</html>
+<!--
+$('#mainDiv').children()
+$('#mainDiv').children().length
+$('#mainDiv').children().size()
+$('#mainDiv').children().first()
+$('#mainDiv').children().last()
+$('#mainDiv').children().eq(2)
+$('#mainDiv').children().first().next()
+$('#mainDiv').children().first().next().next()
+$('#mainDiv').children().first().next().prev()
+$('#child span').wrap('<div></div>')
+$('#child span').wrapAll('<div></div>')
+$('#mainDiv').append('<p>Para-5</p>')
+$('#mainDiv').prepend('<p>Para-0</p>')
+$('#mainDiv').before('<div><p>Above</p></div>')
+$('#mainDiv').after('<div><p>Below</p></div>')
+$('#child span:last').remove()
+$('#txtSample').attr('data-custom','karthik')
+$('#txtSample').attr('data-custom')
+$('#txtSample').attr('data-custom','Ganesh')
+$('#txtSample').removeAttr('data-custom')
+$('#txtSample').val('Capgemini')
+$('#txtSample').val()
+$('#target').text()
+$('#mainDiv p:last').parent()
+$('#mainDiv p:last').parents()
+$('#mainDiv p:last').parents('body')
+$('#mainDiv p:last').parents('html')
+$('#target').text('Changed')
+$('#target').text('<b>Changed</b>')
+$('#target').html('<b>Changed</b>')
+$('#target').html()
+$('#btn').css({color:'red'})
+$('#splBtn').addClass('custom')
+$('#splBtn').hasClass('custom')
+$('#splBtn').removeClass('custom')
+$('#splBtn').toggleClass('custom')
+$('#splBtn').toggleClass('custom')
+-->
