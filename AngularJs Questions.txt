@@ -1,0 +1,126 @@
+
+Which of the built in directived used to handle  the data from controller?
+
+ng-controller
+ng-model
+mg-directive
+bg-data
+ng-click
+
+***********************************************
+Which of the compoent in Angular JS is responsible for  formatting the data we display to the user using [|] Operator?
+
+controller
+service
+filter
+directive
+module
+
+********************************
+Which of the following statement is false about scope in Angular JS?
+
+ng-app and ng-controller are special directives, which modify the scope of directives nested inside of them.
+ng-app creates the $rootScope of an Angular application.
+ng-controller creates a child scope that prototypically inherits from either $rootScope or another ng-controller’s $scope.
+None Of The Above.
+*********************************************************
+When the application bootstraps, Angular starts parsing the DOM using the $compile service. 
+This service searches for directives in the markup and matches them against registered directives.
+Which of the function is executed after  all the directives have been identified?
+
+
+**************************************
+Consider the following code snippet
+in which there is custom directive with name helloWorld is define.
+<script src="Scripts/angular.js"></script>
+<script  type="text/javascript">
+
+		var app = angular.module("direApp",[]);
+		
+		app.directive("helloWorld",function(){
+		return {
+				restrict:'E',
+				template: '<h1>Hello EveryOne</h1>'
+				}}); 
+</script>
+
+
+Which one of the following is the correct way of 
+using  that directive in view?
+
+
+<div><helloWorld></helloWorld></div>
+<div><hello-world></hello-world></div>
+<div><data-helloworld></data-helloworld></div>
+div><data-helloWorld></data-helloWorld></div>
+************************************************************
+Consider the following directive defination code snippet.
+
+	angular.module('myApp', [])
+		.directive('myDirective', function() {
+			return {
+				restrict: 'E',
+				replace:false,
+				template: '<a href="http://google.com">Click me to go to Google</a>'
+					}
+		});
+	
+	Which of the following is correct generated source code 
+	for above directive defination in view? 
+				
+		
+		......................................
+		<html>
+			<head>	</head>		
+		<body  ng-app="myApp">
+			<div>				
+					<a href="http://google.com">Click me to go to Google</a>				
+			</div>		
+		</body>
+		</html>
+		...........................................
+		<html>
+			<head>	</head>		
+		<body>
+			<div>				
+					<a href="http://google.com">Click me to go to Google</a>				
+			</div>		
+		</body>
+		</html>
+		......................correct ans.........................................
+		<html>
+			<head>	</head>		
+		<body  ng-app="myApp">
+			<div>
+				<my-directive>
+					<a href="http://google.com">Click me to go to Google</a>
+				</my-directive>
+			</div>		
+		</body>
+		</html>
+		.......................................
+		<html>
+			<head>	</head>		
+		<body  ng-app="myApp">
+			<div>
+				<mydirective>
+					<a href="http://google.com">Click me to go to Google</a>
+				</mydirective>
+			</div>		
+		</body>
+		</html>
+
+********************************************************
+
+To create our own directive whose scope prototypically inherits from the outside world
+What value should be set  for the  scope property ?
+
+
+scope:true-ans
+scope: {}
+scope:@
+scope:=
+
+
+
+
