@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.jboss.ide.eclipse.as.core.server.runtime.runtimeTarget/WildFly 8.x Runtime">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_31">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/hibernate-commons-annotations-4.0.5.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/hibernate-core-4.3.10.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/hibernate-entitymanager-4.3.10.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/jandex-1.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/jboss-logging-3.1.3.GA.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/jboss-logging-annotations-1.2.0.Beta1.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-aop-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-aop-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-aspects-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-beans-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-boot-1.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-boot-autoconfigure-1.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-context-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-core-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-data-commons-1.11.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-data-jpa-1.9.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-expression-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-jdbc-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-orm-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-oxm-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-tx-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-web-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/spring-webmvc-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/xml-apis-1.0.b2.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/xpp3_min-1.1.4c.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-Data-JPA-Con-JarFile/xstream-1.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/hibernate-commons-annotations-4.0.5.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/hibernate-core-4.3.10.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/hibernate-entitymanager-4.3.10.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/jandex-1.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/jboss-logging-3.1.3.GA.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/jboss-logging-annotations-1.2.0.Beta1.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-aop-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-beans-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-context-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-core-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-data-commons-1.11.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-data-jpa-1.9.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-expression-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-jdbc-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-orm-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-oxm-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-tx-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-web-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/spring-webmvc-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/xml-apis-1.0.b2.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/xpp3_min-1.1.4c.jar"/>
+	<classpathentry kind="lib" path="D:/VaishaliSAllData/Vaishali All jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/xstream-1.3.1.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

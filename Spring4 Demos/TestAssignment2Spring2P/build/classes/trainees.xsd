@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+
+
+	<xsd:simpleType name="module_name_J_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Core Java" />
+			<xsd:enumeration value="Servlet-Jsp" />
+			<xsd:enumeration value="Spring" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:simpleType name="module_name_D_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="C#" />
+			<xsd:enumeration value="VB" />
+			<xsd:enumeration value="ASP" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+
+	<xsd:simpleType name="module_name_V_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Mannual Testing" />
+			<xsd:enumeration value="Automation Testing" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+
+
+	<xsd:simpleType name="domainValues">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="JEE" />
+			<xsd:enumeration value="DotNet" />
+			<xsd:enumeration value="VnV" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:element name="domain_name" type="domainValues" />
+
+	<xsd:element name="trainee">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="empName" type="xsd:string" />
+				<xsd:element name="empId" type="xsd:int" />
+				<xsd:element ref="domain_name" />
+				<xsd:choice>
+					<xsd:element  name="module_name_J" type="module_name_J_Type" />
+					<xsd:element  name="module_name_D" type="module_name_D_Type" />
+					<xsd:element  name="module_name_V" type="module_name_V_Type" />					
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="trainees">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="trainee" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

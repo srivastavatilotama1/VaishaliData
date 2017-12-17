@@ -1,0 +1,265 @@
+Match the following
+1. Spring IO Foundation Layer
+2. Spring IO Coordination Layer
+3. Spring IO Execution Layer
+
+
+a. Helps to avoid deployment to an external container like Tomcat.
+b. A cohesive set of APIs and embeddable runtime components that enable to build applications.
+c. Provides API’s to connect to cloud services.
+
+Ans    1-b
+		2-c
+		3-a
+		
+*********************************************************
+Priyanka wants to avoid the usage of XML 
+configuration in her spring application. 
+Also she doesn't want to use any explicit server 
+for deployment of an application. Which component 
+she should use in development environment to achieve this task?
+
+Spring Framework	
+Spring Cloud	
+Spring Boot	---ch3
+Spring XD
+
+
+***************************options****************
+Which Spring modules usage will be more suitable for designing spring 
+application in the below given scenarios?
+
+Scenario 1: Developer wants to design an application 
+following with convention over configuration and run application as quickly.
+
+Scenario 2:  Developer wants his application to  
+be connected third party APIs like Twitter.
+
+
+
+"Scenario 1. Spring cloud
+Scenario 2. Spring Social"	
+
+"Scenario 1. Spring Social
+Scenario 2. Spring Cloud"	
+
+"Scenario 1. Spring Data
+Scenario 2. Spring Social"
+
+"Scenario 1. Spring Boot
+Scenario 2. Spring Social"
+
+************************************************
+
+"Which Spring modules usage will be more suitable 
+for designing spring application in the below given scenarios?
+
+Scenario 1: Developer wants to use new data access technologies, 
+such as non-relational databases in his application.
+
+Scenario 2:  Developer wants to use an embedded server in a development environment.
+
+
+"Scenario 1. Spring Data     -ans
+Scenario 2. Spring Boot"	
+
+"Scenario 1. Spring Data
+Scenario 2. Spring Cloud"	
+
+
+"Scenario 1. Spring XD
+Scenario 2. Spring Framework"	
+
+
+
+"Scenario 1. Spring XD
+Scenario 2. Spring Web"
+
+**************************************
+
+"Pick the list of features supported by Spring Boot.
+
+"	Spring boot usage increases the size of build file
+
+	Spring boot dynamically wires up beans and settings and applies-ans
+	 them to your application context	
+	 
+	 Spring boot usage ensures the availability of boiler plate code.	
+	 
+	 Spring boot simplifies deployment since it has embedded server--ans
+
+****************************************************************88
+
+"Select the Spring module names  
+which matches with the below mentioned descriptions.
+
+1. Describes Hadoop Workflow management
+2. Used to create XML free Spring application.
+3. Provides a comprehensive programming and configuration model for
+ modern Java-based enterprise applications 
+ 
+ 
+"	"1. Spring Data
+2. Spring Boot
+3. Spring MVC"	
+
+
+"1. Spring XD
+2. Spring Boot
+3. Spring Framework"	
+
+
+"1. Spring XD
+2. Spring Boot
+3. Spring MVC"	
+
+
+"1. Spring Data-----ans
+2. Spring Boot
+3. Spring Framework"
+****************************************************8
+
+"During implementation of JDBC program in Spring, 
+Which list of actions need to be taken care by developers?
+
+1. Defining connection parameters
+2. Open the connection
+3. Defining SQL statement
+4. Executing SQL statement
+5. Processing exception
+6. Handling transactions
+
+
+"	1 and 3
+	1, 2 and 3	
+	3, 4,5 and 6	
+	All the listed action need to be taken care by developers
+	
+	**********************************************************
+	"Anjali wants to configure database for development 
+	environment using profiling in Spring JDBC.
+	 She written part of the code  for the same.	 
+	  Complete the below given code.
+
+1: ______________
+2: ______________
+3: public class DatabaseConfig {
+4: ______________
+5: ______________
+6: public DataSource createDataSource()
+7: {
+8:  DriverManagerDataSource dms=new DriverManagerDataSource();
+  //Setting connection parameters
+9:  return dms;
+10: }
+11: }"
+
+"1: @Component
+2: @Profile(""dev"")
+3: @Component
+4: @Qualifier(""myDS"")"	
+
+
+"1: @Component
+2: @PropertySource(""dev"")
+3: @Component
+4: @Qualifier(""myDS"")"	
+
+"1: @Component   --------------------------------ans
+2: @Profile(""dev"")
+3: @Bean
+4: @Qualifier(""myDS"")"	
+
+"1: @Component    
+2: @Development
+3: @Bean
+4: @Qualifier(""myDS"")"
+
+**********************************************
+
+"Pranav needs to implement RowMapper 
+using Lambda Expression to fetch all the user details 
+such as (USERNAME, PASSWORD) from User table. 
+
+ Complete the below given code to implement the same.
+ 
+
+List<User> users = jdbcTemplate.query(
+  ""SELECT username, password FROM USER"", _________________);
+  
+  
+"	"(rs, rowNum) -> {
+    User user = new User();
+  user.setUsername(rs.getString(""username""));
+user.setPassword(rs.getString(""password""));
+    return user;
+}"-----ans
+
+	"(rs) -> {
+    User user = new User();
+  user.setUsername(rs.getString(""username""));
+user.setPassword(rs.getString(""password""));
+    return user;
+}"	
+
+
+"{
+    User user = new User();
+  user.setUsername(rs.getString(""username""));
+user.setPassword(rs.getString(""password""));
+    return user;
+}"	
+
+No need to pass second argument in query method. 
+RowMapper will be implemented by default.
+***************************************************
+
+"Shyam written partial controller code to search employee 
+details based on department name.
+ Consider department name is accepted from user and passed in the request.
+  Complete the below given code to implement the same. 
+
+'@Controller
+public class EmployeeController {
+
+@RequestMapping(""/searchEmployee.do"")
+ public String searchEmp(_________)
+ {
+    //Code to search Employee details based on department name
+ } 
+}"
+
+
+	@RequestParam("dname") String deptname	
+	
+	@RequestParameter("dname") String deptname	
+	
+	@RequestAttribute("dname") String deptname	
+	
+	@RequestValue("dname") String deptname		
+
+**************************************************8
+
+"Consider the below given Spring MVC(RESTful) controller code:    
+                                                                @RestController
+@RequestMapping(""/service/greeting"")
+public class SpringRestController {
+ @RequestMapping(value = ""/{name}"", method = RequestMethod.GET)
+ public String sayHello(__________) {
+  String result = “Welcome "" + name + "" to Spring session!!!"";
+  return result;
+ }
+}
+
+Complete the above code to accept value  for generating 
+welcome message and placing it into the model. 
+
+ "	@RequestVariable Optional<String> name	
+ @RequestParameter Optional<String> name
+ 	@PathParameter Optional<String> name	
+ 	@PathVariable Optional<String> name		---ans
+
+
+	
+
+

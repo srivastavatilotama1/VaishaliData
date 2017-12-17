@@ -1,0 +1,16 @@
+CREATE TABLE applications (
+applicationId NUMBER PRIMARY KEY,
+username VARCHAR2(20),
+emailId VARCHAR2(20),
+mobileNumber VARCHAR2(10),
+city VARCHAR2(20),
+appliedDate DATE,
+accountExists char(1));
+
+CREATE SEQUENCE application_id_seq
+START With 1 
+INCREMENT BY 1
+MINVAL 1
+MAXVAL100
+
+SELECT application_id_seq.NEXTVAL FROM DUAL;

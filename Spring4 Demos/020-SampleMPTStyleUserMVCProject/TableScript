@@ -1,0 +1,12 @@
+Create Table cg_user(username varchar2(20) primary key
+password varchar2(20));
+
+CREATE table cg_userDetails(username varchar2(15) primary key,
+firstname varchar2(10),lastname varchar2(10),
+email varchar2(20),skillset varchar2(100),
+city varchar2(10),gender varchar2(1),dob Date);
+
+insert into  cg_userDetails values('vaihsriv','vaishali','srivastava',
+'vai@gmail.com',
+'nullC,Java','Pune','F','14-Jan-1977');
+

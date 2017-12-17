@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Jdk8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spring4Jar"/>
+	<classpathentry kind="lib" path="D:/Vaishali All jar Files/Spring4 Jar Files/spring-boot-1.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Vaishali All jar Files/Spring4 Jar Files/spring-boot-autoconfigure-1.0.0.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

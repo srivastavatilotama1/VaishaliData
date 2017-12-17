@@ -1,0 +1,14 @@
+drop table cg_userdetails cascade constraints;
+drop table  cg_users cascade constraints;
+
+CREATE  TABLE cg_userdetails
+(
+user_name varchar2(15) primary key,first_name VARCHAR2(10),
+last_name VARCHAR2(10),user_city varchar2(10),
+user_skill varchar2(20),user_email varchar2 (20),user_gender varchar2(1));
+
+
+CREATE  table  cg_users(user_name varchar2(15) primary key ,password varchar2(20));
+
+select * from cg_users;
+select * from cg_userdetails;
