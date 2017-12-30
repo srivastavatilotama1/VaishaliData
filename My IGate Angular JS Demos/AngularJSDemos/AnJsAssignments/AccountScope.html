@@ -1,0 +1,43 @@
+<html ng-app="directivesApp">
+<head>
+<title>Custom Directives - template &amp; scope '@' symbol</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+<h1>Custom Directives</h1>
+<hr/>
+<div ng-controller="AccountController">
+
+<div>{{accounttype}}</div>
+<div account accounttype="Current  Or Savings" ></div>
+
+<div account accounttype="{{accounttype}}"></div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+<script >
+var app = angular.module("directivesApp",[]);
+
+app.controller('AccountController',function($scope){
+	$scope.accounttype = "Savings Account";
+	console.log($scope.accounttype );
+});
+
+/*Directive uses parent controller scope*/
+app.directive('account',function(){
+	return{
+		template: '<div><font color="red">{{accounttype}}</font></div>',
+		
+		 link:function(scope,element,attrs){
+			scope.accounttype = attrs.accounttype; 
+		} 
+	}
+})
+
+
+
+
+</script>
+</html>

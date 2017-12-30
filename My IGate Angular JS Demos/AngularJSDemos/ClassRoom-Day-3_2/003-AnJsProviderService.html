@@ -1,0 +1,45 @@
+<!-- These factories are all created through the $provide service, which is responsible for instantiating
+these providers at run time.
+A provider is an object with a $get() method. The $injector calls the $get method to create a new
+instance of the service. The $provider exposes several different API methods for creating a service,
+each with a different intended use.
+At the root of all the methods for creating a service is the provider method. The provider() method
+is responsible for registering services in the $providerCache.
+Technically, the factory() function is shorthand for creating a service through the provider()
+method wherein we assume that the $get() function is the function passed in.
+The two method calls are functionally equivalent and will create the same service. -->
+
+<html ng-app="serviceApp">
+<head>
+<title>Service - Custom Service</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+
+	<h1>Creating Custom Service Using Provider</h1>
+	<div ng-app="serviceApp" ng-controller="ServiceCntrl">
+		<div>{{mycompany.Name}} - {{mycompany.Location}}</div>
+	</div>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+
+<script type="text/javascript">
+
+	var app = angular.module("serviceApp", []);
+	
+	app.provider("companyService", {
+		$get : function() {
+			return {
+				company : {
+					"Name" : "IGATE Noida",
+					"Location" : "Delhi"
+				}
+			};
+		}
+	});
+
+	app.controller('ServiceCntrl', function($scope, companyService) {
+		$scope.mycompany = companyService.company;
+	})
+</script>
+</html>

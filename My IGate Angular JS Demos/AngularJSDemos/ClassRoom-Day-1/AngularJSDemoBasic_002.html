@@ -1,0 +1,21 @@
+<!-- Using Directives And Data Binding Syntax**************** -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html data-ng-app="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body data-ng-init="name=['Vaishali','Lavanya','Abhishek']" bgcolor="cyan">
+<div class="container">
+	Name:<input type="text" name="txtFirstName" 
+	ng-model="firstName">{{firstName}}	
+	</br>
+	<ul>
+	<li data-ng-repeat="personName in name">{{personName}}	</li>
+	
+	</ul>
+</div>
+</body>
+<script src="Scripts/angular.js"></script>
+
+</html>

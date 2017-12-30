@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script language="javascript" type="text/javascript">
+function increaseCount()
+{
+	document.getElementById("divId").innerHTML=plus();
+}
+/* * 
+ *  var count=0;
+function add()
+{	
+	 return count +=1;
+}*/
+
+/*
+function add() 
+{
+    var count = 0;
+    function plus()
+    {
+    	 count += 1;
+    }
+   plus();    
+   return count; 
+}*/
+
+
+
+/*var add = 
+	(
+		function ()
+		{
+	   	 var count = 0;
+	    	return function ()
+	    	{
+	    		return count += 1;
+	    	}
+		}
+	)();
+	
+	*/
+/*(
+	function()
+	{
+		var count = 0;
+	     plus=function()
+	    {
+	    	 count += 1;
+	    	 return count; 
+	    }
+	     
+	}
+)	();
+	*/
+
+var add=
+	(
+		function()
+			{
+				var count = 0;
+			     plus=function()
+			    {
+			    	 count += 1;
+			    	 return count; 
+			    }
+			     
+			}
+		)	();
+
+
+</script>
+</head>
+<body bgcolor="pink">
+<input type="button" name="countButton"
+value="Increase Count "  onClick="increaseCount();"/>
+
+</br>Count:<div id="divId">0</div>
+</body>
+</html>

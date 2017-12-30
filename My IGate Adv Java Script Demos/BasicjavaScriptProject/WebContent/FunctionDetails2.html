@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<script language="javascript" type="text/javascript">	
+	function displayQuote() 
+	{
+	    alert(this.memorableQuote);    
+	}
+
+	var williamShakespeare = 
+	{
+		"memorableQuote": "It is a wise father that knows his own child.",
+		"sayIt": displayQuote
+	};	
+	var markTwain = 
+	{
+			"memorableQuote":"Golf is a good walk spoiled.",
+			"sayIt" : displayQuote
+	};	
+	var oscarWilde =
+	{
+		"memorableQuote": "True friends stab you in the front.",
+		"sayIt" : displayQuote	
+	};
+	
+	// ouch!
+	</script>
+	<title>Insert title here</title>
+</head>
+<body bgcolor="cyan">
+<input type="button" name="buttoenShakespeare" 
+value="What Shakespeare Says"
+onclick="williamShakespeare.sayIt();"/>
+
+<input type="button" name="buttonmarkTwain" 
+value="What markTwain Says"
+onclick="markTwain.sayIt();"/>
+
+<input type="button" name="buttoenoscarWilde" 
+value="Call displayQuote.call(oscarWilde)"
+onclick="displayQuote.call(oscarWilde);"/>
+</body>
+</html>

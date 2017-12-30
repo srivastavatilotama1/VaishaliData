@@ -1,0 +1,21 @@
+CREATE TABLE login
+(email VARCHAR2(40) PRIMARY KEY,
+ password VARCHAR2(30));
+ 
+ INSERT INTO login VALUES('aaa_111@yahoo.com','aaa');
+ INSERT INTO login VALUES('bbb_222@yahoo.com','bbb');
+ INSERT INTO login VALUES('ccc_333@yahoo.com','ccc');
+ INSERT INTO login VALUES('ddd_444@yahoo.com','ddd');
+ commit;
+ **********************************************
+ 
+CREATE table IEMP(
+ empno number(10) primary key,
+ efirstname varchar2(20),
+ elastname varchar2(20),
+ city varchar2(20),
+ pref_lang varchar2(20),
+ marrital_status varchar2(20),
+ salary number(10,2),
+  doj Date)
+ 

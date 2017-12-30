@@ -1,0 +1,8 @@
+create table trainees (traineeId number(10) primary key,traineeName varchar2(15) ,traineeLocation varchar2(15),traineeDomain varchar2(15));
+create table traineedomains(domain varchar2(15));
+insert into traineedomains values('JEE');
+insert into traineedomains values('C');
+insert into traineedomains values('C++');
+insert into traineedomains values('Spring');
+insert into traineedomains values('Struts');
+insert into traineedomains values('DotNet');

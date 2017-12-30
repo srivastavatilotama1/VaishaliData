@@ -1,0 +1,147 @@
+<!--action buttons & currency-->
+<div class="row" ng-hide="isLoading()">
+    <div class="col-sm-3 margin-top-10">
+        <div class="btn-group" id="add-to-grouping-buttons">
+            <button class="btn btn-sm"
+                    ng-class="{'btn-default disabled': selectCount() === 0, 'btn-warning': selectCount() > 0}"
+                    ng-click="addToGrouping(false)">
+                <span class="fa fa-plus-circle"></span> Add to Grouping
+            </button>
+            <button class="btn btn-sm"
+                    ng-class="{'btn-default disabled': selectCount() === 0, 'btn-warning': selectCount() > 0}"
+                    ng-click="addToGrouping(true)">
+                <span class="fa fa-arrow-right"></span>
+            </button>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <div class="pull-right margin-top-10">
+            <div class="btn-group margin-right-10">
+                <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" ng-disabled="cxHistory.length === 0">
+                    History <span class="fa fa-caret-down"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                    <li ng-repeat="item in cxHistory track by $index">
+                        <a href="#/connections/{{item}}">{{item}}</a>
+                    </li>
+                </ul>
+            </div>
+            <!--<div class="btn-group margin-right-10">-->
+                <!--<button class="btn btn-default btn-sm" ng-click="excel()">-->
+                    <!--<span class="fa fa-download"></span> Export to Excel-->
+                <!--</button>-->
+            <!--</div>-->
+            <div class="inline-block currency-wrapper">
+                <div class="input-group">
+                    <input type="text" class="form-control input-sm currency-input" id="DebtorCountry" disabled
+                           ng-model="currency" />
+                    <span class="input-group-btn currency-button">
+                        <button class="btn btn-default btn-sm" type="button" ng-click="openHelper('currency')">
+                            <span class="fa fa-question-circle"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr ng-hide="isLoading()"/>
+
+<div class="loading" ng-if="isLoading()">
+    <div class="text-center margin-top-30">
+        <span class="fa fa-refresh spin loading-spinner"></span>
+        <h2 class="fadePulse loading-template">Loading...</h2>
+    </div>
+</div>
+
+
+<!--Connections-->
+<div class="row" ng-hide="isLoading()">
+    <div class="col-sm-12">
+        <!--<div id="connections-listing">-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-unstyled" id="connections-table"
+                        ng-if="debtorArray"
+                        infinite-scroll="getMore($event)"
+                        infinite-scroll-disabled='busy'
+                        infinite-scroll-distance='1'>
+                        <thead>
+                        <tr class="voice-brand">
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th><small>DCC</small></th>
+                            <th><small>Not Expired CL</small></th>
+                            <th><small>GDL</small></th>
+                            <th><small>GDL Expiry</small></th>
+                            <th><small>Ins Limit</small></th>
+                            <th><small>NR Balance Sold</small></th>
+                            <th><small>NR Opportunity</small></th>
+                            <th><small>NR Amount</small></th>
+                            <th><small>Total Balance</small></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!--<tr>-->
+                            <!--<td></td>-->
+                            <!--<td></td>-->
+                            <!--<td></td>-->
+                            <!--<td></td>-->
+                            <!--<td>222.860,64</td>-->
+                            <!--<td>222.860,64</td>-->
+                            <!--<td>222.860,64</td>-->
+                            <!--<td>222.860,64</td>-->
+                            <!--<td>222.860,64</td>-->
+                            <!--<td>222.860,64</td>-->
+                            <!--<td>222.860,64</td>-->
+                            <!--<td>452.860,64</td>-->
+                            <!--<td>952.860,64</td>-->
+                            <!--<td></td>-->
+                        <!--</tr>-->
+                        <tr ng-repeat="debtor in debtorArray track by $index"
+                            ng-class="{'added-to-grouping': inGroupingCheck(debtor.DebtorNumber),
+                                'parent' : debtor.isParent,
+                                'target' : debtor.isTarget,
+                                'child' : debtor.isChild}">
+                            <td class="view-connections text-center">
+                                <a class="btn btn-xs btn-default connections-button" href="#/connections/{{debtor.DebtorNumber}}"
+                                    ng-if="!debtor.isTarget">
+                                    <!--ng-click="getConnections(debtor.DebtorNumber, false, false)">-->
+                                    <img src="img/charts-flow-chart-icon.png" alt="Connections" width="12px" height="12px"/>
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <input type="checkbox" name="selectDebtor"
+                                       ng-model="debtor.selected"
+                                       ng-if="!inGroupingCheck(debtor.DebtorNumber)"/>
+                                <span class="fa fa-check color-green"
+                                      ng-if="inGroupingCheck(debtor.DebtorNumber)"></span>
+                            </td>
+                            <td>{{debtor.DebtorNumber}}</td>
+                            <td class="connections-debtor-name">{{debtor.DebtorName | capitalize:true}}</td>
+                            <td>{{debtor.DebtorCollectionCode}}</td>
+                            <td ng-class="{'text-center text-muted': !debtor.NotExpiredCreditLimit}">{{debtor.NotExpiredCreditLimit || "--" | currency:' '}}</td>
+                            <td ng-class="{'text-center text-muted': !debtor.GlobalDebtorLimit}">{{debtor.GlobalDebtorLimit || "--" | currency:' '}}</td>
+                            <td ng-class="{'text-center text-muted': !debtor.GlobalDebtorLimitExpiry}">{{debtor.GlobalDebtorLimitExpiry || "--" | currency:' '}}</td>
+                            <td ng-class="{'text-center text-muted': !debtor.InsuranceLimit}">{{debtor.InsuranceLimit || "--" | currency:' '}}</td>
+                            <td ng-class="{'text-center text-muted': !debtor.NonRecourseSoldAmount}">{{debtor.NonRecourseSoldAmount || "--" | currency:' '}}</td>
+                            <td ng-class="{'text-center text-muted': !debtor.NonRecourseOpportunity}">{{debtor.NonRecourseOpportunity || "--" | currency:' '}}</td>
+                            <td ng-class="{'text-center text-muted': !debtor.NonRecourseAmount}">{{debtor.NonRecourseAmount || "--" | currency:' '}}</td>
+                            <td ng-class="{'text-center text-muted': !debtor.TotalBalance}">{{debtor.TotalBalance || "--" | currency:' '}}</td>
+                            <td class="{{getLongNodeType(debtor.DebtorOwnerType)}}">{{getShortNodeType(debtor.DebtorOwnerType)}}</td>
+                        </tr>
+                        <tr ng-if="busy">
+                            <td colspan="14" class="text-bold text-large text-muted text-center">
+                                <span class="fa fa-spin fa-refresh"></span> Loading More Debtors
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        <!--</div>-->
+    </div>
+</div>

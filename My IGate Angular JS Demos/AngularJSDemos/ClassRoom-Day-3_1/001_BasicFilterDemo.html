@@ -1,0 +1,35 @@
+<html ng-app="filterApp">
+<head>
+
+</head>
+<body>
+<div  data-ng-controller="FilterCntrl">
+{{'IGATE'|lowercase}}</br>
+{{'IGATE'|lowercase}}</br>
+{{1234|currency}}</br>
+{{1234|currency:'Rs.'}}</br>
+{{123.7866|number:2}}</br>
+{{{Id:222,Name:'vaishali'}|json}}</br>
+{{today|date:'fullDate'}}</br>
+{{today|date:'d-m-y'}}</br>
+</div>
+<!-- <div  data-ng-controller="FilterCntrl">
+{{formattedDate}}</br>
+</div>  -->
+
+</body>
+<script src="Scripts/angular.js"></script>
+<script type="text/javascript">
+var filterApp=angular.module("filterApp",[]);
+
+
+filterApp.controller("FilterCntrl",function($scope){
+
+$scope.today=new Date();
+<!-- $scope.formattedDate=$filter('date')(new Date(),'dd-MM-yyyy'); -->
+});
+</script>
+
+
+
+</html>

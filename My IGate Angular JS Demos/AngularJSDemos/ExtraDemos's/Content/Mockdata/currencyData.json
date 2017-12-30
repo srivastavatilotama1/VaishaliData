@@ -1,0 +1,18 @@
+[
+  {
+    "code": "USD",
+    "name": "U.S. Dollars"
+  },
+  {
+    "code": "CAD",
+    "name": "Canadian Dollars"
+  },
+  {
+    "code": "GBP",
+    "name": "British Pounds"
+  },
+  {
+    "code": "EUR",
+    "name": "Euro"
+  }
+]

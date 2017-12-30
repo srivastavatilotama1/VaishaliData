@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html ng-app="factorLink">
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="img/favicon/favicon.ico">
+
+    <title>FactorLink</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.mod.css"/>
+    <link rel="stylesheet" href="css/Site.css"/>
+
+    <!--top scripts-->
+    <script src="js/lib/modernizr-2.6.2.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/lib/html5shiv.js"></script>
+    <script src="js/lib/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body ng-controller="initCtrl">
+
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <span class="ge-logo"></span>
+                <span>FactorLink <small><i>powered by</i> GE Capital</small></span>
+            </a>
+        </div>
+
+        <div class="pull-right navbar-toolbar">
+            <div class="btn-toolbar pull-left">
+
+                <div class="btn-group">
+                    <button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-fw fa-user"></i>
+                        <span class="user-name">FactorLink User (Admin)</span>
+                        <i class="fa fa-fw fa-caret-down"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="#">Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="logout">Log Out</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+<div class="primary-navbar">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li><a href="#/" nav-eval>Search</a></li>
+            <li><a href="#/group" nav-eval>Grouping</a></li>
+            <li ng-if="currentConnection"><a href="#/connections/{{currentConnection.DebtorNumber}}" nav-eval>Connections</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="fixed-page-alerts"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <ng-view></ng-view>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="primary">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="ge-logo"></span>
+                <span>imagination at work</span>
+                <div data-version></div>
+            </div>
+            <div class="block pull-right">
+                <ul>
+                    <li class="copyright">&copy; 2013 General Electric</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--UI Scripts-->
+<script src="js/lib/jquery-1.10.2.min.js"></script>
+<script src="js/lib/bootstrap.js"></script>
+<script src="js/lib/chosen.jquery.js"></script>
+<script src="js/lib/customAlerts.js"></script>
+<script src="js/lib/animateAuto.js"></script>
+
+<!--Angular Library-->
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/angular-route.min.js"></script>
+<script src="js/lib/ui-bootstrap-tpls-0.12.0.js"></script>
+<script src="js/lib/ng-table.mod.js"></script>
+<script src="js/lib/ng-infinite-scroll.js"></script>
+
+<!--Angular Application-->
+<script src="js/app.js"></script>
+<script src="js/config.js"></script>
+
+<!--Angular Controllers-->
+<script src="js/controllers/initCtrl.js"></script>
+<script src="js/controllers/searchCtrl.js"></script>
+<script src="js/controllers/modalHelperCtrl.js"></script>
+<script src="js/controllers/errorCtrl.js"></script>
+<script src="js/controllers/connectCtrl.js"></script>
+<script src="js/controllers/groupingCtrl.js"></script>
+
+<!--Angular Services-->
+<script src="js/services/apiSrvc.js"></script>
+<script src="js/services/apiFact.js"></script>
+
+<!--Angular Directives-->
+<script src="js/directives/navEval.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="myApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div ng-controller="SampleController">
+		<h1>{{compName}}</h1><!-- Prints IGate -->
+	</div>
+	outside div tag</br>
+	<h1>{{compName}}</h1><!-- Prints Microsoft -->
+</body>
+<script src="Scripts/angular.js"></script>
+<script>
+	var app = angular.module("myApp", []);
+	app.run(function($rootScope) {
+		$rootScope.compName = "Microsoft";//rootscope acts like globle function
+
+	});//it is used to kick start application.
+	app.controller("SampleController", function($scope) {
+		$scope.compName = "IGate";
+	});
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!-- If the return value of the $get method in our service is a constant, we don’t need to define a fullblown
+service with a more complex method. We can simply use the value() function to register the
+service. -->
+
+<html ng-app="serviceApp">
+<head>
+<title>Service - Custom Service</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+
+	<h1>Creating Custom Service Using Factory</h1>
+	<div ng-app="serviceApp" ng-controller="ServiceCntrl">
+		<div>{{mycompany.Id}} - {{mycompany.Name}}</div>
+	</div>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+
+<script type="text/javascript">
+		
+	var app = angular.module("serviceApp",[]);
+	app.value('employee',{Id: 714709, Name:'Karthik'});
+
+	app.controller('ServiceCntrl', function($scope, employee) {
+		$scope.mycompany = employee;
+	})
+</script>
+</html>

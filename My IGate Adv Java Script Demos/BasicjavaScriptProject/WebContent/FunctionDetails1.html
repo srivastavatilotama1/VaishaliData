@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<script language="javascript" type="text/javascript">	
+	function sayHello(message) 
+	{
+	    alert(message+" Everyone....");
+	}	
+	var sayNewYearWish = function(message) 
+	{
+	    alert(message +" EveryOne ");
+	};
+
+
+	var sayHappyBirthDay = new Function("message", "alert(message +' To You ');");
+
+	</script>
+	<title>Insert title here</title>
+</head>
+<body bgcolor="cyan">
+<input type="button" name="buttoenSayHi" value="Say Hello"
+onclick="sayHello('Hello');"/>
+
+<input type="button" name="buttonNewYearWish" value="Happy New Year"
+onclick="sayNewYearWish('Happy New Year');"/>
+
+<input type="button" name="buttoenHappyBirthDay" value="BirthDay Wish"
+onclick="sayHappyBirthDay('Happy Birth Day');"/>
+
+<button type="button" onclick="myFunction()">Count!</button>
+
+<p id="demo">0</p>
+</br>
+<script>
+var add = (
+				function () 
+				{
+    				var counter = 0;
+    				return function () 
+    				{
+    					return counter += 1;
+    				}
+				}
+			)
+			();
+
+function myFunction()
+{
+    document.getElementById("demo").innerHTML = add();
+}
+</script>
+
+</body>
+</html>

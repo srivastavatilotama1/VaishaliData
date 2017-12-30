@@ -1,0 +1,170 @@
+<!-- chrome.exe -allow-file-access-from-files -disable-web-security -->
+<html  ng-app="direApp">
+	<head>	
+		<style type="text/css">
+			.customStyle{
+				color:red;
+				background-color:yellow;
+				font-weight:bold;
+				font-family:candara;
+				font-size:20pt;
+			}
+		</style>
+	</head>	
+	
+<body  ng-app="direApp" bgcolor="pink">
+	<hr/>
+		<h1 
+		ng-init="greeting = 'Hello World'">
+		The greeting is: {{ greeting }}</h1>
+
+		<hr/>
+		<div>
+			<greet-me>**************</greet-me> 
+		</div>
+		<hr/>
+		
+		<div greet-me>**************	</div>
+		<hr/><hr/>
+		
+		<div  data-greet-me>**************	</div>
+		<hr/><hr/>
+		<div class="greet-me">**************</div>
+		<hr/><hr/>
+		<div  ng-controller="DirectiveController">
+			
+			<input type="button"  greet-me="sayHi()" 
+			value=" Call Controller sayHi Function from drective"></input>	
+		</div>		
+		<hr/><hr/>
+		<div  ng-controller="DirectiveController">
+			<input type="button"
+			change-name value="Change Your Name"/>
+			<h1>Updated Name : {{empName}}</h1>
+		</div>		
+		<hr/><hr/>
+		<div my-anchor></div>
+		<hr/><hr/>	
+		<div my-next-anchor my-url="Welcome.html" 
+		my-link-text="Click me to go to Same Welcome"> </div>
+		<div>{{myUrl}}</div>
+		<a href="{{myUrl}}">Again go to welcome page</a>	
+		<hr/><hr/>
+		<div>
+			<input type="button" mouseentry mouseleft datastyle="customStyle" 
+			value="MouseEnter / MouseLeave"/>
+		</div>	
+			<hr/><hr/>
+			
+	<hr/>
+</body>
+
+<script src="Scripts/angular.js"></script>
+<script  type="text/javascript">
+
+		var app = angular.module("direApp",[]);
+/*--------------------------Controller------------------------------*/		
+app.controller("DirectiveController",function($scope){
+ 
+								$scope.empName="Vaishali";
+								
+								$scope.myUrl = "";
+							    $scope.myLinkText = "";
+		
+								$scope.sayHi=function(){
+									alert(" Hi :"+$scope.empName);
+														}	;
+		
+								$scope.sayBye=function(){
+									alert(" Bye  :"+$scope.empName);
+														} ;
+														} 
+ ); 
+/*--------------------------E------------------------------*/		
+		app.directive("greetMe",function(){
+		return {
+				restrict:'E',
+				template: '<h1>Welcome To Capgemini Pune Globle Sol Ltd. Using Element</h1>'
+				}
+											});
+/*--------------------------A------------------------------*/											
+		app.directive("greetMe",function(){
+			return {
+					restrict:"A",/*Default*/
+					template: "<h1>Welcome To IGate Globle Sol Ltd.Using Attribute</h1>"
+					}
+});
+/*--------------------------C------------------------------*/											
+		app.directive("greetMe",function(){
+			return {
+					restrict:"C",/*Default*/
+					template: "<h1>Welcome To IGate Globle Sol Ltd.Using Class</h1>"
+					}
+});
+/*--------------------------C------------------------------*/
+  app.directive("greetMe",function(){ 
+		return function(scope,element,attrs){		
+			element.bind('click',function(){
+								scope.$apply(attrs.greetMe);
+								           }					
+						)
+											}
+									}
+ );
+ /*--------------------------------------------------------*/
+ app.directive('changeName',function(){
+	return function(scope,element,attrs){
+			/*Setting Watch Explicitly*/
+			scope.$watch('empName', function(newValue, oldValue) {
+			console.log("Old Value : "+ oldValue+" New Value : "+newValue);
+		});
+		element.bind('click',function(){
+		
+			scope.empName = "Srivastava";
+			scope.$apply(); //Triggering Digest Cycle
+		});
+	}
+});
+/*----------------------------------------------------------------*/
+		app.directive('myAnchor', function() {
+		return {
+				restrict: 'A',
+				replace: true,
+					template: '<a href="Welcome.html">Click me to go to Welcome Page</a>'
+				}
+			});
+/*----------------------directive as expression--------------------------------*/	
+		app.directive('myNextAnchor', function() {
+		return {
+				restrict: 'A',				
+				template: '<a href="{{myUrl}}">{{myLinkText}}</a>',
+				link:function(scope,element,attrs){
+					scope.myUrl = attrs.myUrl;
+					scope.myLinkText = attrs.myLinkText;
+													} 			
+				}
+			});
+			
+/*---------------------MouseEntry---------------------------------*/	
+app.directive("mouseentry",function(){
+	return {
+		link:function(scope,element,attrs){
+			element.bind('mouseenter',function(){
+				element.addClass(attrs.datastyle);
+			})
+		}
+	}
+});
+/*---------------------MouseMove---------------------------------*/	
+app.directive("mouseleft",function(){
+	return function(scope,element,attrs){
+			element.bind('mouseleave',function(){
+				element.removeClass(attrs.datastyle);
+			})
+	}
+});	
+/*-------------------Compile Service-------------------*/
+ 
+
+</script>
+</html>

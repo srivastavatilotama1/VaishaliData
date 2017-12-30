@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- In this program function code is present in a globle namespace. -->
+<html ng-app>
+<head>
+<script
+	src="Scripts/angular.js"></script>
+</head>
+<body>
+	<div ng-controller="MyController">
+		<h1>Hello {{ clock.now }}!</h1>
+	</div>
+	<script type="text/javascript" >
+	function MyController($scope) {
+		$scope.clock = {
+		now: new Date()
+		};
+		var updateClock = function() {
+		$scope.clock.now = new Date();
+		};
+		setInterval(function() {
+		$scope.$apply(updateClock);
+		}, 1000);
+		updateClock();
+		};
+	
+	</script>
+</body>
+</html>

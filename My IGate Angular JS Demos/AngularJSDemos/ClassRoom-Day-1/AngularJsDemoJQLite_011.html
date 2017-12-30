@@ -1,0 +1,54 @@
+<!-- chrome.exe -allow-file-access-from-files -disable-web-security -->
+<!--element is already there in jquery object.
+and  so we can use jqlite function
+-->
+
+<html  ng-app="myApp">
+	<head>
+	<style>
+		.box{
+			border:2px solid red;
+			display:block;
+			}
+			#theX{
+			font-size:10px;
+			}
+	
+	</style>
+	</head>
+	
+<body  >
+	<get-name></get-name>	
+	</hr>
+	
+</body>
+
+<script type="text/javascript" src="Scripts/jquery.js"></script>
+<script type="text/javascript" src="Scripts/jquery-ui-1.11.1/jquery-ui.js"></script>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+
+<script  type="text/javascript">
+ var app=angular.module("myApp",[]);
+ app.directive("getName",function(){
+    return {
+				scope:{},
+				restrict:"E",
+				template:"<h2>Welcome To IGate</h2><h1>This is Training Division</h1>",
+				link:function(scope,element,attribute){
+			     element.addClass('box'); 
+				 element.bind('click',function(e){element.toggleClass('box')});
+				 element.prepend('This is Header<hr/>');
+				 element.append("<hr/> The is Footer Section");
+				 var h2=angular.element(element.children()[2]);
+				 h2.text(" I am Vaishali");
+				 h2.css({"color":"green"});
+				 h2.attr("id","theX");
+				 } 
+ }
+ }
+ );
+ 
+ 
+</script>
+
+</html>

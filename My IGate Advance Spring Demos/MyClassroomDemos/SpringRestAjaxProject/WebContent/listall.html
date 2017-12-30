@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+		<style type="text/css">
+		table{
+		
+		}
+	td{
+		font-family: serif;
+		font-size:12pt;
+		background-color: #AABBCC;
+	}
+</style>
+		
+		<script type="text/javascript" src="jquery-1.10.1.js"></script>
+		<script>
+		
+		function loadList(){	
+						
+			$.ajax({
+				url : "http://localhost:8081/SpringRestJsonProject/users",
+				type : "GET",
+				contentType : "application/json; charset=utf-8",
+				dataType : "json",
+				
+				success : function(data, textStatus, jqXHR) {
+					//data - response from server
+					var userlist = data.list;
+					var res = "";
+					$.each(userlist, function(idx, obj){
+						
+						res+="<tr><td>"+obj.userid+"</td><td>"+obj.userName+"</td><td>"+obj.password+"</td><td>"+obj.email+"</td></tr>";
+						}); 
+					
+					
+					
+					$('#foo').append("<table border='1'>"+res+"</table>");
+					$('#click').hide();
+					
+					},
+				error : function(jqXHR, textStatus, errorThrown) {
+					alert("Failed : " + textStatus)
+					alert("ERRRORRR : "+errorThrown)
+				}
+			});
+		}
+		</script>
+	</head>
+	<body>
+	<div id='foo'></div>
+	<button id="click" onclick="loadList()">Load List</button>
+	<a href="index.html">Back To Index</a>
+	</body>
+</html>

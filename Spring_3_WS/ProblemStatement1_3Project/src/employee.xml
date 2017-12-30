@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" >
+
+    <bean
+        id="businessUnit"
+        class="com.igate.bean.SBU" >
+
+        <property
+            name="sbuId"
+            value="PES-BU" />
+
+        <property
+            name="sbuName"
+            value="Product Engineering Services" />
+
+        <property
+            name="sbuHead"
+            value="Kiran Rao" />
+
+        <property name="empList">
+			<list>
+				<ref bean="empBean1"></ref>
+				<ref bean="empBean2"></ref>
+			</list>
+		</property>
+    </bean>
+
+    <bean
+        id="empBean1"
+        class="com.igate.bean.Employee" >
+
+        <property
+            name="employeeId"
+            value="101" />
+
+        <property
+            name="employeeName"
+            value="Vaishali" />
+
+        <property
+            name="salary"
+            value="100000" />
+
+        <property
+            name="age"
+            value="30" />       
+      
+    </bean>
+    
+      <bean
+        id="empBean2"
+        class="com.igate.bean.Employee" >
+
+        <property
+            name="employeeId"
+            value="102" />
+
+        <property
+            name="employeeName"
+            value="yukti" />
+
+        <property
+            name="salary"
+            value="120000" />
+
+        <property
+            name="age"
+            value="25" />
+    </bean>
+
+</beans>

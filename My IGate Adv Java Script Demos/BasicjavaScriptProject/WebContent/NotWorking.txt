@@ -1,0 +1,69 @@
+*******************Prototype Inheritance Using Create.Object Method*******
+  var Emp =
+   {
+            init:function(empId,empName,empSal)
+            {  
+                this.empId = empId;
+                this.empName=empName;
+                this.empSal=empSal;
+                this.calcEmpSal = function(){ return (this.empSal+2000);};
+                return  this ;
+            },
+            empId  : 0,
+            empName :'UNKNOWN',
+            empSal : 0,
+            calcEmpSal  : {  }
+        };
+
+<<<Undefine>>>
+****************Create Instances Of Emp******************
+var anjuE=Object.create(Emp).init(1111,"Anju",10000);
+****************************************************
+anjuE.empId
+<<<1111>>>
+anjuE.empName
+<<<"Anju">>>
+anjuE.empSal
+<<<10000>>>
+anjuE.calcEmpSal();
+<<<12000>>>
+anjuE.gender="F";
+anjuE.gender="F";
+<<<"F">>>
+anjuE
+<<<Object {empId: 1111, empName: "Anju", empSal: 10000, calcEmpSal: function, gender: "F"…}>>>
+*******************************************
+var yuktiE=Object.create(Emp).init(2222,"Yukti",20000);
+yuktiE.calcEmpSal();
+<<<22000>>>
+******************************************************
+var WageEmp =
+   {
+            init:function(noOfHr,ratePerHr)
+            {  
+                this.noOfHr = noOfHr;
+                this.ratePerHr=ratePerHr;
+                this.calcWageEmpSal = function()
+                {
+                 return (this.calcEmpSal()+noOfHr*ratePerHr);
+                 };
+                return  this ;
+            },
+            noOfHr  : 0,
+            ratePerHr : 0,
+            calcWageEmpSal  : {  }
+        };
+<<<Undefine>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+for(property in bar)
+{
+	if(bar.hasOwnProperty(property))
+	 {
+	 	console.log("Own Property :"+property);
+	 }
+	 else
+	 {
+		 console.log("Inherited  Property :"+property);
+	 }
+}

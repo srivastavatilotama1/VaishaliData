@@ -1,0 +1,195 @@
+<div class="margin-top-20" id="grouping">
+    <div class="master-list margin-bottom-20">
+        <h3 class="voice-brand">
+            Master List
+        </h3>
+        <button class="btn btn-xs btn-primary padding-left-10 padding-right-10"
+            ng-click="clearAll('groupArray')">Clear All</button>
+            <!--<label class="">-->
+                <!--<input type="checkbox" -->
+                   <!--ng-change="selectAll()"-->
+                   <!--ng-model="allSelected"> Select All-->
+            <!--</label>-->
+
+        <div class="panel margin-top-10">
+            <table class="table table-unstyled">
+                <tbody>
+                    <!--Loop through debtors in master list-->
+                    <tr ng-if="groupArray.length === 0 || !groupArray">
+                        <td class="text-muted text-large">
+                            You haven't selected any debtors for grouping yet.
+                        </td>
+                    </tr>
+                    <tr ng-repeat="debtor in groupArray track by $index"
+                        ng-class="{'selected': debtor.selected}"
+                        ng-click="selectDebtor($event, $index)"
+                        ng-if="groupArray && groupArray.length > 0">
+                        <td class="interaction">
+                            <a class="btn btn-sm btn-default" href="#/connections/{{debtor.DebtorNumber}}">
+                                <img src="img/charts-flow-chart-icon.png" alt="Connections" width="12px" height="12px"/>
+                            </a>
+                        </td>
+                        <td class="data click-select text-center">{{debtor.DebtorNumber}}</td>
+                        <td class="data click-select">{{debtor.DebtorName}} <br/>
+                            United States</td>
+                        <td class="data click-select">44 Jacques St. <br/>
+                            Chicago, IL</td>
+                        <td class="{{getLongNodeType(debtor.DebtorOwnerType)}} click-select">{{getShortNodeType(debtor.DebtorOwnerType)}}</td>
+                        <td class="interaction">
+                            <button class="btn btn-link" ng-click="removeDebtorFromArray(debtor, 'groupArray')">
+                                <span class="fa fa-times-circle text-muted"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--Interactive buttons-->
+    <div class="add-buttons text-center">
+        <button class="btn btn-sm btn-default" id="parent-button"
+                ng-click="addDebtorToParent()"
+                ng-disabled="futureParent !== null || groupArray.length === 0 || !debtorsSelected()">
+            <span class="fa fa-chevron-right"></span>
+        </button>
+        <button class="btn btn-sm btn-default" id="child-button"
+            ng-click="addDebtorsToChildren()"
+            ng-disabled="!futureParent || !futureParentType">
+            <span class="fa fa-chevron-right"></span>
+        </button>
+    </div>
+
+    <!-- Future Group Bucket-->
+    <div class="grouping-bucket margin-bottom-20">
+        <h3 class="voice-brand">
+            Create a Group
+        </h3>
+        <h4 class="voice-brand text-muted">
+            <em>Make</em>
+        </h4>
+        <div class="panel margin-bottom-0">
+
+            <!--Parent table-->
+            <table class="table table-unstyled" id="parent-table">
+                <tbody>
+
+                <!-- Adding Inline Parent -->
+                <tr id="parent-by-id"
+                    ng-show="futureParent === null">
+                    <td>
+                        <div ng-show="!parentByNumber">
+                            <button class="btn btn-link" ng-click="activateInline('parent')">
+                                <span class="text-info fa fa-plus-circle"></span>
+                            </button>
+                            <em class="voice-brand text-bold text-muted">Add Debtor by Number</em>
+                        </div>
+                        <div class="input-group" ng-if="parentByNumber === true">
+                            <input type="text" class="input-sm form-control" placeholder="Debtor Number"
+                               ng-model="search.inlineParent"
+                               ng-change="log()"/>
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn-group btn-sm" type="button"
+                                        ng-click="cancelInline('parent')">
+                                    Cancel
+                                </button>
+                                <button class="btn btn-info btn-group btn-sm" type="button"
+                                    ng-click="findInlineParent()">
+                                    Search
+                                </button>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Parent Debtor -->
+                <tr ng-if="futureParent !== null">
+                    <td class="interaction">
+                        <a class="btn btn-sm btn-default" href="#/connections/{{futureParent.DebtorNumber}}">
+                            <img src="img/charts-flow-chart-icon.png" alt="Connections" width="12px" height="12px"/>
+                        </a>
+                    </td>
+                    <td class="data text-center">{{futureParent.DebtorNumber}}</td>
+                    <td class="data ">{{futureParent.DebtorName}} <br/>
+                        United States</td>
+                    <td class="data ">44 Jacques St. <br/>
+                        Chicago, IL</td>
+                    <td class="{{getLongNodeType(futureParent.DebtorOwnerType)}} click-select">{{getShortNodeType(futureParent.DebtorOwnerType)}}</td>
+                    <td class="interaction">
+                        <button class="btn btn-link" ng-click="removeDebtorFromParent()">
+                            <span class="fa fa-times-circle text-muted"></span>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4 class="voice-brand text-muted">
+            <em>the new</em>
+        </h4>
+
+        <!--Future owner type-->
+        <select name="future-owner-type" id="future-owner-type" class="form-control input-sm"
+            ng-disabled="!futureParent"
+            ng-model="futureParentType">
+            <option value=""></option>
+            <option value="legal-owner">Legal Owner</option>
+        </select>
+        <h4 class="voice-brand text-muted">
+            <em>of</em>
+        </h4>
+
+        <!--Child table-->
+        <div class="panel children">
+            <table class="table table-unstyled" id="child-table">
+                <tbody>
+                <tr id="child-by-id">
+                    <td colspan="6">
+                        <div ng-show="!childByNumber">
+                            <button class="btn btn-link"
+                                ng-click="activateInline('child')"
+                                ng-disabled="!futureParent || !futureParentType">
+                                <span class="text-info fa fa-plus-circle"></span>
+                            </button>
+                            <em class="voice-brand text-bold text-muted">Add Debtor by Number</em>
+                        </div>
+                        <div class="input-group" ng-if="childByNumber === true">
+                            <input type="text" class="input-sm form-control" placeholder="Debtor Number"
+                                   ng-model="search.inlineChild"/>
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn-sm btn-group" type="button"
+                                        ng-click="cancelInline('child')">
+                                    Cancel
+                                </button>
+                                <button class="btn btn-info btn-sm btn-group" type="button"
+                                        ng-click="findInlineChild()">
+                                    Search
+                                </button>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr ng-repeat="debtor in childArray track by $index"
+                    ng-if="childArray.length > 0">
+                    <td class="interaction">
+                        <a class="btn btn-sm btn-default" href="#/connections/{{debtor.DebtorNumber}}">
+                            <img src="img/charts-flow-chart-icon.png" alt="Connections" width="12px" height="12px"/>
+                        </a>
+                    </td>
+                    <td class="data text-center">{{debtor.DebtorNumber}}</td>
+                    <td class="data ">{{debtor.DebtorName}} <br/>
+                        United States</td>
+                    <td class="data ">44 Jacques St. <br/>
+                        Chicago, IL</td>
+                    <td class="{{getLongNodeType(debtor.DebtorOwnerType)}} click-select">{{getShortNodeType(debtor.DebtorOwnerType)}}</td>
+                    <td class="interaction">
+                        <button class="btn btn-link" ng-click="removeDebtorFromArray(debtor, 'childArray')">
+                            <span class="fa fa-times-circle text-muted"></span>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

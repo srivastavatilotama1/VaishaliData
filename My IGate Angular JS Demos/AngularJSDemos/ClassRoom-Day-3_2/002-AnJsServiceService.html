@@ -1,0 +1,38 @@
+<!-- If we want to register an instance of a service using a constructor function, we can use service(),
+which enables us to register a constructor function for our service object.
+ -->
+
+<html ng-app="serviceApp">
+<head>
+<title>Service - Custom Service</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+
+	<h1>Creating Custom Service Using Service</h1>
+	<div  ng-controller="ServiceCntrl">
+		<div>{{mycompany.Name}} - {{mycompany.Location}}</div>
+	</div>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+
+<script type="text/javascript">
+	var app = angular.module("serviceApp", []);
+	
+	/*constructor  function*/
+	var Company = function() {
+		this.getCompanyInfo = function() {
+			return {
+				"Name" : "IGATE Hinjavadi",
+				"Location" : "Pune "
+			};
+		};
+	}
+	app.service('companyService', Company); // service() function
+
+	app.controller('ServiceCntrl', function($scope, companyService) {
+		console.log(companyService.getCompanyInfo().Name);
+		$scope.mycompany = companyService.getCompanyInfo();
+	})
+</script>
+</html>

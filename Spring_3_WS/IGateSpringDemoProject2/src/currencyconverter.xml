@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- <bean id="exchangeService" class="com.igate.intro.ExchangeServiceImpl">
+	  <constructor-arg><value>44.25</value></constructor-arg>
+	</bean>
+
+	<bean id="currencyConverter" class="com.igate.intro.CurrencyConverterImpl">
+	 <property name="exchangeService">
+	  <ref bean="exchangeService"/>
+	 </property>
+	</bean> -->
+	
+	
+	<!-- Search bean by name -->
+	<bean id="exchangeService" class="com.igate.intro.ExchangeServiceImpl">
+	  <constructor-arg><value>70.25</value></constructor-arg>	</bean>
+	<bean id="currencyConverter" class="com.igate.intro.CurrencyConverterImpl" 
+	    autowire="byName"/>
+	
+	
+	<bean id="currencyList" class="com.igate.intro.CurrencyListImpl">
+		<property name="currList">
+			<list>
+				<value>USD</value>
+				<value>EUR</value>
+				<value>INR</value>
+				<value>GBP</value>
+				<value>AUD</value>
+				<value>JPY</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,162 @@
+<div class="row" ng-hide="isLoading()">
+    <div class="col-sm-3">
+        <div class="btn-group" id="add-to-grouping-buttons">
+            <button class="btn btn-sm"
+                    ng-class="{'btn-default disabled': selectCount() === 0, 'btn-warning': selectCount() > 0}"
+                    ng-click="addToGrouping(false)">
+                <span class="fa fa-plus-circle"></span> Add to Grouping
+            </button>
+            <button class="btn btn-sm"
+                    ng-class="{'btn-default disabled': selectCount() === 0, 'btn-warning': selectCount() > 0}"
+                    ng-click="addToGrouping(true)">
+                <span class="fa fa-arrow-right"></span>
+            </button>
+        </div>
+    </div>
+    <!--<div class="col-sm-9">-->
+        <!--<div class="pull-right form-group form-group-sm" id="sort-block">-->
+            <!--<label class="voice-brand control-label pull-left">Sort by:</label>-->
+
+            <!--&lt;!&ndash;no sorting message&ndash;&gt;-->
+            <!--<em ng-if="sortArray.length === 0" class="text-muted">No sorting applied</em>-->
+
+            <!--&lt;!&ndash;houses the list of applied sorts&ndash;&gt;-->
+            <!--<div id="sort-list" class="pull-left" ng-class="{'hellerSort': $parent.searchType === 'heller', 'clientSort': $parent.searchType === 'client'}">-->
+                <!--&lt;!&ndash;repeat through the sort array&ndash;&gt;-->
+                <!--<div class="btn-group animated fadeInUp sort-dropdown-group" ng-repeat="sort in sortArray track by $index" ng-class="{'open': getOpenSort() === $index + 1}">-->
+                    <!--<button type="button" class="btn dropdown-toggle btn-default btn-sm sort-dropdown-button" aria-expanded="false"-->
+                            <!--ng-click="openSortForm($index)"-->
+                            <!--ng-class="{'text-muted': sort.sortField === null}">-->
+                        <!--{{sortArray[$index].sortDisplay || "Select a field"}} <span class="caret pull-right"></span>-->
+                    <!--</button>-->
+                    <!--<p class="small text-muted">{{ordinals[$index]}}</p>-->
+                    <!--<div class="dropdown-menu dropdown-menu-form dropdown-menu-small dropdown-sort" role="menu">-->
+                        <!--<form class="form-group">-->
+                            <!--<div class="modal-header padding-left-0 margin-bottom-20">-->
+                                <!--<h4 class="voice-brand margin-top-0 margin-bottom-0">Select a field to sort by.</h4>-->
+                            <!--</div>-->
+                            <!--<select class="form-control input-sm"-->
+                                    <!--ng-model="sort.selected"-->
+                                    <!--ng-change="sort.changed = true"-->
+                                    <!--ng-options="opt as opt.sortDisplay for opt in sortOptions">-->
+                            <!--</select>-->
+
+                            <!--<div class="row">-->
+                                <!--<div class="col-sm-12">-->
+                                    <!--<div class="form-inline pull-right margin-top-20">-->
+                                        <!--<div class="form-group margin-right-10">-->
+                                            <!--<label class="voice-brand">-->
+                                                <!--<input type="radio" name="sortAscend"-->
+                                                       <!--ng-value="true"-->
+                                                       <!--ng-model="sort.selected.sortAscend"-->
+                                                       <!--ng-change="sort.changed = true"-->
+                                                       <!--ng-disabled="!sort.selected">-->
+                                                <!--Ascending-->
+                                            <!--</label>-->
+                                        <!--</div>-->
+                                        <!--<div class="form-group">-->
+                                            <!--<label class="voice-brand">-->
+                                                <!--<input type="radio" name="sortAscend"-->
+                                                       <!--ng-value="false"-->
+                                                       <!--ng-model="sort.selected.sortAscend"-->
+                                                       <!--ng-change="sort.changed = true"-->
+                                                       <!--ng-disabled="!sort.selected">-->
+                                                <!--Descending-->
+                                            <!--</label>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<hr class="footer-break" />-->
+                            <!--<div class="form-group">-->
+                                <!--<div class="btn-group pull-right">-->
+                                    <!--<button class="btn btn-sm"-->
+                                            <!--ng-click="applySort($index)"-->
+                                            <!--ng-class="{'disabled btn-primary': sort.changed === false, 'btn-success': sort.changed === true}"><span class="fa fa-check"></span> Apply</button>-->
+                                <!--</div>-->
+                                <!--<div class="btn-group pull-right margin-right-5">-->
+                                    <!--<button type="button"-->
+                                            <!--class="btn btn-default btn-sm"-->
+                                            <!--ng-click="closeSortForm()"><span class="fa fa-times"></span> Close</button>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</form>-->
+                    <!--</div>-->
+                    <!--<button class="btn btn-sm btn-default" ng-click="removeSort($index)">-->
+                        <!--<span class="fa fa-times-circle"></span>-->
+                    <!--</button>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="pull-right">-->
+                <!--<button class="btn btn-link btn-lg fa fa-plus-circle sort-action-button"-->
+                        <!--ng-click="addSort()"-->
+                        <!--ng-disabled="sortArray.length >= 4"></button>-->
+                <!--<button class="btn btn-link btn-lg fa fa-refresh sort-action-button" ng-click="resetDefaultSorts()"></button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+
+<!--Search Results-->
+<!--<table class="table table-striped ng-table" id="search-results"-->
+       <!--infinite-scroll="getMore($event)"-->
+       <!--infinite-scroll-disabled='busy'-->
+       <!--infinite-scroll-distance='1'>-->
+<table class="table table-unstyled" id="search-results">
+    <thead>
+    <tr>
+        <th class="text-center">
+            <input type="checkbox" name="allSelected" id="allSelected"
+                   ng-model="allSelected"
+                   ng-change="selectAll()"/>
+        </th>
+        <th ng-if="analyzeSearchType('heller')">Debtor Heller</th>
+        <th ng-if="analyzeSearchType('client')">Admin</th>
+        <th ng-if="analyzeSearchType('client')">Client</th>
+        <th ng-if="analyzeSearchType('client')">Heller Dbtr.</th>
+        <th ng-if="analyzeSearchType('client')">Client Dbtr.</th>
+        <th>Name</th>
+        <th>Address, City, Zip</th>
+        <th>Country</th>
+        <th ng-if="analyzeSearchType('client')">CL</th>
+        <th ng-if="analyzeSearchType('client')">Balance</th>
+        <th>Limit</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="debtor in getSearchResults() track by $index"
+        ng-class="{selected: debtor.selected, 'added-to-grouping': inGroupingCheck(debtor.DebtorNumber)}"
+        ng-click="selectToggle($index, $event)">
+        <td class="text-center">
+            <input type="checkbox" name="selectDebtor" id="select{{debtor.DebtorNumber}}"
+                   ng-model="debtor.selected"
+                   ng-change="log(debtor.selected)"
+                   ng-if="!inGroupingCheck(debtor.DebtorNumber)"/>
+            <span class="fa fa-check color-green"
+                  ng-if="inGroupingCheck(debtor.DebtorNumber)"></span>
+        </td>
+        <td ng-if="analyzeSearchType('heller')">{{debtor.DebtorNumber}}</td>
+        <td ng-if="analyzeSearchType('client')">{{debtor.admin}}</td>
+        <td ng-if="analyzeSearchType('client')">{{debtor.client}}</td>
+        <td ng-if="analyzeSearchType('client')">{{debtor.hellerDbtr}}</td>
+        <td ng-if="analyzeSearchType('client')">{{debtor.clientDbtr}}</td>
+        <td>{{debtor.DebtorName}}</td>
+        <td>{{debtor.DebtorAddress}}<br/>
+            {{debtor.DebtorCity}}, {{debtor.DebtorZip}}</td>
+        <td>{{debtor.DebtoryCountryCode}}</td>
+        <td ng-if="analyzeSearchType('client')">{{debtor.cl}}</td>
+        <td ng-if="analyzeSearchType('client')">{{debtor.balance}}</td>
+        <td>{{debtor.LimitCode}}</td>
+        <td class="{{getLongNodeType(debtor.DebtorOwnerType)}}">{{getShortNodeType(debtor.DebtorOwnerType)}}</td>
+        <td>
+            <a class="btn btn-default btn-sm connections-button" href="#/connections/{{debtor.DebtorNumber}}">
+                <img src="img/charts-flow-chart-icon.png" alt="Connections" width="12px" height="12px"/>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>

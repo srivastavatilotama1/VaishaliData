@@ -1,0 +1,56 @@
+
+<!-- AngularJS web apps are entirely client-side applications. 
+As we’ve seen, we can write AngularJS
+applications without integrating with a back end at all and still have a dynamic, responsive web
+app.
+Without a back end, we are limited to only showing information that we have at load time. Angular
+provides us several methods if we want to integrate our AngularJS app with information from a
+remote server. -->
+
+
+
+
+<html ng-app="serviceApp">
+<head>
+<title>Service - Custom Service</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+
+	<h1>Creating $q Service</h1>
+	<div ng-app="serviceApp" ng-controller="ServiceCntrl">
+		<div>
+			<input type="button" value="$q Service Test" ng-click="test()" />
+		</div>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+
+<script>
+	var app = angular.module("serviceApp", []);
+	
+	app.controller('ServiceCntrl', function($scope, $q) {
+		
+		$scope.test = function() {
+			var deferred = $q.defer();
+			var promise = deferred.promise;
+			promise.then(
+						function(response) {
+							alert('Success :' + response.message);
+						}, 
+						function(response) {
+							alert('Error :' + response.message);
+						}
+						);
+						
+			/*uncomment to resolve the promise*/
+			deferred.resolve({
+				message : 'Promise will gets fullfilled'
+			});
+			
+			<!-- uncomment to reject the promise-->
+			deferred.reject({message:'Promise gets rejected'}); 
+		}
+	});
+</script>
+
+</html>

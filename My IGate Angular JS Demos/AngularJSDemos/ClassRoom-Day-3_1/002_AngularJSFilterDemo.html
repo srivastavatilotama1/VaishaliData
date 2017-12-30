@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html data-ng-app="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Angular JS Module Demo_4.html</title>
+</head>
+<body  data-ng-init="customers=[{firstName:'Vaishali',city:'Pune'},
+			{firstName:'Ameya',city:'Noida'},
+			{firstName:'Sarita',city:'Delhi'},
+			{firstName:'Vrushali',city:'Pune'}]"
+ bgcolor="pink"">
+<input type="text" name="txtFirstName" data-ng-model="name"/>
+{{name}}<br/>
+<ul>
+	<li data-ng-repeat="cust in customers |orderBy:'firstName'">
+	{{cust.firstName |uppercase}}-{{cust.city}}
+	</li>
+
+</ul>
+<h2>**********************************</h2>
+<input type="text" name="txtLastName" data-ng-model="firstNameModel"/>
+<ul>
+	<li data-ng-repeat="cust in customers |filter:firstNameModel|orderBy:'firstName'">
+	{{cust.firstName |uppercase}}-{{cust.city}}
+	</li>
+</ul>
+<h2>**********************************</h2>
+</body>
+<script src="Scripts/angular.js"></script>
+
+</html>

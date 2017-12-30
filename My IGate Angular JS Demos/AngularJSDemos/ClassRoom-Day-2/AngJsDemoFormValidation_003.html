@@ -1,0 +1,86 @@
+<html ng-app="formApplication">
+	<head>
+		<title>Form Validationdemo</title>
+		<style>
+		 .error{
+		   color:red;
+		   font-weight:bold;
+		 }		
+		</style>
+	</head>	
+<body  bgcolor="pink">
+	 <div data-ng-controller="FormController">
+	 <h3>Enter UR Details</h3>
+		<form name="frm" ng-submit="submitForm()">
+		<table>
+		<tr>
+		<td>Enter Id:</td>
+		<td> <input type="text" name="txtId"  ng-model="person.id"
+		 ng-minlength="5" ng-maxlength="8" ng-required="true"/></td>
+		<td> 
+			<span class="error"  
+			ng-show="frm.txtId.$dirty && frm.txtId.$error.required"> 
+			Mandator Id
+			</span>
+			
+			<span class="error"  
+			ng-show="frm.txtId.$dirty && frm.txtId.$error.minlength"> 
+			Min 5 digits re
+			</span>
+			
+			<span class="error"  
+			ng-show="frm.txtId.$dirty && frm.txtId.$error.maxlength"> 
+			Maximum 8 digits Re			</span>
+		</td>
+		
+		
+		</tr>
+		<tr>
+		<td> Enter First Name</td>
+		<td><input type="text" name="txtFName" ng-model="person.fname"
+				ng-pattern="/^[a-zA-Z]/" ng-required="true">
+		</td>
+		<td>
+		
+		<span class="error"  
+			ng-show="frm.txtFName.$dirty && frm.txtFName.$error.pattern"> 
+			Only Charcteres are allowed
+			</span>			
+			<span class="error"  
+			ng-show="frm.txtFName.$dirty && frm.txtFName.$error.required"> 
+			Mandatory Field		</span>
+		</td>
+		
+		
+		</tr>
+		<tr>
+			<input type="submit" ng-disabled="frm.$invalid" value="Submit Data"
+			></input>
+		</tr>		
+		</table>	
+		</form>
+	 
+	 </div>	 
+</body>
+
+<script src="Scripts/angular.js"></script>
+
+<script src="Scripts/angular-sanitize.js"></script>
+
+<script  type="text/javascript">
+ var formApp=angular.module("formApplication",[]);
+ 
+ formApp.controller("FormController",function($scope){
+   $scope.person={'id':0,fname:''};
+   
+   var result="Data Is entered successfully\n"
+   
+   $scope.submitForm=function(){
+    result+="Id Is  : "+$scope.person.id;
+	result+="Name Is  : "+$scope.person.fname;
+	alert(result);	  
+   } ; 
+ } 
+ ); 
+</script>
+</html>

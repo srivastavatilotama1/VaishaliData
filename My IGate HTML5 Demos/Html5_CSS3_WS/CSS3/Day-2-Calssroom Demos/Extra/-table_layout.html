@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: separate;
+    width: 100%;
+    border: 1px solid black;
+} 
+
+td {
+    border: 1px solid black;
+}
+
+table.ex1 {
+    table-layout: auto;
+}
+
+table.ex2 {
+    table-layout: fixed;
+}
+</style>
+</head>
+<body>
+
+<p>table-layout: auto:</p>
+<table class="ex1">
+  <tr>
+    <td width="5%">1000000000000000000000000000</td>
+    <td width="95%">10000000</td>
+  </tr>
+</table>
+
+<p>table-layout: fixed:</p>
+<table class="ex2">
+  <tr>
+    <td width="5%">1000000000000000000000000000</td>
+    <td width="95%">10000000</td>
+  </tr>
+</table>
+<!--
+auto Automatic table layout algorithm 
+(this is default): •The column width is set by the widest unbreakable content in the cells
+•Can be slow, since it needs to read through all the content in the table,
+ before determining the final layout
+ Play it » 
+fixed Fixed table layout algorithm: •
+The horizontal layout only depends on the table's 
+width and the width of the columns, not the contents of the cells
+•Allows a browser to lay out the table faster than the automatic table layout
+•The browser can begin to display the table once the first row has been received
+ Play it » 
+initial Sets this property to its default value. Read about initial Play it » 
+inherit Inherits this property from its parent element. Read about inherit 
+
+-->
+</body>
+</html>
+

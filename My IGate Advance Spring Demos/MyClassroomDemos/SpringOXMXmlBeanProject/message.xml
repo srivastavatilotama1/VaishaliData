@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-fragment><mes:data xmlns:mes="http://www.example.org/message">Test message</mes:data><mes:senderId xmlns:mes="http://www.example.org/message">test@test.com</mes:senderId><mes:size xmlns:mes="http://www.example.org/message">12345</mes:size><mes:messageType xmlns:mes="http://www.example.org/message"><mes:value>VIDEO</mes:value></mes:messageType></xml-fragment>

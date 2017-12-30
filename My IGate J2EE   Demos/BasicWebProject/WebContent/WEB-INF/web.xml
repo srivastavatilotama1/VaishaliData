@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <welcome-file-list>
+    <welcome-file>Home.html</welcome-file>
+  </welcome-file-list>
+  <display-name>BasicWebProject</display-name>
+  <servlet>
+    <servlet-name>WelcomeServletName</servlet-name>
+    <servlet-class>com.igate.web.WelcomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WelcomeServletName</servlet-name>
+    <url-pattern>/WelcomeServlet.com</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginValidateServletName</servlet-name>
+    <servlet-class>com.igate.web.LoginValidateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginValidateServletName</servlet-name>
+    <url-pattern>/LoginValidateServlet.Com</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserControllerName</display-name>
+    <servlet-name>UserControllerName</servlet-name>
+    <servlet-class>com.igate.demo.controller.UserController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserControllerName</servlet-name>
+    <url-pattern>/UserController</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Security Code -->
+   
+ <security-constraint>
+		<web-resource-collection>
+			<web-resource-name>EditEmployee</web-resource-name>
+			<url-pattern>/jsps/EditEmployee.jsp</url-pattern> 
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		
+		 <auth-constraint>
+			<role-name>admin_user</role-name>
+		</auth-constraint>
+		
+		   <user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+		
+	</security-constraint>
+
+	<!--	All security roles that will be used anywhere within this app. -->
+	<security-role>
+		<role-name>admin_user</role-name>
+	</security-role>
+	<!-- Tell the server to use BASIC authentication. -->
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>Very Sensitive Application</realm-name>
+	</login-config>
+  
+  
+</web-app>

@@ -1,0 +1,154 @@
+If we want to write a pseudo  code for
+input 10 numbers, and print their total  but any numbers>100
+ should be ignored, i.e should not be summed.
+ Which of the following seems to be  a correct pseudo code  for  the
+ above requirement?
+	BEGIN
+		DECLARE sum=0
+		FOR n=1 TO 10
+			ACCEPT number
+			IF number<=100
+				sum=sum+number
+			ENFIF
+		ENDFOR
+		DISPLAY sum
+	END;
+
+
+	BEGIN	
+		DECLARE sum=0
+		FOR n=1 TO 10
+			ACCEPT number
+			IF number>=100
+				sum=sum+number
+			ENFIF
+		ENDFOR
+		DISPLAY sum
+	END;
+		
+	
+	BEGIN	
+		DECLARE sum=0
+		FOR n=1 TO 10
+			ACCEPT number
+			IF number==100
+				sum=sum+number
+			ENFIF
+		ENDFOR
+		DISPLAY sum
+	END;
+		
+	BEGIN
+		DECLARE sum=0
+		FOR n=1 TO 10
+			ACCEPT number
+			IF number<=100
+				sum=sum+number			
+			ENDFOR
+		ENFIF
+		DISPLAY sum
+	END;
+		
+		***********************************
+		
+ Which of the following seems to be  a correct pseudo code  for  the
+  reading each line from employee.txt file    and  display on screen ?
+
+	BEGIN	
+		DECLARE line
+		OPEN "employee.txt" FOR INPUT
+			READ line FROM "employee.txt"
+				WHILE NOT END OF FILE
+					DISPLAY line
+					READ line FROM "employee.txt"
+				ENDWHILE
+			CLOSE files.
+	END;
+
+		
+		BEGIN	
+		DECLARE line
+		OPEN "employee.txt" FOR INPUT
+			READ line FROM "employee.txt"
+				WHILE NOT END OF FILE
+					DISPLAY line
+					READ line FROM "employee.txt"
+				CLOSE files.
+				ENDWHILE			
+		END;
+		
+		
+	BEGIN	
+		DECLARE line		
+			READ line FROM "employee.txt"
+			OPEN "employee.txt" FOR INPUT
+				WHILE NOT END OF FILE
+					DISPLAY line
+					READ line FROM "employee.txt"
+				ENDWHILE
+			CLOSE files.
+	END;
+
+	
+	
+	BEGIN			
+		OPEN "employee.txt" FOR INPUT
+			READ line FROM "employee.txt"
+				WHILE NOT END OF FILE
+					DISPLAY line
+					DECLARE line
+					READ line FROM "employee.txt"
+				ENDWHILE
+			CLOSE files.
+	END;
+	
+	**************************************************
+	Which of the following is the 
+	correct pseudo  code for for checking
+	whether number is positive or negative?
+	In case number is negative exception should occoure.
+	and if it is positive it should be displayed.
+	
+	BEGIN	
+			DECLARE number
+			INPUT number
+			IF number<0 THEN
+				RAISE NegativeNumberException("Number  Is Negative")
+			ELSE
+				DISPLAY NUMBER
+			ENDIF
+	END;
+	
+	
+	BEGIN	
+			DECLARE number
+			INPUT number
+			IF number<0 THEN
+					DISPLAY NUMBER
+			ELSE
+				RAISE NegativeNumberException("Number  Is Negative")			
+			ENDIF
+	END;
+	
+	
+	BEGIN	
+			DECLARE number
+			INPUT number
+			IF number<0 THEN
+				RAISE NegativeNumberException("Number  Is Negative")
+			END IF.
+			DISPLAY NUMBER
+			ENDIF
+	END;
+	
+	BEGIN				
+			INPUT number
+			DECLARE number			
+			IF number<0 THEN
+				RAISE NegativeNumberException("Number  Is Negative")
+			ELSE
+				DISPLAY NUMBER
+			ENDIF
+	END;
+		
+		

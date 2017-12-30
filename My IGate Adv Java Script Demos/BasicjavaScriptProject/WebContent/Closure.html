@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<input type="button" value="Print" onclick="printYear()"/>
+<input type="button" value="Increment" onclick="incrementYear()"/>
+<input type="button" value="Set" onclick="setYear(2015)"/>
+</body>
+<script>
+(
+function()
+{
+    var year = 2015;
+	 printYear = function()
+	{
+	   alert(year);
+	}
+	incrementYear = function()
+	{
+	   year++;
+	}
+	setYear = function(yr)
+	{
+	   year = yr;
+	}
+		
+ }
+ )();
+</script>
+</html>

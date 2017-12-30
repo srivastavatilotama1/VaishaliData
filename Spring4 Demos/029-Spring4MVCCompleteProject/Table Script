@@ -1,2 +1,0 @@
-create table login414(username varchar2(10) primary key,password varchar2(15));
-create table user414(username varchar2(10) primary key,gender varchar2(2),email varchar2(20),skills varchar2(50),city varchar2(10));

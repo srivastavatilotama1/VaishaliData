@@ -1,0 +1,372 @@
+Which of the following  statement is true   about Spring ORM framework?
+
+
+Less coding is required as we don't need to write extra codes before and after the actual database logic
+ such as getting the connection, starting transaction, commiting transaction, closing connection . 
+Spring's IoC approach makes it easy to test the application.
+Spring framework provides its own API for exception handling with ORM framework.
+Integrated transaction management
+
+***********************************************************************
+ Which of the following  bean class  in spring configuration file gives us the  
+ SessionFactory interface?
+
+LocalFactoryBean &  AnnotationFactoryBean
+SessionFactoryBean &  AnnotationSessionBean
+LocalSessionFactoryBean &  AnnotationSessionFactoryBean
+None of the above.
+
+**************************************
+Consider the following code  snippet in spring configuration file.
+
+<bean id="sessionFactory"
+    class=".................................">
+      <property name="dataSource" ref="dataSource" />
+      <property name="mappingResources">
+           <list>
+                <value>Emp.hbm.xml</value>
+           </list>
+      </property>
+      <property name="hibernateProperties">
+          <props>
+               <prop key="dialect">org.hibernate.dialect.Oracle9Dialect</prop>
+          </props>
+      </property>
+</bean>
+ 
+If object-to-database mapping is defined in Emp.XML, 
+Which of the following class should be placed  in class attribute of above  bean tag 
+definition for getting the Session Factory object?
+
+
+LocalSessionFactoryBean
+LocalFactoryBean
+AnnotationSessionFactoryBean
+AnnotationFactoryBean
+
+
+******************************************
+
+<bean id="hibernateTransactionManager"
+		class=".......................">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+Consider the above  code snippet.
+
+Which of the following class we can use to configure the hibernate transaction in above code?
+
+TransactionManager
+HibernateTransactionManager
+HibernateManager
+HibernateTransaction
+
+**********************OXM********************
+//........Line-1.....
+public class Customers {
+List<Customer>customers;
+//getter and setter  method
+}
+Consider above code snippet.
+
+Which of the following annotation should be used in above Customer class at Line No-1
+to  map Customers  to <custs> as a root element in   generated xml file in Marshaling process.
+
+
+@XmlRootElement(name = "custs")
+@XmlElement(name = "custs")
+@XmlRootElement(name = "customers")
+@XmlElement(name = "customers")
+
+  
+  
+  ***************************************
+   Consider the following code snippet.
+   
+   <bean id = "jaxbMarshaller" 
+	      class = "org.springframework.oxm.jaxb.Jaxb2Marshaller">
+		<property name = "......">
+			<array>
+				<value>com.igatepatni.jaxb.Customers</value>
+				<value>com.igatepatni.jaxb.Customer</value>
+				<value>com.igatepatni.jaxb.Orders</value>
+			</array>
+		</property>
+	</bean>
+	
+	Which of the following is the mandatory  property  of Jaxb2Marshaller   class
+ which takes an array of java classes carrying the annotation definition?
+ 
+ classesToBeBound
+ classToBeBound
+classesToBound
+classesBeBound
+*****************************************
+
+Which of the following class  in spring configuration 
+allows us to  marshal  of java object to  xml ?
+
+
+XmlBeansMarshaller
+XmlBeans
+XmlMarshaller
+BeansMarshaller
+
+***********************************************
+Which tool helps us  to generate the java model classes from the xml schema?
+
+Java Compiler
+Schema Compiler
+XML Compiler
+None of the above.
+
+********************************************************
+
+Which of the following is the correct way of configuring  the
+JMS Connection factory  for Activemq Message  broker?
+
+
+<bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory"
+    p:brokerURL="http://localhost:61616" />
+    
+ <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory"
+    p:brokerURL="tcp://localhost:61616" />
+ 
+ <bean id="connectionFactory" class="org.apache.activemq.ActiveConnectionFactory"
+    p:brokerURL="tcp://localhost:61616" />
+    
+    <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory"
+    p:URL="tcp://localhost:61616" />
+    
+    
+    **********************************
+    
+Which of the following statement is true about Active MQ message broker 
+ configuration in spring configuration file?
+    
+If we  use ActiveMQ’s own Spring configuration namespace in xml ,then we can use the 
+<amq:connectionFactory> element to declare the connection factory.
+  
+<amq:connectionFactory> element is clearly specific to ActiveMQ. 
+ 
+The brokerURL  attribute  in <amq:connectionFactory> tells the connection factory where 
+the message broker is located.
+
+All of the above.
+
+
+************************************
+Assuming that we are using ActiveMQ  message broker,
+Which of the following is correct  way of
+  configuring  the   destination queue 
+ in Spring using a message broker–specific implementation class?
+
+
+<bean id="destination" class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg value="com.igatepatni.igatequeue" />
+  </bean>
+  
+  <bean id="topic" class="org.apache.activemq.command.ActiveMQTopic">
+    <constructor-arg value="com.igatepatni.igatequeue" />
+  </bean>
+  
+  <bean id="queue " class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg value="com.igatepatni.igatequeue" />
+  </bean>
+  
+  <bean id="myqueue " class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg value="com.igatepatni.igatequeue" />
+  </bean>
+  
+  
+  ************************************
+  
+  Which of the following statement is false about JMSTemplate?
+  
+  
+  JmsTemplate is Spring’s answer to verbose and repetitive JMS code. 
+JmsTemplate takes care of creating a connection, obtaining a session, and ultimately sending or receiving messages. 
+JmsTemplate allows developer to focus their  development efforts on constructing the message 
+to send or processing the messages that are received. 
+None of the above.
+
+  
+  **************************************
+  Which of the following allows us to   produces a container-managed
+EntityManagerFactory  in Spring -JPA?
+
+ContainerEntityManagerFactoryBean
+LocalEntityManagerFactoryBean 
+LocalContainerEntityManagerFactoryBean
+EntityManagerFactoryBean
+  
+  **************************************
+  Consider the following  tag definition for Spring-JPA.
+  
+  <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+			p:dataSource-ref="dataSource">
+		<property name="jpaVendorAdapter">			
+			<bean class=".............................">
+			</bean>
+        </property>		
+		
+	</bean>
+	
+ Which of the following  JPA vendor adaptors should be used in class attribute for  jpaVendorAdapter property 
+   to provide  Hibernate specifics implementation? 
+
+EclipseLinkJpaVendorAdapter
+ HibernateJpaVendorAdapter
+ OpenJpaVendorAdapter
+ TopLinkJpaVendorAdapter
+ 
+ 
+    
+ *************************************
+     Which of the following annotation in DAO class allows     
+ an instance of EntityManager to be injected into em?
+ 
+ 
+ 
+   @PersistenceContext
+    private EntityManager em;
+    
+    @PersistenceContext
+    private EntityManagerFactory em;
+    
+    @Persistence
+    private EntityManager em;
+    
+    @Persistence
+    private EntityManagerFactory em;
+   ************************************
+   
+   
+   If the persistence logic is configured in persistent.xml file,
+   then which is the correct property name  supposed to be used in LocalContainerEntityManagerFactoryBean
+   bean?
+   
+   
+   
+persistenceName
+persistenceUnit
+persistenceUnitName
+persistenceUnitNameBean
+
+   *****************************
+   Which of the method of Spring’s TaskExecutor interface 
+   accepts a task for execution based on the semantics and 
+   configuration of the thread pool? 
+    
+    execute()    
+    exec(Runnable task)
+    execute(Runnable task)
+     exec()
+    
+    
+    *******************************************
+Consider the following code snippet.
+   
+<bean id="taskExecutor" class="...............">
+    <property name="corePoolSize" value="5" />
+    <property name="maxPoolSize" value="10" />
+    <property name="queueCapacity" value="25" />
+</bean>
+
+<bean id="taskExecutorExample" class="TaskExecutorExample">
+    <constructor-arg ref="taskExecutor" />
+</bean>
+    
+  
+  Which of the following class should be used  in the class attribute of above code
+  to configure   the rules that the TaskExecutor  uses?
+    
+   ThreadPoolTaskExecutor 
+   ThreadPoolExecutor
+   ThreadTaskExecutor
+   PoolTaskExecutor
+   
+   *****************************************
+   Spring offers two Quartz FactoryBean implementations with convenient defaults.That are 
+  _____and _______ .
+  
+  
+  CronFactoryBean and SimpleFactoryBean.
+   CronTriggerFactoryBean and SimpleTriggerFactoryBean .
+   TriggerFactoryBean and SimpleFactoryBean.
+  TriggerFactoryBean and SimpleTriggerBean. 
+  
+  
+  ***************************************
+  
+  Which of the following class is special  filter which
+   delegates to an implementation of javax.servlet.Filter that’s registered
+as a <bean> in the Spring application context and configured in spring web.xml for 
+configuring  spring web security?
+
+ 
+
+
+
+FilterProxy
+DelegatingFilterProxy
+DelegatingProxy
+Filter
+
+********************************************
+Consider the following code snippet.
+
+<http auto-config="true" >
+		<!--Line-2-->
+		 <logout logout-url="/static/j_spring_security_logout"/>  
+</http>
+ 
+<authentication-manager>
+	  <authentication-provider>
+	    <user-service>
+				<user name="igate" password="igate123" authorities="IGATE_USER" />	   
+		 </user-service>
+	  </authentication-provider>
+</authentication-manager>
+
+Which of the following  has to be inserted at <<Line-2>> in above code snippet,
+if we want all the url which starts with
+home and ends to  any name to be access by the people who is having the IGATE_USER Role?
+
+
+<intercept-url  url="/*" role="IGATE_USER" />
+<intercept-url  pattern="/home*" access="IGATE_USER" />
+<intercept  pattern="/home*" access="IGATE_USER" />
+<security-url  pattern="/home*" access="IGATE_USER" />
+
+
+********************************
+Which of the attribute in <http></http>  tag of spring security configuration  file
+allows us to get  Basic Authentication login form?
+
+automatic-config="false"
+automatic-config="true"
+auto-config="false"
+ auto-config="true"
+             
+************************************
+Which of the following tag in spring security configuration xml file,
+sets up Spring Security for securing methods that are annotated with Spring
+Security’s own @Secured annotation?
+
+<global-method-security secured-annotations="enabled" />
+<global-method-security secured-annotations="disable" />
+
+<global-security secured-annotations="enabled" />
+<global-security secured-annotations="disable" />
+
+***********************************8
+Which of the following is true about spring security related annotation?
+
+
+@Secured annotation is   Spring-specific annotation.
+@RolesAllowed annotation is same as @Secured in almost every way.
+@RolesAllowed is one of Java’s standard annotations.
+All of the above.
+
+ 

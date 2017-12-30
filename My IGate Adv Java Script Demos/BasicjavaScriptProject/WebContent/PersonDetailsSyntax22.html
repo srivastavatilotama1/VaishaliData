@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+<script language="javascript" type="text/javascript">
+	var p1= 
+	{
+		panNo : 0,
+		personName : "Guest ",
+		personAge :   0,
+		talk :  function() 
+		{
+			alert("Hello EveryOne : My Name Is : " + 
+					this.personName+
+					" And   I Am "+this.personAge+
+					" Year Old"+ "   Pan No is : "+
+					this.panNo);
+			
+		},
+		setPersonAge : function(tempAge) 
+		{
+			this.personAge = tempAge;
+		},
+		getPersonAge : function()
+		{
+			return personAge;
+		},
+		
+		setPersonName : function(tempName) 
+		{
+			this.personName = tempName;
+		},
+		getPersonName : function()
+		{
+			return personName;
+		},
+		setPanNo : function(panNo) 
+		{
+			this.panNo = panNo;
+		},
+		getPanNo :function()
+		{
+			return  panNo;
+		}
+	}
+	
+	function createEmp()
+	{		
+	
+		p1.setPersonAge(30);
+		p1.setPersonName("Vaishali ");
+		p1.setPanNo(999);
+		p1.talk();
+	}
+</script>
+</head>
+<body bgcolor="cyan">
+	<input type="button" name="buttoenShowEmpInfo" value="Show Emp Info"
+		onclick="createEmp();" />
+
+</body>
+</html>

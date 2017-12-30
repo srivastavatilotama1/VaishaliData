@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script language="javascript" type="text/javascript">
+	function createPerson()
+	{	
+		//empty Object
+		var p1=new Object();
+		
+		p1.panNo="777";
+		
+		p1.personName="Vaishali";
+		
+		p1.personAge=function(personAge)
+		{
+					return personAge;
+		};
+		
+		p1.talk = function() 
+		{			
+			alert("Hello EveryOne : My Name Is : " + 
+					this.personName+
+					" And   I Am "+this.personAge(45)+
+					" Year Old"+ "   Pan No is : "+
+					this.panNo);	
+		};
+				
+		//another syntax
+		
+		var p2 = {}; // equivalent to new Object()
+		p2["panNo"] = 888;
+		
+		p2["personName"] = "Samir";
+		
+		p2["personAge"]=function(age)
+		{
+			return age;
+		};
+		
+		p2["talk"] = function() 
+		{			
+			alert("Hello EveryOne : My Name Is : " + 
+					this.personName+
+					" And   I Am "+this.personAge(78)+
+					" Year Old"+ "   Pan No is : "+
+					this.panNo);	
+		};	
+		
+		
+		p1.talk();
+		
+		p2.talk();
+	}
+</script>
+</head>
+<body bgcolor="cyan">
+	<input type="button" name="buttoenShowEmpInfo" value="Show Person Info"
+		onclick="createPerson();" />
+
+</body>
+</html>

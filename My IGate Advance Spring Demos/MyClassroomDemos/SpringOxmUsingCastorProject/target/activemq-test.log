@@ -1,0 +1,69 @@
+2015-04-08 11:24:14,976 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a51027: startup date [Wed Apr 08 11:24:14 IST 2015]; root of context hierarchy
+2015-04-08 11:24:15,023 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 11:24:15,491 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b1a66b: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 11:24:15,585 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 11:25:14,180 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a51027: startup date [Wed Apr 08 11:25:14 IST 2015]; root of context hierarchy
+2015-04-08 11:25:14,242 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 11:25:14,539 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b1a66b: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 11:25:14,601 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 11:29:00,670 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a51027: startup date [Wed Apr 08 11:29:00 IST 2015]; root of context hierarchy
+2015-04-08 11:29:00,732 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 11:29:01,091 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@24f937: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 11:29:01,153 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 11:29:21,154 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@790192: startup date [Wed Apr 08 11:29:21 IST 2015]; root of context hierarchy
+2015-04-08 11:29:21,201 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 11:29:21,513 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@165ca94: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 11:29:21,575 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 11:30:26,331 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a51027: startup date [Wed Apr 08 11:30:26 IST 2015]; root of context hierarchy
+2015-04-08 11:30:26,393 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 11:30:26,690 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b1a66b: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 11:30:26,737 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 12:09:06,398 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a51027: startup date [Wed Apr 08 12:09:06 IST 2015]; root of context hierarchy
+2015-04-08 12:09:06,445 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 12:09:06,819 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b1a66b: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 12:09:06,882 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 16:09:40,775 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a51027: startup date [Wed Apr 08 16:09:40 IST 2015]; root of context hierarchy
+2015-04-08 16:09:40,837 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 16:09:41,165 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b1a66b: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:09:41,258 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 16:09:41,446 [main           ] INFO  DefaultListableBeanFactory     - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b1a66b: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:15:45,751 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@c7833c: startup date [Wed Apr 08 16:15:45 IST 2015]; root of context hierarchy
+2015-04-08 16:15:45,798 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 16:15:46,110 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@24f937: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:15:46,157 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 16:15:46,282 [main           ] INFO  DefaultListableBeanFactory     - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@24f937: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:16:13,411 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@c7833c: startup date [Wed Apr 08 16:16:13 IST 2015]; root of context hierarchy
+2015-04-08 16:16:13,457 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 16:16:13,754 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@24f937: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:16:13,801 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 16:16:13,910 [main           ] INFO  DefaultListableBeanFactory     - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@24f937: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:18:15,435 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16136f0: startup date [Wed Apr 08 16:18:15 IST 2015]; root of context hierarchy
+2015-04-08 16:18:15,825 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 16:18:16,745 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@141fedb: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:18:17,135 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 16:18:17,603 [main           ] INFO  DefaultListableBeanFactory     - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@141fedb: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:20:25,105 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@c7833c: startup date [Wed Apr 08 16:20:25 IST 2015]; root of context hierarchy
+2015-04-08 16:20:25,152 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 16:20:25,542 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@24f937: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:20:25,589 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 16:20:25,760 [main           ] INFO  DefaultListableBeanFactory     - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@24f937: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:20:59,661 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a51027: startup date [Wed Apr 08 16:20:59 IST 2015]; root of context hierarchy
+2015-04-08 16:20:59,708 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 16:21:00,036 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@165ca94: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:21:00,129 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 16:21:36,245 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a51027: startup date [Wed Apr 08 16:21:36 IST 2015]; root of context hierarchy
+2015-04-08 16:21:36,291 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 16:21:36,619 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b1a66b: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:21:36,681 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 16:22:18,380 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a51027: startup date [Wed Apr 08 16:22:18 IST 2015]; root of context hierarchy
+2015-04-08 16:22:18,427 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 16:22:18,786 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@165ca94: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:22:18,833 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 16:25:01,403 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@15b011c: startup date [Wed Apr 08 16:25:01 IST 2015]; root of context hierarchy
+2015-04-08 16:25:01,512 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 16:25:01,871 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a88254: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:25:01,933 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]
+2015-04-08 16:28:23,225 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6765: startup date [Wed Apr 08 16:28:23 IST 2015]; root of context hierarchy
+2015-04-08 16:28:23,334 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [castor-context.xml]
+2015-04-08 16:28:23,662 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@127d4d9: defining beans [castorMarshaller]; root of factory hierarchy
+2015-04-08 16:28:23,724 [main           ] INFO  CastorMarshaller               - Configured using [class path resource [castor-mapping.xml]]

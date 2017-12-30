@@ -1,0 +1,246 @@
+2015-04-12 19:28:29,746 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1a5e65f: startup date [Sun Apr 12 19:28:29 IST 2015]; root of context hierarchy
+2015-04-12 19:28:29,793 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [applicationContext.xml]
+2015-04-12 19:28:30,323 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a2a2b: defining beans [dataSource,entityManagerFactory,transactionManager,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,contactDAO,contactService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-04-12 19:28:30,370 [main           ] INFO  DriverManagerDataSource        - Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2015-04-12 19:28:30,432 [main           ] INFO  tainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-04-12 19:28:30,448 [main           ] INFO  Version                        - Hibernate Annotations 3.3.1.GA
+2015-04-12 19:28:30,448 [main           ] INFO  Environment                    - Hibernate 3.2.6
+2015-04-12 19:28:30,464 [main           ] INFO  Environment                    - hibernate.properties not found
+2015-04-12 19:28:30,464 [main           ] INFO  Environment                    - Bytecode provider name : cglib
+2015-04-12 19:28:30,479 [main           ] INFO  Environment                    - using JDK 1.4 java.sql.Timestamp handling
+2015-04-12 19:28:30,510 [main           ] INFO  Version                        - Hibernate EntityManager 3.3.2.GA
+2015-04-12 19:28:30,526 [main           ] INFO  Ejb3Configuration              - Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-04-12 19:28:30,620 [main           ] INFO  AnnotationBinder               - Binding entity from annotated class: com.test.entities.ContactEO
+2015-04-12 19:28:30,651 [main           ] INFO  EntityBinder                   - Bind entity com.test.entities.ContactEO on table contact
+2015-04-12 19:28:30,682 [main           ] INFO  AnnotationConfiguration        - Hibernate Validator not found: ignoring
+2015-04-12 19:28:30,729 [main           ] INFO  ConnectionProviderFactory      - Initializing connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2015-04-12 19:28:30,744 [main           ] INFO  edDataSourceConnectionProvider - Using provided datasource
+2015-04-12 19:28:31,680 [main           ] INFO  SettingsFactory                - RDBMS: Oracle, version: Oracle Database 11g Express Edition Release 11.2.0.2.0 - Production
+2015-04-12 19:28:31,680 [main           ] INFO  SettingsFactory                - JDBC driver: Oracle JDBC driver, version: 9.2.0.1.0
+2015-04-12 19:28:31,712 [main           ] INFO  Dialect                        - Using dialect: org.hibernate.dialect.OracleDialect
+2015-04-12 19:28:31,712 [main           ] WARN  Oracle9Dialect                 - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2015-04-12 19:28:31,712 [main           ] WARN  OracleDialect                  - The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2015-04-12 19:28:31,712 [main           ] INFO  TransactionFactoryFactory      - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+2015-04-12 19:28:31,712 [main           ] INFO  ransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Automatic flush during beforeCompletion(): disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Automatic session close at end of transaction: disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - JDBC batch size: 15
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - JDBC batch updates for versioned data: disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Scrollable result sets: enabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - JDBC3 getGeneratedKeys(): disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Connection release mode: auto
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Default batch fetch size: 1
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Generate SQL with comments: disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Order SQL updates by primary key: disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Order SQL inserts for batching: disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-04-12 19:28:31,712 [main           ] INFO  ASTQueryTranslatorFactory      - Using ASTQueryTranslatorFactory
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Query language substitutions: {}
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - JPA-QL strict compliance: enabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Second-level cache: enabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Query cache: disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Cache provider: org.hibernate.cache.NoCacheProvider
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Optimize cache for minimal puts: disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Structured second-level cache entries: disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Echoing all SQL to stdout
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Statistics: disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Deleted entity synthetic identifier rollback: disabled
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Default entity-mode: pojo
+2015-04-12 19:28:31,712 [main           ] INFO  SettingsFactory                - Named query checking : enabled
+2015-04-12 19:28:31,743 [main           ] INFO  Version                        - Hibernate Search 3.0.0.GA
+2015-04-12 19:28:31,758 [main           ] INFO  SessionFactoryImpl             - building session factory
+2015-04-12 19:28:31,899 [main           ] INFO  SessionFactoryObjectFactory    - Not binding factory to JNDI, no JNDI name configured
+2015-04-12 19:28:31,899 [main           ] INFO  SchemaExport                   - Running hbm2ddl schema export
+2015-04-12 19:28:31,899 [main           ] INFO  SchemaExport                   - exporting generated schema to database
+2015-04-12 19:28:32,913 [main           ] INFO  SchemaExport                   - schema export complete
+2015-04-12 19:29:04,601 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1a5e65f: startup date [Sun Apr 12 19:29:04 IST 2015]; root of context hierarchy
+2015-04-12 19:29:04,648 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [applicationContext.xml]
+2015-04-12 19:29:05,179 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1f66f50: defining beans [dataSource,entityManagerFactory,transactionManager,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,contactDAO,contactService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-04-12 19:29:05,210 [main           ] INFO  DriverManagerDataSource        - Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2015-04-12 19:29:05,288 [main           ] INFO  tainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-04-12 19:29:05,303 [main           ] INFO  Version                        - Hibernate Annotations 3.3.1.GA
+2015-04-12 19:29:05,303 [main           ] INFO  Environment                    - Hibernate 3.2.6
+2015-04-12 19:29:05,319 [main           ] INFO  Environment                    - hibernate.properties not found
+2015-04-12 19:29:05,319 [main           ] INFO  Environment                    - Bytecode provider name : cglib
+2015-04-12 19:29:05,319 [main           ] INFO  Environment                    - using JDK 1.4 java.sql.Timestamp handling
+2015-04-12 19:29:05,350 [main           ] INFO  Version                        - Hibernate EntityManager 3.3.2.GA
+2015-04-12 19:29:05,366 [main           ] INFO  Ejb3Configuration              - Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-04-12 19:29:05,444 [main           ] INFO  AnnotationBinder               - Binding entity from annotated class: com.test.entities.ContactEO
+2015-04-12 19:29:05,475 [main           ] INFO  EntityBinder                   - Bind entity com.test.entities.ContactEO on table contact
+2015-04-12 19:29:05,491 [main           ] INFO  AnnotationConfiguration        - Hibernate Validator not found: ignoring
+2015-04-12 19:29:05,537 [main           ] INFO  ConnectionProviderFactory      - Initializing connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2015-04-12 19:29:05,537 [main           ] INFO  edDataSourceConnectionProvider - Using provided datasource
+2015-04-12 19:29:05,662 [main           ] INFO  SettingsFactory                - RDBMS: Oracle, version: Oracle Database 11g Express Edition Release 11.2.0.2.0 - Production
+2015-04-12 19:29:05,662 [main           ] INFO  SettingsFactory                - JDBC driver: Oracle JDBC driver, version: 9.2.0.1.0
+2015-04-12 19:29:05,678 [main           ] INFO  Dialect                        - Using dialect: org.hibernate.dialect.OracleDialect
+2015-04-12 19:29:05,678 [main           ] WARN  Oracle9Dialect                 - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2015-04-12 19:29:05,678 [main           ] WARN  OracleDialect                  - The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2015-04-12 19:29:05,678 [main           ] INFO  TransactionFactoryFactory      - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+2015-04-12 19:29:05,678 [main           ] INFO  ransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Automatic flush during beforeCompletion(): disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Automatic session close at end of transaction: disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - JDBC batch size: 15
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - JDBC batch updates for versioned data: disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Scrollable result sets: enabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - JDBC3 getGeneratedKeys(): disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Connection release mode: auto
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Default batch fetch size: 1
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Generate SQL with comments: disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Order SQL updates by primary key: disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Order SQL inserts for batching: disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-04-12 19:29:05,678 [main           ] INFO  ASTQueryTranslatorFactory      - Using ASTQueryTranslatorFactory
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Query language substitutions: {}
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - JPA-QL strict compliance: enabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Second-level cache: enabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Query cache: disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Cache provider: org.hibernate.cache.NoCacheProvider
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Optimize cache for minimal puts: disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Structured second-level cache entries: disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Echoing all SQL to stdout
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Statistics: disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Deleted entity synthetic identifier rollback: disabled
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Default entity-mode: pojo
+2015-04-12 19:29:05,678 [main           ] INFO  SettingsFactory                - Named query checking : enabled
+2015-04-12 19:29:05,693 [main           ] INFO  Version                        - Hibernate Search 3.0.0.GA
+2015-04-12 19:29:05,725 [main           ] INFO  SessionFactoryImpl             - building session factory
+2015-04-12 19:29:05,834 [main           ] INFO  SessionFactoryObjectFactory    - Not binding factory to JNDI, no JNDI name configured
+2015-04-12 19:29:05,834 [main           ] INFO  SchemaExport                   - Running hbm2ddl schema export
+2015-04-12 19:29:05,834 [main           ] INFO  SchemaExport                   - exporting generated schema to database
+2015-04-12 19:29:06,583 [main           ] INFO  SchemaExport                   - schema export complete
+2015-04-12 19:30:11,434 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1a5e65f: startup date [Sun Apr 12 19:30:11 IST 2015]; root of context hierarchy
+2015-04-12 19:30:11,496 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [applicationContext.xml]
+2015-04-12 19:30:12,027 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6597d1: defining beans [dataSource,entityManagerFactory,transactionManager,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,contactDAO,contactService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-04-12 19:30:12,058 [main           ] INFO  DriverManagerDataSource        - Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2015-04-12 19:30:12,120 [main           ] INFO  tainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-04-12 19:30:12,136 [main           ] INFO  Version                        - Hibernate Annotations 3.3.1.GA
+2015-04-12 19:30:12,136 [main           ] INFO  Environment                    - Hibernate 3.2.6
+2015-04-12 19:30:12,136 [main           ] INFO  Environment                    - hibernate.properties not found
+2015-04-12 19:30:12,136 [main           ] INFO  Environment                    - Bytecode provider name : cglib
+2015-04-12 19:30:12,152 [main           ] INFO  Environment                    - using JDK 1.4 java.sql.Timestamp handling
+2015-04-12 19:30:12,198 [main           ] INFO  Version                        - Hibernate EntityManager 3.3.2.GA
+2015-04-12 19:30:12,214 [main           ] INFO  Ejb3Configuration              - Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-04-12 19:30:12,292 [main           ] INFO  AnnotationBinder               - Binding entity from annotated class: com.test.entities.ContactEO
+2015-04-12 19:30:12,323 [main           ] INFO  EntityBinder                   - Bind entity com.test.entities.ContactEO on table contact
+2015-04-12 19:30:12,339 [main           ] INFO  AnnotationConfiguration        - Hibernate Validator not found: ignoring
+2015-04-12 19:30:12,386 [main           ] INFO  ConnectionProviderFactory      - Initializing connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2015-04-12 19:30:12,386 [main           ] INFO  edDataSourceConnectionProvider - Using provided datasource
+2015-04-12 19:30:12,510 [main           ] INFO  SettingsFactory                - RDBMS: Oracle, version: Oracle Database 11g Express Edition Release 11.2.0.2.0 - Production
+2015-04-12 19:30:12,510 [main           ] INFO  SettingsFactory                - JDBC driver: Oracle JDBC driver, version: 9.2.0.1.0
+2015-04-12 19:30:12,526 [main           ] INFO  Dialect                        - Using dialect: org.hibernate.dialect.OracleDialect
+2015-04-12 19:30:12,526 [main           ] WARN  Oracle9Dialect                 - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2015-04-12 19:30:12,526 [main           ] WARN  OracleDialect                  - The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2015-04-12 19:30:12,526 [main           ] INFO  TransactionFactoryFactory      - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+2015-04-12 19:30:12,526 [main           ] INFO  ransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Automatic flush during beforeCompletion(): disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Automatic session close at end of transaction: disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - JDBC batch size: 15
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - JDBC batch updates for versioned data: disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Scrollable result sets: enabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - JDBC3 getGeneratedKeys(): disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Connection release mode: auto
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Default batch fetch size: 1
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Generate SQL with comments: disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Order SQL updates by primary key: disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Order SQL inserts for batching: disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-04-12 19:30:12,526 [main           ] INFO  ASTQueryTranslatorFactory      - Using ASTQueryTranslatorFactory
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Query language substitutions: {}
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - JPA-QL strict compliance: enabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Second-level cache: enabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Query cache: disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Cache provider: org.hibernate.cache.NoCacheProvider
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Optimize cache for minimal puts: disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Structured second-level cache entries: disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Echoing all SQL to stdout
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Statistics: disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Deleted entity synthetic identifier rollback: disabled
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Default entity-mode: pojo
+2015-04-12 19:30:12,526 [main           ] INFO  SettingsFactory                - Named query checking : enabled
+2015-04-12 19:30:12,542 [main           ] INFO  Version                        - Hibernate Search 3.0.0.GA
+2015-04-12 19:30:12,573 [main           ] INFO  SessionFactoryImpl             - building session factory
+2015-04-12 19:30:12,682 [main           ] INFO  SessionFactoryObjectFactory    - Not binding factory to JNDI, no JNDI name configured
+2015-04-12 19:30:12,682 [main           ] INFO  SchemaExport                   - Running hbm2ddl schema export
+2015-04-12 19:30:12,682 [main           ] INFO  SchemaExport                   - exporting generated schema to database
+2015-04-12 19:30:12,963 [main           ] INFO  SchemaExport                   - schema export complete
+2015-04-13 13:09:14,563 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1a5e65f: startup date [Mon Apr 13 13:09:14 IST 2015]; root of context hierarchy
+2015-04-13 13:09:14,615 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [applicationContext.xml]
+2015-04-13 13:09:15,532 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@154d4f9: defining beans [dataSource,entityManagerFactory,transactionManager,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,contactDAO,contactService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-04-13 13:09:15,590 [main           ] INFO  DriverManagerDataSource        - Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2015-04-13 13:09:15,662 [main           ] INFO  tainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'ContactPU'
+2015-04-13 13:09:15,746 [main           ] INFO  Version                        - Hibernate Annotations 3.3.1.GA
+2015-04-13 13:09:15,754 [main           ] INFO  Environment                    - Hibernate 3.2.6
+2015-04-13 13:09:15,756 [main           ] INFO  Environment                    - hibernate.properties not found
+2015-04-13 13:09:15,758 [main           ] INFO  Environment                    - Bytecode provider name : cglib
+2015-04-13 13:09:15,761 [main           ] INFO  Environment                    - using JDK 1.4 java.sql.Timestamp handling
+2015-04-13 13:09:15,814 [main           ] INFO  Version                        - Hibernate EntityManager 3.3.2.GA
+2015-04-13 13:09:15,840 [main           ] INFO  Ejb3Configuration              - Processing PersistenceUnitInfo [
+	name: ContactPU
+	...]
+2015-04-13 13:09:15,912 [main           ] INFO  DefaultListableBeanFactory     - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@154d4f9: defining beans [dataSource,entityManagerFactory,transactionManager,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,contactDAO,contactService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-04-13 13:10:45,485 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@b79701: startup date [Mon Apr 13 13:10:45 IST 2015]; root of context hierarchy
+2015-04-13 13:10:45,553 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [applicationContext.xml]
+2015-04-13 13:10:46,109 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1f66f50: defining beans [dataSource,entityManagerFactory,transactionManager,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,contactDAO,contactService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-04-13 13:10:46,134 [main           ] INFO  DriverManagerDataSource        - Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2015-04-13 13:10:46,178 [main           ] INFO  tainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'ContactPU'
+2015-04-13 13:10:46,197 [main           ] INFO  Version                        - Hibernate Annotations 3.3.1.GA
+2015-04-13 13:10:46,203 [main           ] INFO  Environment                    - Hibernate 3.2.6
+2015-04-13 13:10:46,205 [main           ] INFO  Environment                    - hibernate.properties not found
+2015-04-13 13:10:46,207 [main           ] INFO  Environment                    - Bytecode provider name : cglib
+2015-04-13 13:10:46,208 [main           ] INFO  Environment                    - using JDK 1.4 java.sql.Timestamp handling
+2015-04-13 13:10:46,270 [main           ] INFO  Version                        - Hibernate EntityManager 3.3.2.GA
+2015-04-13 13:10:46,280 [main           ] INFO  Ejb3Configuration              - Processing PersistenceUnitInfo [
+	name: ContactPU
+	...]
+2015-04-13 13:10:46,383 [main           ] INFO  AnnotationBinder               - Binding entity from annotated class: com.test.entities.ContactEO
+2015-04-13 13:10:46,420 [main           ] INFO  EntityBinder                   - Bind entity com.test.entities.ContactEO on table contact
+2015-04-13 13:10:46,446 [main           ] INFO  AnnotationConfiguration        - Hibernate Validator not found: ignoring
+2015-04-13 13:10:46,513 [main           ] INFO  riverManagerConnectionProvider - Using Hibernate built-in connection pool (not for production use!)
+2015-04-13 13:10:46,513 [main           ] INFO  riverManagerConnectionProvider - Hibernate connection pool size: 20
+2015-04-13 13:10:46,513 [main           ] INFO  riverManagerConnectionProvider - autocommit mode: true
+2015-04-13 13:10:46,513 [main           ] INFO  riverManagerConnectionProvider - using driver: oracle.jdbc.driver.OracleDriver at URL: jdbc:oracle:thin:@127.0.0.1:1521:XE
+2015-04-13 13:10:46,513 [main           ] INFO  riverManagerConnectionProvider - connection properties: {user=system, password=****, autocommit=true, release_mode=auto}
+2015-04-13 13:10:47,438 [main           ] INFO  SettingsFactory                - RDBMS: Oracle, version: Oracle Database 11g Express Edition Release 11.2.0.2.0 - Production
+2015-04-13 13:10:47,438 [main           ] INFO  SettingsFactory                - JDBC driver: Oracle JDBC driver, version: 9.2.0.1.0
+2015-04-13 13:10:47,504 [main           ] INFO  Dialect                        - Using dialect: org.hibernate.dialect.OracleDialect
+2015-04-13 13:10:47,508 [main           ] WARN  Oracle9Dialect                 - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2015-04-13 13:10:47,512 [main           ] WARN  OracleDialect                  - The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2015-04-13 13:10:47,514 [main           ] INFO  TransactionFactoryFactory      - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+2015-04-13 13:10:47,516 [main           ] INFO  ransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-04-13 13:10:47,517 [main           ] INFO  SettingsFactory                - Automatic flush during beforeCompletion(): disabled
+2015-04-13 13:10:47,517 [main           ] INFO  SettingsFactory                - Automatic session close at end of transaction: disabled
+2015-04-13 13:10:47,517 [main           ] INFO  SettingsFactory                - JDBC batch size: 15
+2015-04-13 13:10:47,517 [main           ] INFO  SettingsFactory                - JDBC batch updates for versioned data: disabled
+2015-04-13 13:10:47,518 [main           ] INFO  SettingsFactory                - Scrollable result sets: enabled
+2015-04-13 13:10:47,518 [main           ] INFO  SettingsFactory                - JDBC3 getGeneratedKeys(): disabled
+2015-04-13 13:10:47,518 [main           ] INFO  SettingsFactory                - Connection release mode: auto
+2015-04-13 13:10:47,519 [main           ] INFO  SettingsFactory                - Default batch fetch size: 1
+2015-04-13 13:10:47,520 [main           ] INFO  SettingsFactory                - Generate SQL with comments: disabled
+2015-04-13 13:10:47,520 [main           ] INFO  SettingsFactory                - Order SQL updates by primary key: disabled
+2015-04-13 13:10:47,520 [main           ] INFO  SettingsFactory                - Order SQL inserts for batching: disabled
+2015-04-13 13:10:47,520 [main           ] INFO  SettingsFactory                - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-04-13 13:10:47,524 [main           ] INFO  ASTQueryTranslatorFactory      - Using ASTQueryTranslatorFactory
+2015-04-13 13:10:47,524 [main           ] INFO  SettingsFactory                - Query language substitutions: {}
+2015-04-13 13:10:47,524 [main           ] INFO  SettingsFactory                - JPA-QL strict compliance: enabled
+2015-04-13 13:10:47,525 [main           ] INFO  SettingsFactory                - Second-level cache: enabled
+2015-04-13 13:10:47,525 [main           ] INFO  SettingsFactory                - Query cache: disabled
+2015-04-13 13:10:47,525 [main           ] INFO  SettingsFactory                - Cache provider: org.hibernate.cache.NoCacheProvider
+2015-04-13 13:10:47,525 [main           ] INFO  SettingsFactory                - Optimize cache for minimal puts: disabled
+2015-04-13 13:10:47,525 [main           ] INFO  SettingsFactory                - Structured second-level cache entries: disabled
+2015-04-13 13:10:47,533 [main           ] INFO  SettingsFactory                - Echoing all SQL to stdout
+2015-04-13 13:10:47,533 [main           ] INFO  SettingsFactory                - Statistics: disabled
+2015-04-13 13:10:47,533 [main           ] INFO  SettingsFactory                - Deleted entity synthetic identifier rollback: disabled
+2015-04-13 13:10:47,534 [main           ] INFO  SettingsFactory                - Default entity-mode: pojo
+2015-04-13 13:10:47,534 [main           ] INFO  SettingsFactory                - Named query checking : enabled
+2015-04-13 13:10:47,588 [main           ] INFO  Version                        - Hibernate Search 3.0.0.GA
+2015-04-13 13:10:47,686 [main           ] INFO  SessionFactoryImpl             - building session factory
+2015-04-13 13:10:48,023 [main           ] INFO  SessionFactoryObjectFactory    - Not binding factory to JNDI, no JNDI name configured
+2015-04-13 13:10:48,029 [main           ] INFO  SchemaExport                   - Running hbm2ddl schema export
+2015-04-13 13:10:48,030 [main           ] INFO  SchemaExport                   - exporting generated schema to database
+2015-04-13 13:10:50,777 [main           ] INFO  SchemaExport                   - schema export complete

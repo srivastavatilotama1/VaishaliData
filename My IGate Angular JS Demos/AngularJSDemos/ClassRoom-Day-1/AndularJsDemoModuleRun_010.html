@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="directiveApp">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>User Defien Directive</title>
+	</head>
+<body>
+<h2>{{globalVariable}}</h2>
+
+</body>
+
+<script  type="text/javascript" src="Scripts/angular.js"></script>
+<script  type="text/javascript">
+var myApp=angular.module("directiveApp",[]);
+
+myApp.run(function($rootScope){
+	$rootScope.globalVariable="IGate Global variable";
+});
+</script>
+</html>

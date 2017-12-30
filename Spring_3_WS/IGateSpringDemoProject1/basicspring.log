@@ -1,0 +1,70 @@
+2014-08-22 15:30:10,969 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter.xml]
+2014-08-22 15:33:03,252 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 15:35:19,124 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 15:35:19,327 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 15:35:38,187 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 15:35:38,343 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 15:36:23,833 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 15:36:23,989 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 15:37:01,835 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 15:37:02,007 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 15:38:45,794 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 15:38:45,966 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 15:40:39,236 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 15:42:00,980 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 15:42:01,152 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 15:45:22,767 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 15:45:22,939 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 15:46:44,574 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 15:46:44,746 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 15:47:36,881 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 15:47:37,037 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 16:08:55,809 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 16:08:57,308 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 16:09:24,546 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 16:09:24,702 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 16:16:43,459 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 16:16:43,646 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-22 16:20:39,209 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-22 16:20:39,380 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-23 16:37:43,355 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-23 16:37:43,714 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-24 11:16:12,655 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 11:22:19,770 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 11:22:19,911 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@8cc6a8: startup date [Sun Aug 24 11:22:19 IST 2014]; root of context hierarchy
+2014-08-24 11:22:19,911 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 11:22:19,958 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@12e67fa: defining beans [HelloWorldBean,com.igate.intro.InitHelloWorld#0]; root of factory hierarchy
+2014-08-24 11:22:19,958 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@158b812: startup date [Sun Aug 24 11:22:19 IST 2014]; root of context hierarchy
+2014-08-24 11:22:19,958 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 11:22:19,973 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@51a9e4: defining beans [HelloWorldBean,com.igate.intro.InitHelloWorld#0]; root of factory hierarchy
+2014-08-24 11:23:07,990 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 11:23:08,130 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@8cc6a8: startup date [Sun Aug 24 11:23:08 IST 2014]; root of context hierarchy
+2014-08-24 11:23:08,130 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 11:23:08,177 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@12e67fa: defining beans [HelloWorldBean,com.igate.intro.InitHelloWorld#0]; root of factory hierarchy
+2014-08-24 11:23:08,177 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@158b812: startup date [Sun Aug 24 11:23:08 IST 2014]; root of context hierarchy
+2014-08-24 11:23:08,177 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 11:23:08,193 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@51a9e4: defining beans [HelloWorldBean,com.igate.intro.InitHelloWorld#0]; root of factory hierarchy
+2014-08-24 17:18:12,746 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 17:21:48,167 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 17:21:48,307 WARN [org.springframework.context.support.ResourceBundleMessageSource] - ResourceBundle [applicationResources] not found for MessageSource: Can't find bundle for base name applicationResources, locale en_GB
+2014-08-24 17:22:38,305 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter1.xml]
+2014-08-24 17:22:38,461 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [currencyconverter2.xml]
+2014-08-24 17:22:56,510 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 17:22:56,651 WARN [org.springframework.context.support.ResourceBundleMessageSource] - ResourceBundle [applicationResources] not found for MessageSource: Can't find bundle for base name applicationResources, locale en_GB
+2014-08-24 17:23:32,421 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 17:23:32,546 WARN [org.springframework.context.support.ResourceBundleMessageSource] - ResourceBundle [applicationResources] not found for MessageSource: Can't find bundle for base name applicationResources, locale en_GB
+2014-08-24 17:26:23,429 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 17:27:17,998 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 17:27:18,154 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@32dc75: startup date [Sun Aug 24 17:27:18 IST 2014]; root of context hierarchy
+2014-08-24 17:27:18,154 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 17:27:18,216 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@10c624a: defining beans [HelloWorldBean,com.igate.intro.InitHelloWorld#0,messageSource]; root of factory hierarchy
+2014-08-24 17:27:18,216 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@19d3901: startup date [Sun Aug 24 17:27:18 IST 2014]; root of context hierarchy
+2014-08-24 17:27:18,216 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 17:27:18,232 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@16237fd: defining beans [HelloWorldBean,com.igate.intro.InitHelloWorld#0,messageSource]; root of factory hierarchy
+2014-08-24 17:36:03,391 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 17:36:03,532 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@8cc6a8: startup date [Sun Aug 24 17:36:03 IST 2014]; root of context hierarchy
+2014-08-24 17:36:03,532 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 17:36:03,578 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@12e67fa: defining beans [HelloWorldBean,com.igate.intro.InitHelloWorld#0]; root of factory hierarchy
+2014-08-24 17:36:03,578 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@158b812: startup date [Sun Aug 24 17:36:03 IST 2014]; root of context hierarchy
+2014-08-24 17:36:03,578 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [beanConfig.xml]
+2014-08-24 17:36:03,594 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@51a9e4: defining beans [HelloWorldBean,com.igate.intro.InitHelloWorld#0]; root of factory hierarchy

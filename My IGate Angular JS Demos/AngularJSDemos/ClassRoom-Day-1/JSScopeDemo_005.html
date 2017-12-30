@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Scope</title>
+</head>
+<body bgcolor="cyan">
+Scope...
+</body>
+<script>
+/*(
+	function(){
+				( function(){
+					var a =5;
+					console.log(a);
+				}
+						)();
+}			
+)();*/
+
+/*(
+		function(){
+				var a =5;
+					( function(){
+						
+						console.log(a);
+					}
+							)();
+	}			
+	)();
+	*/
+/*(
+	function(){					
+			( function(){
+				var a;
+				console.log(a);
+				a=5;
+				//this is as good as var a=5 at this line
+				//answer is undefine
+				}
+		)();
+		}			
+		)();*/
+	/*	Test();
+		function Test(){
+			console.log("Test Invoked");
+			//thi s is possible because it will place at start.
+			//best practice declare and then call.
+			//use var keyword for declaring function
+		}
+		*/
+		
+		/*function sum(a){
+			return a;	
+			//sum(9) return 9 so how to achieve sum(9)(7)
+		}*/
+		
+		function sum(a){
+			return function(b){
+				return a+b;
+				//sum(9)(8) return 17
+
+			}
+		}
+
+</script>
+</html>

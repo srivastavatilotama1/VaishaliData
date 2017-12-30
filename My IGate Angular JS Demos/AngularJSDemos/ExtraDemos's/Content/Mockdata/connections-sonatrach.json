@@ -1,0 +1,43 @@
+{
+  "DebtorType": 1,
+  "name": "SONATRACH SPA",
+  "children": [
+    {
+      "DebtorType": 1,
+      "name": "AMERADA HESS (GEA) LIMITED-HASSI MESSAOU",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "AMERADA HESS (GEA) LIMITED-WILAYA DE OUA",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "BROWN AND ROOT CONDOR SPA",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "ENTERPRISE NATIONALE DE FORAGE SPA",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "ENTERPRISE NATIONALE DE L INDUSTRIE PETR",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "ENIP - SOCITTT NATIONALE DE LA",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "ENTREPRISE NATIONALE DE L INDUSTRIE PETR",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

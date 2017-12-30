@@ -1,0 +1,36 @@
+<html ng-app="directivesApp">
+<head>
+<title>Custom Directives</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+<h1>Custom Directives - usage of scope '&amp;' symbol</h1>
+<hr/>
+<div ng-controller="MobileCntrl">
+	<div mobile type-Message="sendMessage(msg)"></div>
+	<div mobile type-Message="sendMessage(msg)"></div>
+	<div mobile type-Message="sendMessage(msg)"></div>
+</div>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+<script type="text/javascript" >
+var app = angular.module("directivesApp",[]);
+app.controller('MobileCntrl',function($scope){
+	$scope.sendMessage = function(msg){
+		alert('Recieved : '+msg);
+	}
+})
+app.directive('mobile',function(){
+	return{
+		scope:{
+			typeMessage:"&" /*Invoke Expression.  Need to call it as type-Message in view*/
+		},
+		template: '<input type="text" ng-model="message">'+
+				  '<input type="button" ng-click="typeMessage({msg:message})" value="Send Message" />'
+	}
+})
+
+
+
+</script>
+</html>

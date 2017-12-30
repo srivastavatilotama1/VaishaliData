@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Employees>
+    <emp empid="12345">
+        <empname>Shrjjilata</empname>
+        <salary>2000.0</salary>
+     </emp>
+        <emp empid="222">
+            <empname>Vaishali</empname>
+         <salary>1000.0</salary>
+         </emp>
+         <emp empid="444">
+             <empname>Anju</empname>
+             <salary>2000.0</salary>
+             
+             </emp>
+             
+             </Employees>

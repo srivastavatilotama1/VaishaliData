@@ -1,0 +1,25 @@
+<taglib>
+ <tlib-version>1.0</tlib-version>
+  <jsp-version>1.2</jsp-version>
+	<tag>
+		<name>currentDate</name>
+		<tagclass>com.igate.CurrentDateHandler</tagclass>
+		<body-content>Jsp</body-content>
+		<description>Simple Tag Prints date and Name Of Class</description>
+	</tag>
+	
+	
+		
+	<tag>
+		<name>greet</name>
+		<tag-class>com.igate.GreetTag</tag-class>
+		<body-content>empty</body-content>
+		<description>Prints Hello user! wherever it occurs</description>
+		<attribute>
+			<name>user</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+</taglib>

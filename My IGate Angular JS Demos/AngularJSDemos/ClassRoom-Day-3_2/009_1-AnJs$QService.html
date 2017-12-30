@@ -1,0 +1,47 @@
+
+<!-- AngularJS web apps are entirely client-side applications. 
+As we’ve seen, we can write AngularJS
+applications without integrating with a back end at all and still have a dynamic, responsive web
+app.
+Without a back end, we are limited to only showing information that we have at load time. Angular
+provides us several methods if we want to integrate our AngularJS app with information from a
+remote server. -->
+
+<html ng-app="qServiceApp">
+<head>
+<title>Service - Custom Service</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+	<h1>Creating $q Service</h1>
+	<div ng-controller="QServiceCntrl">{{myValue}}</div>
+	
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+
+<script>
+	var app = angular.module("qServiceApp", []);
+	
+	app.controller('QServiceCntrl',function($scope, $q) {	
+			$scope.addOne=function(num){
+			var q=$q.defer();
+				if(angular.isNumber(num))
+				{
+					q.resolve(num+1);
+				}
+				else
+				{
+					q.resolve('Nan');
+				}
+					return q.promise;			
+			}
+			$scope.myValue=8;
+			$scope.promise=$scope.addOne($scope.myValue);
+			$scope.promise.then(function(v){$scope.myValue=v;},
+			function(err){$scope.myValue=err;}			
+			);	
+			
+		});
+</script>
+
+</html>

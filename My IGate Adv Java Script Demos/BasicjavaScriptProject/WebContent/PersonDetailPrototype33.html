@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Object Prototype Demo......</title>
+
+<script language="javascript" type="text/javascript">
+	function Person() 
+	{
+		var personPanNo;
+		var personName;
+			
+		this.setPanNo=setPanNo;
+		this.setPersonName=setPersonName;
+		
+		this.getPanNo=getPanNo;
+		this.getPersonName=getPersonName;
+		
+		this.getAddressDetails=getAddressDetails;
+		
+		function getAddressDetails()
+		{
+			return this.getOfficialAddress('SipCot Chennai ');
+			
+		}
+		function setPanNo(panNo)
+		{
+			personPanNo=panNo;
+		}
+		
+		function setPersonName(nm)
+		{
+			personName=nm;
+			
+		}
+				
+		function getPanNo()
+		{
+			return personPanNo;
+		}
+		function getPersonName()
+		{
+			return personName;
+			
+		}		
+	}
+	
+	function createPerson()
+	{
+		
+		var p1=new Person();
+		var p2=new Person();	
+		Person.prototype.companyName='iGATE';
+		Person.prototype.getOfficialAddress=function(officeAddress)
+		{
+			return officeAddress;
+		}
+
+		p1.setPanNo(333);
+		p1.setPersonName("Samir");
+		
+		
+		p2.setPanNo(444);
+		p2.setPersonName("Aamir");
+		
+		alert("Hello "+ p1.getPersonName()+" Your Pan No  is : "+
+				p1.getPanNo()+
+				" Working For : "+p1.companyName+
+				" Comp Address is : "+
+				p1.getAddressDetails());
+		
+		alert("Hello "+ p2.getPersonName()+
+				" Your Pan No  is : "+p2.getPanNo()+
+				" Working For : "+p2.companyName+
+				" Comp Address is : "+
+				p2.getAddressDetails());
+		
+		
+	}
+</script>
+</head>
+<body bgcolor="cyan">
+	<input type="button" name="buttoenShowPersonInfo" 
+	value="Show Person Info"
+		onclick="createPerson();" />
+
+</body>
+</html>

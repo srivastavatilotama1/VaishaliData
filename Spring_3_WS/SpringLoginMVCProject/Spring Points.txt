@@ -1,0 +1,8 @@
+What is framework.
+Difference between all JDBCTemplet  and SimpleJdbcTemplet.
+What is difference between callbacks and templet.
+Ambiguity for @Qualifier and constructor injection.
+Explanation about Internal View Resolver.
+How spring EL is different than jspel.
+Can we have default xml file? yes[application-context.xml"
+

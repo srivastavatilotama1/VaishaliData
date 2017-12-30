@@ -1,0 +1,4677 @@
+{
+  "DebtorType": 0,
+  "name": "SIEMENS AG",
+  "children": [
+    {
+      "DebtorType": 3,
+      "name": "ALPHA VERTEILERTECHNIK GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "ANJOU SECURITE SA",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "ARABIA ELECTRIC LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "BAYER DIAGNOSTICS MANUFACTURIN",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "BOSCH-SIEMENS HAUSGERATE GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "CERBERUS GUINARD - DEC",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "CERBERUS SECURITE",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "CERBERUS SECURITE",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "CERBERUS SECURITE",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "CERBERUS SECURITE - 83",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "DADE BEHRING",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "DADE BEHRING",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "DADE BEHRING MICROSCAN",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "DADE BEHRING, INC., SYVA CO.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "DEMAG DELAVAL INDUSTRIAL TURBOMACHINERY",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "Elin GmbH & CO KG",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Elin GmbH & CO KG",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "ELIN GmbH & Co KG Region Osterreich Ost",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "ELIN GMBH & CO KG",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ELIN BUILDINGS AND INFRASTRUCTUR",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "ELECTRIUM SALES LTD",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "ELECTRIUM SALES LTD",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "ELIN Energietechnik GmbH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "FLENDER GUSS GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "FLENDER-GRAFFENSTADEN",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "FLENDER GRAFFENSTADEN CEDEX",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "FUNDACION SIEMENS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "INVENSYS RAIL NORTH AMERICA",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "ISCOSA INDUSTRIES AND MAINTENANCE",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Kadon Electro Mechanical Services",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "KONCAR POWER TRANSFORMERS LTD.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "LINCAS ELECTRO VERTRIEBS-GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "LOHER GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "MECHANIK CENTER ERLANGEN GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "MECHANIK CENTER ERLANGEN GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Nokia Siemens Networks Chile Ltda.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "NEM Energy Services BV",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "NEM ENERGY B.V.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "NEM STANDARD FASEL",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "NEM USA CORP",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "NERTUS MANTENIMIENTO FERROVIARIO  S A",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "NERTUS MANTENIMIENTO FERROVIARIO  S A",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "Oktopus",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "OEZ S.R.O.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "OOO SIEMENS GAS TURBINE TECHNOLOGY",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "OSRAM ARGENTINA S.A.C. E I.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "OSRAM LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "OSRAM OPTO SEMICONDUCTORS GMBH",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "OSRAM OPTO SEMICONDUCTORS GMBH",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "PETNET SOLUTIONS, INC.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens (N.Z.) Limited",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "Siemens termelo, szolgaltato es keresked",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ZRT",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens A/S Denmark",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Aktiengesellschaft",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Aktiengesellschaft",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Aktiengesellschaft",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Aktiengesellschaft",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Aktiengesellschaft",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Aktiengesellschaft",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Aktiengesellschaft und Magdeburg",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Aktiengesellschaft �sterreich",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG  Lf Nr 224584",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG / I&S IP8",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "Siemens AG / Lief.-Nr. 224584",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens AG  Lf.-Nr.224584",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG / Lief.-224584",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG BuildingTechnologies",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG OEsterreich",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG Transportation Systems",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG Transportation Systems",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG,",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens AG, PGI",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Dematic AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Electronics assambly systems Gmb",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Energy Inc.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Fuel Gasification Technology",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Geb�udeman.&Services",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "Siemens Government Services Inc",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Government Services Inc",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "Siemens Gusstechnik GmbH",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS GUSSTECHNIK GMBH",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "Siemens Industrial Turbomachinery B.V.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Industrial Turbomachinery B.V.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRIAL TURBOMACHINERY",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Industriegetriebe GmbH",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "Siemens Industry Inc.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Industry Inc.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Industry Inc.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BLDG TECHNOLOGIES (CAN) LTD",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY, INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS TRANSPORTATION SYSTEMS INC",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Innovaciones, S.A. de C.V.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Installasjon AS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Installasjon Vestfold AS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Japan KK",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Limited",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Limited",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Limited Liability Company",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Ltd.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Ltd.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Ltd.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Ltda",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "Siemens LLC",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens LLC",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens LLC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens LLC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens LLC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens LLC Abu Dhabi",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens LLC Energy Sector",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens M?co, S.A. de C.V.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Med. Solutions Diagnostics GmbH",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "Siemens Nederland N.V.-Hengelo OV",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS NEDERLAND N.V.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Plant Operations",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Plc",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Plc",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Power Generation, L",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Power Plant",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Pte Ltd",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "Siemens Rail Automation Limited",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "INVENSYS RAIL",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SAFETRAN SYSTEMS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS RAIL AUTOMATION LIMITED",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Rail Automation Limited",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "Siemens S A de C V",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens S A de C V",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens, S.A. de C.V.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S A  DE C V",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A. DE C.V.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SA DE CV",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS, S.A. D",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS, S.A. DE C.V.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS, S.A. DE C.V.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens S.p.A",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens S.p.A.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens S.A.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens S.A. Power Generation",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens S.A.C.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Security Services Ltda",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Siemens WLL",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens SA Argentina",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Transmission Distribution Ltd",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens VAI Metals",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens VAI Metals",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "Siemens VAI Metals Technologies GmbH",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens VAI Metals Technologies GmbH & C",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS VAI METALS TECHNOLOGIE",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens VDO Automotive Rambouillet",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Wind Power",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens Wind Power GmbH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Siemens WLL Bahrain",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SiemensAG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SiemensAG",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS  LIMITED",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS A/S",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AE (SAE) ET HS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG (HEALTHCARE SECTOR)",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG -PTD A AP-",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG AUTOMATISIERUNGS- UND",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG E O C&S ONS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG ENERGY SECTOR MHAC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG HEALTHCARE",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG HEALTHCARE SECTOR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG HEALTHCARE SECTOR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG HEALTHCARE SECTOR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG HEALTHCARE SECTOR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG HEALTHCARE SECTOR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG HEALTHCARE SECTOR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG HEALTHCARE SECTOR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG HEALTHCARE SECTOR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG HEALTHCARE SECTOR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG HEALTHCARE SECTOR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG ID DT 33",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG KWU WM F",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG MEDICAL SOLUTION",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG MEDICAL SOLUTIONS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG MEDICAL SOLUTIONS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG MEDICAL SOLUTIONS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG MEDICAL SOLUTIONS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG MEDICAL SOLUTIONS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG MEDICAL SOLUTIONS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG PG O",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG POWER GENERATION",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG T/A",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG T/A SIEMENS AG MEDICAL SOLS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG T/A SIEMENS AG MEDICAL SOLS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG T/A SIEMENS AG MEDICAL SOLS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG TRANSPORTATION SYSTEMS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG TS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG,",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG, INDUSTRIY SECTOR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AG, SPLS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AKTIENGESELLSCHAFT",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AKTIENGESELLSCHAFT",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS AKTIENGESELLSCHAFT OSTERREICH",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Aktiengesellschaft",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Aktiengesellschaft Osterreich",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Aktiengesellschaft �sterreich",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens AG �?sterreich",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens AG �?sterreich",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens AG Osterreich",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens AG �sterreich",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Transportation Systems",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS TRANSFORMERS AUSTRIA G",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS TRANSPORTATION SYSTEMS GMBH & CO",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS TRANSPORTATION SYSTEMS GMBH & CO",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS TRANSPORTATION SYSTEMS GMBH & CO",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AKTIESELSKAB",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ARGENTINA",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS AS",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens AS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS AS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS AS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS AS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS AS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS AS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS AS                 OSL",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS AS INSTALLASJON LARVIK",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS AS INSTALLASJON MO",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS AS INSTALLASJON TRONDHEIM",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FINANCIAL SERVICES",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENSAS",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AS INST MOSJEN",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS AS INSTALLASJON SUNNFJORD",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS BUILDING TEC. AB",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS AB",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIE",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS BUILDING TECHNOLOGIES",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES PVT LT",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES PVT LTD",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES - ENGENHAR",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS BUILDING TECHNOLOGIES AG",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES SA",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS BUILDING TECHNOLOGIES FIRE & SEC",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES FIRE & SEC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES FIRE & SEC",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Building Technologies",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Building Technologies",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Building Technologies",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Building Technologies",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Building Technologies",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Building Technologies",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Building Technologies GmbH & Co.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Building Technologies GmbH & Co.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES HOLDING GM",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES INC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES LTDA.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES SA (EXTING",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS BUILDING TECHNOLOGIES SECURITY S",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES LTD",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES SECURITY,",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS BUILDING TECHNOLOGIES SP Z O O",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SP Z O O",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES-",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES-",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUILDING TECHNOLOGIES-",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS BUSINESS SERVICES MEDIA TECHNOLO",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS CANADA ENERGY SE",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS CANADA INC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS CANADA LIMITED",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS CANADA LIMITED",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Canada Limited",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS CANADA LIMITED",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS CANADA LIMITED",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS CANADA LIMITED",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS CANADA LIMITED",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS CANADA LIMITED",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS CANADA LIMITED",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS CANADA LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS CERBERUS SA (EXTINGUIDA)",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS CO LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS CONVERGENCE CREATORS GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS CORPORATION",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMEN'S CORPORATION",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMEN'S CORPORATION",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMEN'S CORPORATION",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS DEMAG DELAVAL TURBINAS INDUSTRIA",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS DEMAG DELAVAL TURBOMACHINERY",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS DEMAG DELAVAL TURBOMACHINERY (PT",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS DEMAG DELAVAL TURBOMACHINERY INC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS DEMAG DELAVAL TURBOMACHINERY, IN",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS DEMAG DELAVAL TURBOMACHINERY, IN",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS DEMAG DELAVAL TURBOMACHINERY, IN",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS DEMAG DELAVAL TURBOMACHINERY, IN",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS DEMAG DELAVAL TURBOMACHINERY, IN",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS DEMATIC AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS DEUTSCHLAND",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS DUEWAG SCHIENENFAHRZEUGE GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS DUISBURG II",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ELECTRIC LIMITED",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ELECTRIC MACHINES S.R.O.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ELECTRIQUE LTEE",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ELIN BUILDINGS AND INFRASTRUCTUR",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ENERGY",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ENERGY & AUTOMATION INC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ENERGY & AUTOMATION, INC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ENERGY INC",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS ENERGY, INC",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Building Technologies",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Energy & Automation",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Fire Safety Division",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY AND AUTOMATION",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY, INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS POWER GENERATION INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS POWER GENERATION INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS POWER TRANSMISSION & DISTRIB",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ENERGY, INC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ENERGY, INC",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS ENERGY, INC OIL & GAS DIVISI",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ENERGY, INC",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ENTERPRISE COMMUNICATIONS AG",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS FINANCE & LEASING GMBH",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Finance & Leasing GmbH",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS FINANCIAL SERVICES AB",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS FINANCIAL SERVICES LIMITED",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS FINANCIAL SERVICES LTD",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FINANCIAL SERVICES",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FINANCIAL SERVICES LTD",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS FINANCIAL SERVICES SAS",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FINANCIAL SERVICES",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS FINANCIAL SERVICES, INC.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FINANCIAL SERVICES INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FINANCIAL SERVICES INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FINANCIAL SERVICES INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FINANCIAL SERVICES, INC",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS FINANZIARIA SPA",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS GEB�UDETECHNIK NORD GMBH & CO. O",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS GEB UDETECHNIK OST",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS GEB�UDETECHNIK BAYERN GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS GEB�UDETECHNIK NORD GMBH & CO. O",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS GEB�UDETECHNIK OST GMBH & CO. OH",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS GEBAEUDETECHNIK RHEIN/MAIN GMBH",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS GEBAUDETECHNIK BAYERN GMBH & CO.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS GEBSUDEMANAGEMENT &",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS GEBSUDEMANAGEMENT &SER",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS HEALTCHCARE",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS HEALTH SERVICE GMBH & CO. KG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS HEALTHCARE",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS HEALTHCARE DIAGNOSTICS INC.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAG",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAG",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAG",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAGNOSTICS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAGNOSTICS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAGNOSTICS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAGNOSTICS INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAGNOSTICS INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAGNOSTICS INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAGNOSTICS INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAGNOSTICS INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS DIAGNOSTICS",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS HEALTHCARE DIAGNOSTICS INC.",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS HEALTHCARE DIAGNOSTICS PRODUCTS",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Healthcare Diagnostics Products",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE DIAGNOSTICS",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS HEALTHCARE DIAGNOSTICS PRODUCTS",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS HEALTHCARE DIAGNOSTICS, FILIAL A",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS HEALTHCARE DIAGNOSTICS, INC.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS HIGH VOLTAGE CIRCUIT BREAKER CO.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS HOLDING NV",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS IND TURBINE MACHINERY",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS IND TURBOMACHINERY LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS INDONESIA, PT",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "P.T. SIEMENS INDONESIA",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS INDUSNTRY INC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS INDUSTRIAL TURBO MACHINERY",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS INDUSTRIAL TURBOMACH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS INDUSTRIAL TURBOMACHINERY",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS INDUSTRIAL TURBOMACHINERY AB",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Industrial Turbomachinery AB",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Industrial Turbomachinery AB",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS IND TURBOMACHINERY AB",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRIAL TURBOMACHIN",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRIAL TURBOMACHINERY",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRIAL TURBOMACHINERY AB",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS INDUSTRIAL TURBOMACHINERY GMBH",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Turbomachinery Equip GmbH-",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS INDUSTRIAL TURBOMACHINERY LTD",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Industrial Turbomachinery Ltd",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRIAL TURBOMACHINERY LTD",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRIAL TURBOMACHINERY LTD",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS INDUSTRIAL TURBOMACHINERY LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS INDUSTRIAL TURBOMACHINERY S.R.O.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS INDUSTRIAL TURBOMACHINERY SERVIC",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS INDUSTRIAL TURBOMACHINERY, INC.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Industrial Turbomachinery, Inc.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRIAL TURBOMACHINERY IN",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRIAL TURBOMACHINERY, INC.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS INDUSTRIE MONTAGE SERVICES GMBH",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS INDUSTRIE MONTAGE SERVICES GMBH",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS INNOVACIONES S A  DE C V",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS INNOVACIONES S.A. DE C",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS INTEGRATED SERVICESJT SPRAWLS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ISRAEL LTD.",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS IT SOLUTIONS AND SERVICES GMBH &",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES GMBH & CO.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS IT SERVICES",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS IT SOLUTIONS AND SERVICES GMBH &",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS IT SOLUTIONS AND SERVICES GMBH &",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS IT SOLUTIONS AND SERVICES GMBH &",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS IT SOLUTIONS AND SERVICES GMBH &",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS IT SOLUTIONS AND SERVICES SPA",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS LEASE SERVICES SAS",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS LEASE SERVICES SAS",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LEASING AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LEASING AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LIMITED",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS LIMITED",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS LIMITED",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS LIMITED",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS LIMITED",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS LIMITED",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS LIMITED",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS LIMITED-GURGAON VENDOR# 5007",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LIMITED LIABILITY COMP",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LTD AUSTRALIA",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LTD BARODA VENDOR 50078370",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LTD.",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS LTD.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS LTD",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LTD. GSS F&A",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LTD., SEOUL",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LTD-ROBINSON",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS LTDA",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Ltda",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS LTDA.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS MAGNET TECHNOLOGY LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS MALAYSIA SDN BHD",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MALAYSIA SDN BHD",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS MANUFACTURING S.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS MANUFACTURING S.A",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS MANUFACTURING SA",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS MEDICAL SOLUTIONS",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS MEDICAL SOLUTIONS HEALTH SERVICE",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS MEDICAL SOLUTIONS USA INC",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS USA INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS USA INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS USA, INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS USA, INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS USA, INC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS USA, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS USA, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS USA, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS USA, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONSSIEMENS MEDICAL",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SYSTEMS, INC.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "UPHSSIEMENS MEDICAL SOLUTIONS SALE",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS MEDICAL SOLUTIONS USA INC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS METERING DATACARE LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS MILTRONICS PROCESS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS MOROCCO",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS NEDERLAND N.V.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Nederland Nv",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Nederland NV",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BUILDING TECHNOLOGIES HOLDING B.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS NEDERLAND N V",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS NEDERLAND N.V.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS NEDERLAND N.V.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS NEDERLAND N.V.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS NEDERLAND NV",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS NEDERLAND NV",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS NEDERLAND NV",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS NIXDORF INFORMATIONSSYSTEME A.G.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS NURNBERG A&D LD INDUSTRIE",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS NV",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "MILLTRONICS C/O SIEMENS NV",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens SA-Bruxelles",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FINANCE LEASING EN LIQUIDATION S",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FIRE & SECURITY PRODUCTS NV",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS PENSIONSKASSE AG",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BACON GMBH & CO KG",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS BACON GMBH & CO KG",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS GEB�UDEMANAGEMENT & -SERVICES G.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS PLC",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "DADE BEHRING LTD",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens plc",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Mobility",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Plc",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Plc",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS HEALTHCARE SERVICES LTD",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS MEDICAL SOLUTIONS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PLC-BERKSHIRE",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS PUBLIC LIMITED COMPANY",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS TRANSMISSION & DISTRIB",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS POWER GENERATION",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS POWER GENERATION",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Power Generation, Inc.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS POWER GENERATION",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS POWER GENERATION",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS POWER GENERATION ANLAGENTECHNIK",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Power Generation",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS POWER GENERATION ANLAGENTECHNIK",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS POWER GENERATION INC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS POWER GENERATION, ICIS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS POWER GENERATION, INC",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS PTE LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS PTE LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS PTE LTD.",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS RAIL AUTOMATION PTY. LTD.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS RAIL AUTOMATION P L",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS RAIL AUTOMATION P L",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS ROLLING STOCK PVT.LTD.",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS S.A.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S. A. COLOMBIA",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SA COLOMBIA",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS S.A.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS S.A. DASSA",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS S.A.-DE DICIEMBRE",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS S.A.-LA URUCA",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS S.A.S/SAINT DENIS",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS S.P.A.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SPA",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SPA",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SPA",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS S.R.O.",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS SA",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FIRE & SECURITY PRODUCTS SAS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS FRANCE SAS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A.S",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A.S",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A.S",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A.S",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A.S",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A.S.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SAS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SAS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SAS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SAS-93 ST DENIS  *V3**",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS ST DENIS",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS SA",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS REDES CORPORATIVAS SA (EXTINGUID",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS RENTING SA",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS S.A.-TRES CANTOS",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SA",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SA",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS SA",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS SA COSTA RICA",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS SA DE CV",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SA DE CV",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS SA DIV ENERGIA Y TRANSPORTE",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS SA SUCCURSALE AU GRAND-DUCHE",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens S.A.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens SA",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS SAC",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS SANAYI VE TICARET A S",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SAN. VE TIC. A.S.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SANAYI VE TICARET A S",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS SCHWEIZ AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS SCHWEIZ AG",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS SCHWEIZ AG",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Schweiz AG",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SCHWEIZ AG",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS SECUTITE SYSTEMS",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS SGP VERKEHRSTECHNIK",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS SGP VERKEHRSTECHNIK",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS SP. Z O.O.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens sp. z.o.o.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SP Z O O",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SP. ZO.O.MEDICAL SOLUTIONS",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS SRO - ODDSTEPNY ZAVOD INDUST",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS T & D",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS T & D",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS T & D",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TECHNOLOGIES DU",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TECHNOLOGY SERVICES A/S",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TRAFFIC CONTROL LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TRANSFORMADORES",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TRANSFORMADORES SA DE CV",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TRANSFORMERS AUSTRIA GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TRANSFORMERS AUSTRIA GMBH  CO K",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TRANSFORMERS S P A",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TRANSFORMERS SPA",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TRANSMISSION & DISTRIBUTION LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TRANSMISSION DISTRIBUTION",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS TURBOMACHINERY EQUIMENT GMBH",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Turbomachinery",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Turbomachinery Equip GmbH",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "Siemens Turbomachinery Equipment GmbH",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS TURBOMACHINERY EQUIPMENT GMB",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS TURBOMACHINERY EQUIPMENT GMBH",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TURBOMACHINERY EQUIPMENT A/S",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS TURBOMACHINERY EQUIPMENT GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS VAI",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS VAI METALS TECHNOLOGIES SAS",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS VAI METALS TECHNOLOGIES SAS",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS VDO AUTOMOTIVE INC.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS VDO AUTOMOTIVE S.A.S.",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS VDO SA DE CV",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS VDO",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS VDO TRADING GMBH",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS VDO AUTOMOTIVE AG",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS VDO AUTOMOTIVE AG",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS VDO TRADING GMBH",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS WATER TECH",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS WATER TECHNOLOGIES CORP.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS WATER TECHNOLOGIE",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS WATER TECHNOLOGIES",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS WATER TECHNOLOGIES",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS WATER TECHNOLOGIES COR",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS WATER TECHNOLOGIES CORP.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS WATER TECHNOLOGIES CORP.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS WATER TECHNOLOGIES CORP.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS WATER TECHNOLOGIES CORP.",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS WATER TECHNOLOGIES HOLDING CORP.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS WATER TECHNOLOGIES CORP.-",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS WESTING",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS WESTINGHOUSE POW",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS WESTINGHOUSE TEC",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS WESTINGHOUSE TEC",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS WIND POWER A S",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS WIND POWER",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS WIND POWER GMBH",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "Siemens Wind Power GmbH",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS WLL QATAR",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SIEMENS, S.A.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SICMAN-SIEMENS & J.CURVELO,SERV.OPERA��O",
+          "children": []
+        },
+        {
+          "DebtorType": 3,
+          "name": "SIEMENS SA-AMADORA",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS, S.A. DE C.V",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENS, SA DE CV (4723)",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SIEMENSAG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SITECO BELEUCHTUNGSTECHNIK GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SITECO LIGHTING SYSTEMS S.R.L",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SITECO LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 1,
+      "name": "SOLEVAL RENOVABLES S.L.",
+      "children": [
+        {
+          "DebtorType": 3,
+          "name": "SOLE AL RENOVABLES S.L.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "DebtorType": 3,
+      "name": "STANDARD FASEL B.V.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "STIGHO ELECTRO B.V.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "SYKATEC -SYSTEME, KOMMPONENTEN, ANWENDUN",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Trench Limited",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Turbine Airfoil Coating and",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "TELECOMUNICACION ELECTRONICA Y CONMUTACI",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "TLT-TURBO GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "TRENCH GERMANY GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "TRENCH LIMITED",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "TURBINE AIRFOIL COATING AND REPAIR GMBH",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "TURBOCARE CA",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "TURBOCARE CANADA LTD.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "TURBOCARE SP Z O O",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "TURBOCARE SP. Z O.O.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "TURBOCARE SPA",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Vista Security Technics Pvt Ltd",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "VA TECH EZ A.S.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "VA TECH REYROLLE DISTRIBUTION LTD",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "Winergy AG, Am Industriepark 2",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "WINERGY AG",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "WINERGY DRIVE SYSTEMS CORP.",
+      "children": []
+    },
+    {
+      "DebtorType": 3,
+      "name": "WINERGY DRIVE SYSTEMS INDIA PVT LTD",
+      "children": []
+    }
+  ]
+}

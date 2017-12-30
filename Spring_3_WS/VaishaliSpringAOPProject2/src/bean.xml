@@ -1,0 +1,64 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-3.0.xsd
+     http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd" >
+
+    <aop:aspectj-autoproxy />
+
+    <context:component-scan base-package="bean" />
+
+    <bean
+        id="audience"
+        class="bean.Audience" />
+
+    <bean
+        id="tabla"
+        class="bean.Tabla" >
+    </bean>
+
+    <bean
+        id="ZakirHusein"
+        class="bean.Instrumentalist" >
+
+        <property
+            name="audience"
+            ref="audience" />
+
+        <property
+            name="instrument"
+            ref="tabla" />
+
+        <property
+            name="song"
+            value="Ja Ja Re Apane " />
+    </bean>
+
+    <bean
+        id="doAfterAspect"
+        class="advice.AudienceAfterAdv" >
+
+        <property
+            name="audience"
+            ref="audience" />
+    </bean>
+    
+    
+      <bean
+        id="doBeforeAspect"
+        class="advice.AudienceBeforeAdv" >
+
+        <property
+            name="audience"
+            ref="audience" />
+    </bean>
+    
+    
+    
+
+</beans>

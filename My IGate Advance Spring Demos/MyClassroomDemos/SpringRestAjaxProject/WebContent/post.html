@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<style type="text/css">
+	input{
+		border-color:green
+		}
+</style>
+		<script type="text/javascript" src="jquery-1.10.1.js"></script>
+		<script type="text/javascript">
+		$('#link').hide();
+	 function send() {
+		 // creating JS Object from the input values
+    	    var formData = {
+    	    	"userid" : $("#id-uid").val(),
+				"userName" : $("#id-uname").val(),
+				"password" : $("#id-upass").val(),
+				"email" : $("#id-uemail").val()
+        	    
+			}
+			
+			$.ajax({
+				url : "http://localhost:8081/SpringRestJsonProject/adduser",
+				type : "POST",
+				contentType : "application/json; charset=utf-8",
+				dataType : "json",
+				data : JSON.stringify(formData), // converting JS object to JSON
+				success : function(data, textStatus, jqXHR) {
+					//data - response from server
+					$("#id-uid").val("");
+				    $("#id-uname").val("");
+				    $("#id-upass").val("");
+				    $("#id-uemail").val("");
+				    alert("Record Added.....")
+							
+				},
+				error : function(jqXHR, textStatus, errorThrown) {
+					alert("Failed : " + textStatus)
+					alert("ERROR : "+errorThrown)
+				}
+			});
+			};
+			
+		</script>
+	</head>
+	<body>
+		<h1 align="center">Add User Details</h1>
+		<table align="center">
+			<tr><td>User Id</td><td><input type="text" id="id-uid"/></td></tr>
+			<tr><td>User Name</td><td><input type="text" id="id-uname"/></td></tr>
+			<tr><td>Password</td><td><input type="password" id="id-upass"/></td></tr>
+			<tr><td>Email</td><td><input type="text" id="id-uemail"/></td></tr>
+			<tr><td><input type="reset"/></td><td><button onclick="send()">Add Record</button></td></tr>
+		</table>
+		<a href="index.html" id="link">Back To Index</a>
+	</body>
+</html>

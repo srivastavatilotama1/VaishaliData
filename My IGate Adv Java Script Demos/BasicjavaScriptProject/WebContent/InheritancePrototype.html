@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script language="javascript" type="text/javascript">
+	
+	
+	var calcEmpSal = function(empSal) {
+		this.empSal + empSal;
+		return (empSal + 2000);
+	}
+
+	
+	function Employee(empId, empName, empSal) {
+		this.empId = empId, this.empName = empName, this.empSal = empSal,
+				this.calcEmpSal = calcEmpSal(empSal);
+	}
+
+	var WageEmp = function(noOfHrs, ratePHrs) 
+	{
+		this.noOfHrs = noOfHrs;
+		this.ratePHrs = ratePHrs;
+		this.calcWageEmpSal = function (noOfHrs, ratePHrs)
+		{
+			//return (calcEmpSal(this.empSal))+(noOfHrs*ratePHrs);
+			
+			return (this.calcEmpSal)+(noOfHrs*ratePHrs);
+		}
+	}
+
+	function createEmp() 
+	{
+		var e1 = new Employee(821219, " Vaishali", 5000);
+		var e2 = new Employee(821230, " Sunita", 6000);
+
+		alert(" Hi " + e1.empName + "  Your Id Is : " + e1.empId
+				+ "   Your Total Salary Is  :" + e1.calcEmpSal);
+		alert(" Hi " + e2.empName + " Your Id Is : " + e2.empId
+				+ "Your Total Salary Is  :" + e2.calcEmpSal);
+		
+		WageEmp.prototype=new Employee(8244,"Pramod",10000);
+		var we3=new WageEmp(4,500);
+		
+		alert(" Hi " + we3.empName + " Your Id Is : " + we3.empId
+				+ "Your Total Salary Is  :" +
+				we3.calcWageEmpSal(we3.noOfHrs,we3.ratePHrs));
+		
+		
+		alert("Is  e1.hasOwnProperty('calcEmpSal')? "+
+					e1.hasOwnProperty("calcEmpSal"));
+		alert("Is  we3.hasOwnProperty('calcEmpSal')? "+
+				we3.hasOwnProperty("calcEmpSal"));
+		alert("Is  we3.hasOwnProperty('calcWageEmpSal')? "+
+				we3.hasOwnProperty("calcWageEmpSal"));
+		
+		
+		alert("Is  Employee.prototype.isPrototypeOf(e1)? "+
+				Employee.prototype.isPrototypeOf(e1));
+		alert("Is  WageEmp.prototype.isPrototypeOf(we3)? "+
+				WageEmp.prototype.isPrototypeOf(we3));
+		
+		
+		alert("Is  WageEmp.prototype.isPrototypeOf(e2)? "+
+				WageEmp.prototype.isPrototypeOf(e2));
+		
+
+	}
+</script>
+<title>Insert title here</title>
+</head>
+<body bgcolor="cyan">
+	<input type="button" name="buttoenShowEmpInfo" value="Show Emp Info"
+		onclick="createEmp();" />
+</body>
+</html>

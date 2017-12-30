@@ -1,0 +1,45 @@
+create table itemsForBid(itemId number(3),itemName varchar2(20), itemPrice number(5,2),status varchar2(20));
+
+insert into itemsforbid values(101,'sofa',500,'available');
+insert into itemsforbid values(102,'mattress',600,'available');
+insert into itemsforbid values(103,'samsung duos',100,'available');
+insert into itemsforbid values(104,'refrigerator',900,'available');
+insert into itemsforbid values(105,'tv',100,'available');
+
+SQL> desc vaishali_user;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------
+ UNAME                                     NOT NULL VARCHAR2(20)
+ PASSWORD                                           VARCHAR2(20)
+
+
+
+update  itemsForBid set status='available';
+**************************************************************
+Line-1    @.........( 
+Line-2  	filterName = "AuthenticateFilter", 
+Line-3  	  urlPatterns = "/Authenticate", 
+Line-4  	 initParams = 
+Line-5    	  {@InitParam(name = "param1", value = "value1"), 
+Line-6     	   @InitParam(name = "param2", value = "value2")} 
+Line-7		 ) 
+Line-8	 public class AuthenticateFilter {  } 
+
+ Consider the above code snippet.
+ Which of the annotation should be added at Line-1 
+ for intercepting the AuthenticateFilter for Authenticate URL?
+ 
+ 
+ @ServletFilter
+@Filter
+@FilterServlet
+@WebFilter
+
+*******************************************************************
+Which of the following annotation should be used 
+if we want to receive events whenever the servlet
+context is created and destroyed by the web container. 
+ 
+ 
+ 
+ @WebServletContextListener

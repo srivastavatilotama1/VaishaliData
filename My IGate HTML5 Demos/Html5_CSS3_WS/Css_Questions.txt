@@ -1,0 +1,163 @@
+
+Which of the following 
+style sheet definition only applies to the tag
+ contents that contain it and is 
+is used to control a single tag element?
+
+
+*************************
+Which of the following character is used 
+as universal selector?
+
+@
+#
+.
+*
+*************************
+Consider the following tag snippet.
+
+<div title="too-big">This is first division</div>
+
+Which of the following is the correct way 
+of  applying the style on above div tag having a
+ title attribute  with the  hyphen separated  value?
+ 
+
+
+div[title|="too"]
+{
+		border:5px solid pink;
+}
+
+div[title^="too"]
+{
+		border:5px solid pink;
+}
+div[title$="too"]
+{
+		border:5px solid pink;
+}
+div[title-="too"]
+{
+		border:5px solid pink;
+}
+**************************
+
+The value ________ generates a positioned box whose 
+position is first computed as for the normal flow.
+
+relative
+static
+fixed
+absolute
+
+*****************************
+Consider the following html snippet.
+<style>
+h1 {
+ Line-3   //inser Property Here
+		top: 100px;
+		left: 50px;
+		color: red;
+}
+</style>
+
+Which of the following should be added  
+in above code at Line-3 
+to position the h1 element 
+100px from the top, and 50px from the left, 
+relative to the HTML page?
+
+
+position: absolute;
+position: relative;
+position: static;
+position: fixed;
+**************************************
+Consider the following html snippet.
+<style>
+table
+ {
+    border-collapse: separate;
+    width: 100%;
+    border: 1px solid black;
+} 
+td {
+    border: 1px solid black;
+}
+table.example {
+Line-12    //Insert Code Here.
+}
+</style>
+
+Which of the following  should be inserted
+in above code at Line-12,
+If we want  the value of the table-layout
+ property should be inherited from the parent element?
+
+
+ table-layout: fixed;
+ table-layout: inherit;
+table-layout: auto;
+table-layout: default;
+****************************************
+
+Consider the following code snippet.
+
+.site-wrapper
+{
+	margin-left:10px;
+	height:480px;
+	width:950px;
+	border: solid black;
+	//Insert Line Here
+	//Insert Line Here
+	
+}
+If We want to add the sun.PNG  background image
+in the web page in the following division tag.
+
+<div class="site-wrapper"></div>
+What is the correct way of doing it?
+
+
+background-img: url("images/sun.PNG");
+background-repeat: space repeat;
+
+background-image: url("images/sun.PNG");
+background-repeat: space repeat;
+
+background-image: ("images/sun.PNG");
+background-repeat: space repeat;
+
+background-imageurl: url("images/sun.PNG");
+background-repeat: space ;
+********************************8
+
+
+_____method  moves  the element 
+from its current position, depending on the parameters 
+given for the left (X-axis) and the top (Y-axis) position.
+
+skew()
+ translate()
+ scale()
+ rotate()
+ matrix()
+ 
+ ******************************8
+ 
+ Which  of the following statement is true  the CSS animation?
+ 
+ In CSS 3 animation is an effect , where an element gradually
+ changes its style from one style to another.
+ 
+The animations are created  in the @Keyframe rule .
+
+For animation CSS style  should be present 
+ inside the @keyframes rule.
+ 
+ All of the above.
+
+
+

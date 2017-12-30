@@ -1,0 +1,244 @@
+<div id="search-wrapper">
+    <div class="btn-group margin-top-10 margin-bottom-10" id="advanced-search-group" ng-class="{'open': getStatus('advanced')}">
+
+        <!--Search form toggle-->
+        <button type="button" class="btn dropdown-toggle" id="advanced-search-button"
+                ng-click="toggleDropdown('advanced')"
+                ng-class="{'btn-primary': getStatus('advanced')}">
+            Advanced <span class="caret"></span>
+        </button>
+
+        <!--Search form-->
+        <div class="dropdown-menu dropdown-search-form" id="advanced-search-form" role="menu">
+            <fieldset class="margin-bottom-10 margin-top-10">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="DebtorNumber" class="col-sm-2 control-label voice-brand">Debtor Number</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control input-sm" id="DebtorNumber" ng-model="search.DebtorNumber">
+                        </div>
+                        <div class="col-sm-3"></div>
+                        <label for="DebtorNumberClient" class="col-sm-2 control-label voice-brand">Debtor Number Client</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control input-sm" id="DebtorNumberClient" ng-model="search.DebtorNumberClient">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="margin-bottom-10">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="AdministrationNumber" class="col-sm-2 control-label voice-brand">Administration Number</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control input-sm" id="AdministrationNumber"
+                                   ng-model="search.AdministrationNumber"
+                                   ng-change="alertTooltip('AdministrationNumber', 'ClientNumber', 'You need to enter an Administration Number first.')"
+                                   clear-model="ClientNumber">
+                        </div>
+                        <div class="col-sm-3"></div>
+                        <label for="ClientNumber" class="col-sm-2 control-label voice-brand">Client Number</label>
+                        <div class="col-sm-2">
+                            <div>
+                                <input type="text" class="form-control input-sm" id="ClientNumber"
+                                       ng-model="search.ClientNumber"
+                                       ng-disabled="!search.AdministrationNumber">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="margin-bottom-10">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <label for="TypeOfIdNumber" class="col-sm-2 control-label voice-brand">Type of ID-Number</label>
+                        <div class="col-sm-2">
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" id="TypeOfIdNumber"
+                                       ng-model="search.TypeOfIdNumber"
+                                       ng-change="alertTooltip('TypeOfIdNumber', 'DebtorIdNumber', 'You need to enter a ID Type first.')"
+                                       clear-model="DebtorIdNumber">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-sm btn-group" type="button" ng-click="openHelper('TypeOfIdNumber')">
+                                        <span class="fa fa-question-circle"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <p class="read-only" id="idTypeLong" ng-bind="getLongValue('TypeOfIdNumber')"></p>
+                        </div>
+
+                        <label for="DebtorIdNumber" class="col-sm-2 control-label voice-brand">Debtor ID-Number</label>
+                        <div class="col-sm-2">
+                            <div>
+                                <input type="text" class="form-control input-sm" id="DebtorIdNumber"
+                                       ng-model="search.DebtorIdNumber"
+                                       ng-disabled="!search.TypeOfIdNumber">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="margin-bottom-10">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <label for="DebtorName" class="col-sm-2 control-label voice-brand">Debtor Name</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control input-sm" id="DebtorName" ng-model="search.DebtorName">
+                        </div>
+
+                        <div class="col-sm-1"></div>
+
+                        <div class="col-sm-5">
+
+                            <div class="row">
+                                <label for="NodeType" class="col-sm-3 control-label voice-brand">Type</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" name="NodeType" id="NodeType"
+                                            ng-model="search.NodeType"
+                                            ng-options='type.code as (type.code + " - " + type.name) for type in ownerTypes'>
+                                        <option value="" ng-value="">All</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <label for="DebtorAddress" class="col-sm-3 control-label voice-brand">Address</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control input-sm" id="DebtorAddress" ng-model="search.DebtorAddress">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <label for="DebtorZip" class="col-sm-3 control-label voice-brand">Zip Code</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control input-sm" id="DebtorZip" ng-model="search.DebtorZip">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <label for="debtorCity" class="col-sm-3 control-label voice-brand">City</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control input-sm" id="debtorCity" ng-model="search.DebtorCity">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <label for="DebtorRegion" class="col-sm-3 control-label voice-brand">Region</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control input-sm" id="DebtorRegion" ng-model="search.DebtorRegion">
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <label for="debtorCountry" class="col-sm-3 control-label voice-brand">Country Code</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-sm" maxlength="2" id="DebtorCountry"
+                                               ng-model="search.DebtorCountry">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default btn-sm btn-group" type="button" ng-click="openHelper('DebtorCountry')">
+                                            <span class="fa fa-question-circle"></span>
+                                        </button>
+                                    </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-5">
+                                    <p class="read-only" id='debtorCountryLong' ng-bind="getLongValue('DebtorCountry')"></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="col-sm-12">
+                    <div class="pull-left">
+                        <button class="btn btn-default btn-sm"
+                                ng-click="clearFields()">Clear Fields</button>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-default btn-sm margin-right-10" ng-click="toggleDropdown('advanced')">Close</button>
+                        <div style="display: inline-block">
+                            <button class="btn btn-sm"
+                                    id="advanced-search-submit"
+                                    ng-disabled="!requirements()"
+                                    ng-class="{'btn-primary' :  !requirements(), 'btn-info': requirements()}"
+                                    ng-click="searchDebtors('advanced')">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <!--<div class="btn-group margin-top-10 margin-bottom-10"-->
+         <!--id="basic-search-group"-->
+         <!--ng-class="{'open': getStatus('basic')}">-->
+
+        <!--&lt;!&ndash;Search form toggle&ndash;&gt;-->
+        <!--<button type="button" class="btn dropdown-toggle" id="basic-search-button"-->
+                <!--ng-click="toggleDropdown('basic')"-->
+                <!--ng-class="{'btn-primary': getStatus('basic')}">-->
+            <!--Basic <span class="caret"></span>-->
+        <!--</button>-->
+
+        <!--&lt;!&ndash;Search form&ndash;&gt;-->
+        <!--<form class="dropdown-menu dropdown-search-form" id="basic-search-form" name="basicSearch">-->
+
+            <!--<fieldset class="margin-bottom-10">-->
+                <!--<div class="form-group">-->
+                    <!--<div class="col-sm-4 padding-left-0">-->
+                        <!--<label for="debtorNumber" class="control-label voice-brand">Search by Heller Number</label>-->
+                        <!--<small class="text-gray">One entry per line, numbers only</small>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-8 pull-right">-->
+                        <!--<textarea name="debtorArray" id="debtorArray" rows="12" class="form-control"-->
+                            <!--ng-model="searchArray"></textarea>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</fieldset>-->
+
+            <!--<fieldset>-->
+                <!--<div class="col-sm-12">-->
+                    <!--<div class="pull-left">-->
+                        <!--<button class="btn btn-default btn-sm"-->
+                                <!--ng-click="clearArray()">Clear Entries</button>-->
+                    <!--</div>-->
+                    <!--<div class="pull-right">-->
+                        <!--<button class="btn btn-default btn-sm margin-right-10" ng-click="toggleDropdown('basic')">Close</button>-->
+                        <!--<div tooltip="{{submitTooltip}}" style="display: inline-block">-->
+                            <!--<button class="btn btn-sm"-->
+                                    <!--id="basic-search-submit"-->
+                                    <!--ng-disabled="!searchArray"-->
+                                    <!--ng-class="{'btn-primary' : !searchArray, 'btn-info': searchArray}"-->
+                                    <!--ng-click="searchById()">Submit</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</fieldset>-->
+
+        <!--</form>-->
+    <!--</div>-->
+</div>
+
+<!--Temporary placeholder thing-->
+<div class="loading" ng-if="isLoading()">
+    <div class="text-center margin-top-30">
+        <span class="fa fa-refresh spin loading-spinner"></span>
+        <h2 class="fadePulse loading-template">Loading...</h2>
+    </div>
+</div>
+
+<div ng-if="searchResults && searchResults.length === 0">
+    <div ng-include="'views/no-results.html'"></div>
+</div>
+
+<div ng-if="searchResults && searchResults.length > 0">
+    <div ng-include="'views/search-results.html'"></div>
+</div>

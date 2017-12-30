@@ -1,0 +1,52 @@
+ <!-- The compile() function sets a border on the HTML element. This is only executed once because the compile() function is only executed once.
+
+The link() function replaces the content of the HTML element, and sets the background color to yellow. 
+
+There is no particular reason why we need to set the border in the compile() function,
+ and the background color in the link() function. 
+ Both could have been set in the compile() function, or both in the link() function. 
+
+If set in the compile() function they would only have been set once. If set in the link() function they would be set every time the HTML element is bound to data in the $scope object. This might be useful if you needed to set the border and background color differently depending on data in the $scope object.  -->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="myapp" >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Compile Service Demo</title>		
+</head>
+<body bgcolor="pink">
+
+<div ng-controller="MyController" >
+    <userinfo >This will be replaced</userinfo>
+</div>
+ <userinfo >This will be replaced</userinfo>
+	<hr/>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+
+<script type="text/javascript" >
+
+    var myapp = angular.module("myapp", []);
+	
+    myapp.directive('userinfo', function() {
+        var directive = {};
+        directive.restrict = 'E'; /* restrict this directive to elements */
+        directive.compile = function(element, attributes) {
+            element.css("border", "1px solid #cccccc");
+            var linkFunction = function($scope, element, attributes) {
+                element.html("This is the new content: " + $scope.firstName);
+                element.css("background-color", "#ffff00");
+            }
+            return linkFunction;
+        }
+        return directive;
+    });
+    myapp.controller("MyController", function($scope, $http) {
+	$scope.firstName = "Vaishali";
+    });
+
+
+</script>
+
+</html>

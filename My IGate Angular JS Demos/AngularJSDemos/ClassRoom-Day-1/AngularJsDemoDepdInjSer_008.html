@@ -1,0 +1,118 @@
+<!-- ******What is Injector Service?*****************************
+It is  service  single ton object used for dependency injection.
+Suppose we have var app=angular.module(“myapp”,[]);
+Function EmpControllee($scope){}. who create object of $scope in a controller. 
+So injector service create the object of controller.
+Angular uses injector  for managing  look up and instantiation of dependency
+It is responcible for instantiation of module,controller and directives and it is used in framework.
+When any of our modules boot up at run time, the injector is responsible for actually instantiating
+the instance of the object and passing in any of its required dependencies.
+
+Chrome*************************
+Adding[Loading] 2 module in injector
+var $injector=angular.injector(['ng','myApp']);
+<<<undefined>>>
+****************************************
+Annotate method is used to display  what all services available and has to be injected  in the module.
+$injector.annotate(function($q,$http){});
+<<<["$q", "$http"]>>>
+*************************************
+$injector.has('$http');
+true
+$injector.has('greeter');
+true
+$injector.has('$controller');
+true
+$injector.has('$rootScope');
+<<<true>>>
+$injector.has('$scope');
+<<<false>>>
+*********************************************
+$injector.invoke(function(){console.log('Invoked');});
+***************************************
+var http=$injector.get('$http');
+<<<undefined>>>
+***************************************
+var q=$injector.get('$q');
+<<<undefined>>>
+*******************************
+var controller=$injector.get('$controller');
+<<<undefined>>>
+*******************************************
+var greeter=$injector.get('greeter');
+<<<undefined>>>
+***************************
+var rootScope=$injector.get('$rootScope');
+<<<undefine>>>
+*****************************************
+rootScope.globalVariable='Globle Var';
+<<<"Globle Var">>>
+******************************************
+var $scope=rootScope.$new();
+<<<undefined>>>
+***********************************
+$scope.scopeVariable="Scope Varibale";
+<<<"Scope Varibale">>>
+***********************************************************************
+var MyController=controller('MyController',{$scope:$scope});
+<<undefined>>>
+**************************************
+$scope.sayHello=function(){ greeter.greet('Happy Holli');};
+<<<function (){   greeter.greet('Happy  Holli');}>>>
+************************************************
+$scope.sayHello();<<function invoked>>>
+***************************************************************
+$injector.instantiate(function($http){});
+<<<Constructor {}>>
+$injector.instantiate(function(greeter){});
+<<<Constructor {}>>>
+var mynewgreeterObj=$injector.instantiate(function(greeter){});
+<<<undefined>>>
+mynewgreeterObj.greet=$scope.sayHello();
+<<<undefined>>>
+-->
+<html ng-app="myApp">
+	<head>
+	<title> Dependancy Injection Demo</title>
+	</head>
+	
+<body  bgcolor="pink">
+	
+	<div ng-controller="MyController">
+			<button ng-click="sayHello()"> Hello EveryOne..../</button>
+	</div>
+</body>
+
+<script src="Scripts/angular.js"></script>
+<script  type="text/javascript">
+ 
+ var myApp=angular.module("myApp",[]);
+ 
+ myApp.factory('greeter',function(){
+				return{
+					      greet: function(msg){alert(msg);}				
+					  }
+									} 
+			  );
+			  
+var MyController=myApp.controller("MyController",function($scope,$rootScope,greeter){
+
+if($rootScope.globalVariable != undefined)
+	{	
+		alert($rootScope.globalVariable);
+	}
+	
+	if($scope.scopeVariable != undefined)
+	{	
+		alert($scope.scopeVariable);
+	}
+
+        $scope.sayHello=function()
+		{
+		   greeter.greet('Happy New Year');
+		}
+	}
+);
+</script>
+
+</html>

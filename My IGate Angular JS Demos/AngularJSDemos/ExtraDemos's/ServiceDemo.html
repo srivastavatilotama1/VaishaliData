@@ -1,0 +1,81 @@
+<!-- chrome.exe -allow-file-access-from-files -disable-web-security -->
+<html  ng-app="myApp">
+	<head>
+	</head>
+	
+<body  bgcolor="pink">
+	<div ng-controller="ServiceController">
+			<label for="username">
+				Type in a GitHub username
+			</label>
+			<input type="text"	ng-model="username"
+					placeholder="Enter a GitHub username" />
+			<ul>
+				<li ng-repeat="event in events">
+					<!--
+						event.actor and event.repo are returned
+						by the github API. To view the raw
+							API, uncomment the next line:
+						-->
+						<!-- {{ event | json }} -->
+						{{ event.actor.login }} {{ event.repo.name }}
+</li>
+</ul>
+</div>
+	
+</body>
+
+<script src="Scripts/angular.js"></script>
+<script  type="text/javascript">
+
+	angular.module('myApp.services', [])
+				.factory('githubService', function($http) {
+				var githubUrl = 'https://api.github.com',
+					githubUsername;
+						var runUserRequest = function(path) {
+						// Return the promise from the $http service
+							// that calls the Github API using JSONP
+				return $http({
+							method: 'JSONP',
+								url: githubUrl + '/users/' +
+							githubUsername + '/' +
+								path + '?callback=JSON_CALLBACK'
+								});
+							}
+			// Return the service object with two methods
+			// events
+			// and setUsername
+				return {
+					events: function() {
+					return runUserRequest('events');
+						},
+					setUsername: function(username) {
+							githubUsername = username;
+					}
+				};
+			});
+
+			angular.module('myApp', ['myApp.services'])
+	            .controller('ServiceController',
+		function($scope, $timeout, githubService) {
+			// The same example as above, plus
+			// the $timeout service
+				var timeout;
+				$scope.$watch('username', function(newUserName) {
+				if (newUserName) {
+				// If there is a timeout already
+				// in progress
+					if (timeout) $timeout.cancel(timeout);
+					timeout = $timeout(function() {
+						githubService.events(newUserName)
+								.success(function(data, status) {
+								$scope.events = data.data;
+						});
+				}, 350);
+				}
+				});
+				});
+ 
+</script>
+
+</html>

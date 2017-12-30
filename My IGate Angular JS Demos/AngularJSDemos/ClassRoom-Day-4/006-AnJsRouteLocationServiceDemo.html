@@ -1,0 +1,65 @@
+<html lang="en" ng-app="routeApp">
+<head>
+<title>Routing - using Location Service</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+	<div ng-controller="MainController">
+		<input type="button" value="Load One" ng-click="LoadPage('one')"/>
+		<input type="button" value="Load Two" ng-click="LoadPage('two')"/>
+		<input type="button" value="Load Three" ng-click="LoadPage('three')"/>
+		
+		<div ng-view>
+			
+		</div>
+		
+	<div>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+<script type="text/javascript" src="Scripts/angular-route.js"></script>
+<script >
+var app = angular.module('routeApp',['ngRoute']);
+app.config(function($routeProvider){
+	$routeProvider
+		//?country=India&state=Karnataka#Bangalore
+		.when('/one',
+		{
+			templateUrl:'partials/One.html',
+			controller:'RouteController',			
+		})
+		.when('/two',
+		{
+			templateUrl:'partials/Two.html',
+			controller:'RouteController',
+			
+		})
+		.when('/three',
+		{
+			templateUrl:'partials/Three.html',
+			controller:'RouteController',			
+		})		
+});
+
+app.controller("MainController",function($scope,$location){
+	
+	$scope.LoadPage = function(page){
+		$location.replace(); //Clears the history 
+		$location.url("/"+page);
+	}
+});
+
+app.controller("RouteController",function($scope,$location){
+	console.log($location);
+	$scope.absUrl = $location.absUrl();
+	$scope.protocol = $location.protocol();
+	$scope.port = $location.port();
+	$scope.host = $location.host();
+	$scope.path = $location.path();
+	$scope.search = $location.search();
+	$scope.hash = $location.hash();
+	$scope.url = $location.url();
+	
+});
+
+</script>
+</html>

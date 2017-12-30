@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+	     <title>Leave Application </title>
+		 <script src='Section-2.js'></script>
+		 <link href="Section-2.css" type="text/css" rel="stylesheet"/>
+	</head>
+    <body>
+	    <form name='fm' method='post' onsubmit='return validate(this)' action='javascript:this.preventDefault()'>
+		
+			<table align='center'width='70%'border='2' id='table1' cellpadding="10" >
+			<caption><h3 id='head1'>Welcome to Leave Management System</h3></caption>
+			<tr>
+			<td >Enter Employee Id:<span class="msgcolor">*</td>
+			<td><input type='text' name='eid' id='eid' placeholder='Enter Employee Id' pattern="[0-9]{6}" 
+			title='Enter 6-digit employee Id'required autofocus></span></td>
+			</tr>
+			<tr>
+			<td >Choose Leave Type:<span class="msgcolor">*</td>
+			<td>
+			<select name="leave_type" id="leave_type" required>
+			<option value="-1" selected>Select leave type</option>
+			<option value="Earned_leave">Earned leave</option>
+			<option value="attendance">Request for attendance</option>
+			<option value="Loss_of_pay">Loss of pay</option>
+			</select><span id="msgtype" class="msgcolor"/></span>
+			</td>
+			</tr>
+			<tr>
+			<td >Choose Leave reason:<span class="msgcolor">*</td>
+			<td>
+			<select name="leave_reason" id="leave_reason" >
+			<option value="-1" selected>Select leave reason</option>
+			<option value="Personal">Personal</option>
+			<option value="Sick">Sick</option>
+			<option value="Out_of_station">Out of station</option>
+			</select><span id="msgreason" class="msgcolor"/></span>
+			</td>
+			</tr>
+			<tr>
+			<td >Choose leave start date:<span class="msgcolor">*</td>
+			<td><input type='Date' name='start' id='start' placeholder=""><span id="msgstart" class="msgcolor"/>
+			</span></td>
+			</tr>
+			<tr>
+			<td >Choose leave end date:<span class="msgcolor">*</td>
+			<td><input type='Date' name='end' id='end' placeholder=''><span id="msgend" class="msgcolor"/>
+			</span></td>
+			</tr>
+			<tr>
+			<td colspan='2' align='center'><input type='submit' name='submit' id='submit' value="Apply Leave" >
+			
+			</tr>
+			</table>
+			
+		</form>
+	    
+    </body>
+</html>

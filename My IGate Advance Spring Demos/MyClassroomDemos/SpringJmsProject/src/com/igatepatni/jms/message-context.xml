@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:amq="http://activemq.apache.org/schema/core"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/jms 
+                           http://www.springframework.org/schema/jms/spring-jms.xsd
+                           http://activemq.apache.org/schema/core 
+                           http://activemq.apache.org/schema/core/activemq-core.xsd">
+ 
+    <context:component-scan base-package="com.igatepatni.jms" />
+    <!-- For any message broker configuring connection factory  use this tag. -->
+   <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory"
+    p:brokerURL="tcp://localhost:61616" />
+   
+   
+   <!-- for only active mq as message broker use following tag 
+   
+   <amq:connectionFactory id="connectionFactory" brokerURL="tcp://localhost:61616"/>    -->
+  
+  <bean id="destination" class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg value="com.igatepatni.myqueue" />
+  </bean>
+    
+  <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate"
+    p:connectionFactory-ref="connectionFactory"
+    p:defaultDestination-ref="destination" />
+  
+  <!--<bean id="messageProducer" class="com.igatepatni.jms.JMSMessageProducer"
+    p:jmsTemplate-ref="jmsTemplate" />
+    
+  <bean id="messageListener" class="com.igatepatni.jms.JMSMessageConsumer" />
+  
+  -->
+ <!-- This tag configures the Message consumer --> 
+  <jms:listener-container concurrency="5-10">
+    <jms:listener destination="com.igatepatni.myqueue" ref="messageListener"/>
+  </jms:listener-container>
+
+    
+</beans>

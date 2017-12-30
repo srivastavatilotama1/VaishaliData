@@ -1,0 +1,26 @@
+<html ng-app="filterApp">
+	<head>
+	<title> Custom Filter Demo</title>
+	</head>
+	
+<body  bgcolor="pink">
+	<h3>Capitalize First Char Of Given String Demo</h3>
+	
+	{{'vaishali'|capitalizeChar}}
+</body>
+
+<script src="Scripts/angular.js"></script>
+<script  type="text/javascript">
+ 
+var  filterApp=angular.module('filterApp',[])	;
+
+	filterApp.filter('capitalizeChar', function(){	
+	return	function(input){
+					if(input)
+			return input[0].toUpperCase()+ input.slice(1);
+							}	
+										}		
+	);
+</script>
+
+</html>

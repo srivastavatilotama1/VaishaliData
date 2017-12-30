@@ -1,0 +1,182 @@
+<!-- chrome.exe -allow-file-access-from-files -disable-web-security -->
+
+<html  ng-app="myApp">
+	<head>
+	</head>	
+<body  bgcolor="pink">
+		<div ng-controller="EmpController">
+				{{ empName }}
+				<button ng-click="setEmpName()">Set Employee Name</button>
+				<div ng-controller="ManagerController">
+					{{ empName }}
+					<button ng-click="setManagerName()">Set Manager Name</button>
+				</div>
+		</div>
+		<hr/>
+		</hr/>
+		
+		<div ng-controller="EmpController">
+				{{ empName }}
+				<button ng-click="setEmpName()">Set Employee Name</button>				
+		</div>
+		<div ng-controller="ManagerController">
+					{{ empName }}
+					<button ng-click="setManagerName()">Set Manager Name</button>
+		</div>
+		
+		
+		<h3>**************With CarController****************</h3>
+			
+		<div	ng-init="carName= 'Honda City'"></div>
+		<div ng-init="carMialage = '1100CC'">
+				 1 Car Average: {{ carAverage }}
+				<div ng-init="carAverage = '20Km/Hr'"  ng-controller="CarController">
+					2 Car Average:  {{ carAverage }}
+					<div ng-init="isLuxuryCar">
+					3	Car Average:: {{ carAverage }}
+					</div>
+				</div>
+		</div>
+		
+		<h3>**************With NextCarController****************</h3>
+			
+		<div	ng-init="carName= 'Honda City'"></div>
+		<div ng-init="carMialage = '1100CC'">
+				 1  Without Controller Car Average : {{ carAverage }}
+				<div ng-init="carAverage = '20Km/Hr'"  ng-controller="CarController">
+					2 CarController Car Average :  {{ carAverage }}
+					<div ng-init="isLuxuryCar" ng-controller="NextCarController">
+					3	In NextController Car Average:  {{ carAverage }}
+					</div>
+				</div>
+		</div>
+		
+		<h3>With Directive**************scope is optional. 
+		
+		To set properties on the inner scope of our directive, we have a few options. The simplest option is to
+	simply use the existing scope currently provided by the controller (ng-controller) inside of which
+	we’re nested.
+			While simple, however, sharing state leaves us vulnerable. If that controller is removed or if a
+			property with the name myUrl is later defined on its scope, we’ll be forced to change our code,
+			which is costly and frustrating.
+				To overcome this common issue, Angular provides the ability to 
+				create a new child scope or create
+					an isolate scope.	In contrast to		
+		It can be set to true or to an object, {}. By default,
+		it is set to false.When scope is set to true, a new scope object
+		is created that prototypically inherits from its parent scope.
+		When we set the scope of our directive to a clean object with its own properties,
+Introduction to Directives 72
+scope: {
+someProperty: "needs to be set"
+}
+We’re creating what is referred to as an isolate scope. Essentially, that means the directive gets
+its own $scope object, which we can only use inside other methods of the directive or inside the
+directive’s template string:
+		
+If multiple</h3>
+			
+		<div	ng-init="carName= 'Honda City'"></div>
+		<div ng-init="carMialage = '1100CC'">
+				 1  Without Controller Car Average : {{ carAverage }}
+				<div ng-init="carAverage = '20Km/Hr'"  ng-controller="CarController">
+					2 CarController Car Average :  {{ carAverage }}
+					<div ng-init="isLuxuryCar" ng-controller="NextCarController">
+					3	In NextController Car Average:  {{ carAverage }}<br>
+							4 Outside Directive Car Color Is : {{ carColor }}
+								<div set-colorr ng-init="carColor = 'wow, Red is cool'">
+									5 Inside Directive  Car Color Is : {{ carColor }}
+								</div>
+					</div>
+				</div>
+		</div>
+		<hr/>
+		<div	ng-init="carName= 'Honda City'"></div>
+		<div ng-init="carMialage = '1100CC'">
+				 1  Without Controller Car Average : {{ carAverage }}
+				<div ng-init="carAverage = '20Km/Hr'"  ng-controller="CarController">
+					2 CarController Car Average :  {{ carAverage }}
+					<div ng-init="isLuxuryCar" ng-controller="NextCarController">
+					3	In NextController Car Average:  {{ carAverage }}<br>
+							4 Outside Directive Car Color Is : {{ carColor }}
+								<div set-colorb ng-init="carColor = 'wow, Blue is cool'">
+									5 Inside Directive  Car Color Is : {{ carColor }}
+								</div>
+					</div>
+				</div>
+		</div>		
+		<hr/>
+		
+		<div	ng-init="carName= 'Honda City'"></div>
+		<div ng-init="carMialage = '1100CC'">
+				 1  Without Controller Car Average : {{ carAverage }}
+				<div ng-init="carAverage = '20Km/Hr'"  ng-controller="CarController">
+					2 CarController Car Average :  {{ carAverage }}
+					<div ng-init="isLuxuryCar" ng-controller="NextCarController">
+					3	In NextController Car Average:  {{ carAverage }}<br>
+							4 Outside Directive Car Color Is : {{ carColor }}
+								<div set-colorg ng-init="carColor = 'wow, Green is cool'">
+									
+								</div>
+					</div>
+				</div>
+		</div>		
+		<hr/>
+		
+</body>
+
+<script src="Scripts/angular.js"></script>
+<script  type="text/javascript">
+				angular.module('myApp', [])
+					.controller('EmpController', function($scope) {
+					$scope.empName = 'UnKnown';					
+					$scope.setEmpName = function() {					
+					$scope.empName = 'Emp Name Is Vaishali';
+												};
+					})					
+					
+					.controller('ManagerController', function($scope) {
+							$scope.setManagerName = function() {
+								// sets {{ someBareValue }} inside ChildController
+								$scope.empName = 'Manager name Is Samir';
+															};
+							}) 
+							
+					.controller('CarController', function($scope) {
+							
+					}) 
+					.controller('NextCarController', function($scope) {
+							
+					})
+					
+					.directive('setColorr', function() {
+					return {
+							restrict: 'A',
+								scope: false,
+								template: '<div>This is Set Through directive  {{ carColor }}</div>'
+							}
+							})
+							
+							.directive('setColorb', function() {
+					return {
+							restrict: 'A',
+								scope: true,
+								template: '<div>This is Set Through directive  {{ carColor }}</div>'
+							}
+							})
+							
+							.directive('setColorg', function() {
+					return {
+							restrict: 'A',
+								scope: {},
+								template: '<div>This is Set Through directive  {{ carColor }}</div>'
+							}
+							})
+							
+							
+							
+</script>
+</html>
+ 
+ 
+ 

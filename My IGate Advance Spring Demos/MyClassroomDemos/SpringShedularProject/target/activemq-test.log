@@ -1,0 +1,76 @@
+2015-04-09 12:44:11,550 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@fc9d2b: startup date [Thu Apr 09 12:44:11 IST 2015]; root of context hierarchy
+2015-04-09 12:44:11,612 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [spring-scheduler.xml]
+2015-04-09 12:44:12,034 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a88254: defining beans [taskExecutor,taskExecutorExample]; root of factory hierarchy
+2015-04-09 12:44:12,127 [main           ] INFO  ThreadPoolTaskExecutor         - Initializing ExecutorService  'taskExecutor'
+2015-04-09 12:45:02,893 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3461d1: startup date [Thu Apr 09 12:45:02 IST 2015]; root of context hierarchy
+2015-04-09 12:45:02,940 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [Spring-Quartz.xml]
+2015-04-09 12:45:03,252 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c3b3af: defining beans [runMeTask,runMeJob,simpleTrigger,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+2015-04-09 12:45:03,252 [main           ] INFO  DefaultListableBeanFactory     - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c3b3af: defining beans [runMeTask,runMeJob,simpleTrigger,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+2015-04-09 12:47:29,841 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5388b5: startup date [Thu Apr 09 12:47:29 IST 2015]; root of context hierarchy
+2015-04-09 12:47:29,904 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [Spring-Quartz.xml]
+2015-04-09 12:47:30,231 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@12f717c: defining beans [runMeTask,runMeJob,simpleTrigger,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+2015-04-09 12:47:30,231 [main           ] INFO  DefaultListableBeanFactory     - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@12f717c: defining beans [runMeTask,runMeJob,simpleTrigger,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+2015-04-09 12:48:06,190 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3461d1: startup date [Thu Apr 09 12:48:06 IST 2015]; root of context hierarchy
+2015-04-09 12:48:06,237 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [Spring-Quartz.xml]
+2015-04-09 12:48:06,533 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c3b3af: defining beans [runMeTask,runMeJob,simpleTrigger,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+2015-04-09 12:48:06,533 [main           ] INFO  DefaultListableBeanFactory     - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c3b3af: defining beans [runMeTask,runMeJob,simpleTrigger,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+2015-04-09 12:50:27,607 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3461d1: startup date [Thu Apr 09 12:50:27 IST 2015]; root of context hierarchy
+2015-04-09 12:50:27,653 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [Spring-Quartz.xml]
+2015-04-09 12:50:27,950 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@149d226: defining beans [runMeTask,runMeJob,simpleTrigger,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+2015-04-09 12:50:28,106 [main           ] INFO  QuartzScheduler                - Quartz Scheduler v.1.5.2 created.
+2015-04-09 12:50:28,106 [main           ] INFO  RAMJobStore                    - RAMJobStore initialized.
+2015-04-09 12:50:28,106 [main           ] INFO  StdSchedulerFactory            - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2015-04-09 12:50:28,106 [main           ] INFO  StdSchedulerFactory            - Quartz scheduler version: 1.5.2
+2015-04-09 12:50:28,106 [main           ] INFO  QuartzScheduler                - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@18961f2
+2015-04-09 12:50:28,106 [main           ] INFO  DefaultLifecycleProcessor      - Starting beans in phase 2147483647
+2015-04-09 12:50:28,106 [main           ] INFO  SchedulerFactoryBean           - Starting Quartz Scheduler now
+2015-04-09 12:50:28,106 [main           ] INFO  QuartzScheduler                - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2015-04-13 14:39:54,540 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5388b5: startup date [Mon Apr 13 14:39:54 IST 2015]; root of context hierarchy
+2015-04-13 14:39:54,710 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [Spring-Quartz.xml]
+2015-04-13 14:39:55,210 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c3b3af: defining beans [runMeTask,runMeJob,simpleTrigger,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+2015-04-13 14:39:55,438 [main           ] INFO  QuartzScheduler                - Quartz Scheduler v.1.5.2 created.
+2015-04-13 14:39:55,439 [main           ] INFO  RAMJobStore                    - RAMJobStore initialized.
+2015-04-13 14:39:55,439 [main           ] INFO  StdSchedulerFactory            - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2015-04-13 14:39:55,439 [main           ] INFO  StdSchedulerFactory            - Quartz scheduler version: 1.5.2
+2015-04-13 14:39:55,441 [main           ] INFO  QuartzScheduler                - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@1f0caaa
+2015-04-13 14:39:55,446 [main           ] INFO  DefaultLifecycleProcessor      - Starting beans in phase 2147483647
+2015-04-13 14:39:55,447 [main           ] INFO  SchedulerFactoryBean           - Starting Quartz Scheduler now
+2015-04-13 14:39:55,447 [main           ] INFO  QuartzScheduler                - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2015-04-13 14:43:50,422 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5388b5: startup date [Mon Apr 13 14:43:50 IST 2015]; root of context hierarchy
+2015-04-13 14:43:50,474 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [Spring-Quartz.xml]
+2015-04-13 14:43:50,816 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@12f717c: defining beans [runMeTask,runMeJob,simpleTrigger,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+2015-04-13 14:43:50,961 [main           ] INFO  QuartzScheduler                - Quartz Scheduler v.1.5.2 created.
+2015-04-13 14:43:50,962 [main           ] INFO  RAMJobStore                    - RAMJobStore initialized.
+2015-04-13 14:43:50,962 [main           ] INFO  StdSchedulerFactory            - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2015-04-13 14:43:50,962 [main           ] INFO  StdSchedulerFactory            - Quartz scheduler version: 1.5.2
+2015-04-13 14:43:50,964 [main           ] INFO  QuartzScheduler                - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@1439515
+2015-04-13 14:43:50,969 [main           ] INFO  DefaultLifecycleProcessor      - Starting beans in phase 2147483647
+2015-04-13 14:43:50,969 [main           ] INFO  SchedulerFactoryBean           - Starting Quartz Scheduler now
+2015-04-13 14:43:50,969 [main           ] INFO  QuartzScheduler                - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2015-04-13 15:11:54,199 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3c35fd: startup date [Mon Apr 13 15:11:54 IST 2015]; root of context hierarchy
+2015-04-13 15:11:54,245 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [spring-scheduler.xml]
+2015-04-13 15:11:54,589 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17da438: defining beans [taskExecutor,taskExecutorExample]; root of factory hierarchy
+2015-04-13 15:11:54,729 [main           ] INFO  ThreadPoolTaskExecutor         - Initializing ExecutorService  'taskExecutor'
+2015-04-13 15:12:25,805 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3c35fd: startup date [Mon Apr 13 15:12:25 IST 2015]; root of context hierarchy
+2015-04-13 15:12:25,851 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [spring-scheduler.xml]
+2015-04-13 15:12:26,148 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17da438: defining beans [taskExecutor,taskExecutorExample]; root of factory hierarchy
+2015-04-13 15:12:26,210 [main           ] INFO  ThreadPoolTaskExecutor         - Initializing ExecutorService  'taskExecutor'
+2015-04-13 15:12:52,216 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@b29c9d: startup date [Mon Apr 13 15:12:52 IST 2015]; root of context hierarchy
+2015-04-13 15:12:52,263 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [spring-scheduler.xml]
+2015-04-13 15:12:52,590 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@460d4: defining beans [taskExecutor,taskExecutorExample]; root of factory hierarchy
+2015-04-13 15:12:52,668 [main           ] INFO  ThreadPoolTaskExecutor         - Initializing ExecutorService  'taskExecutor'
+2015-04-13 15:13:28,720 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3c35fd: startup date [Mon Apr 13 15:13:28 IST 2015]; root of context hierarchy
+2015-04-13 15:13:28,767 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [spring-scheduler.xml]
+2015-04-13 15:13:29,064 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17da438: defining beans [taskExecutor,taskExecutorExample]; root of factory hierarchy
+2015-04-13 15:13:29,110 [main           ] INFO  ThreadPoolTaskExecutor         - Initializing ExecutorService  'taskExecutor'
+2015-04-13 15:36:26,847 [main           ] INFO  ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@101e178: startup date [Mon Apr 13 15:36:26 IST 2015]; root of context hierarchy
+2015-04-13 15:36:26,893 [main           ] INFO  XmlBeanDefinitionReader        - Loading XML bean definitions from class path resource [Spring-Quartz.xml]
+2015-04-13 15:36:27,237 [main           ] INFO  DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@183cee3: defining beans [runMeTask,runMeJob,simpleTrigger,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+2015-04-13 15:36:27,361 [main           ] INFO  QuartzScheduler                - Quartz Scheduler v.1.5.2 created.
+2015-04-13 15:36:27,361 [main           ] INFO  RAMJobStore                    - RAMJobStore initialized.
+2015-04-13 15:36:27,361 [main           ] INFO  StdSchedulerFactory            - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2015-04-13 15:36:27,361 [main           ] INFO  StdSchedulerFactory            - Quartz scheduler version: 1.5.2
+2015-04-13 15:36:27,361 [main           ] INFO  QuartzScheduler                - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@7d58ae
+2015-04-13 15:36:27,361 [main           ] INFO  DefaultLifecycleProcessor      - Starting beans in phase 2147483647
+2015-04-13 15:36:27,361 [main           ] INFO  SchedulerFactoryBean           - Starting Quartz Scheduler now
+2015-04-13 15:36:27,361 [main           ] INFO  QuartzScheduler                - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.

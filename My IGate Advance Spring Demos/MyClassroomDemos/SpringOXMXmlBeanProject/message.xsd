@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        targetNamespace="http://www.example.org/message" 
+        xmlns:tns="http://www.example.org/message" 
+        elementFormDefault="qualified">
+
+    <complexType name="message">
+    	<sequence>
+    		<element name="data" type="string" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    		<element name="senderId" type="string" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    		<element name="size" type="int" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    		<element name="messageType" type="tns:messageType" minOccurs="1" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="messageType">
+    	<sequence>
+    		<element name="value" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

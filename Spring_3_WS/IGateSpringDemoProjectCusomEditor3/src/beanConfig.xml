@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" >
+
+    <bean class="com.igate.msg.InitHelloWorld" />
+    
+	<bean id="placeHolderConfig" 
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location"><value>lang.properties</value></property>
+	</bean>
+    
+    <bean id="messageSource"
+        class="org.springframework.context.support.ResourceBundleMessageSource" >
+        <property name="basename" >
+            <value>applicationResources</value>
+        </property>
+    </bean>   
+    
+    <bean
+        id="HelloWorldBean"
+        class="com.igate.msg.HelloWorld"
+        destroy-method="destroy"
+        init-method="init" >
+
+        <property name="messageSource" >
+            <ref bean="messageSource" />
+        </property>
+        <property name="country"><value>${country}</value></property>
+		<property name="lang"><value>${lang}</value></property>
+    </bean>
+
+    
+    
+    <bean id="customEditorConfigurer"
+		class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="java.sql.Date">
+					<bean class="com.igate.intro.SQLDateEditor" />
+				</entry>
+			</map>
+		</property>
+
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employees>
+    <employee>
+        <department deptId="IT">
+            <deptName>IT Department</deptName>
+        </department>
+        <empId>12345</empId>
+        <empName>Vaishali</empName>
+    </employee>
+    <employee>
+        <department deptId="Act">
+            <deptName>Acout Department</deptName>
+        </department>
+        <empId>1111</empId>
+        <empName>Priti</empName>
+    </employee>
+</employees>

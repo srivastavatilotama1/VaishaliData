@@ -1,0 +1,50 @@
+<html ng-app="myApp">
+	<head>
+		<title> Dependancy Injection Demo</title>
+	</head>	
+<body  bgcolor="pink"    data-ng-controller="ServiceController">
+<h2> Data Accessed  from json using http request</h3>
+	<ul data-ng-repeat="tempGuest in guestList" >
+		 <li>{{tempGuest.Name}}</li>
+			</ul>	
+</body>
+
+<script src="Scripts/angular.js"></script>
+<script  type="text/javascript">
+
+var app=angular.module("myApp",[]);
+   
+   app.factory("loadGuest",function($http,$log){
+    return {
+	   retrieveGuest:function(successObj){	   
+	      var promise=  $http({
+					method:'GET',
+					//url:'data/guests.json' 
+					url:'https://api.mongolab.com/api/1/databases/igateangulardb/collections/employees?apiKey=Y6KaLZK8I2pEA-zgfk8oGNP6v8IVOLFm'
+				  });
+		 promise .success(function(data,status)
+									{
+				        successObj(data);
+						$log.info(data,status);
+						}				  
+				);						  
+		promise.error(function(data,status){
+				            $log.info(data,status);
+				             }	
+					)	   
+	             }
+	     }
+                                             }   
+          );
+		  
+		  app.controller("ServiceController",function($scope,loadGuest){		  
+		  loadGuest.retrieveGuest(function(data){
+		  $scope.guestList=data;
+												}	 		  
+								);
+																		} 
+						);
+ 
+</script>
+
+</html>

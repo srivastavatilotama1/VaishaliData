@@ -1,0 +1,8 @@
+http://localhost:8081/SpringRestDemo/jsp/RestfulClient.jsp
+http://localhost:8081/SpringRestDemo/employee/12345
+
+...........get all employees...........
+http://localhost:8081/SpringRestDemo/employee/employees
+
+**********8To AddEmp***********************8
+http://localhost:8081/SpringRestDemo/employee/addEmp

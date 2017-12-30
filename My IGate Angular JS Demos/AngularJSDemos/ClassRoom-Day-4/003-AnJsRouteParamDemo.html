@@ -1,0 +1,41 @@
+<!-- chrome.exe -allow-file-access-from-files -disable-web-security  -->
+<html ng-app="routeApp">
+<head>
+<title>Routing - Basics</title>
+</head>
+<body>
+	<div ng-view>		
+	</div>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+<script type="text/javascript" src="Scripts/angular-route.js"></script>
+<script type="text/javascript">
+		var app = angular.module('routeApp',['ngRoute']);
+		app.config(function($routeProvider){
+			$routeProvider
+					.when('/',                            
+					{
+						templateUrl:"partials/Sample.html",
+						controller:"SampleController"
+					})
+					.when('/pagetwo',						
+					{
+						template:'<div>This is Page <strong>TWO </strong></div>'
+					})					
+					.when('/calender/:month/:day/:year',
+					{
+						templateUrl:"partials/Calender.html",
+						controller:"CalenderController"
+					})					
+				.otherwise({
+					template:"<h3>There is no Page here</h3>"
+						});					
+			
+});
+app.controller("CalenderController",function($scope,$routeParams){
+$scope.model={message:" Date Is : "+$routeParams.day+" / "+$routeParams.month+"  /   "+$routeParams.year};
+});
+app.controller("SampleController",function($scope){
+});
+</script>
+</html>

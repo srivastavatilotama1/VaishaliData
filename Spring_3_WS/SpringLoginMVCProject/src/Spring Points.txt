@@ -1,0 +1,5 @@
+What is fraework?
+diffv between jdbctemplet and simple jdbctemplet and named jdbc templet.
+lofecycle of spring framework.
+diff between callbacks and templet?
+internalview resolver.

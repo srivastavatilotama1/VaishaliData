@@ -1,0 +1,38 @@
+<!-- It’s possible to register an existing value as a service that we can later inject into other parts of our
+app as a service. For instance, let’s say we want to set an apiKey for a back-end service. We can store
+that constant value using constant(). -->
+
+<html ng-app="serviceApp">
+<head>
+<title>Service - Custom Service</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+
+	<h1>Creating Custom Service Using Factory</h1>
+	<div ng-app="serviceApp" ng-controller="ServiceCntrl">
+		<div>{{mycompany}} - {{mycompanyLocation}}</div>
+	</div>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+
+<script type="text/javascript">
+
+	var app = angular.module("serviceApp", []);
+	
+	app.constant('Name', 'IGATE ');
+	app.constant('Location', 'Chennai');
+	
+	app.config(function(Name) {
+		//We can resolve companyName here
+	});
+	app.config(function(Location) {
+		//We can resolve Location here
+	});
+
+	app.controller('ServiceCntrl', function($scope, Name,Location) {
+		$scope.mycompany = Name;
+		$scope.mycompanyLocation = Location;
+	})
+</script>
+</html>

@@ -1,0 +1,10 @@
+DROP table emp cascade constraints;
+
+CREATE TABLE emp (emp_id NUMBER PRIMARY KEY,emp_name VARCHAR2(20));
+
+INSERT INTO emp VALUES(112081,'Vaishali');
+INSERT INTO emp VALUES(222,'Anjulata');
+INSERT INTO emp VALUES(333,'Zainab');
+INSERT INTO emp VALUES(444,'Kavita');
+
+commit;

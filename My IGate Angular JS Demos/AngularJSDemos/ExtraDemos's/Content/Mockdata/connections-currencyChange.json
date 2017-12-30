@@ -1,0 +1,158 @@
+{
+  "ancestors": [
+    {
+      "DebtorName": "Walmart",
+      "DebtorNumber": 12345,
+      "dcc": "",
+      "notExpiredCl": "2.000.111,98",
+      "GDL": "6.888.777,32",
+      "GDLExp": "31.05.2015",
+      "insLimit": "4.222.333,54",
+      "nrBalanceSold": "222.860,64",
+      "nrOpportunity": "222.860,64",
+      "nrAmount": "452.860,64",
+      "totalBalance": "952.860,64",
+      "nodeType": {
+        "code": "UP",
+        "long": "ultimate-parent"
+      }
+    },
+    {
+      "DebtorName": "Walmart Corporate",
+      "DebtorNumber": 23456,
+      "dcc": "",
+      "notExpiredCl": "2.000.111,98",
+      "GDL" : "6.888.777,32",
+      "GDLExp" : "31.05.2015",
+      "insLimit" : "4.222.333,54",
+      "nrBalanceSold": "222.860,64",
+      "nrOpportunity": "222.860,64",
+      "nrAmount": "452.860,64",
+      "totalBalance": "952.860,64",
+      "nodeType": {
+        "code": "CO",
+        "long": "commercial-owner"
+      }
+    }
+  ],
+  "treeData": {
+    "dcc": "",
+    "notExpiredCl": "2.000.111,98",
+    "GDL" : "6.888.777,32",
+    "GDLExp" : "31.05.2015",
+    "insLimit" : "4.222.333,54",
+    "nrBalanceSold": "472.984,32",
+    "nrOpportunity": "472.984,32",
+    "nrAmount": "618.776,90",
+    "totalBalance": "1.898.201,54"
+  },
+  "currentDebtor": {
+    "DebtorName": "Walmart Asia",
+    "DebtorNumber": 5678910,
+    "dcc": "",
+    "notExpiredCl": "2.000.111,98",
+    "GDL" : "6.888.777,32",
+    "GDLExp" : "31.05.2015",
+    "insLimit" : "4.222.333,54",
+    "nrBalanceSold": "472.984,32",
+    "nrOpportunity": "472.984,32",
+    "nrAmount": "618.776,90",
+    "totalBalance": "1.898.201,54",
+    "nodeType": {
+      "code": "LO",
+      "long": "legal-owner"
+    }
+  },
+  "children": [
+    {
+      "DebtorName": "Walmart Shipping",
+      "DebtorNumber": 123,
+      "dcc": "",
+      "notExpiredCl": "2.000.111,98",
+      "GDL" : "6.888.777,32",
+      "GDLExp" : "31.05.2015",
+      "insLimit" : "4.222.333,54",
+      "nrBalanceSold": "472.984,32",
+      "nrOpportunity": "472.984,32",
+      "nrAmount": "618.776,90",
+      "totalBalance": "1.898.201,54",
+      "nodeType": {
+        "code": "BR",
+        "long": "branch"
+      },
+      "hasChildren": false
+    },
+    {
+      "DebtorName": "Walmart Medical",
+      "DebtorNumber": 3215,
+      "dcc": "",
+      "notExpiredCl": "2.000.111,98",
+      "GDL" : "6.888.777,32",
+      "GDLExp" : "31.05.2015",
+      "insLimit" : "4.222.333,54",
+      "nrBalanceSold": "472.984,32",
+      "nrOpportunity": "472.984,32",
+      "nrAmount": "618.776,90",
+      "totalBalance": "1.898.201,54",
+      "nodeType": {
+        "code": "BR",
+        "long": "branch"
+      },
+      "hasChildren": false
+    },
+    {
+      "DebtorName": "Walmart Education",
+      "DebtorNumber": 52,
+      "dcc": "",
+      "notExpiredCl": "2.000.111,98",
+      "GDL" : "6.888.777,32",
+      "GDLExp" : "31.05.2015",
+      "insLimit" : "4.222.333,54",
+      "nrBalanceSold": "472.984,32",
+      "nrOpportunity": "472.984,32",
+      "nrAmount": "618.776,90",
+      "totalBalance": "1.898.201,54",
+      "nodeType": {
+        "code": "BR",
+        "long": "branch"
+      },
+      "hasChildren": false
+    },
+    {
+      "DebtorName": "Walmart Legal and Liability",
+      "DebtorNumber": 98038,
+      "dcc": "1234",
+      "notExpiredCl": "2.000.111,98",
+      "GDL" : "6.888.777,32",
+      "GDLExp" : "31.05.2015",
+      "insLimit" : "4.222.333,54",
+      "nrBalanceSold": "472.984,32",
+      "nrOpportunity": "472.984,32",
+      "nrAmount": "618.776,90",
+      "totalBalance": "1.898.201,54",
+      "nodeType": {
+        "code": "BR",
+        "long": "branch"
+      },
+      "hasChildren": false
+    },
+    {
+      "DebtorName": "Walmart Mines and Minerals",
+      "DebtorNumber": 12054,
+      "dcc": "",
+      "notExpiredCl": "2.000.111,98",
+      "GDL" : "6.888.777,32",
+      "GDLExp" : "31.05.2015",
+      "insLimit" : "4.222.333,54",
+      "nrBalanceSold": "472.984,32",
+      "nrOpportunity": "472.984,32",
+      "nrAmount": "618.776,90",
+      "totalBalance": "1.898.201,54",
+      "nodeType": {
+        "code": "BR",
+        "long": "branch"
+      },
+      "hasChildren": false
+    }
+  ]
+}

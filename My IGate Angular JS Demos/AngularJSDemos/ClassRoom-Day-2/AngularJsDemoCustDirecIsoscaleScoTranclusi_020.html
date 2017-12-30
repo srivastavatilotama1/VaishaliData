@@ -1,0 +1,55 @@
+<html ng-app="directivesApp">
+<head>
+<title>Custom Directives</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<style type="text/css">
+	.style01{
+		background-color:crimson;
+		padding:10px;
+		text-align:center;
+		color:white;
+	}
+	
+	.style02{
+		background-color:blue;
+		padding:14px;
+		text-align:left;
+		color:white;
+	}
+</style>
+</head>
+<body>
+<h1>Custom Directives - transclude</h1>
+<hr/>
+<div>
+	<div wrapdiv customstyle="style01">
+		<input type="button" value="Wrap this button with custom style2"/>
+	</div>
+</div>
+
+
+<hr/>
+
+<div>
+	<div wrapdiv customstyle="style02">
+		<input type="button" value="Wrap this button with custom style2"/>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+<script type="text/javascript" ">
+
+var app = angular.module("directivesApp",[]);
+app.directive('wrapdiv',function(){
+	return{
+		scope:{
+			customstyle:"@"
+		},
+		transclude:true,
+		template:'<div class="{{customstyle}}"><h1>WrapDiv Directive</h1><div ng-transclude></div></div>'
+	}
+})
+
+
+</script>
+</html>

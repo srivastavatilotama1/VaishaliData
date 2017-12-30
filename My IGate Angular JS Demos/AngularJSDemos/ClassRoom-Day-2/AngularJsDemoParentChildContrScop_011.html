@@ -1,0 +1,87 @@
+<!-- chrome.exe -allow-file-access-from-files -disable-web-security -->
+
+<html  ng-app="myApp">
+	<head>
+	</head>	
+<body  bgcolor="pink">
+		<div ng-controller="EmpController">
+				{{ empName }}
+				<button ng-click="setEmpName()">Set Employee Name</button>
+				<div ng-controller="ManagerController">
+					{{ empName }}
+					<button ng-click="setManagerName()">Set Manager Name</button>
+				</div>
+		</div>
+		<hr/>
+		</hr/>
+		
+		<div ng-controller="EmpController">
+				{{ empName }}
+				<button ng-click="setEmpName()">Set Employee Name</button>				
+		</div>
+		<div ng-controller="ManagerController">
+					{{ empName }}
+					<button ng-click="setManagerName()">Set Manager Name</button>
+		</div>
+		
+		
+		<h3>**************With CarController****************</h3>
+			
+		<div	ng-init="carName= 'Honda City'"></div>
+		<div ng-init="carMialage = '1100CC'">
+				 1 Car Average: {{ carAverage }}
+				<div ng-init="carAverage = '20Km/Hr'"  ng-controller="CarController">
+					2 Car Average:  {{ carAverage }}
+					<div ng-init="isLuxuryCar">
+					3	Car Average:: {{ carAverage }}
+					</div>
+				</div>
+		</div>
+		
+		<h3>**************With NextCarController****************</h3>
+			
+		<div	ng-init="carName= 'Honda City'"></div>
+		<div ng-init="carMialage = '1100CC'">
+				 1 Car Average: {{ carAverage }}
+				<div ng-init="carAverage = '20Km/Hr'"  ng-controller="CarController">
+					2 Car Average:  {{ carAverage }}
+					<div ng-init="isLuxuryCar" ng-controller="NextCarController">
+					3	Car Average:: {{ carAverage }}
+					</div>
+				</div>
+		</div>
+
+
+</body>
+
+<script src="Scripts/angular.js"></script>
+<script  type="text/javascript">
+				angular.module('myApp', [])
+					.controller('EmpController', function($scope) {
+					$scope.empName = 'UnKnown';					
+					$scope.setEmpName = function() {					
+					$scope.empName = 'Emp Name Is Vaishali';
+												};
+					})					
+					
+					.controller('ManagerController', function($scope) {
+							$scope.setManagerName = function() {
+								// sets {{ someBareValue }} inside ChildController
+								$scope.empName = 'Manager name Is Samir';
+															};
+							}) 
+							
+					.controller('CarController', function($scope) {
+							
+					}) 
+					.controller('NextCarController', function($scope) {
+							
+					});
+							
+							
+							
+</script>
+</html>
+ 
+ 
+ 

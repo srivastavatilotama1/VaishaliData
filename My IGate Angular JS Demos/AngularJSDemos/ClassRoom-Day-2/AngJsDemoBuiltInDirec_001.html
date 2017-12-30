@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="directivesApp" >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Built In Directive Demo</title>
+		<style type="text/css">
+		
+	.customClass{
+		color:blue;
+		font-family:candara;
+		font-size:20pt;
+		text-transform:uppercase;
+		letter-spacing:1cm;
+	}
+	
+	.evenElementStyle{
+		float:left; 
+		color:white;
+		background-color:green;
+		font-family : candara;
+	}
+	
+	.oddElementStyle{
+		float:left; 
+		color:white;
+		background-color:crimson;
+		font-family : candara;
+	}
+	
+	
+</style>
+		
+</head>
+<body bgcolor="pink">
+
+<!-- using $rootScope property -->
+	<div>
+		<span><b>Using $rootScope :</b>
+		<h2>{{compNameGlobalProp}}</h2>
+	</div>
+	<hr/>
+	
+	<!-- ngBind Directive -->
+	<div data-ng-controller="DirectivesController">
+		<span><b>Using Expression :</b></span>
+		<span>{{"My Comp Location Is :"}}{{companyLocation}}</span>
+	</div>
+	<hr/>
+	
+	<div data-ng-controller="DirectivesController">
+		<span><b>Using ngBind :</b> </span>
+		<span data-ng-Bind="companyLocation"></span>
+	</div>
+	<hr/>
+	
+	
+	<!-- ngBindTemplate Directive -->
+	<div data-ng-controller="DirectivesController">
+		<span><b>Using ngBindTemplate :</b></span>
+		<span data-ng-bind-template="{{'Company Location :'+companyLocation}}"></span>
+	</div>
+	<hr/>
+	
+	<!-- ngBindHtml Directive Error : 
+	"Attempting to use an unsafe value in a safe context" if ngSanitize not included as module dependency.-->
+	
+	<div data-ng-controller="DirectivesController">
+		<span><b>Using ngBindHtml without $sce service:</b></span>
+		<span data-ng-bind-html="unsafeContent"></span>
+	</div>
+	
+	
+	
+	<div data-ng-controller="DirectivesController">
+		<span><b>Using ngBindHtml with $sce service:</b></span>
+		<span data-ng-bind-html="safeContent"></span>
+	</div>
+	<hr/>
+	
+	<!-- ngStyle Directive-->
+	<div data-ng-controller="DirectivesController">
+		<span><b>Using ngStyle:</b></span>
+		<span data-ng-style="customStyle">Custom Style applied.</span>
+		<pre>Custom style given : {{customStyle}}</pre>
+	</div>
+	
+	<hr/>
+	
+	<!-- ngClass Directive-->
+	<div  data-ng-controller="DirectivesController">
+		<input type="button" value="Set Style" 
+		data-ng-click="cssClass='customClass'"/>
+		<input type="button" value="Clear Style"
+		 data-ng-click="cssClass=''"/>
+	</div>
+	
+	<div data-ng-controller="DirectivesController">
+		<span><b>Using ngClass:</b></span>
+		<span data-ng-class="cssClass">igate</span>
+	</div>
+	<hr/>
+
+	
+	<!-- ngRepeat, ngClassEven & ngClassOdd Directive-->
+	<div data-ng-controller="DirectivesController">
+		<span><b>Using ngRepeat, ngClassEven &amp;
+		 ngClassOdd Directives</b></span>
+		<ul id="names" data-ng-repeat="name in names">
+			<li data-ng-class-even="cssEvenClass" 
+			data-ng-class-odd="cssOddClass">{{name}}</li></br>
+		</ul>
+	</div>
+	<br style="clear:left"/>
+	<hr/>
+	
+	<!-- ngHref & ngSrc Directive-->
+	<div data-ng-controller="DirectivesController">
+		<span><b>Using ngSrc - Adding Image: </b></span>
+		<image data-ng-src="{{'images/'+imageSource}}" 
+		alt="imageSource" title="{{imageSource}}"/>
+	</div>
+	<div data-ng-controller="DirectivesController">
+		<span><b>Using ngHref - Adding URL: </b></span>
+		<a data-ng-href="{{'https://'+urlSource}}">{{urlSource}}</a>
+	</div>
+	<hr/>
+	
+	<!-- ngDisabled, ngChecked, ngReadonly & ngSelected -->
+	<div>
+		<span><b>Using ngDisabled:</b></span>
+		<input type="button" data-ng-disabled="true" value="Disabled button"/>&nbsp;&nbsp;</br>
+		<input type="button" data-ng-disabled="true" value="Cancle" />&nbsp;&nbsp;</br>
+		
+		
+		<span><b>Using ngChecked:</b></span>		
+		<input type="checkbox" data-ng-checked="true" />&nbsp;&nbsp;</br>
+		
+		<span><b>I Have:</b></span>		
+		<input type="checkbox" name="chkVehicle" value="Car"  data-ng-checked="false" >Car</input>&nbsp;&nbsp;
+		<input type="checkbox" name="chkVehicle" value="Bike"  data-ng-checked="true" >Bike</input>&nbsp;&nbsp;
+		<input type="checkbox" name="chkVehicle" value="Bi-Cycle"  data-ng-checked="false" >Bi-Cycle</input>&nbsp;&nbsp;
+		
+		<span><b>Using ngReadonly:</b></span>
+		<input type="textbox" value="Read only textbox" data-ng-readonly="true" />&nbsp;&nbsp;</br>
+		
+		<input type="textbox"  name="txtCompName" value="IGate Globle Sol Ltd " data-ng-readonly="true" />&nbsp;&nbsp;
+		
+		
+		<span><b>Using ngSelected:</b></span>
+		<select>
+			<option value="Banglore">Bangalore</option>
+			<option value="Pune">Pune</option>
+			<option value="Noida">Noida</option>
+			<option data-ng-selected="true"  value="Chennai">Chennai</option>
+		</select>
+	</div>
+	<hr/>
+
+	
+	<!-- ngIf Directive-->
+	<div>
+		<span><b>Using ngIf : </b></span>
+		<span data-ng-if="2 + 2 == 5">This DOM node wont be available in DOM</span>
+		<span data-ng-if="2 + 2 == 4">If condition is true. That's why I am getting displayed</span>
+	</div>
+	<hr/>
+	
+	<!-- ngModel Directive-->
+	<div>
+		<span><b>Using ngModel : </b></span>
+		<input type="text" data-ng-model="sampleText"/>
+	</div>
+	<div>
+		<span><b>Text typed : </b></span>
+		<span data-ng-bind="sampleText"></span>
+	</div>
+	<hr/>
+
+	<div data-ng-controller="DirectivesController">
+	<!-- ngSwitch Directive -->
+	<div  >
+		<span><b>Using ngSwitch:</b></span>
+		<select data-ng-model="selection" data-ng-options="name for name in names">
+			<option value="">Select a Name</option>
+		</select>
+	</div>
+	
+	<div data-ng-switch on="selection"  >
+	  <div data-ng-switch-when="Latha Subramanian">You have selected Latha Subramanian</div>
+	  <div data-ng-switch-when="Karthik Muthukrishnan">You have selected Karthik Muthukrishnan</div>
+      <div data-ng-switch-default>You have not selected Karthik Muthukrishnan / Latha Subramanian</div>
+	</div>
+	</div>
+	
+	<hr/>
+
+
+	<!-- ngInclude Directive -->
+	<div  data-ng-controller="DirectivesController">
+		<span><b>Using ngInclude:</b></span>
+		<div data-ng-include="partialPage"></div>
+	</div>
+	<hr/>
+
+	
+	
+	
+	
+
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+<script type="text/javascript" src="Scripts/angular-sanitize.js"></script>
+<script type="text/javascript" >
+
+var directiveNameSpace = angular.module('directivesApp',['ngSanitize']); 
+
+directiveNameSpace.run(function($rootScope) {
+	$rootScope.compNameGlobalProp = "You are creating property on global Scope  My Comp name IGate";
+});
+
+directiveNameSpace.controller('DirectivesController',function($scope,$sce){
+	$scope.companyLocation = "IGATE Hinjavadi Pune";
+	
+	
+	$scope.unsafeContent = 
+		"<span style='color:red'>Content won't appear in red</span>";
+	
+	$scope.safeContent = 
+		$sce.trustAsHtml("<span style='color:red'>Content should appear in red</span>");
+
+	
+	$scope.customStyle = {'color':'yellow','background-color':'black','font-family':'candara'};
+
+	$scope.cssClass = "customClass";
+	
+	$scope.cssEvenClass="evenElementStyle";
+	
+	$scope.cssOddClass="oddElementStyle";
+	
+	$scope.names = 	[
+						"Harish Kasthurirangan",
+						"Hiranmai Ramakrishnan",
+						"Karthik Muthukrishnan",
+						"Latha Subramanian",
+						"Mangala Rangaswamy",
+						"Rashmi Keshavamurthy",
+						"Sarbananda Behera",
+						"Sathiabama Ranganathan",
+						"Tanmaya Acharya",
+						"Uma Maheshwari",
+						"Veena Keshavalu",
+						"Vinod Manoharan"
+					];
+	
+	$scope.imageSource = "delete.png";
+	$scope.urlSource = "www.google.com";
+	$scope.partialPage = "partials/partial.html";	
+	});
+	
+</script>
+
+</html>

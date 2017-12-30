@@ -1,0 +1,18 @@
+create table itemsForBid(itemId number(3),itemName varchar2(20), itemPrice number(5,2),status varchar2(20));
+
+insert into itemsforbid values(101,'sofa',500,'available');
+insert into itemsforbid values(102,'mattress',600,'available');
+insert into itemsforbid values(103,'samsung duos',100,'available');
+insert into itemsforbid values(104,'refrigerator',900,'available');
+insert into itemsforbid values(105,'tv',100,'available');
+
+SQL> desc vaishali_user;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------
+ UNAME                                     NOT NULL VARCHAR2(20)
+ PASSWORD                                           VARCHAR2(20)
+
+
+
+update  itemsForBid set status='available';
+**************************************************************

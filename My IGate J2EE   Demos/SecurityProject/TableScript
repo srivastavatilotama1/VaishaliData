@@ -1,0 +1,20 @@
+CREATE TABLE USERINFO(user_name VARCHAR2(30) PRIMARY KEY,
+password VARCHAR2(20),
+first_name VARCHAR(20),
+last_name VARCHAR2(20),
+phone_no NUMBER(20)
+);
+
+INSERT INTO USERINFO VALUES ('aaa_111@gmail.com',
+'aaa','vaishali','srivastava',8888108810);
+
+INSERT INTO USERINFO VALUES ('bbb_222@gmail.com',
+'bbb','Varsha','J',9999999999);
+
+INSERT INTO USERINFO VALUES ('ccc_333@gmail.com',
+'ccc','Anu','K',7777777777);
+
+INSERT INTO USERINFO VALUES ('ddd_444@gmail.com',
+'ddd','Sanjana','S',4444444444);
+
+

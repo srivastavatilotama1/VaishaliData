@@ -1,0 +1,34 @@
+<html ng-app="myApp">
+	<head>
+		<title>isolated scope - Two way binding using '='</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	</head>
+	<body>
+		<div ng-controller="myController">
+				Admin Says Customer Account Type Is :
+				<input type="text" ng-model="accounttype"/><br/>
+					Customer Says  My Account Type Is : 
+						<data-account data-getaccounttype="accounttype"></data-data-account>
+							<span>{{accounttype}}</span>
+		</div>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+<script>
+	var app= angular.module("myApp",[]);
+	
+	app.controller("myController",function($scope){
+		$scope.accounttype="Saving Account";
+	})
+		
+	app.directive("account",function(){
+		return{			
+			restrict: 'E',			
+			replace : true,
+			//scope : { getname: '='}	, 
+			scope : '=',
+			template: '<input type="text" ng-model="accounttype"/>'
+		}
+	})
+	
+</script>
+</html>

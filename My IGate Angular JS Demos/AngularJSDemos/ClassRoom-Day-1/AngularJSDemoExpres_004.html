@@ -1,0 +1,34 @@
+<!-- Angular initializes automatically upon DOMContentLoaded event or
+
+ when the angular.js script is evaluated if at that time document.readyState is set to 'complete'. 
+
+At this point Angular looks for the ng-app directive which designates your application root. 
+
+If the ng-app directive is found then Angular will:
+
+Load the module associated with the directive.
+Create the application injector
+Compile the DOM treating the ng-app directive as the root of the compilation. 
+
+
+This allows you to tell it to treat only a portion of the DOM as an Angular application. -->
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body >
+<div>
+{{3*3}}</br>
+{{['vaishali','Anju','Gitika'][1]}}
+
+</div>
+</body>
+<script src="Scripts/angular.js"></script>
+</html>
