@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Stores User details -->
+<Users xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+ xs:noNamespaceSchemaLocation="Users.xsd">
+	<User>
+		<Username>John</Username>
+		<Password>john@123</Password>
+		<Type>seller</Type>
+		<EmailID>john@igate.com</EmailID>
+	</User>
+	<User>
+		<Username>Fazil</Username>
+		<Password>fazil@123</Password>
+		<Type>seller</Type>
+		<EmailID>fazil@igate.com</EmailID>
+	</User>
+	<User>
+		<Username>Jim</Username>
+		<Password>jim@123</Password>
+		<Type>customer</Type>
+		<EmailID>jim@igate.com</EmailID>
+	</User>
+	<User>
+		<Username>Rose</Username>
+		<Password>rose@123</Password>
+		<Type>seller</Type>
+		<EmailID>rose@igate.com</EmailID>
+	</User>
+</Users>

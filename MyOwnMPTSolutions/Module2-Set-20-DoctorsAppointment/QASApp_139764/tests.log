@@ -1,0 +1,9 @@
+2017-11-30-main-DEBUG-com.capgemini.doctors.dao.DoctorAppointmentDaoImpl:your appointment details found
+2017-11-30-main-ERROR-com.capgemini.doctors.dao.DoctorAppointmentDaoImpl:not found
+2017-11-30-main-INFO -com.capgemini.doctors.dao.DoctorAppointmentDaoImpl:Appointment date and time, along with doctor's phone number will be shared shortly with you.
+2017-11-30-main-INFO -com.capgemini.doctors.dao.DoctorAppointmentDaoImpl:ID generated: 1001
+2017-11-30-main-INFO -com.capgemini.doctors.dao.DoctorAppointmentDaoImpl:Registered
+2017-11-30-main-DEBUG-com.capgemini.doctors.dao.DoctorAppointmentDaoImpl:your appointment details found
+2017-12-05-main-INFO -com.capgemini.doctors.dao.DoctorAppointmentDaoImpl:ID generated: 1002
+2017-12-05-main-INFO -com.capgemini.doctors.dao.DoctorAppointmentDaoImpl:Registered
+2017-12-05-main-DEBUG-com.capgemini.doctors.dao.DoctorAppointmentDaoImpl:your appointment details found

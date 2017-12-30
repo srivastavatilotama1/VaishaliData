@@ -1,0 +1,17 @@
+
+@CHARSET "ISO-8859-1";
+
+@CHARSET "ISO-8859-1";
+
+#data{
+	margin-top:300px;
+	font-family : verdana;
+	font-size: 11px;
+	color: #001a00;
+	font-weight: bold;
+	text-align: left;
+}
+
+.tab {
+	background-color: #ffe6e6;
+}

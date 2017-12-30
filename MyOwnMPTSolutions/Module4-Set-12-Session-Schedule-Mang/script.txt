@@ -1,0 +1,8 @@
+//Changed the table Name 
+
+CREATE TABLE Training(tId NUMBER PRIMARY KEY,tName VARCHAR2(20),tDuration NUMBER,tFaculty VARCHAR2(30),tMode VARCHAR2(20));
+
+INSERT INTO Training VALUES(1,'Spring',4,'Vihar','ILT');
+INSERT INTO Training VALUES(2,'Struts',4,'Tarun','ITL');
+INSERT INTO Training VALUES(3,'Hibernate',3,'Rekha','VC');
+commit;

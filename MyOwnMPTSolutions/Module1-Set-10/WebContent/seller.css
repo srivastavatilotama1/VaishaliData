@@ -1,0 +1,46 @@
+@CHARSET "ISO-8859-1";
+table,tr
+{
+	border: medium;
+	border-style: solid;
+	border-color: white;
+	border-radius: 8px;
+}
+
+form 
+{
+	margin-left: 335px;
+	width: 600px;
+	height: auto;
+	margin-top: 40px;
+}
+tr:nth-child(even)
+{
+	background-color: silver;
+}
+tr:nth-child(odd)
+{
+background-color:  aqua;
+}
+td,th
+{
+	border-radius: 3px;
+	border-color: black;
+	border-width:thin;
+	border-style: solid;
+}
+input,select
+{
+margin: 12px;
+}
+#err
+{
+	background-color: white;
+	border-color: white;
+	border-style: hidden;
+}
+h1
+{
+	text-align: center;
+	color: blue;
+}

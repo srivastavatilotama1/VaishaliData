@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sell Your Mobile</title>
+<link rel="stylesheet" href="seller.css"/>
+<script src="seller.js"></script>
+</head>
+<body>
+	<h2 style="text-align: center; margin: 30px;color: black;">Sell My Mobilephone !!!</h2>
+	<form name="seller" onsubmit="return displayDetails()">
+		<table>
+			<tr>
+				<td>Owner Name:</td>
+				<td><input type="text" name="name" pattern="[a-zA-Z\s]+"  required/></td>
+			</tr>
+			<tr>
+				<td>Mobile Name:</td>
+				<td>
+				<select name="mobName" onchange="populateColor()">
+					<option value="SelectMobileName" selected disabled>Select Mobile Name</option>
+					<option value="iPhone6">iPhone 6</option>
+					<option value="iPhone5S">iPhone 5S</option>
+					<option value="iPhone5C">iPhone 5C</option>
+				</select>
+				</td>
+				<td id="err"></td>
+			</tr>
+			<tr>
+				<td>Color:</td>
+				<td>
+					<select name="color">
+						<option value="--------" selected>Select Color</option>
+						<option value="--------">----------</option>
+						<option value="--------">----------</option>
+						<option value="--------">----------</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Description:</td>
+				<td><textarea name="descrip" rows="4" cols="25" required></textarea></td>
+			</tr>
+			<tr>
+				<td>Selling Cost:</td>
+				<td><input type="text" name="sellingCost" pattern="[0-9]+" required/></td>\
+			</tr>
+			<tr>
+				<td>Negotiable:</td>
+				<td><input type="checkbox" name="negotiable"/></td>
+			</tr>
+		</table>
+		<input type=submit value=Submit style="margin-left: 140px;" />
+	</form>
+</body>
+</html>

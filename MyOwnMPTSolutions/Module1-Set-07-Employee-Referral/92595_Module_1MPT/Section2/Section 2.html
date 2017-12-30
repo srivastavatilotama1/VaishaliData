@@ -1,0 +1,158 @@
+
+<!------------------------------------------------------------------------------------------------------------------
+1.File				  :Section_2.html
+2.Author		      :Samyaka Dalvi
+3.Version			  :1.0
+4.Last Modified date  :2-September-2016
+5.Desription	      :MPT Question to create a webpage of employee referral
+------------------------------------------------------------------------------------------------------------------>
+
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>MPT</title>
+		<meta name="author" content="Samyaka"/>
+		<link href="Section_2.css" type="text/css" rel="stylesheet"/>
+		<script src="JavaScript_Section2.js"></script>
+	</head>
+	
+	<body>
+	<div id="divId1">
+		<form name="form1" onsubmit="return ValidateAllDate();">     <!--calling the function-->
+			<table border="0">
+				<tr >
+					<td colspan="3"><p id="inhead">Employee Referral Form</p></td>
+				</tr>
+								
+				<tr>
+					<td id="head">
+						First Name:
+					</td>
+					
+					<td>
+						<input type="text" 
+						name="txtFn" 
+						id="fnId" 
+						value=""
+						required
+						pattern="[A-Z][a-z]*"
+						minlength="3"                                <!--Applying restrictions-->
+						
+						</input>
+					</td>
+					
+					<td id="fnErrorSectionId">	
+					</td>	
+				</tr>
+				
+				<tr>
+					<td id="head">
+						Last Name:
+					</td>
+					
+					<td>
+						<input type="text" 
+						name="txtln" 
+						id="lnId" 
+						value=""
+						required
+						pattern="[A-Z][a-z]*"
+						minlength="3"                             <!--Applying restrictions-->
+						
+						
+						</input>
+					</td>
+					
+					<td id="lnErrorSectionId">	
+					</td>	
+				</tr>
+				
+				<tr>
+					<td id="head">
+						Contact Number:
+					</td>
+					
+					<td>
+						<input type="txt" 
+						name="txtMobile"
+						value="" 
+						id="mobileId" 
+						required
+						pattern="[7-9][0-9]{9}"
+						title="Only valid 10 digit Mobile no is allowed"/>
+					</td>
+					
+					<td id="cnErrorSectionId">	
+					</td>
+					
+				</tr>
+				
+				<tr>
+					<td id="head">
+						Email:
+					</td>
+					
+					<td>
+						<input type="email" 
+						name="txtEmail"
+						value="" 
+						id="emailId"
+						title="Provide Valid Email Address eg.sheetal12@gmail.com"/>
+					</td>
+					
+					<td id="eIdErrorSectionId">	
+					</td>
+					
+				</tr>
+				
+				<tr>
+					<td id="head">	
+						Date of Birth:
+					</td>
+					
+					<td>
+						<input type="date" 
+						name="txtDoB"
+						value="" 
+						required
+						id="doBId"
+						max="1995-05-27"/>	                      <!--Applying restrictions-->
+					</td>
+					
+					<td id="DoBErrorSectionId">	
+					</td>
+					
+				</tr>
+				
+				<tr>
+					<td id="head"> Current City/Location:</td>
+					<td>
+						<select name="txtCity">
+							<option value="Chennai">Chennai</option>
+							<option value="Mumbai">Mumbai</option>	
+							<option value="Pune">Pune</option>
+							<option value="Bangalore">Bangalore</option>								
+						
+						</select>
+					</td>
+					<td id="cityErrorSectionId"></td>
+				</tr>
+				
+				<tr>
+					<td colspan="3" style="text-align: center; padding-top: 10px;">
+						<input type="submit" 
+						name="btnRegister"
+						id="button"
+						value="&nbsp Submit &nbsp &nbsp"/>
+					</td>
+				</tr>
+				
+			</table>
+		
+		</form>
+		</div>
+		
+	</body>
+
+</html>

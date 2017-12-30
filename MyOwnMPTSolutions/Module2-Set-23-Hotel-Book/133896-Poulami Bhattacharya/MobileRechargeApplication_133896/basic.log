@@ -1,0 +1,33 @@
+2017-08-16 12:13:41,233 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-00942: table or view does not exist
+
+2017-08-16 12:15:46,887 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-00942: table or view does not exist
+
+2017-08-16 12:17:05,741 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-00942: table or view does not exist
+
+2017-08-16 12:18:42,880 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02291: integrity constraint (LAB1BTRG18.SYS_C00764749) violated - parent key not found
+
+2017-08-16 12:20:47,832 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02291: integrity constraint (LAB1BTRG18.SYS_C00764749) violated - parent key not found
+
+2017-08-16 12:21:54,629 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02291: integrity constraint (LAB1BTRG18.SYS_C00764749) violated - parent key not found
+
+2017-08-16 12:23:18,240 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02291: integrity constraint (LAB1BTRG18.SYS_C00764749) violated - parent key not found
+
+2017-08-16 12:32:43,113 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02291: integrity constraint (LAB1BTRG18.SYS_C00764749) violated - parent key not found
+
+2017-08-16 12:35:08,173 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02291: integrity constraint (LAB1BTRG18.SYS_C00764749) violated - parent key not found
+
+2017-08-16 12:39:05,429 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02291: integrity constraint (LAB1BTRG18.SYS_C00764756) violated - parent key not found
+
+2017-08-16 12:39:43,535 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02291: integrity constraint (LAB1BTRG18.SYS_C00764756) violated - parent key not found
+
+2017-08-16 12:44:36,155 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02291: integrity constraint (LAB1BTRG18.SYS_C00764756) violated - parent key not found
+
+2017-08-28 15:23:02,100 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02289: sequence does not exist
+
+2017-08-28 15:24:20,327 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02289: sequence does not exist
+
+2017-08-28 15:25:27,697 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02289: sequence does not exist
+
+2017-08-28 15:32:12,221 ERROR [com.capgemini.hotel.dao.CustomerBookingDAO] - ORA-02291: integrity constraint (SYSTEM.SYS_C007848) violated - parent key not found
+
+2017-08-28 15:40:14,229 INFO [com.capgemini.hotel.dao.CustomerBookingDAO] - customer id:1002

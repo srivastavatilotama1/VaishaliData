@@ -1,0 +1,66 @@
+CREATE OR REPLACE PROCEDURE displayDetails(mobName IN salesdata.mobilename%TYPE)
+AS
+	mobileName salesdata.mobilename%TYPE;
+	ownerName users.username%type;
+	email users.email_id%type;
+	color salesdata.color%type;
+	cost salesdata.cost%type;
+	CURSOR cname IS SELECT s.owner_name,u.email_id,s.mobilename,s.color,s.cost 
+					FROM users u,salesdata s
+					WHERE s.mobilename=mobName AND s.owner_name=u.username AND u.type='seller';     --cursor created
+	MobileNotFound EXCEPTION;		--exception declared
+	BEGIN
+		IF cname%ISOPEN THEN NULL;
+		ELSE OPEN cname;
+		END IF;
+		FETCH cname INTO ownerName,email,mobileName,color,cost;
+		IF cname%ROWCOUNT>0 THEN
+			WHILE cname%FOUND
+			LOOP
+				DBMS_OUTPUT.PUT_LINE(ownerName||'     '||email||'         '||mobileName||'     '||color||'             '||cost);
+				FETCH cname INTO ownerName,email,mobileName,color,cost;
+
+			END LOOP;
+		ELSE
+			RAISE MobileNotFound;	--exception raised
+		END IF;
+		CLOSE CNAME;
+		EXCEPTION	--exception handling
+			WHEN MobileNotFound THEN 
+			DBMS_OUTPUT.PUT_LINE('NO RECORDS FOUND FOR THIS MOBILE NAME');
+		END;
+		
+-- calling the above procedure by using anonymous block
+
+BEGIN
+	displayDetails(&mobName);
+END;
+***************************************************
+SELECT DISTINCT s.owner_name ,u.email_id , s.negotiable
+	FROM salesdata s, users u
+	WHERE s.negotiable=1 AND s.owner_name=u.username;
+
+
+SELECT sd.owner_name "OWNER NAME", us.email_id "EMAIL ID", 
+						CASE
+						WHEN sd.negotiable=1 THEN 'YES'
+						END "NEGOTIABLE"
+	FROM salesdata sd, users us
+	WHERE us.username=sd.owner_name
+		AND sd.negotiable=1;
+
+***************************************************************
+	SELECT COUNT(DISTINCT OWNER_NAME) "WEALTHY OWNERS"
+	FROM SALESDATA
+	WHERE OWNER_NAME IN(SELECT OWNER_NAME
+						FROM SALESDATA
+						GROUP BY OWNER_NAME
+						HAVING SUM(COST)>(SELECT AVG(COST) FROM SALESDATA));
+............................................
+SELECT owner_name,SUM(cost) total
+	      FROM salesdata
+	       GROUP BY owner_name
+	        HAVING SUM(cost)>(SELECT AVG(cost) FROM salesdata);
+			
+**********************************************
+	

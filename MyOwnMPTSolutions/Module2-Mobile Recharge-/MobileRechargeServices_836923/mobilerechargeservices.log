@@ -1,0 +1,111 @@
+Entered Account Id:101
+Account ID :101
+Account Balance: 1100.0
+Invalid Recharge Scheme
+This Recharge Scheme is not valid for you
+Exception :This Recharge Scheme is not valid for you
+[Ljava.lang.StackTraceElement;@1952a2d
+Given Account Id Does Not Exits
+Entered Account Id:101
+Account ID :101
+Account Balance: 1250.0
+Entered Account Id:as
+Please enter Account Id in correct format
+[Ljava.lang.StackTraceElement;@1ea3742
+Entered Account Id:asa
+Please enter Account Id in correct format
+[Ljava.lang.StackTraceElement;@1952a2d
+Entered Account Id:asa
+Please enter Account Id in correct format
+[Ljava.lang.StackTraceElement;@159c4b8
+ERROR : Can not Recharge Account. Scheme cannot be Numeric
+[Ljava.lang.StackTraceElement;@14c265e
+Account Recharged Succesfully
+Given Account Id Does Not Exits
+Exception :Given Account Id Does Not Exits
+[Ljava.lang.StackTraceElement;@1846619
+Given Account Id Does Not Exits
+Exception :Given Account Id Does Not Exits
+[Ljava.lang.StackTraceElement;@1ea3742
+Given Account Id Does Not Exits
+Exception :Given Account Id Does Not Exits
+[Ljava.lang.StackTraceElement;@1ea3742
+Account Recharged Succesfully
+Account Recharged Succesfully
+Entered Account Id:sda
+Please enter Account Id in correct format
+[Ljava.lang.StackTraceElement;@14c265e
+Please enter Account Id in correct format
+[Ljava.lang.StackTraceElement;@8139f0
+Given Account Id Does Not Exits
+Exception :Given Account Id Does Not Exits
+[Ljava.lang.StackTraceElement;@159c4b8
+Entered Account Id:123
+Given Account Id Does Not Exits
+Error :Given Account Id Does Not Exits
+[Ljava.lang.StackTraceElement;@1ea3742
+Given Account Id Does Not Exits
+Error :Given Account Id Does Not Exits
+[Ljava.lang.StackTraceElement;@159c4b8
+Invalid Recharge Scheme
+This Recharge Scheme is not valid for you
+Error :This Recharge Scheme is not valid for you
+[Ljava.lang.StackTraceElement;@1ec1f0c
+Entered Account Id:11
+Please enter Account Id in correct format
+[Ljava.lang.StackTraceElement;@719f1f
+Entered Account Id:101
+Check the Login CredentialsIO Error: The Network Adapter could not establish the connection
+Entered Account Id:101
+Check the Login CredentialsIO Error: The Network Adapter could not establish the connection
+Entered Account Id:101
+Check the Login CredentialsIO Error: The Network Adapter could not establish the connection
+Entered Account Id:101
+Check the Login CredentialsIO Error: The Network Adapter could not establish the connection
+Entered Account Id:101
+Check the Login CredentialsIO Error: The Network Adapter could not establish the connection
+Entered Account Id:101
+Check the Login CredentialsIO Error: The Network Adapter could not establish the connection
+Entered Account Id:101
+connection not established
+Connection not established
+Entered Account Id:101
+connection not established
+Connection not established
+Entered Account Id:101
+connection not established
+Connection not established
+Entered Account Id:101
+connection not established
+Connection not established
+Entered Account Id:101
+connection not established
+Connection not established
+Entered Account Id:10001
+Please enter Account Id in correct format
+[Ljava.lang.StackTraceElement;@1401d28
+Entered Account Id:101
+connection not established
+Connection not established
+Entered Account Id:101
+connection not established
+Connection not established
+Entered Account Id:101
+connection not established
+Connection not established
+Entered Account Id:101
+connection not established
+Connection not established
+Entered Account Id:11
+Please enter Account Id in correct format
+[Ljava.lang.StackTraceElement;@99a589
+Entered Account Id:101
+Entered Account Id:101
+Entered Account Id:101
+Entered Account Id:102
+Account Recharged Succesfully
+Entered Account Id:102
+Entered Account Id:44
+Please enter Account Id in correct format
+[Ljava.lang.StackTraceElement;@fd02e5
+Account Recharged Succesfully

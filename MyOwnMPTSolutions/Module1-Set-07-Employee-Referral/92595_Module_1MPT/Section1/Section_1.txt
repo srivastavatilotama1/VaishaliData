@@ -1,0 +1,118 @@
+//------------------------------------------------------------------------------------------------------------------
+1.File				  :Section_1.txt
+2.Author		      :Samyaka Dalvi
+3.Version			  :1.0
+4.Last Modified date  :2-September-2016
+5.Desription	      :MPT Question to write a pseudocode to accept, store and display employee's information
+------------------------------------------------------------------------------------------------------------------//
+
+
+
+BEGIN
+	DECLARE empNo AS INTEGER 
+    DECLARE name AS STRING
+	DECLARE salary AS INTEGER
+	DECLARE currentLocation AS STRING
+	DECLARE state AS STRING
+	DECLARE check AS BOOLEAN
+	
+	ACCEPT empNo,name,salary,currentLocation
+	
+	state = empState(currentLocation)
+	check = validData(empNo,name,salary,currentLocation);
+	
+	
+	IF(check) THEN
+		PRINT "The Employee Data are as follows."
+		PRINT "Employee Number-",empNo
+		PRINT "Employee Name-",name
+		PRINT "Employee Salary-",salary
+		PRINT "Employee Current Location-",currentLocation
+		PRINT "Employee Current State-",state
+	END IF
+	
+	EXCEPTION
+		WHEN InvalidEmpNo THEN
+			PRINT errormessage  							// print emp number error message	
+		WHEN InValidName THEN
+			PRINT errormessage  							// print name error message
+		WHEN InvalidSalary THEN
+			PRINT error message  							// print salary error message
+		WHEN InvalidCity THEN
+			PRINT errormessage  							// print city error message
+END
+
+
+//----------------------------------------------------------------------------------------------------------------
+Sub module 			    :empState
+Input Parameter 		:currentLocation
+Return type			    :STRING
+Author					:Samyaka Dalvi
+Creation date           :2-September-2016
+Desription				:Return current state of the employee.
+----------------------------------------------------------------------------------------------------------------//
+
+
+SUB empState(currentLocation)
+
+    IF(currentLocation=="Chennai") THEN
+		RETURN "TamilNadu"
+		
+	ELSE IF((currentLocation=="Mumbai") || (currentLocation=="Pune")) THEN
+		RETURN "Maharastra"
+		
+	ELSE IF(currentLocation=="Bangalore") THEN
+		RETURN "Karnataka"
+		
+	END IF
+	
+END SUB
+
+//---------------------------------------------------------------------------------------------------------------
+Sub module			    :validData
+Input Parameter		    :empNo,name,salary,currentLocation
+Return type				:BOOLEAN
+Author					:Samyaka Dalvi
+Creation date           :2-September-2016
+Desription				:Validating the Pseudocode
+----------------------------------------------------------------------------------------------------------------//
+
+SUB validData(empNo,name,salary,currentLocation)
+
+    IF
+	(empNo>0 && empNo = INTEGER) THEN			                //Checking for negative emp no or alpha numeric 
+		RETURN TRUE
+    ELSE
+		RAISE InValidEmpNo("Please Enter a Valid Employee ID")
+    ENDIF
+	
+	IF
+	(name = STRING) THEN			                           //Checking for name  
+		RETURN TRUE
+    ELSE
+		RAISE InValidName("Please Enter Valid Characters")
+    ENDIF
+	
+	IF
+	(salary>0 && salary = INTEGER) THEN			               //Checking for negative Salary or alphanumeric
+		RETURN TRUE
+    ELSE
+		RAISE InValidSalary("Please Enter a Valid Salary")
+    ENDIF
+	
+	IF                                                         //Checking for Location                
+	((currentLocation=="Chennai") || (currentLocation=="Mumbai") || (currentLocation=="Pune") || (currentLocation=="Bangalore") THEN			
+		RETURN TRUE
+    ELSE                                                     
+		RAISE InValidCity("The given City does not exist. Please enter a valid city")
+    ENDIF
+	
+END SUB
+
+//---------------------------------------------------- END ------------------------------------------------------------//
+
+
+
+
+
+

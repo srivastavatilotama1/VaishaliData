@@ -1,0 +1,7 @@
+2016-02-16-main-INFO -root      :no record found
+2016-02-16-main-ERROR-root      :Exception occured while viewing detailscom.igate.tcc.exception.PatientException: There is no patient with this Id
+2016-02-16-main-INFO -root      :no record found
+2016-02-16-main-ERROR-root      :Exception occured while viewing detailscom.igate.tcc.exception.PatientException: There is no patient with this Id
+2016-02-16-main-INFO -root      :no record found
+2016-02-16-main-ERROR-root      :Exception occured while viewing detailscom.igate.tcc.exception.PatientException: There is no patient with this Id
+2016-02-16-main-INFO -root      :Patient Details found

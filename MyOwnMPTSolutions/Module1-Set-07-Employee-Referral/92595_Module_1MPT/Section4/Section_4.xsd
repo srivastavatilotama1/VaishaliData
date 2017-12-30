@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	
+	<!-- Create name type -->
+	
+	<xs:simpleType name="name">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- Create address type -->
+	
+	<xs:simpleType name="address">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- Create degree type -->
+	
+	<xs:simpleType name="degree">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- Create phone type -->
+	
+	<xs:simpleType name="phone">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[7-9][0-9]{9}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- Define ref no. Tag -->
+	
+		<xs:element name="refno" type="xs:int" />
+	
+	<!-- Define ref name Tag -->
+		
+		<xs:element name="refname" type="name"/>
+		
+	<!-- Define Address Tag -->
+		
+		<xs:element name="address" type="address"/>
+		
+	<!-- Define number Tag -->
+	
+		<xs:element name="phoneno" type="phone"/>
+		
+	<!-- Define Degree Tag -->
+		<xs:element name="degree" type="degree"/>
+		
+	<!-- Define emp no. Tag -->
+	
+		<xs:element name="empno" type="xs:int" />
+		
+	<!-- Define employee Tag -->
+		<xs:element name="employee">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="refno"/>
+					<xs:element ref="refname"/>
+					<xs:element ref="address"/>
+					<xs:element ref="phoneno"/>
+					<xs:element ref="degree"/>
+					<xs:element ref="empno"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		
+	<!-- Define emp Tag -->
+	
+		<xs:element name="emp" >
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="employee" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+</xs:schema>

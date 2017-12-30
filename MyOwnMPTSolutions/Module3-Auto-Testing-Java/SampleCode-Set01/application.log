@@ -1,0 +1,46 @@
+
+2016-02-02 15:40:18 INFO  Client:12 - Application started.
+2016-02-02 15:40:59 INFO  Client:12 - Application started.
+2016-02-02 15:42:18 INFO  Client:12 - Application started.
+2016-02-02 15:43:57 INFO  Client:12 - Application started.
+2016-02-02 16:17:18 INFO  Client:12 - Application started.
+2016-02-02 16:17:51 INFO  Client:12 - Application started.
+2016-02-02 16:19:19 INFO  Client:12 - Application started.
+2016-02-02 16:20:06 INFO  Client:12 - Application started.
+2016-02-02 16:24:04 INFO  Client:12 - Application started.
+2016-02-02 16:26:00 INFO  Client:12 - Application started.
+2016-02-02 16:27:20 INFO  Client:12 - Application started.
+2016-02-02 16:27:40 INFO  Client:69 - Application Exiting.
+2016-02-02 16:38:25 INFO  Client:12 - Application started.
+2016-02-02 16:46:34 INFO  Client:12 - Application started.
+2016-02-02 16:46:58 INFO  Client:54 - Adding new customer details:Customer [customerId=0, customerName=Vinod Satpute, accountType=PREPAID, mobileNumber=8446655532]
+2016-02-02 16:46:58 INFO  DBUtil:18 - Requesting for new connection
+2016-02-02 16:47:02 INFO  DBUtil:28 - Request for new connection completed
+2016-02-02 16:47:02 INFO  DBHelper:17 - Request to add new customer started
+2016-02-02 16:47:02 INFO  DBHelper:25 - Request to add new customer completed. New assinged id:4
+2016-02-02 16:47:02 INFO  Client:57 - New customer details successfully recorded with Customer id:4
+2016-02-02 16:47:16 INFO  Client:69 - Application Exiting.
+2016-02-02 16:47:37 INFO  Client:12 - Application started.
+2016-02-02 16:47:53 INFO  Client:54 - Adding new customer details:Customer [customerId=0, customerName=Anjali Satpute, accountType=PREPAID, mobileNumber=9503731864]
+2016-02-02 16:47:53 INFO  DBUtil:18 - Requesting for new connection
+2016-02-02 16:47:54 INFO  DBUtil:28 - Request for new connection completed
+2016-02-02 16:47:54 INFO  DBHelper:17 - Request to add new customer started
+2016-02-02 16:47:54 INFO  DBHelper:25 - Request to add new customer completed. New assinged id:5
+2016-02-02 16:47:54 INFO  Client:57 - New customer details successfully recorded with Customer id:5
+2016-02-02 16:47:57 INFO  Client:69 - Application Exiting.
+2016-02-02 16:49:53 INFO  Client:12 - Application started.
+2016-02-02 16:50:23 INFO  Client:54 - Adding new customer details:Customer [customerId=0, customerName=Pramod Jadhav, accountType=PREPAID, mobileNumber=1234567890]
+2016-02-02 16:50:23 INFO  DBUtil:18 - Requesting for new connection
+2016-02-02 16:50:23 INFO  DBUtil:28 - Request for new connection completed
+2016-02-02 16:50:23 INFO  DBHelper:17 - Request to add new customer started
+2016-02-02 16:50:24 ERROR DBHelper:30 - Problem in adding new customer. Details:java.sql.SQLException: Missing IN or OUT parameter at index:: 4
+2016-02-02 16:50:24 ERROR Client:60 - Problem in adding customer details. Cause:Problem in adding new customer. Details:Missing IN or OUT parameter at index:: 4
+2016-02-02 16:51:10 INFO  Client:12 - Application started.
+2016-02-02 16:51:37 INFO  Client:12 - Application started.
+2016-02-02 16:51:56 INFO  Client:54 - Adding new customer details:Customer [customerId=0, customerName=Ganesh Korke, accountType=PREPAID, mobileNumber=9503731863]
+2016-02-02 16:51:56 INFO  DBUtil:18 - Requesting for new connection
+2016-02-02 16:51:56 INFO  DBUtil:28 - Request for new connection completed
+2016-02-02 16:51:56 INFO  DBHelper:17 - Request to add new customer started
+2016-02-02 16:51:57 INFO  DBHelper:26 - Request to add new customer completed. New assinged id:7
+2016-02-02 16:51:57 INFO  Client:57 - New customer details successfully recorded with Customer id:7
+2016-02-02 16:52:01 INFO  Client:69 - Application Exiting.

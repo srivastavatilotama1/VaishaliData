@@ -1,0 +1,119 @@
+/****************************************************************************************************************************
+
+* File           :  MPTSection_3.txt
+* Author Name    :  Samyaka Dalvi
+* Description    :  MPT Module 1
+* Version        :  1.0
+* Last Modified  :  2-September-2016
+
+*****************************************************************************************************************************/
+
+
+
+CREATE TABLE Employee (EmpNo NUMBER CONSTRAINT pk_empno PRIMARY KEY,
+Ename VARCHAR2(20), Address VARCHAR2(30), PhoneNo CHAR(10));
+
+INSERT INTO employee VALUES(101,'Sanjay','Mumbai',9876543210);
+INSERT INTO employee VALUES(102,'Kalai','Pune',9998654321);
+INSERT INTO employee VALUES(103,'Raju','Chennai',9678943210);
+INSERT INTO employee VALUES(104,'Vinay','Bangalore',8876543288);
+INSERT INTO employee VALUES(105,'Amit','Mumbai',9888943210);
+INSERT INTO employee VALUES(106,'Radha','Chennai',7878787821);
+
+CREATE TABLE Referral ( RefNo NUMBER CONSTRAINT pk_refno PRIMARY KEY,
+RefName VARCHAR2(20), Address VARCHAR2(30), PhoneNo CHAR(10),
+Degree VARCHAR2(4), Empno NUMBER REFERENCES Employee(Empno));
+
+INSERT INTO Referral VALUES(5000,'Praveen','Chennai',9897969594,'BE',104);
+INSERT INTO Referral VALUES(5001,'Anbazhagan','Bangalore',8989878767,'BSc',106);
+INSERT INTO Referral VALUES(5002,'Saravanan','Chennai',7876757878,'BE',104);
+INSERT INTO Referral VALUES(5003,'Rakesh','Pune',7788778877,'BSc',105);
+INSERT INTO Referral VALUES(5004,'Vikas','Mumbai',9844577866,'BE',106);
+INSERT INTO Referral VALUES(5005,'Sandeep','Pune',8867756643,'BSc',102);
+INSERT INTO Referral VALUES(5006,'Sumit','Bangalore',9897969594,'BE',106);
+INSERT INTO Referral VALUES(5007,'Rajesh','Mumbai',7654323456,'BSc',104);
+INSERT INTO Referral VALUES(5008,'Shalini','Chennai',9897654594,'BE',105);
+
+
+CREATE TABLE ReferralStatus
+(RefNo NUMBER REFERENCES Referral(RefNo),
+Status VARCHAR2(50));
+
+INSERT INTO ReferralStatus VALUES(5003,'Selected');
+INSERT INTO ReferralStatus VALUES(5001,'Screeing pending');
+INSERT INTO ReferralStatus VALUES(5005,'Screening selected');
+INSERT INTO ReferralStatus VALUES(5000,'Selected');
+INSERT INTO ReferralStatus VALUES(5002,'Rejected');
+INSERT INTO ReferralStatus VALUES(5004,'Screening pending');
+INSERT INTO ReferralStatus VALUES(5007,'Screening selected');
+INSERT INTO ReferralStatus VALUES(5008,'Selected');
+
+CREATE SEQUENCE referencenum START WITH 5010;
+
+//1
+
+CREATE OR REPLACE PROCEDURE display (v_empno IN NUMBER,v_refname OUT VARCHAR2,v_phoneno OUT CHAR)
+AS
+v_employee Referral%ROWTYPE;
+
+CURSOR cur_ref
+IS
+SELECT *
+FROM referral
+WHERE empno=v_empno;
+
+BEGIN
+
+  FOR v_employee IN cur_ref
+    LOOP
+      DBMS_OUTPUT.PUT_LINE('Name of referral is '||v_employee.RefName||' And his Contact Number is '||v_employee.PhoneNo);
+    END LOOP;
+        
+    EXCEPTION
+		WHEN NO_DATA_FOUND THEN
+		
+		DBMS_OUTPUT.PUT_LINE('DATA NOT FOUND');
+    
+END display;
+
+SHOW ERRORS;
+
+
+//declaring variables to call procedure
+
+DECLARE
+
+	v_empno NUMBER(3):=106;
+	v_refname VARCHAR2(20);
+	v_phoneno CHAR(10);
+
+BEGIN
+	display(v_empno,v_refname,v_phoneno);
+END;
+
+SET SERVEROUTPUT ON;
+
+// 2.a
+
+
+SELECT e.EmpNo, e.Ename, r.RefName, rs.Status
+FROM Employee e , Referral r , ReferralStatus rs
+WHERE e.EmpNo = r.Empno AND r.RefNo = rs.RefNo;
+
+//2.b
+
+SELECT e.Ename AS "Employee Name", COUNT(r.empno) AS "Number of Referrals"
+FROM Employee e , Referral r 
+WHERE e.EmpNo = r.empno
+GROUP BY e.ename;
+
+//3
+
+INSERT INTO referral VALUES(referencenum.NEXTVAL,'&RefName','&Address','&PhoneNo','&Degree',&Empno);
+
+
+
+
+
+
+
