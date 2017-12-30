@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="PUNL6553" id="0" name="AllTests" package="com.igate.demo2.junit" tests="2" time="0.016" timestamp="2015-11-27T04:44:23">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="eclipse.pdebuild.templates" value="/D:/Vaishali_Software/IRAPIDv3_Bundle/IRAPID/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/templates/" />
+
+          <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+
+          <property name="test.data.dir" value="C:\TEMP\LabJUnitAnt\test\data" />
+
+          <property name="os.name" value="Windows 7" />
+
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\Jdk8\jre\lib\resources.jar;C:\Program Files\Java\Jdk8\jre\lib\rt.jar;C:\Program Files\Java\Jdk8\jre\lib\sunrsasign.jar;C:\Program Files\Java\Jdk8\jre\lib\jsse.jar;C:\Program Files\Java\Jdk8\jre\lib\jce.jar;C:\Program Files\Java\Jdk8\jre\lib\charsets.jar;C:\Program Files\Java\Jdk8\jre\lib\jfr.jar;C:\Program Files\Java\Jdk8\jre\classes" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="D:\Vaishali_Software\apache-ant-1.8.2" />
+
+          <property name="java.runtime.version" value="1.8.0_31-b13" />
+
+          <property name="user.name" value="vaissriv" />
+
+          <property name="build.dir" value="." />
+
+          <property name="ant.file.type.LabJUnitAnt" value="file" />
+
+          <property name="user.language" value="en" />
+
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\Jdk8\jre\bin" />
+
+          <property name="ant.project.default-target" value="all" />
+
+          <property name="test.htmlreports.dir" value="C:\TEMP\LabJUnitAnt\test\htmlreports" />
+
+          <property name="ant.project.name" value="LabJUnitAnt" />
+
+          <property name="java.version" value="1.8.0_31" />
+
+          <property name="user.timezone" value="Asia/Calcutta" />
+
+          <property name="sun.arch.data.model" value="32" />
+
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\Jdk8\jre\lib\endorsed" />
+
+          <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86" />
+
+          <property name="sun.jnu.encoding" value="Cp1252" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="C:\Program Files\Java\Jdk8\jre" />
+
+          <property name="java.vm.info" value="mixed mode, sharing" />
+
+          <property name="ant.file" value="C:\TEMP\LabJUnitAnt\build.xml" />
+
+          <property name="os.version" value="6.1" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="25.31-b07" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="D:\Vaishali_Software\apache-ant-1.8.2\lib" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="junit.class.name" value="com.igate.demo2.junit.AllTests" />
+
+          <property name="user.script" value="" />
+
+          <property name="eclipse.pdebuild.scripts" value="/D:/Vaishali_Software/IRAPIDv3_Bundle/IRAPID/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/scripts/" />
+
+          <property name="user.home" value="C:\Users\vs821219" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="test.dir" value="C:\TEMP\LabJUnitAnt\src" />
+
+          <property name="java.library.path" value="D:\Vaishali_Software\IRAPIDv3_Bundle\IRAPID;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/Jdk8/bin/../jre/bin/client;C:/Program Files/Java/Jdk8/bin/../jre/bin;C:/Program Files/Java/Jdk8/bin/../jre/lib/i386;C:\Program Files\Java\Jdk8\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Java\jdk1.7.0_60\bin;D:\oracle\bin;C:\Program Files\Oracle\jre\1.3.1\bin;C:\Program Files\Oracle\jre\1.1.8\bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;;C:\Program Files\Java\jdk1.7.0_60\bin;D:\\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Enterprise Vault\EVClient\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\TortoiseSVN\bin;D:\Vaishali_Software\Maven\ICOMPLIANCE V3.0\apache-maven-3.0.4\bin;D:\Vaishali_Software\apache-ant-1.8.2\bin;D:\Vaishali_Software\IRAPIDv3_Bundle\IRAPID;;.;D:\Vaishali_Software\IRAPIDv3_Bundle\IRAPID\configuration\org.eclipse.osgi\bundles\666\1\.cp" />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.eclipse.ant.internal.launching.remote.InternalAntRunner -Dorg.eclipse.ant.core.ANT_PROCESS_ID=1448599462572 -Declipse.connect.port=60509 -Declipse.pdebuild.home=/D:/Vaishali_Software/IRAPIDv3_Bundle/IRAPID/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/./ -Declipse.pdebuild.scripts=/D:/Vaishali_Software/IRAPIDv3_Bundle/IRAPID/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/scripts/ -Declipse.pdebuild.templates=/D:/Vaishali_Software/IRAPIDv3_Bundle/IRAPID/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/templates/ -Dant.home=D:\Vaishali_Software\apache-ant-1.8.2 -logger org.eclipse.ant.internal.launching.remote.logger.RemoteAntBuildLogger -inputhandler org.eclipse.ant.internal.ui.antsupport.inputhandler.ProxyInputHandler -buildfile C:\TEMP\LabJUnitAnt\build.xml all clean compile compile-test test" />
+
+          <property name="java.class.path" value="D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-antlr.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-apache-bcel.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-apache-bsf.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-apache-log4j.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-apache-oro.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-apache-regexp.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-apache-resolver.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-apache-xalan2.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-commons-logging.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-commons-net.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-jai.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-javamail.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-jdepend.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-jmf.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-jsch.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-junit.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-junit4.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-launcher.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-netrexx.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-swing.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant-testutil.jar;D:\Vaishali_Software\apache-ant-1.8.2\lib\ant.jar;D:\Vaishali_Software\IRAPIDv3_Bundle\IRAPID\configuration\org.eclipse.osgi\bundles\64\1\.cp\lib\antdebug.jar;D:\Vaishali_Software\IRAPIDv3_Bundle\IRAPID\configuration\org.eclipse.osgi\bundles\64\1\.cp\lib\remote.jar;D:\Vaishali_Software\IRAPIDv3_Bundle\IRAPID\configuration\org.eclipse.osgi\bundles\65\1\.cp\lib\remoteAnt.jar;C:\Program Files\Java\Jdk8\lib\tools.jar;D:\Vaishali_Software\IRAPIDv3_Bundle\IRAPID\plugins\org.eclipse.swt.win32.win32.x86_3.102.1.v20140206-1358.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="Service Pack 1" />
+
+          <property name="eclipse.pdebuild.home" value="/D:/Vaishali_Software/IRAPIDv3_Bundle/IRAPID/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/./" />
+
+          <property name="java.io.tmpdir" value="C:\Users\vs821219\AppData\Local\Temp\" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="os.arch" value="x86" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="C:\Program Files\Java\Jdk8\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="user.dir" value="C:\TEMP\LabJUnitAnt" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+
+          <property name="basedir" value="C:\TEMP\LabJUnitAnt" />
+
+          <property name="ant.java.version" value="1.7" />
+
+          <property name="ant.core.lib" value="D:\Vaishali_Software\apache-ant-1.8.2\lib\ant.jar" />
+
+          <property name="file.encoding" value="UTF-8" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="src.dir" value="C:\TEMP\LabJUnitAnt\src" />
+
+          <property name="ant.project.invoked-targets" value="all,clean,compile,compile-test,test" />
+
+          <property name="ant.file.LabJUnitAnt" value="C:\TEMP\LabJUnitAnt\build.xml" />
+
+      </properties>
+
+      <testcase classname="com.igate.demo2.util.test.Addition_test" name="testAddition" time="0.0" />
+
+      <testcase classname="com.igate.demo2.util.test.Multiply_test" name="testMultiply" time="0.0" />
+
+      <system-out><![CDATA[Test use of Addition class
+    Result: 9
+Test use of Multiply class
+    Result: 20
+]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+</testsuites>

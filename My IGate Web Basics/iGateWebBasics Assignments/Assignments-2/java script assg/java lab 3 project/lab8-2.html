@@ -1,0 +1,217 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="validate.js"></script>
+</head>
+<form name="form1">
+<body>
+<h1 align="left">Email Registration Form</h1>
+<b>Email Account Details(* is required)</b>
+<table>
+<tr>
+<td>Choose your Login Name:*</td>
+<td><input type="text" name="uname" onblur="isName(this.value);"/>@patni.com</td>
+</tr>
+<tr>
+<td>Choose Password:*</td>
+<td><input type="password" name="pwd" onblur="isPass(this.value);"/></td>
+</tr>
+<tr>
+<td>Retype Password:*</td>
+<td><input type="password" name="retypePwd" onblur="isPassMatch(this.value);"/></td>
+</tr>
+</table>
+<br><hr><br>
+<b>Password Reminder Information *(All the fields required)</b>
+<table>
+<tr>
+<td>Hint Question</td>
+<td><select name="qstn">
+<option value="Select"/>Select
+<option value="FSchool"/>First School?
+<option value="Pet"/>Pet Name?
+<option value="FTeacher"/>First Teacher?
+<option value="BPlace"/>Birth Place?
+<option value="DOB"/>Date of Birth?
+</select></td></tr>
+<tr>
+<td>OR Create your Question</td>
+<td><input type="text" name="Qstn2"></td>
+</tr>
+<tr>
+<td>Hint Answer</td>
+<td><input type="text" name="Answer" onblur="isHintQuesAns();"></td>
+</tr>
+<tr><td>Birthdate</td>
+<td><select name="day" onblur="isDate(this.value);">
+<option value="Select"/>Select
+<option value="1"/>1
+<option value="2"/>2
+<option value="3"/>3
+<option value="4"/>4
+<option value="5"/>5
+<option value="6"/>6
+<option value="7"/>7
+<option value="8"/>8
+<option value="9"/>9
+<option value="10"/>10
+<option value="11"/>11
+<option value="12"/>12
+<option value="13"/>13
+<option value="14"/>14
+<option value="15"/>15
+<option value="16"/>16
+<option value="17"/>17
+<option value="18"/>18
+<option value="19"/>19
+<option value="20"/>20
+<option value="21"/>21
+<option value="22"/>22
+<option value="23"/>23
+<option value="24"/>24
+<option value="25"/>25
+<option value="26"/>26
+<option value="27"/>27
+<option value="28"/>28
+<option value="29"/>29
+<option value="30"/>30
+<option value="31"/>31
+</select>
+<select name="month" onblur="isDate(this.value);">
+<option value="Select"/>Select
+<option value="1"/>1
+<option value="2"/>2
+<option value="3"/>3
+<option value="4"/>4
+<option value="5"/>5
+<option value="6"/>6
+<option value="7"/>7
+<option value="8"/>8
+<option value="9"/>9
+<option value="10"/>10
+<option value="11"/>11
+<option value="12"/>12
+</select>
+<select name="year" onblur="isDate(this.value);">
+<option value="Select"/>Select
+<option value="2014"/>2014
+<option value="2013"/>2013
+<option value="2012"/>2012
+<option value="2011"/>2011
+<option value="2010"/>2010
+<option value="2009"/>2009
+<option value="2008"/>2008
+<option value="2007"/>2007
+<option value="2006"/>2006
+<option value="2005"/>2005
+<option value="2004"/>2004
+<option value="2003"/>2003
+<option value="2002"/>2002
+<option value="2001"/>2001
+<option value="2000"/>2000
+<option value="1999"/>1999
+<option value="1998"/>1998
+<option value="1997"/>1997
+<option value="1996"/>1996
+<option value="1995"/>1995
+<option value="1994"/>1994
+<option value="1993"/>1993
+<option value="1992"/>1992
+</select></td></tr>
+<tr><td>Country</td>
+<td><select name="country" onblur="isCountry(this.value);">
+<option value="Select"/>Select
+<option value="Australia"/>Australia
+<option value="Bangladesh"/>Bangladesh
+<option value="Canada"/>Canada
+<option value="Dargling"/>Dargling
+<option value="England"/>England
+<option value="Finland"/>Finland
+<option value="Hongkong"/>Hongkong
+<option value="India"/>India
+<option value="Japan"/>Japan
+<option value="Kuwait"/>Kuwait
+<option value="London"/>London
+<option value="Malaysia"/>Malaysia
+</select></td></tr>
+<tr><td>City</td>
+<td><select name="city" onblur="isCity(this.value);">
+<option value="Select"/>Select
+<option value="Ahmedabad"/>Ahmedabad
+<option value="Banglore"/>Banglore
+<option value="Chennai"/>Chennai
+<option value="Delhi"/>Delhi
+<option value="Hyderabad"/>Hyderabad
+<option value="Jaipur"/>Jaipur
+<option value="Kashmir"/>Kashmir
+<option value="Lakshadweep"/>11
+<option value="Mumbai"/>12
+</select></td></tr>
+</table>
+<b>Tell us about yourself</b>
+<table>
+	<tr>
+		<td>First Name*<input type="text" name="fname" onblur="isFullName(this.value);" /></td>
+		<td>Last Name*<input type="text" name="lname" onblur="isFullName(this.value);" /></td>
+	</tr>
+	<tr>
+		<td>Gender
+		<select name="gender">
+		<option value="male"/>Male
+		<option value="female"/>Female
+		</select></td>
+	</tr>
+	<tr>
+		<td>State
+		<select name="state">
+		<option value="selcetOne"/>[Select One]
+		<option value="AP"/>AP
+		<option value="MP"/>MP
+		<option value="UP"/>UP
+		<option value="TN"/>TN
+		<option value="Karnataka"/>Karnataka
+		<option value="Kerala"/>Kerala
+		<select></td>
+	</tr>
+		<td>Pincode<input type="text" name="pincode"></td>
+	</tr>
+	<tr>
+		<td>Education
+		<select name="Education">
+		<option value="selcetOne"/>[Select One]
+		<option value="BTech"/>B.Tech
+		<option value="MCA"/>MCA
+		<option value="BSC"/>BSc
+		<option value="BCOM"/>BCom
+		<option value="BA"/>BA
+		</select></td>
+	</tr>
+	<tr>
+		<td>Occupation
+		<select name="Software Engineer">
+		<option value="Business"/>Business
+		<option value="Artist"/>Artist
+		<option value="MD"/>MD
+		</select></td>
+	</tr>
+	<tr>
+		<td>Alternate Email Address<input type="text" name="altEmail">(Optional)</td>
+	</tr>
+</table>
+<b>Tell us your interests(optional)</b>
+<br>
+Based on your selection we will periodically send you information
+<table>
+	<tr>
+	<td><input type="checkbox" name="interests"/>Entertainment</td>
+	<td><input type="checkbox" name="interests"/>Computer & Technology</td>
+	<td><input type="checkbox" name="interests"/>Real Estate</td>
+	</tr>
+</table>
+<input type="button" name="registerMe" value="Register Me" onClick="validate();"/>
+<input type="reset" name="reset" value="Reset"/>
+</form>
+</body>
+</html>

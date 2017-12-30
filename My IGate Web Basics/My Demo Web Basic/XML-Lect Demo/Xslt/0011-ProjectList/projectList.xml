@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="projectList.xsl"?>
+
+<projectList>
+    <project projectNumber="1">
+        <projectId>ABC123</projectId>
+        <projectName>CreditCardSystem</projectName>
+        <customer>XYZ</customer>
+        <plannedStartDate>12-05-2007</plannedStartDate>
+        <plannedEndDate>12-06-2009</plannedEndDate>
+        <team>
+        	<teamMember memberNumber="m01">
+        		<employeeId>E01</employeeId>
+        		<firstName>John</firstName>
+        		<middleName>Sweet</middleName>
+        		<lastName>Linkon</lastName>
+        		<designation>TeamLeader</designation>
+        		<role>ABC</role>
+        	</teamMember>
+        </team>  
+    </project>
+    <project projectNumber="2">
+        <projectId>XYZ456</projectId>
+        <projectName>Banking System</projectName>
+        <customer>BSNL</customer>
+        <plannedStartDate>12-05-2007</plannedStartDate>
+        <plannedEndDate>12-06-2009</plannedEndDate>
+        <team>
+        	<teamMember>
+        		<employeeId>E02</employeeId>
+        		<firstName>Merry</firstName>
+        		<designation>ProjectLeader</designation>
+        		<role>BBB</role>
+        	</teamMember>
+        </team>
+    </project>
+</projectList>

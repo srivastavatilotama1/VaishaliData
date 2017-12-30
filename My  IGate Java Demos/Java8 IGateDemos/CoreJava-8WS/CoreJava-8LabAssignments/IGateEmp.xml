@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:emps xmlns:ns2="com.emp.vinsys">
+    <emp empId="100">
+        <firstName>Steven</firstName>
+        <lastName>King</lastName>
+        <email>SKING</email>
+        <phoneNumber>515.123.4567</phoneNumber>
+        <hireDate/>
+        <designation>President</designation>
+        <salary>24000.0</salary>
+        <department>
+            <departmentId>10</departmentId>
+            <departmentName>Administration</departmentName>
+            <managerId>100</managerId>
+        </department>
+    </emp>
+    <emp empId="101">
+        <firstName>Neena</firstName>
+        <lastName>Kochhar</lastName>
+        <email>NKOCHHAR</email>
+        <phoneNumber>515.123.4568</phoneNumber>
+        <hireDate/>
+        <designation>Vice President</designation>
+        <salary>17000.0</salary>
+        <managerId>100</managerId>
+        <department>
+            <departmentId>10</departmentId>
+            <departmentName>Administration</departmentName>
+            <managerId>100</managerId>
+        </department>
+    </emp>
+    <emp empId="102">
+        <firstName>Lex</firstName>
+        <lastName>De Haan</lastName>
+        <email>LDEHAAN</email>
+        <phoneNumber>515.123.4569</phoneNumber>
+        <hireDate/>
+        <designation>Vice President</designation>
+        <salary>17000.0</salary>
+        <managerId>100</managerId>
+        <department>
+            <departmentId>10</departmentId>
+            <departmentName>Administration</departmentName>
+            <managerId>100</managerId>
+        </department>
+    </emp>
+    <emp empId="201">
+        <firstName>Michael</firstName>
+        <lastName>Hartstein</lastName>
+        <email>MHARTSTE</email>
+        <phoneNumber>515.123.5555</phoneNumber>
+        <hireDate/>
+        <designation>Manager</designation>
+        <salary>13000.0</salary>
+        <managerId>100</managerId>
+        <department>
+            <departmentId>20</departmentId>
+            <departmentName>Production</departmentName>
+            <managerId>201</managerId>
+        </department>
+    </emp>
+    <emp empId="202">
+        <firstName>Pat</firstName>
+        <lastName>Fay</lastName>
+        <email>PFAY</email>
+        <phoneNumber>603.123.6666</phoneNumber>
+        <hireDate/>
+        <designation>Deputy Manager</designation>
+        <salary>6000.0</salary>
+        <managerId>201</managerId>
+        <department>
+            <departmentId>20</departmentId>
+            <departmentName>Production</departmentName>
+            <managerId>201</managerId>
+        </department>
+    </emp>
+    <emp empId="124">
+        <firstName>Kevin</firstName>
+        <lastName>Mourgos</lastName>
+        <email>KMOURGOS</email>
+        <phoneNumber>650.123.5234</phoneNumber>
+        <hireDate/>
+        <designation>Manager</designation>
+        <salary>5800.0</salary>
+        <managerId>100</managerId>
+        <department>
+            <departmentId>30</departmentId>
+            <departmentName>Sales</departmentName>
+            <managerId>124</managerId>
+        </department>
+    </emp>
+    <emp empId="141">
+        <firstName>Trenna</firstName>
+        <lastName>Rajs</lastName>
+        <email>TRAJS</email>
+        <phoneNumber>650.121.8009</phoneNumber>
+        <hireDate/>
+        <designation>Clerk</designation>
+        <salary>3500.0</salary>
+        <managerId>124</managerId>
+        <department>
+            <departmentId>30</departmentId>
+            <departmentName>Sales</departmentName>
+            <managerId>124</managerId>
+        </department>
+    </emp>
+    <emp empId="205">
+        <firstName>Shelley</firstName>
+        <lastName>Higgins</lastName>
+        <email>SHIGGINS</email>
+        <phoneNumber>515.123.8080</phoneNumber>
+        <hireDate/>
+        <designation>Manager</designation>
+        <salary>12000.0</salary>
+        <managerId>101</managerId>
+        <department>
+            <departmentId>40</departmentId>
+            <departmentName>Finance</departmentName>
+            <managerId>205</managerId>
+        </department>
+    </emp>
+    <emp empId="206">
+        <firstName>William</firstName>
+        <lastName>Gietz</lastName>
+        <email>WGIETZ</email>
+        <phoneNumber>515.123.8181</phoneNumber>
+        <hireDate/>
+        <designation>Accountant</designation>
+        <salary>8300.0</salary>
+        <managerId>205</managerId>
+        <department>
+            <departmentId>40</departmentId>
+            <departmentName>Finance</departmentName>
+            <managerId>205</managerId>
+        </department>
+    </emp>
+    <emp empId="199">
+        <firstName>Douglas</firstName>
+        <lastName>Grant</lastName>
+        <email>DGRANT</email>
+        <phoneNumber>650.507.9844</phoneNumber>
+        <hireDate/>
+        <designation>Clerk</designation>
+        <salary>2600.0</salary>
+        <managerId>205</managerId>
+        <department>
+            <departmentId>40</departmentId>
+            <departmentName>Finance</departmentName>
+            <managerId>205</managerId>
+        </department>
+    </emp>
+    <emp empId="200">
+        <firstName>Jennifer</firstName>
+        <lastName>Whalen</lastName>
+        <email>JWHALEN</email>
+        <phoneNumber>515.123.4444</phoneNumber>
+        <hireDate/>
+        <designation>Admin Assistant</designation>
+        <salary>4400.0</salary>
+        <managerId>102</managerId>
+    </emp>
+    <emp empId="198">
+        <firstName>Donald</firstName>
+        <lastName>OConnell</lastName>
+        <email>DOCONNEL</email>
+        <phoneNumber>650.507.9833</phoneNumber>
+        <hireDate/>
+        <designation>Clerk</designation>
+        <salary>2600.0</salary>
+    </emp>
+</ns2:emps>

@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE=JavaScript>
+function myLoad()
+{
+ doc = document.getElementsByTagName("table");
+ var docAtt=doc.item(0);
+docAtt.setAttribute("border", "6");
+  
+  
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<a href="alert.html" target="_blank">Alert</a><br/>
+<a href="addition.html" target="_blank">Addition</a><br/>
+<a href="next.html" target="_blank">Next</a><br/>
+<table border="2"  cellspacing="2" cellpadding="5">
+	<caption>Emp Info</caption>
+	<tr   bgcolor="green" >
+		<th>EMP_ID</th>
+		<th>EMP_NAME</th>
+		<th>EMP_SAL</th>
+	</tr>
+
+	<tr>
+		<td>111</td>
+		<td>Vaishali</td>
+		<td>100000</td>
+	</tr>
+
+	<tr>
+		<td>2221</td>
+		<td>Krishna</td>
+		<td>200000</td>
+	</tr>
+
+	<tr>
+		<td>333</td>
+		<td>Bhanumati</td>
+		<td>300000</td>
+	</tr>
+
+	</table>
+<hr size="3"/>
+<table border="1">
+	<caption > Column Span</caption>
+	<tr>
+		<th>NAME</th>
+		<th colspan="2">TELEPHONE</th>
+	</tr>
+	<tr>
+		<td> Vaishali</td>
+		<td>8888108810</td>
+		<td>0120-666666</td>
+	</tr>
+</table>
+<input type="button"  onclick="myLoad();" name="but" value="Change Border"/>
+
+</BODY>
+</HTML>

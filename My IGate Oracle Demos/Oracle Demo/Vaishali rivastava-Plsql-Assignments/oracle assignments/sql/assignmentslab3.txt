@@ -1,0 +1,579 @@
+lab 3.1
+query 1
+
+Wrote file afiedt.buf
+
+  1  SELECT staff_name,dept_code,dept_name
+  2  FROM staff_masters
+  3  NATURAL JOIN department_masters
+  4* WHERE staff_sal>20000
+SQL> /
+
+result---
+
+
+STAFF_NAME                                          DEPT_CODE DEPT_NAME
+-------------------------------------------------- ---------- --------------------------------------
+john abraham                                               10 Computer Science
+Mohan                                                      10 Computer Science
+Rahul                                                      20 Electricals
+Smith                                                      20 Electricals
+Ram                                                        30 Electronics
+Allen                                                      30 Electronics
+
+6 rows selected.
+
+
+
+
+********************************************************************************************************************************
+query 2
+
+
+
+ SELECT staff_code "STAFF#",staff_name "staff",dept_name "mgr#",
+ mgr_code "manager"
+ FROM staff_masters
+ NATURAL JOIN department_masters
+
+
+result--
+
+
+    STAFF# staff                                              mgr#                                                  manager
+---------- -------------------------------------------------- --------------------------------------
+    100003 Mohan                                              Computer Science                                       100006
+    100005 john abraham                                       Computer Science                                       100007
+    100004 Anil                                               Electricals                                            100006
+    100007 Smith                                              Electricals                                            100005
+    100009 Rahul                                              Electricals                                            100006
+    100001 Arvind                                             Electronics                                            100006
+    100006 Allen                                              Electronics                                            100005
+    100010 Ram                                                Electronics                                            100007
+    100008 Raviraj                                            Mechanics                                              100006
+
+9 rows selected.
+
+SQL> 
+
+
+
+***************************************************************************************************************************
+query 3
+
+
+ SELECT  DISTINCT stu.student_code, stu.student_name,dept.dept_name,sm.student_year,
+    sm.subject1,sm.subject2,sm.subject3
+    FROM student_masters  stu
+    JOIN department_masters dept
+    ON(dept.dept_code=dept.dept_code)
+    JOIN student_marks sm
+    ON(stu.student_code=sm.student_code)    
+    AND sm.subject1>=60
+    AND sm.subject2>=60
+    AND sm.subject3>=60
+    AND dept.dept_code IN(10,20)
+
+result--
+
+
+STUDENT_CODE STUDENT_NAME                                       DEPT_NAME                                          STUDENT_YEAR   SUBJECT1   SUBJECT2   SUBJECT3
+------------ -------------------------------------------------- ------------------------------------
+        1004 Raj                                                Electricals                                                2010         65         64         90
+        1011 Sunder                                             Electricals                                                2010         89         96         78
+        1021 Sumit                                              Electricals                                                2010         78         79         78
+        1002 Ravi                                               Electricals                                                2011         89         96         78
+        1002 Ravi                                               Computer Science                                           2010         66         74         88
+        1004 Raj                                                Computer Science                                           2010         65         64         90
+        1014 Sunil                                              Computer Science                                           2010         73         74         65
+        1002 Ravi                                               Computer Science                                           2011         89         96         78
+        1015 Kapil                                              Computer Science                                           2011         78         88         65
+        1011 Sunder                                             Computer Science                                           2010         89         96         78
+        1021 Sumit                                              Computer Science                                           2010         78         79         78
+        1013 Anil                                               Electricals                                                2011         66         74         88
+        1014 Sunil                                              Electricals                                                2011         65         64         90
+        1002 Ravi                                               Electricals                                                2010         66         74         88
+        1005 Arvind                                             Electricals                                                2010         78         88         65
+        1016 Ashok                                              Computer Science                                           2010         68         78         74
+        1014 Sunil                                              Computer Science                                           2011         65         64         90
+        1005 Arvind                                             Electricals                                                2011         73         74         65
+        1013 Anil                                               Computer Science                                           2011         66         74         88
+        1005 Arvind                                             Computer Science                                           2010         78         88         65
+        1005 Arvind                                             Computer Science                                           2011         73         74         65
+        1007 Mehul                                              Computer Science                                           2011         68         78         74
+        1014 Sunil                                              Electricals                                                2010         73         74         65
+        1007 Mehul                                              Electricals                                                2011         68         78         74
+        1012 Rajesh                                             Electricals                                                2011         78         79         78
+        1012 Rajesh                                             Computer Science                                           2011         78         79         78
+        1016 Ashok                                              Electricals                                                2010         68         78         74
+        1015 Kapil                                              Electricals                                                2011         78         88         65
+
+28 rows selected.
+
+
+
+
+
+
+
+*************************************************************************************************************************************************************************
+query 4
+
+
+  1  SELECT s.student_code,s.student_name,b.book_code,b.book_name,t.book_expected_return_date
+  2  FROM student_masters s,book_masters b,book_transactions t
+  3  WHERE b.book_code=t.book_code
+  4  AND s.student_code=t.student_code
+  5* AND t.book_expected_return_date=sysdate
+SQL> /
+
+
+result--
+
+
+no rows selected
+
+SQL> 
+
+
+
+*****************************************************************************************************************************************************************************
+query 4
+query 5
+
+ 1  SELECT staff.staff_code,staff.staff_name,dept.dept_name,
+ 2  des.design_name,book.book_code,book.book_name,trans.book_issue_date
+ 3  FROM staff_masters staff ,department_masters dept,designation_masters des,
+ 4  book_masters book,book_transactions trans
+ 5  WHERE staff.staff_code=trans.staff_code
+ 6  AND   staff.design_code=des.design_code
+ 7  AND        staff.dept_code=dept.dept_code
+ 8  AND    book.book_code=trans.book_code
+ 9* AND trans.book_issue_date BETWEEN TO_CHAR(sysdate-30) AND SYSDATE
+sQL> /
+
+
+
+result--
+
+
+
+no rows selected
+
+SQL> 
+
+************************************************************************************************************************************************************************
+query 4
+query 6
+
+
+ 1  SELECT DISTINCT book.book_code,book.book_name
+ 2  FROM book_masters book,book_transactions trans
+ 3*  WHERE book.book_code=trans.book_code
+QL> /
+SQL> /
+
+result--
+
+
+
+ BOOK_CODE BOOK_NAME
+---------- --------------------------------------------------
+  10000004 J2EE Complete Reference
+  10000006 Let Us C
+  10000007 Intoduction To Algorithams
+  10000008 Computer Networks
+  10000009 Introduction to O/S
+  10000005 Relational DBMS
+
+6 rows selected.
+
+
+
+*****************************************************************************************************************************************************************************
+query 4
+query 7
+
+
+  1  SELECT staff.staff_code,staff.staff_name,design.design_name,dept.dept_name,
+  2  NVL((SELECT staff1.staff_name
+  3  FROM staff_masters staff1
+  4  WHERE staff1.dept_code=staff.dept_code
+  5  AND staff1.design_code=101),'NO HOD')"deapartment head"
+  6  FROM staff_masters staff,designation_masters design ,department_masters dept
+  7  WHERE staff.design_Code=design.design_code
+  8  AND staff.dept_code=dept.dept_code
+  9* AND staff.design_code!=101
+SQL> /
+
+result--
+
+
+
+STAFF_CODE STAFF_NAME                                         DESIGN_NAME                                        DEPT_NAME                                          deap
+---------- -------------------------------------------------- --------------------------------------
+    100007 Smith                                              Reader                                             Electricals                                        NO H
+    100009 Rahul                                              Professor                                          Electricals                                        NO H
+    100004 Anil                                               Professor                                          Electricals                                        NO H
+    100006 Allen                                              Reader                                             Electronics                                        NO H
+    100010 Ram                                                Reader                                             Electronics                                        NO H
+    100001 Arvind                                             Professor                                          Electronics                                        NO H
+    100008 Raviraj                                            Professor                                          Mechanics                                          NO H
+
+7 rows selected.
+
+SQL> 
+
+*****************************************************************************************************************************************************************************
+
+query 8 
+
+
+
+
+
+************************************************************************************************************************************************************************
+
+query 9
+
+*****************************************************************************************************************************************************************************
+query 4
+query 10
+
+
+
+  1   SELECT staff_code,staff_name,staff_sal
+  2  FROM staff_masters
+  3  WHERE staff_sal<
+  4  (SELECT AVG(staff_sal)
+  5* FROM staff_masters )
+SQL> /
+
+result--
+
+
+STAFF_CODE STAFF_NAME                                          STAFF_SAL
+---------- -------------------------------------------------- ----------
+    100001 Arvind                                                  17000
+    100004 Anil                                                    20000
+    100008 Raviraj                                                 18000
+    100009 Rahul                                                   22000
+       111 priya                                                   20000
+       333 sonam                                                    8000
+
+6 rows selected.
+
+
+******************************************************************************************************************************************************************
+
+query 11
+
+
+ 1   SELECT staff_code,staff_name
+ 2   FROM staff_masters  staff
+ 3     WHERE NOT EXISTS
+ 4     (SELECT DISTINCT mgr_code FROM staff_masters mgr
+ 5*  WHERE mgr.mgr_code=staff.staff_code)
+QL> /
+
+result--
+
+
+STAFF_CODE STAFF_NAME
+---------- --------------------------------------------------
+       111 priya
+    100008 Raviraj
+       100 samir
+    100010 Ram
+    100004 Anil
+       333 sonam
+    100009 Rahul
+    100001 Arvind
+
+8 rows selected.
+
+*******************************************************************************************************************************************************************
+query 12
+
+  1   SELECT book_pub_author,book_name
+  2   FROM book_masters book
+  3   WHERE(SELECT  COUNT(*)
+  4   FROM book_masters author
+  5   GROUP BY author.book_pub_author
+  6*  HAVING book.book_name=author.book_pub_author)>1
+  7  /
+
+	result--
+
+
+
+no rows selected
+
+
+
+
+
+*******************************************************************************************************************************************************************
+query 13  
+
+ 
+  SELECT staff.staff_code,staff.staff_name,dept.dept_name
+  FROM staff_masters staff,department_masters dept
+  WHERE staff.dept_code=dept.dept_code
+  AND
+  (SELECT COUNT(*) FROM book_transactions book GROUP BY book.staff_code
+  HAVING book.staff_code=staff.staff_code)>1;
+
+result
+
+
+STAFF_CODE STAFF_NAME                                         DEPT_NAME
+---------- -------------------------------------------------- --------------------------------------
+    100007 Smith                                              Electricals
+    100006 Allen                                              Electronics
+
+
+
+                                                                                                                                                                
+*******************************************************************************************************************************************************************                                                       
+
+query 14
+
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  SELECT stud.student_code,stud.student_name,dept.dept_name,
+  2  marks.subject1,marks.subject2,marks.subject3,
+  3  (marks.subject1+marks.subject2+marks.subject3)"TOtal marks"
+  4  FROM student_masters stud,department_masters dept,student_marks marks
+  5  WHERE stud.dept_code=dept.dept_code
+  6  AND   stud.student_code=marks.student_code
+  7* AND        stud.dept_code=10       
+SQL> /
+
+
+result--
+
+
+
+STUDENT_CODE STUDENT_NAME                                       DEPT_NAME                                            SUBJECT1   SUBJECT2   SUBJECT3 TOtal marks
+------------ -------------------------------------------------- ------------------------------------
+        1001 Amit                                               Computer Science                                           55         45         78         178
+        1002 Ravi                                               Computer Science                                           66         74         88         228
+        1008 Dev                                                Computer Science                                           72         55         55         182
+        1014 Sunil                                              Computer Science                                           73         74         65         212
+        1020 Amrit                                              Computer Science                                           45         55         65         165
+        1001 Amit                                               Computer Science                                           68         44         92         204
+        1002 Ravi                                               Computer Science                                           89         96         78         263
+        1008 Dev                                                Computer Science                                           69         44         52         165
+        1014 Sunil                                              Computer Science                                           65         64         90         219
+        1020 Amrit                                              Computer Science                                           55         45         78         178
+
+10 rows selected.
+
+
+
+*******************************************************************************************************************************************************************
+
+query 15
+
+
+  1  SELECT staff.staff_name,dept.dept_name,staff.staff_sal
+  2  FROM staff_masters staff,department_masters dept
+  3  WHERE staff.dept_code=dept.dept_code
+  4  AND staff.staff_sal<
+  5  (SELECT AVG(staff1.staff_sal)
+  6  FROM staff_masters staff1
+  7* GROUP BY staff1.dept_code HAVING staff1.dept_code=staff.dept_code)
+SQL> /
+
+
+result---
+
+
+STAFF_NAME                                         DEPT_NAME                                           STAFF_SAL
+-------------------------------------------------- -------------------------------------------------
+Rahul                                              Electricals                                             22000
+Anil                                               Electricals                                             20000
+Arvind                                             Electronics                                             17000
+
+SQL> 
+
+********************************************************************************************************************************************************************
+Query 15b)
+
+
+  1  SELECT staff.staff_code,staff.staff_name,
+  2  ((TO_CHAR(SYSDATE,'YYYY'))-(TO_CHAR(Hiredate,'YYYY')))"Experience"
+  3  FROM staff_masters staff
+  4  WHERE staff.design_code In
+  5  (SELECT design.design_code FROM designation_masters design
+  6*    WHERE design.design_name IN('Professor','Lecturer'))
+SQL> /
+
+result--
+
+
+STAFF_CODE STAFF_NAME                                         Experience
+---------- -------------------------------------------------- ----------
+    100001 Arvind                                                     11
+    100004 Anil                                                       13
+    100008 Raviraj                                                    11
+    100009 Rahul                                                      11
+
+SQL> 
+
+
+
+
+*******************************************************************************************************************************************************************
+
+query 16
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  SELECT staff1.staff_name,dept.dept_name
+  2  FROM staff_masters staff1,department_masters dept,staff_masters staff
+  3  WHERE staff.dept_code=dept.dept_code
+  4  AND staff.staff_code=100004
+  5* AND staff1.dept_code=staff.dept_code
+SQL> /
+
+result--
+
+
+STAFF_NAME                                         DEPT_NAME
+-------------------------------------------------- -------------------------------------------------
+Anil                                               Electricals
+Smith                                              Electricals
+Rahul                                              Electricals
+
+SQL> 
+
+
+
+
+*******************************************************************************************************************************************************************
+
+query 17
+
+
+
+  1  SELECT marks.student_code,stud.student_name
+  2  FROM student_marks marks,student_masters stud
+  3  WHERE marks.student_code=stud.student_code
+  4  AND stud.dept_code=10
+  5  AND marks.subject1=(SELECT MAX(sm.subject1) FROM student_marks sm
+  6  WHERE sm.student_year=2010
+  7  AND sm.student_code IN
+  8  (SELECT s.student_code FROM student_masters s WHERE s.dept_code=stud.dept_code))
+  9  AND marks.subject2=(SELECT MAX(sm.subject2) FROM student_marks sm
+ 10  WHERE sm.student_year=2010
+ 11  AND sm.student_code IN
+ 12  (SELECT s.student_code FROM student_masters s WHERE s.dept_code=stud.dept_code))
+ 13  AND marks.subject3=(SELECT MAX(sm.subject3) FROM student_marks sm
+ 14  WHERE sm.student_year=2010
+ 15  AND sm.student_code IN
+ 16* (SELECT s.student_code FROM student_masters s WHERE s.dept_code=stud.dept_code))
+SQL> /
+
+
+result--
+
+
+no rows selected
+
+*******************************************************************************************************************************************************************
+
+query 18
+
+
+ SELECT STUD.student_code,stud.student_name,dept.dept_name
+ FROM student_masters stud,department_masters dept
+ WHERE stud.dept_code=dept.dept_code
+ AND
+ (SELECT COUNT(*) FROM student_masters student GROUP BY
+ student.dept_code HAVING student.dept_code=stud.dept_code)=
+ (SELECT MAX (COUNT (*))FROM student_masters GROUP BY dept_code)
+
+
+
+result--
+
+
+STUDENT_CODE STUDENT_NAME                                       DEPT_NAME
+------------ -------------------------------------------------- ------------------------------------
+        1001 Amit                                               Computer Science
+        1002 Ravi                                               Computer Science
+        1008 Dev                                                Computer Science
+        1014 Sunil                                              Computer Science
+        1020 Amrit                                              Computer Science
+
+*******************************************************************************************************************************************************************
+
+query 19
+
+
+  1  SELECT staff.staff_code,staff.staff_name,dept.dept_code,design.design_code
+  2  FROM staff_masters staff,department_masters dept,designation_masters design
+  3  WHERE staff.dept_code=dept.dept_code
+  4  AND staff.design_code=design.design_code
+  5* AND staff.hiredate BETWEEN (sysdate-90) AND sysdate
+SQL> /
+
+
+result--
+
+
+no rows selected
+
+SQL> 
+
+*******************************************************************************************************************************************************************
+
+query 20
+
+Wrote file afiedt.buf
+
+  1  SELECT staff.staff_name,
+  2  (SELECT COUNT(*) FROM staff_masters staff2 WHERE staff2.mgr_code=staff.staff_code)
+  3  FROM staff_masters staff
+  4  WHERE staff.staff_code IN
+  5* (SELECT DISTINCT mgr_code FROM staff_masters)
+SQL> /
+
+result--
+
+
+
+STAFF_NAME                                         (SELECTCOUNT(*)FROMSTAFF_MASTERSSTAFF2WHERESTAFF2.MGR_CODE=STAFF.STAFF_CODE)
+-------------------------------------------------- -------------------------------------------------
+Allen                                                                                                                         4
+Smith                                                                                                                         1
+
+
+
+*******************************************************************************************************************************************************************
+
+*******************************************************************************************************************************************************************
+
+*******************************************************************************************************************************************************************
+
+*******************************************************************************************************************************************************************
+
+*******************************************************************************************************************************************************************
+
+*******************************************************************************************************************************************************************
+
+
+*******************************************************************************************************************************************************************
+
+*******************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************
+
+*******************************************************************************************************************************************************************
+

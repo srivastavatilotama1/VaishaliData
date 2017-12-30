@@ -1,0 +1,54 @@
+<!-- 
+
+-->
+<html>
+	<head>
+	<title>jQuery Dom </title>
+	<style type="text/css">
+		.style1{background-color:blue; color:white;font-size:20pt}
+	</style>
+	<script language="javascript" src="../Scripts/jquery-2.0.0.js">
+	</script>
+	
+<script type="text/javascript">
+	$(document).ready(function()
+	{ 
+		WireEvents();
+	});	
+	function WireEvents()
+	{
+		$('#btnOneId').bind("click",buttonOneHandler);
+		$('#btnTwoId').bind("click",buttonTwoHandler);
+		$('#btnThirdId').bind("click",buttonThirdHandler);
+		$('#btnForthId').bind("iGateClick",buttonForthHandler);
+	}
+	function buttonOneHandler(event)
+	{
+		$('#btnTwoId').trigger("click");		
+	}	
+	function buttonTwoHandler(event)
+	{
+		alert("Second Button Clicked");
+	}	
+	function buttonThirdHandler(event)
+	{
+		$('#btnForthId').trigger("iGateClick","Hello Vaishali");
+	}
+	
+	function buttonForthHandler(event, data)
+	{
+		alert("Igate Forth Button Clicked  Received " +data);
+	}
+	
+</script>
+</head>
+<body  bgcolor="pink">
+	<form>
+		<input type="button" id="btnOneId" value="One"/><br/>
+		<input type="button" id="btnTwoId" value="Two"/><br/>
+		<input type="button" id="btnThirdId" value="Three"/><br/>
+		<input type="button" id="btnForthId" value="Forth"/><br/>
+		
+	</form>
+</body>
+</html>

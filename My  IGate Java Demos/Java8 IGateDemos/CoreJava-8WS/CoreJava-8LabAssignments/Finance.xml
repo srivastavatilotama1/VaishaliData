@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:emps xmlns:ns2="com.emp.vinsys">
+    <emp empId="205">
+        <firstName>Shelley</firstName>
+        <lastName>Higgins</lastName>
+        <email>SHIGGINS</email>
+        <phoneNumber>515.123.8080</phoneNumber>
+        <hireDate/>
+        <designation>Manager</designation>
+        <salary>12000.0</salary>
+        <managerId>101</managerId>
+        <department>
+            <departmentId>40</departmentId>
+            <departmentName>Finance</departmentName>
+            <managerId>205</managerId>
+        </department>
+    </emp>
+    <emp empId="206">
+        <firstName>William</firstName>
+        <lastName>Gietz</lastName>
+        <email>WGIETZ</email>
+        <phoneNumber>515.123.8181</phoneNumber>
+        <hireDate/>
+        <designation>Accountant</designation>
+        <salary>8300.0</salary>
+        <managerId>205</managerId>
+        <department>
+            <departmentId>40</departmentId>
+            <departmentName>Finance</departmentName>
+            <managerId>205</managerId>
+        </department>
+    </emp>
+    <emp empId="199">
+        <firstName>Douglas</firstName>
+        <lastName>Grant</lastName>
+        <email>DGRANT</email>
+        <phoneNumber>650.507.9844</phoneNumber>
+        <hireDate/>
+        <designation>Clerk</designation>
+        <salary>2600.0</salary>
+        <managerId>205</managerId>
+        <department>
+            <departmentId>40</departmentId>
+            <departmentName>Finance</departmentName>
+            <managerId>205</managerId>
+        </department>
+    </emp>
+</ns2:emps>

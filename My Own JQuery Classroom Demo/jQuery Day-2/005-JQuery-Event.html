@@ -1,0 +1,64 @@
+<!-- 
+
+-->
+<html>
+	<head>
+	<title>jQuery Dom </title>
+	<style type="text/css">
+		.style1{background-color:blue; color:white}
+		.style2{font-size:20pt}
+		.style3{background-color:red; color:white;font-size:50pt}
+	</style>
+	<script language="javascript" src="../Scripts/jquery-2.0.0.js">
+	</script>
+	
+<script type="text/javascript">
+	$(document).ready(function()
+	{ 
+		WireEvents();
+	});
+	function WireEvents()
+	{
+		$(':button.btnNextClass').bind('click',clickHandler);
+		$('#btnAddId').bind('click',addClickHandler);
+		$('#btnStopId').bind('click',stopClickHandler);
+	}
+	function clickHandler(event)
+	{
+		alert (" Next Btn Clicked....");
+	}
+	
+	function addClickHandler(event)
+	{
+		var $newRow=$('#SampleTableId tr:first').clone();
+		$('#SampleTableId tr:last').after($newRow);
+	}
+	
+	function stopClickHandler(event)
+	{
+		$(':button.btnNextClass').die();
+	}
+	
+</script>
+</head>
+<body  bgcolor="pink">
+<div>
+		<input type="button"
+			name="btnAdd" id="btnAddId"
+			value="Add" class="btnAddClass"/>
+						
+		<input type="button"
+			name="btnStop" id="btnStopId"
+			value="Stop" class="btnStopClass"/>	
+</div>
+<hr/>
+	<table  id="SampleTableId" border="1">
+		<tr>			
+			<td><input type="button"
+			name="btnNext" id="btnNextId"
+			value="Next" class="btnNextClass"/></td>
+			</td>	
+		</tr>
+	</table>
+</body>
+</html>

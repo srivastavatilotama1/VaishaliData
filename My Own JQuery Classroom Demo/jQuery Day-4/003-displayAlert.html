@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>jQuery Plugin</title>
+<script type="text/javascript" src="..\Scripts\jquery-1.4.1.js"></script>
+<script type="text/javascript" src="jquery.displayAlert.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$.displayAlert("Hellooo.... Message");	
+	
+	$('#btnDisableId').click(function(){
+	
+	var state=$('#txtTest').is(':enabled');
+			$('#txtTest').attr('readonly',$.enableDisable(state));	
+	});
+	
+});
+</script>
+</head>
+<body>
+<input type="text" id="txtTest"/>
+<input type="button" id="btnDisableId" value="Disable Textbox"/>
+</body>
+</html>

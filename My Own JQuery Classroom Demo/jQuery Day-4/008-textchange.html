@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>jQuery Plugin</title>
+<script type="text/javascript" src="..\Scripts\jquery-1.4.1.js"></script>
+<script type="text/javascript" src="jquery.textChange.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#target").bind("customevent", handler); 
+	$("#target").trigger("customevent");
+	
+	function handler()
+	{
+		alert('Its working');
+	}
+})
+</script>
+</head>
+<body>
+<div id="target">
+Target Div
+</div>
+</textarea>
+</body>
+</html>

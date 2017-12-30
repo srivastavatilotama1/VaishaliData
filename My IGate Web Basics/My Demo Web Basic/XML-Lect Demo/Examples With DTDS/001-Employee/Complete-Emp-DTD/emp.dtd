@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY copyright "Vaishali Srivastava">
+<!ENTITY % address "(city, state)">
+<!NOTATION filePath SYSTEM "C:\IBM Folder\XMLP\src\ibmDesc.txt">
+<!ELEMENT employees (author,employee+)>
+<!ELEMENT employee (ename,esal,eaddress)>
+<!ELEMENT eaddress  %address;>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT esal (#PCDATA)>
+<!ELEMENT ename ((fname,mname,lname)|(fname,lname)|(fname,mname))>
+<!ATTLIST employee gender CDATA #REQUIRED>
+<!ATTLIST esal currency CDATA #FIXED "RS">
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT mname (#PCDATA)>
+<!ELEMENT lname (#PCDATA)>
+<!ATTLIST fname title (MRS|MR) #IMPLIED>
+<!ATTLIST employee emp_id ID #REQUIRED>
+<!ATTLIST employee supervisor IDREF #IMPLIED>
+<!ATTLIST employee compdesc NOTATION (filePath) #IMPLIED>
+
+
+

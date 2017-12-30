@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE address SYSTEM "Address1.dtd">
+
+<address>
+	<street>MGRoad</street>
+	<city>Pune</city>
+	<state>MS</state>
+</address>
+
+
+<!--  Both are allowed 
+<address>
+	<buildingnumber>45</buildingnumber>
+	<street>MGRoad</street>
+	<city>Pune</city>
+	<state>MS</state>
+</address>
+-->

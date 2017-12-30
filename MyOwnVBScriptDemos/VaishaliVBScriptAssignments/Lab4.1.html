@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=10"/>
+	<script language="Vbscript"  type="text/vbscript"> 
+	Sub btnUpper_OnClick
+			value1=(UCase(document.getElementById("txtStringId").value))
+		document.getElementById("txtResultId").value=value1
+	End Sub
+
+	Sub btnLower_OnClick
+		value1=(LCase(document.getElementById("txtStringId").value))
+		document.getElementById("txtResultId").value=value1
+	End Sub
+
+	Sub btnLen_OnClick
+		value1=(Len(document.getElementById("txtStringId").value))
+		document.getElementById("txtResultId").value=value1
+	End Sub
+
+	Sub btnSearch_OnClick
+		dim m
+		dim n
+		m=document.getElementById("txtSearchId").value
+		n=document.getElementById("txtStringId").value
+		value1=(InStr(n,m))
+		document.getElementById("txtResultId").value=value1
+	End Sub
+
+</script>
+</head>
+
+<body>
+		<div align="center">
+			<h1>String  Functions</h1>
+			<table>
+				<tr>
+					<td>Enter the string</td>
+					<td><input type="text" id="txtStringId"></td>
+				</tr>
+				<tr>
+					<td>enter the string to search</td>
+					<td><input type="text"id="txtSearchId"></td>
+				</tr>
+				<tr>
+					<td><input type="button" name="btnUpper"
+						value="Upper case">	</td>
+					<td><input type="button" name="btnLower" 
+							value="Lower case">	</td>
+					<td><input type="button" name="btnLen" 
+							value="Length">	</td>
+					<td><input type="button" name="btnSearch" 
+						value="Search"></td>
+				</tr>
+				<tr>
+					<td>Result</td>
+					<td><input type="text" id="txtResultId"></td>
+				</tr>
+		</table>
+</div>
+</body>
+</html>

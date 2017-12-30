@@ -1,0 +1,445 @@
+problem 1.1
+
+query 1
+SQL> ed
+Wrote file afiedt.buf
+
+  1  SELECT staff_code,staff_name,staff_Sal
+  2  FROM staff_masters
+  3* WHERE dept_code IN(20,30,40)
+SQL> /
+
+result -
+
+STAFF_CODE STAFF_NAME                                          STAFF_SAL
+---------- -------------------------------------------------- ----------
+    100001 Arvind                                                  17000
+    100004 Anil                                                    20000
+    100006 Allen                                                   42000
+    100007 Smith                                                   62000
+    100008 Raviraj                                                 18000
+    100009 Rahul                                                   22000
+    100010 Ram                                                     32000
+
+
+
+
+*************************************************************************
+
+query2
+
+
+
+  1  SELECT student_code,subject1,subject2,subject3,subject1+subject2+subject3
+  2* FROM student_marks
+SQL> /
+
+result -
+
+STUDENT_CODE   SUBJECT1   SUBJECT2   SUBJECT3 SUBJECT1+SUBJECT2+SUBJECT3
+------------ ---------- ---------- ---------- --------------------------
+        1001         55         45         78                        178
+        1002         66         74         88                        228
+        1003         87         54         65                        206
+        1004         65         64         90                        219
+        1005         78         88         65                        231
+        1006         65         86         54                        205
+        1007         67         79         49                        195
+        1008         72         55         55                        182
+        1009         71         59         58                        188
+        1010         68         44         92                        204
+        1011         89         96         78                        263
+        1012         78         56         55                        189
+        1013         75         58         65                        198
+        1014         73         74         65                        212
+        1015         66         45         74                        185
+        1016         68         78         74                        220
+        1017         69         44         52                        165
+        1018         65         78         56                        199
+        1019         78         58         74                        210
+        1020         45         55         65                        165
+        1021         78         79         78                        235
+        1001         68         44         92                        204
+        1002         89         96         78                        263
+        1003         78         56         55                        189
+        1004         75         58         65                        198
+        1005         73         74         65                        212
+        1006         66         45         74                        185
+        1007         68         78         74                        220
+        1008         69         44         52                        165
+        1009         65         78         56                        199
+        1010         78         58         74                        210
+        1011         45         55         65                        165
+        1012         78         79         78                        235
+        1013         66         74         88                        228
+        1014         65         64         90                        219
+        1015         78         88         65                        231
+        1016         65         86         54                        205
+        1017         67         79         49                        195
+        1018         72         55         55                        182
+        1019         71         59         58                        188
+        1020         55         45         78                        178
+        1021         87         54         65                        206
+
+42 rows selected.
+
+*******************************************************************************************************
+
+
+
+query3
+
+
+
+  1  SELECT staff_name,design_code,staff_sal,hiredate
+  2  FROM staff_masters
+  3  WHERE staff_sal BETWEEN 12000 AND 25000
+  4* AND hiredate<'01-jan-2003'
+SQL> /
+
+
+result -
+
+STAFF_NAME                                         DESIGN_CODE  STAFF_SAL HIREDATE
+-------------------------------------------------- ----------- ---------- ---------
+Mohan                                                      102      24000 19-JAN-02
+Anil 
+
+
+
+************************************************************************************************************
+
+
+query 4
+
+
+
+
+
+  1  SELECT staff_code,staff_name,dept_code,hiredate
+  2  FROM staff_masters
+  3  WHERE hiredate<'19-aug-96'
+  4* ORDER BY hiredate DESC
+SQL> /
+
+
+result -
+
+
+no rows selected
+
+
+***************************************************************************************************************
+
+
+
+query 5
+
+
+  1  SELECT staff_name NAME,design_code DESIGNATION,(staff_sal*10)+1000 INCOME
+  2  FROM staff_masters
+  3* WHERE dept_code IN(10,30)
+  4  /
+
+result -
+
+NAME                                               DESIGNATION     INCOME
+-------------------------------------------------- ----------- ----------
+Arvind                                                     102     171000
+Mohan                                                      102     241000
+John                                                       106     321000
+Allen                                                      103     421000
+Ram                                                        103     321000
+
+
+
+
+
+************************************************************************************************************************
+
+
+
+
+query 6
+
+
+
+
+Wrote file afiedt.buf
+
+  1  SELECT CONCAT(CONCAT(student_name,', '),dept_code) student_info
+  2* FROM student_masters
+SQL> /
+
+
+
+
+
+
+result -
+
+
+
+
+
+
+STUDENT_INFO
+--------------------------------------------------------------------------------------------
+Amit, 10
+Ravi, 10
+Ajay, 20
+Raj, 30
+Arvind, 40
+Rahul, 50
+Mehul, 20
+Dev, 10
+Vijay, 30
+Rajat, 40
+Sunder, 50
+Rajesh, 30
+Anil, 20
+Sunil, 10
+Kapil, 40
+Ashok, 40
+Ramesh, 30
+Amit Raj, 50
+Ravi Raj, 50
+Amrit, 10
+Sumit, 20
+
+21 rows selected.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*******************************************************************************************************************************************
+
+
+
+
+
+query 7
+
+
+
+
+  1  SELECT  staff_code,staff_name,design_code,dept_code,hiredate,mgr_code,staff_sal
+  2  FROM staff_masters
+  3* WHERE mgr_code IS NULL
+SQL> /
+
+
+
+result-
+
+
+
+
+no rows selected
+
+
+
+
+*********************************************************************************************************************************************
+
+
+
+
+query 8 
+
+
+
+
+
+  1  SELECT  dept_code,student_name,student_dob
+  2  FROM student_masters
+  3  WHERE STUDENT_DOB BETWEEN '01-jan-81'
+  4  AND '31-MAR-83'
+  5* ORDER BY student_dob ASC
+SQL> /
+
+
+RESULT--
+
+
+
+
+ DEPT_CODE STUDENT_NAME                                       STUDENT_D
+---------- -------------------------------------------------- ---------
+        50 Rahul                                              16-JAN-81
+        10 Dev                                                11-MAR-81
+        40 Kapil                                              18-MAR-81
+        50 Ravi Raj                                           29-MAY-81
+        10 Ravi                                               01-NOV-81
+        20 Ajay                                               13-JAN-82
+        20 Mehul                                              17-JAN-82
+        40 Arvind                                             15-JAN-83
+
+8 rows selected.
+
+
+
+***************************************************************************************************************************************************
+
+
+
+
+query 9
+
+
+
+
+
+****************************************************************************************************************************************************
+
+
+query 10
+
+
+
+
+
+
+  1  SELECT  book_code,book_name,book_pub_year
+  2  FROM book_masters
+  3  WHERE book_pub_year BETWEEN '2001' and '2004'
+  4* OR book_name LIKE '%&%'
+SQL> /
+
+
+
+result--
+
+
+
+
+ BOOK_CODE BOOK_NAME                                          BOOK_PUB_YEAR
+---------- -------------------------------------------------- -------------
+  10000003 JAVA Complete Reference                                     2004
+  10000007 Intoduction To Algorithams                                  2001
+  10000009 Introduction to O/S                                         2001
+
+SQL> 
+
+
+****************************************************************************************************************************************************
+
+
+
+
+
+query 11
+
+
+
+
+  1  SELECT  book_name,book_code,book_pub_year,book_pub_author
+  2  FROM book_masters
+  3*  WHERE book_name LIKE '%Comp%'
+SQL> /
+
+
+
+
+
+result--
+
+
+BOOK_NAME                                           BOOK_CODE BOOK_PUB_YEAR BOOK_PUB_AUTHOR
+-------------------------------------------------- ---------- ------------- ------------------------
+JAVA Complete Reference                              10000003          2004 H.Schild
+J2EE Complete Reference                              10000004          2000 H. Schild
+Computer Networks                                    10000008          2000 Tanenbaum
+
+SQL> 
+
+
+
+
+*******************************************************************************************************************************************************
+
+
+
+query 12
+
+
+Wrote file afiedt.buf
+
+  1  SELECT staff_name,staff_code,design_code,dept_code,hiredate,staff_sal,mgr_code
+  2  FROM staff_masters
+  3  WHERE staff_name LIKE 'A%s'
+  4  OR staff_name LIKE '_n%s'
+  5  OR staff_name LIKE '_n%n'
+  6  OR staff_name LIKE '__n%n'
+  7* OR staff_name LIKE '__n%s'
+SQL> /
+
+
+
+result--
+
+
+
+no rows selected
+
+SQL> 
+
+
+
+*********************************************************************************************************************************************************
+
+
+
+query 13
+
+
+
+
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  SELECT staff_name
+  2  FROM staff_masters
+  3* WHERE staff_name LIKE '_'
+SQL> /
+
+
+
+result----
+
+
+
+no rows selected
+
+SQL> 
+
+
+
+********************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

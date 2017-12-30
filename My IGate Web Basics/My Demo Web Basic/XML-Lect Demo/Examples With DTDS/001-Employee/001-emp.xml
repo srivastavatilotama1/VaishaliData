@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Employees SYSTEM "C:\VaishaliTemp\HSBCCode\HsbcXMl\Emp.dtd">
+<Employees>
+	<Employee>
+		<EmpId age="36">787</EmpId>
+		<EmpName>
+			<FName>Vaishali</FName>
+			<MName>Abhishek</MName>
+			<LName>Srivastava</LName>
+		</EmpName>
+		<EmpEMail>vai_141@gmail.com</EmpEMail>
+	</Employee>
+</Employees>

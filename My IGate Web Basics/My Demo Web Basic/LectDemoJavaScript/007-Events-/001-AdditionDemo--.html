@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE=JavaScript>
+function butAdd_onclick()
+{
+ 
+   var myForm = document.form1;
+  
+   		var n1=myForm.txtNum1.value;
+		var n2=myForm.txtNum2.value;
+
+		var nn1=eval(n1);
+		var nn2=eval(n2);
+		var res=nn1+nn2;
+		
+		myForm.txtRes.value=res;
+		
+        alert("Thanks for adding the form " + res);
+  
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME=form1>   
+Please enter the following Numbers:
+   <P>
+   Num1:<INPUT TYPE="text" NAME=txtNum1><BR>
+   Num2:<INPUT TYPE="text" NAME=txtNum2><BR>  
+   Res:<INPUT TYPE="text" NAME=txtRes><BR>  
+		<INPUT TYPE="button" VALUE="Add" NAME=butAdd   onclick="butAdd_onclick()">
+</FORM>
+</BODY>
+</HTML>

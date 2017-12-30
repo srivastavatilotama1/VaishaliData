@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Iterating the Nodes</title>
+<script type="text/javascript" src="../Scripts/jquery-1.6.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+		var result = "";
+		$('div.One,div.Two,div.Three').each(
+		function(index)
+		{
+			result+=index+" "+$(this).text()+"<br/>";
+		});
+		$('#OutputDiv').html(result);
+		//try with element
+});
+</script>
+</head>
+<body>
+<div class="One">
+First Div
+</div>
+
+<div class="Two">
+Second Div
+</div>
+
+<div class="Three">
+Third Div
+</div>
+
+<div id="OutputDiv" />
+
+</body>
+</html>

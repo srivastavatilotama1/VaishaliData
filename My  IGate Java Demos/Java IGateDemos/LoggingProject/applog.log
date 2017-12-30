@@ -1,0 +1,3 @@
+2014-08-12 10:35:10,039 - TestLoggerUsingPropertyFile - WARN - This is warn level  message 
+2014-08-12 10:35:10,040 - TestLoggerUsingPropertyFile - ERROR - This is error level  message 
+2014-08-12 10:35:10,041 - TestLoggerUsingPropertyFile - FATAL - This is fatal level  message 

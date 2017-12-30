@@ -1,0 +1,19 @@
+<html>
+<head>
+<script language="JavaScript">
+	function setCookie(name, value)
+	 {
+ 
+		var exp=new Date("August 20,2014")
+		document.cookie=name+"="+escape(value)+"; expires="+exp.toGMTString() +"; path=/";
+		document.write("Cookie has been set")
+}
+ </script>
+</head>
+<body>
+<form>
+
+<input type="button" value="Set a Cookie" onClick="setCookie('user','Paul Smith')">
+</form>
+</body>
+</html>

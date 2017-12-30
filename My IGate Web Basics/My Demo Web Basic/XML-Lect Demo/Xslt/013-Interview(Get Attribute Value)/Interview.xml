@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Interview.xsl"?>
+<Interview xmlns:dt ="urn:schemas-microsoft-com:datatypes">
+
+		<Candidate Skill="IT">
+			<Name DOB="12-12-1988">Mahesh</Name>
+			<Project>xyz</Project>
+			<Score dt:dt="number">88</Score>			
+		</Candidate>
+
+		<Candidate Skill="Design">
+			<Name DOB="22-10-1988">Ramesh</Name>
+			<Project>abc</Project>
+			<Score dt:dt="number">99</Score>			
+		</Candidate>
+
+		<Candidate Skill="Computer">
+			<Name DOB="23-07-1988">Sreedhar</Name>
+			<Project>ECE</Project>
+			<Score dt:dt="number">100</Score>
+			</Candidate>
+			
+</Interview>

@@ -1,0 +1,15 @@
+<html>
+<body>
+
+<script type="text/javascript">
+
+var mycars = new Array("SEED","Infotech",10,new Array("M","F"));
+document.write(mycars.length + "<br/>");
+document.write(mycars[0] + "<br/>");
+document.write(mycars[1] + "<br/>");
+document.write(mycars[2] + "<br/>");
+document.write(mycars[3][0] + "<br/>");
+document.write(mycars[3][1] + "<br/>");
+</script>
+</body>
+</html>

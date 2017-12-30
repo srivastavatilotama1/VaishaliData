@@ -1,0 +1,6 @@
+111 vaishali 12-12-2001 b pune 200000 
+222 anju 23-11-1900 a delhi 30000 
+333 sami 3-6-2007 o noida 4000 
+555 ahilya 12-4-1888 ab up 4000 
+777 dani 2-2-2 a andra 2000 
+888 vvv 3-3-3 b fff 4444 

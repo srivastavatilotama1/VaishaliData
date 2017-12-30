@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<?xml-stylesheet type="text/xsl" href="C:\IBM Folder\XMLP\src\catalog.xsl"?>
+<books>
+	<book>
+		<title>Java How to Program</title>
+		<translation edition="1">Spanish</translation>
+		<translation edition="1">Chinese</translation>
+		<translation edition="1">Japanese</translation>
+		<translation edition="2">French</translation>
+		<translation edition="2">Japanese</translation>
+	</book>
+	<book>
+		<title>C++ How to Program</title>
+		<translation edition="1">Korean</translation>
+		<translation edition="2">French</translation>
+		<translation edition="2">Spanish</translation>
+		<translation edition="3">Italian</translation>
+		<translation edition="3">Japanese</translation>
+	</book>
+</books>
+

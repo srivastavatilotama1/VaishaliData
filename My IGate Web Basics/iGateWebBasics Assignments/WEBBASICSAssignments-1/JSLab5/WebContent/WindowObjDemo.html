@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+var widthV=parseInt(document.form1.widthTB.value);
+var heightV=parseInt(document.form1.HeightTB.value);
+var leftV=parseInt(document.form1.leftTB.value);
+var topV=parseInt(document.form1.TopTB.value);
+var myWindow;
+function newWindow()
+{
+	myWindow=open('','mywindow','height=heightV,width=widthV,left=leftV,top=topV');
+	myWindow.document.writeln("<html><head><title>fun</title></head>");
+	myWindow.document.writeln("<h1> This window is opened on clicking of the New Window button </h1>");
+	myWindow.document.close();
+	myWindow.document.focus();
+}
+</script>
+</head>
+<body>
+<form name="form1" action="">
+<table border="1" cellspacing="8" cellpadding="10" bordercolor="blue">
+<tr>
+	<td align="center" colspan="4"><b>Create a new window</b></td>
+</tr>
+<tr>
+	<td align="center" colspan="4"><b>Window Size</b></td>
+</tr>
+<tr>
+	<td>Width</td>
+	<td><input type="text" name="widthTB" value=""></td>
+	<td>Height</td>
+	<td><input type="text" name="HeightTB" value=""></td>
+</tr>
+<tr>
+	<td align="center" colspan="4">POSITION</td>
+</tr>
+<tr>
+	<td>Left</td>
+	<td><input type="text" name="leftTB" value=""></td>
+	<td>Top</td>
+	<td><input type="text" name="TopTB" value=""></td>
+</tr>
+<tr>
+	<td colspan="2"><input type="button" name="NewWindow" value="New Window" onClick="newWindow()"></td>
+	<td colspan="2"><input type="reset" name="reset" value="reset" onClick="reset()"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- 
+Add the   attribute to the third paragrapg 
+with the name title
+having  value =ThirdTitle
+<<<$('p:last').attr('title','ThirdTitle');>>>
+**************************
+retrieve the value from the attribute
+<<<$('p:last').attr('title');>>>
+**************************
+removeAttribute can only remove one attribute at a time.
+*****************************
+add style  1 and style 2 to first paragraph
+<<<$('p:first').addClass('style1 style2');>>>
+**********************************
+remove style from para
+<<<$('p:first').removeClass('style1 style2');>>>
+***********************
+remove only style 1
+<<<$('p:first').removeClass('style1');>>>
+*****************************
+chk whether style 2 is present or not?
+<<<$('p:first').hasClass('style2');>>>
+
+**************************************
+find p in body tag
+<<<$('body').find('p');>>>
+************************8
+find a paragraph in body tag containing  second
+$('body').find('p:contains("Second")');
+*************************
+remove tag permantly from dom
+<<<$('p:last').remove();>>>
+******************************
+detach templorarily  tag  from dom
+<<<spanDetach=$('p:last').detach();>>>
+*****************************
+<<<spanDetach>>>
+********************
+attach the same element as it is
+<<<$('body').append(spanDetach);>>>
+-->
+<html>
+	<head>
+	<title>jQuery Dom </title>
+	<style type="text/css">
+		.style1{background-color:blue; color:white}
+		.style2{font-size:20pt}
+		.style3{background-color:red; color:white;font-size:50pt}
+	</style>
+	<script language="javascript" src="../Scripts/jquery-2.0.0.js">
+	</script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{     
+			
+	});
+</script>
+</head>
+<body>
+	<p>First</p>
+	<p>Second</p>
+	<p>Third</p>
+<hr/>
+</div>
+</body>
+</html>

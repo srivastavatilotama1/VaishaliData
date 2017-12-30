@@ -1,0 +1,76 @@
+<!--
+ -->
+<html>
+<head>
+<!-- <script language="javascript" src="../Scripts/jquery-2.0.0.js">  
+</script> -->
+<script type="text/javascript">
+var xmlHttp=null;
+function LoadXMLHTTP()  {
+
+	if(XMLHttpRequest)
+	{
+		//alert("supporetd..");
+		xmlHttp=new XMLHttpRequest();
+	}
+	else
+	{
+		//alert(" not supporetd..");
+		xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+  }
+  
+  function AddNumbers()
+  {
+	  var firstNumber=document.getElementById("txtFirstNumberId").value;
+	  var secondNumber=document.getElementById("txtSecondNumberId").value;
+	  alert(firstNumber);
+	  alert(secondNumber);
+	  
+	  var params="txtFirstNumber="+firstNumber+
+	  "&txtSecondNumber="+secondNumber;
+	   alert(params);
+	   var url="http://localhost:8081/AjaxJQueryJspAdditionDemo/Addition.jsp";
+  
+	   xmlHttp.open("POST",url,true);
+	   //call back method will be executed when response  will be send
+	   //readystate=loading(1) loaded(2) interactive(3) complete(4)
+	   xmlHttp.onreadystatechange=showResults;
+	   //send method id used to send request
+	   xmlHttp.send(params);
+  }
+  //call back method 4 times called
+  function showResults()
+  {
+	  alert ("Hi ");
+	  
+	  if(xmlHttp.readyState==4 && xmlHttp.status==200)
+		  {
+		 // document.forms[0].elements['txtResultId'].value=
+			//  xmlHttp.responseText;
+		  document.getElementById("txtResultId").value=xmlHttp.responseText;
+		  }
+  }
+</script>
+</head>
+<body onload="LoadXMLHTTP();">
+	<h3>Enter Details</h3>
+	<form >
+			First Number :<input type="text"  
+			id="txtFirstNumberId" 
+			name="txtFirstNumber"/><br/>
+			
+			Second Result:<input type="text" 
+			name="txtSecondNumber"  
+			id="txtSecondNumberId"/><br/>
+			
+			Result:<input type="text" name="txtResult" 
+			id="txtResultId"/><br/>
+			
+			
+		<input type="button" name="btnAdd"  value="ADD"
+		onclick="AddNumbers();"
+		/>
+	</form>
+</body>
+</html>

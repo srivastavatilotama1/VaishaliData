@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ociweb.com/cars"
+	targetNamespace="http://www.ociweb.com/cars">
+	<xs:complexType name="car">
+		<xs:sequence>
+			<xs:element name="make" type="xs:string" />
+			<xs:element name="model" type="xs:string" />
+			<xs:element name="color" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="year" type="xs:positiveInteger" use="required" />
+	</xs:complexType>
+	<xs:element name="cars">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="car" type="car" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

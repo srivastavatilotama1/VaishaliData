@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="employee.xsd">
+		<employeeName>BillClinton</employeeName>
+	    <!--<empPhone>5576-5565-77775</empPhone>-->
+		<age>23</age>
+		<salary>40000</salary>
+</employee>

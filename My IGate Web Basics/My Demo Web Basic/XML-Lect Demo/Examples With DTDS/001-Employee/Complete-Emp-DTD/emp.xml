@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM "emp.dtd" >
+<employees>
+<author>&copyright;</author>
+	<employee  compdesc="filePath" emp_id="E111" gender="M" supervisor="E112">
+		<ename>
+			<fname >Vaishali</fname>
+			<mname>A</mname>			
+		</ename>
+		<esal>10000</esal>
+		<eaddress>
+			<city>pune</city>
+			<state>maharashtra</state>		
+		</eaddress>
+	</employee>
+	<employee  emp_id="E112" gender="F" >
+		<ename>
+			<fname title="MR">amit</fname>
+			<mname>H</mname>
+			<lname>Chaudhary</lname>
+		</ename>
+		<esal currency="RS">20000</esal>
+		<eaddress>
+			<city>pune</city>
+			<state>maharashtra</state>		
+		</eaddress>
+	</employee>
+
+</employees>

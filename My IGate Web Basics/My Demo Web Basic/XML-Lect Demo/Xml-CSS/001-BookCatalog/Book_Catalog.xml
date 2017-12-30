@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="Book_Catalog.css"?>
+<catalog>
+<book>
+<author>Simon St.Laurent</author>
+<title>XML Elements of Style</title>
+<pubyear>2000</pubyear>
+<publisher>McGraw-Hill</publisher>
+<isbn>0-07-212220-X</isbn>
+<price>$29.99</price>
+</book>
+<book>
+<author>Elliotte Rusty Harold</author>
+<title>XML Bible</title>
+<pubyear>1999</pubyear>
+<publisher>IDG Books</publisher>
+<isbn>0764532367</isbn>
+<price>$49.99</price>
+</book>
+<book>
+<author>Robert Eckstein</author>
+<title>XML Pocket Reference</title>
+<pubyear>1999</pubyear>
+<publisher>O'Reilly and Associates</publisher>
+<isbn>1-56592-709-5</isbn>
+<price>$8.95</price>
+</book>
+</catalog>

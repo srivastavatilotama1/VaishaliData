@@ -1,0 +1,29 @@
+<html>
+<head>
+<script language="javascript" src="Scripts/jquery-2.0.0.js"></script>
+<script language="javascript">
+jQuery(document).ready(mainEntry);
+function mainEntry()
+{
+	wireEvents();
+}
+function wireEvents(){
+	alert ("in wire events ")
+	$('#btnLoadId').bind('click',clickHandler);		
+}
+function clickHandler(event)
+{
+	alert(",,,,,,,");	
+	$('#targetDiv').load('IgateContents.json');
+}
+
+</script>
+
+</head>
+<body>
+<input type="button"  id="btnLoadId" value="Get Json Data"/>
+hello......
+<div id="targetDiv"> </div>
+</body>
+
+</html>

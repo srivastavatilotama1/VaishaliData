@@ -1,0 +1,144 @@
+	A developer would like to use referential datatype declaration on a variable. The variable name is EMPLOYEE_LASTNAME, and the corresponding table and column is EMPLOYEE, and LNAME, respectively. How would the developer define this variable using referential datatypes? 
+	
+ Use employee.lname%type.--ans
+Use employee.lname%rowtype.
+ Look up datatype for EMPLOYEE column on LASTNAME table and use that.
+ Declare it to be type LONG.
+
+**********************************
+	Which of the following is not a feature of a cursor FOR loop?
+	
+	Record type declaration.
+	Opening and parsing of SQL statements.
+	Fetches records from cursor.
+	Requires exit condition to be defined.
+	
+	**************************************
+	
+	Which of the following type of  cursor are declared by ORACLE for each UPDATE, DELETE and INSERT SQL commands.
+	
+Implicit	-ans
+ Explicit	
+ Internal	
+ External
+
+Which of the following  database object  groups logically related PL/SQL types, objects and subprograms.
+
+ Module	
+ Package  -ans	
+ Body	
+ Name
+ 
+ *************************************
+ Which of the  following is an example of correlated subquery
+ 
+a)	SELECT DEPT_ID,LAST_NAME,SALARY FROM EMPLOYEE E                 WHERE SALARY > (SELECT AVG(SALARY) FROM EMPLOYEE E WHERE A.DEPT_ID=E.DEPT_ID)ORDER BY A.DEPT_ID;
+
+b)	SELECT DEPT_ID,LAST_NAME,SALARY, (SELECT AVG(SALARY) FROM EMP_MGR WHERE DEPT_ID=10) FROM EMPLOYE E WHERE DEPT_ID=10;   
+     
+c)	Both a and b
+d)   Only a
+e)	None of these   
+
+****************************************************************
+Which three statements are not true regarding subqueries? 
+
+	Subqueries can contain GROUP BY and ORDER BY clauses.
+	Main query and subquery can get data from different tables.
+	Main query and subquery must get data from the same tables.
+	Subqueries can contain ORDER BY but not the GROUP BY clause.
+
+*********************************************
+Consider the following employee table having emp_id and Date of Joining(doj) column.
+********employee table******
+emp_id        doj
+  3    	    03-DEC-15
+  1 	    24-DEC-14
+  2 		20-NOV-99
+  
+****************************
+What should be the outcome of the following query execution on above 
+employee table?
+  
+select max(doj) from employee;
+
+03-DEC-15
+24-DEC-14
+20-NOV-99
+system date
+None of the above
+
+**********************************
+Which of the following  query will 
+lists the count of employees working in each department?
+ 
+SELECT  DEPARTMENT_ID,  COUNT (*)
+FROM employees
+GROUP BY DEPARTMENT_ID;
+
+SELECT  DEPARTMENT_ID,  COUNT (*)
+FROM employees.
+
+SELECT  DEPARTMENT_ID,   (*)
+FROM employees
+GROUP BY DEPARTMENT_ID;
+
+SELECT  DEPARTMENT_ID,  (*)
+FROM employees.
+
+*********************************
+******emp table****
+empid
+empname
+city
+*********dept table************
+deptno
+city
+
+Cosider the above emp table  where city column is
+added using alter table command afterword.
+
+Suppose we  have added the city column in the employee table 
+and now we want to set this column with corresponding city column in department table .
+Which of the following  query will do that?
+
+alter emp set city=(select city from dept where deptno= emp.deptno); 
+update emp set city=(select city from dept where deptno= emp.deptno);
+update emp , city=(select city from dept where deptno= emp.deptno);
+alter emp , city=(select city from dept where deptno= emp.deptno); 
+ 
+ *****************
+ Consider the following employee table.
+ 
+ **********employee table*********
+ emp_id   emp_name  salary   comm    job_id
+ 111		John 20000     200    Trainer
+ 222		Sam   30000    400    CLERK
+ 333		Ram   10000    100    Trainer
+ 
+ *********************************
+ 
+Which of the following  statement gives null commissions to all employees with the job Trainer?
+
+UPDATE employee
+   SET comm   NULL
+   WHERE job_id = 'Trainer';
+
+UPDATE employee
+   SET comm = NULL
+   WHERE job_id = 'Trainer';
+   
+   
+   UPDATE employee
+   SET comm  IS   NULL
+   WHERE job_id = 'Trainer';
+   
+   None of the above
+
+
+
+
+
+
+
+

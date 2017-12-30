@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shiporder orderid="889923" xmlns:tns="http://www.example.org/details" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.example.org/details details.xsd ">tns:address
+
+<tns:orderperson>John Smith</tns:orderperson>
+<tns:shipto>
+	<tns:name>Ola Nordmann</tns:name>
+	<tns:address>Langgt23</tns:address>
+	<tns:city>4000 Stavagar</tns:city>
+	<tns:country>Norway</tns:country>
+</tns:shipto>
+<tns:item>
+	<tns:title>Empire Burlesque</tns:title>
+	<tns:note>Special Editon</tns:note>
+	<tns:quantity>1</tns:quantity>
+	<tns:price>10.90</tns:price>
+</tns:item>
+<tns:item>
+	<tns:title>Hide your heart</tns:title>
+	<tns:quantity>1</tns:quantity>
+	<tns:price>9.90</tns:price>
+</tns:item>
+</shiporder>

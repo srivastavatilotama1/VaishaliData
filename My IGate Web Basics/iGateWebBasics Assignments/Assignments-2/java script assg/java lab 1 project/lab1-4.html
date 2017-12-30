@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Embedding Script tag in HTML Document</title>
+ 
+<script src="Hello.js">
+</script>
+</head>
+<script>
+ document.write("This Text is Displayed from the script tag embedded in the Head tag of the document") 
+</script>
+
+
+ 
+
+<body>
+ <br>
+ <script>
+ document.write("<i>This Text is Displayed from the script tag embedded in the Body tag of the document") 
+</script>
+
+<p><code>
+"The actual Script is in  External Script File called Hello.js"
+</code></p>
+
+<script>
+var msg=Disp_Hello();
+document.write("This text is displayed by calling External Function :"+msg)
+  </script>
+
+<hr>
+</body>
+</html>

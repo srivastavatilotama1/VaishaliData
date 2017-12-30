@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library [
+<!ENTITY greet  SYSTEM "C:\VaishaliTemp\Wiprow Workspace\XML-Demo\dtd\greeting.txt">
+<!ELEMENT library (#PCDATA | magazine)*>
+<!ELEMENT magazine (#PCDATA)>
+]>
+<library>
+    <magazine>&greet;</magazine>
+</library>

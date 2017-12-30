@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="myemployee.css"?>
+
+<myemployees xmlns:xlink="http://www.w3.org/1999/xlink">
+	<myemployee xlink:type="simple"		xlink:href="    Employee.xml#14782">
+		<description xlink:type="simple">Jim is the employee of the year
+		</description>
+	</myemployee>
+</myemployees>

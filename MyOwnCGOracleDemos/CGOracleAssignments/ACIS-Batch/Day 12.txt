@@ -1,0 +1,280 @@
+solutions
+-------------
+
+1A) CREATE TABLE member(member_id NUMBER(3),member_name VARCHAR2(30),member_address     VARCHAR2(50),acc_open_date DATE,membership_type VARCHAR2(20),fees_paid number       (4),max_books_allowed NUMBER(2),penalty_amount NUMBER(7,2));
+
+1B) CREATE TABLE books(book_no NUMBER(6),book_name VARCHAR2(30),author_name         VARCHAR2(30),cost NUMBER(7,2),category CHAR(10));
+
+1C) CREATE TABLE issue(lib_issue_id NUMBER(10),books_no NUMBER(6),member_id NUMBER      (5),issue_date DATE,return_date DATE));
+--------------------------------------------------------------------------------------------------------------------------------------
+2A) DESC member;
+2B) DESC books;
+2C) DESC issue;
+--------------------------------------------------------------------------------------------------------------------------------------
+
+3) DROP TABLE member;
+--------------------------------------------------------------------------------------------------------------------------------------
+4A) ALTER TABLE member 
+    ADD CONSTRAINT pr_member_id PRIMARY KEY(member_id);
+
+4B) ALTER TABLE member 
+    ADD CONSTRAINT check_membership_type CHECK(membership_type     IN'Lifetime','Annual','Half-yearly','Quarterly');
+--------------------------------------------------------------------------------------------------------------------------------------
+5) ALTER TABLE member
+   MODIFY(member_name VARCHAR2(30));
+--------------------------------------------------------------------------------------------------------------------------------------
+6) ALTER TABLE issue
+   ADD Reference CHAR(30);
+--------------------------------------------------------------------------------------------------------------------------------------
+7) ALTER TABLE issue
+   DROP COLUMN Reference;
+--------------------------------------------------------------------------------------------------------------------------------------
+8) RENAME issue TO lib_issue;
+--------------------------------------------------------------------------------------------------------------------------------------
+9A) INSERT INTO member VALUES(1,'Richa Sharma','Pune','10-Dec-    06','Lifetime',25000,5,50);
+
+9B) INSERT INTO member(member_id,member_name,member_address,acc_open_date,membership_type,fees_paid,max_books_allowed) VALUES(2,'Garima Sen','Pune',SYSDATE,'Annual',1000,3);
+-----------------------------------------------------------------------------------
+10Ai) INSERT INTO member VALUES(3,'Sonam Rathore','Mumbai','12-Oct-         07','Annual',1000,4,100);
+
+10Aii) INSERT INTO member(member_id,member_name,member_address,acc_open_date,membership_type,fees_paid,max_books_allowed) VALUES(4,'Aastha Upadhyay','USA','04-Apr-10','Half-yearly',500,2);
+
+10Aiii) INSERT INTO member VALUES(5,'Ankita Upadhyay','Arizona','06-May-                 97','Annual',1000,4,50);
+
+10Bi) INSERT INTO books VALUES(7000,'Ghost stories','John       Abraham',350.08,'Entertainment');
+
+10Bii) INSERT INTO books VALUES(7001,'Vikram Betaal','Sapna        Chowdhary',200,'Entertainment');
+
+10Biii) INSERT INTO books VALUES(7002,'C programming','Yeshwant                Kanetar',180,'Technical');
+
+10Biv) INSERT INTO books VALUES(7003,'Oracle','P.C.Cliff'                     550,'Technical');
+
+10Bv) INSERT INTO books VALUES(7004,'Bloodline','Sidney Sheldon'                           390,'Fiction');
+
+--------------------------------------------------------------------------------------------------------------------------------------
+11) ALTER TABLE member
+    MODIFY(member_name varchar2(20));
+--------------------------------------------------------------------------------------------------------------------------------------
+12) max_books_allowed of member table is with data precision number(2) and record     insertion is 110 i.e. number(3). Hence, error is reported.
+--------------------------------------------------------------------------------------------------------------------------------------
+13) CREATE TABLE member101(member_id NUMBER(4), memberName VARCHAR2(30),memberLoc VARCHAR2(20));
+--------------------------------------------------------------------------------------------------------------------------------------
+14A) ALTER TABLE member
+     ADD CONSTRAINT check_max_books(max_books_allowed<100);
+
+14B) ALTER TABLE member
+     ADD CONSTRAINT check_penalty_amount(penalty_amount<100);
+--------------------------------------------------------------------------------------------------------------------------------------
+
+15) DROP TABLE books;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+16) CREATE TABLE books(book_no number(6) PRIMARY KEY,book_name varchar2(40) NOT NULL,category VARCHAR2(30) check(Category in 'Science','Fiction','Database','RDBMS','Others'));
+--------------------------------------------------------------------------------------------------------------------------------------
+17A) INSERT INTO books VALUES(101,'Let us C','Dennis Ritchie',450,'Science');
+
+17B) INSERT INTO books VALUES(102,'Oracle-COmplete Ref','Loni',550,'Database');
+
+17C) INSERT INTO books values(103,'Mastering SQL','Loni',250,'Database');
+
+17D) INSERT INTO books VALUES(104,'PL-SQL Ref','Scott Urman',750,'Database');
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+18) INSERT INTO books VALUES(&book_no,&book_name,&author_name,&cost,&category);
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+19) CREATE TABLE books101 AS books;
+--------------------------------------------------------------------------------------------------------------------------------------
+20) INSERT INTO books101 SELECT * FROM books;
+--------------------------------------------------------------------------------------------------------------------------------------
+21) commit;
+--------------------------------------------------------------------------------------------------------------------------------------
+22A) select * from member;
+
+22B) select * from books;
+
+22C) select * from books101;
+
+22D) select * from lib_issue;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+23) INSERT INTO books VALUES(105,'National Geographic','Adis Scott',1000,'Science');
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+24) rollback;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+25) UPDATE books SET cost=300.00 WHERE book_no=103;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+26) RENAME lib_issue TO issue;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+27) DROP TABLE issue;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+28) CREATE TABLE issue(lib_issue_id NUMBER(4) CONSTRAINT pk_issue_id PRIMARY KEY,books_no NUMBER(4) CONSTRAINT fk_booknumber REFERENCES books(book_no),members_id CONSTRAINT fk_memberid REFERENCES member(member_id),issue_date DATE,return_date DATE);
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+29) INSERT INTO issue(lib_issue_id,books_no,members_id,issue_date) VALUES(7001,101,1,'10-Dec-06');
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+30) commit;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+31A) ALTER TABLE issue DISABLE CONSTRAINT pk_issue_id;
+
+31B) ALTER TABLE issue DISBALE CONSTRAINT fk_booknumber;
+
+31C) ALTER TABLE issue DISABLE CONSTRAINT fk_memberid;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+32) INSERT INTO issue(lib_issue_id,books_no,members_id,issue_date) VALUES(7001,101,1,'10-Dec-06');
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+33A) ALTER TABLE issue ENABLE CONSTRAINT pk_issue_id;
+
+33B) ALTER TABLE issue ENABLE CONSTRAINT fk_booknumber;
+
+33C) ALTER TABLE issue ENABLE CONSTRAINT fk_memberid;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+34) DELETE FROM issue 
+    WHERE lib_issue_id=7007;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+35) DELETE FROM member 
+    WHERE member_id=1;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+36A) UPDATE issue SET return_date=issue_Date+15 
+     WHERE lib_issue_is=7004;
+
+36B) UPDATE issue SET return_date=issue_Date+15 
+     WHERE lib_issue_is=7005;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+37) UPDATE member_id SET penalty_amount=100 
+    WHERE member_id='Garima Sen';
+--------------------------------------------------------------------------------------------------------------------------------------
+
+38) SAVEPOINT X;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+39) DELETE FROM issue 
+    WHERE members_id=1 AND issue_date<'10-Dec-06';
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+40) DELETE FROM books
+    WHERE category<>'RDBMS' AND 'Database';
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+41) ROLLBACK TO SAVEPOINT X;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+42) commit;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+43) DELETE TABLE member101;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+44) DELETE TABLE books101;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+45A) SELECT * FROM member;
+     DESC member;
+
+45B) SELECT * FROM books;
+     DESC books;
+
+45C) SELECT * FROM issue;
+     DESC issue;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+46) CREATE SEQUENCE no_seq START WITH 100 INCREMENT BY 2 MAXVALUE 200;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+47) DROP SEQUENCE no_seq;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+48) CREATE SEQUENCE book_seq START WITH 101 INCREMENT BY 1 MAXVALUE 1000;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+49) CREATE SEQUENCE member_seq START WITH 1 INCREMENT BY 1 MAXVALUE 100;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+50A) DROP SEQUENCE book_seq;
+
+50B) DROP SEQUENCE member_seq;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE emp1(emp_id NUMBER(10) CONSTRAINT pk_emp_id PRIMARY KEY,fname VARCHAR2(25),lname VARCHAR2(25));
+
+INSERT INTO emp1(emp_id,fname,lname) VALUES(emp_sequence.nextval,'Veer','Singh');
+
+INSERT INTO emp1(emp_id,fname,lname) VALUES(emp_sequence.nextval,'Karan','Singh');
+
+INSERT INTO emp1(emp_id,fname,lname) VALUES(emp_sequence.nextval,'Vedika','Saxena');
+
+INSERT INTO emp1(emp_id,fname,lname) VALUES(emp_sequence.nextval,'Vijay','Rathore');
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

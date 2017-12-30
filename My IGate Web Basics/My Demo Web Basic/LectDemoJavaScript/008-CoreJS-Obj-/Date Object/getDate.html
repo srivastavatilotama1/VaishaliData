@@ -1,0 +1,50 @@
+<html>
+<body>
+
+<script type="text/javascript">
+
+var d=new Date();
+
+document.write("Today  is " + d.getDate()+" of month");
+
+var weekday=new Array(7);
+		weekday[0]="Sunday";
+		weekday[1]="Monday";
+		weekday[2]="Tuesday";
+		weekday[3]="Wednesday";
+		weekday[4]="Thursday";
+		weekday[5]="Friday";
+		weekday[6]="Saturday";
+
+		document.write("<br/>Today is " + weekday[d.getDay()]);
+
+
+document.write("<br/>Today  is " + d.getMonth()+"  th Month </br>");
+document.write("<br/>This   is " + d.getYear()+" year ");
+
+d.setFullYear(1992,10,3);
+document.write("<br/>setFullYear( )    :"+d);
+
+d=new Date();
+document.write("<br/>This   is  " + d.getFullYear()+" year ");
+
+
+var today = new Date()
+var d1 = new Date("October 13, 1975 11:13:00")
+var d2 = new Date(79,5,24)
+var d3 = new Date(79,5,24,11,33,0)
+var myDate1=new Date("April 12, 2012") 
+var myDate2= new Date(5000) 
+document.write("<br/>This   is mydate 1 " + myDate1);
+document.write("<br/>This   is mydate 2 " + myDate2);
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+

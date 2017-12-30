@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="empsType">
+    <xs:sequence>
+      <xs:element name="emp" type="empType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="empType">
+    <xs:sequence>
+      <xs:element name="empName" type="empNameType"/>
+      <xs:element name="empSal" type="xs:float"/>
+      <xs:element name="empGender" type="xs:unsignedShort"/>
+    </xs:sequence>
+    <xs:attribute name="empId" type="xs:int" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="empNameType">
+    <xs:sequence>
+      <xs:element name="fn" type="xs:string"/>
+      <xs:element name="mn" type="xs:string"/>
+      <xs:element name="ln" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

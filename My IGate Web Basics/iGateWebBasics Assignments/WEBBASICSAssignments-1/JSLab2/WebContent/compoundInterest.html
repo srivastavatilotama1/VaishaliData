@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+document.write("------------------------------------------------<br>");
+document.write("******Calculate Compound Interest*******<br>");
+document.write("------------------------------------------------<br><br>");
+var principle=1000;
+var rate=10;
+var period=1;
+var compound_interest=(principle*(1+Math.pow(rate/100,period)))-principle;
+document.write("principle	-	1000RS<BR>Rate of Interest	-	10%<br>")
+document.write("Period	-	1 yr<br>Comp interest	-	"+compound_interest);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Variables</title>
+<script type="text/javascript" language="javascript">
+var headVar=10;
+document.write("Script embedded in Head Tag<br>--------------------------------------<br> value stored in variable <i>headVar</i> is "+headVar+"<br><hr>");
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript">
+var bodyVar=65;
+document.write("Script embedded Body Tag <br>--------------------------------------<br>value stored in variable <i>bodyVar</i> is "+bodyVar+"<br><hr>");
+</script>
+<script type="text/javascript" src="var.js">
+</script>
+<script>
+var res=add_nos(headVar,bodyVar);
+document.write("The actual script is in external script file called var.js"+res);
+</script>
+
+</body>
+</html>

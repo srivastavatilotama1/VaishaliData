@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:emps xmlns:ns2="com.emp.vinsys">
+    <emp empId="201">
+        <firstName>Michael</firstName>
+        <lastName>Hartstein</lastName>
+        <email>MHARTSTE</email>
+        <phoneNumber>515.123.5555</phoneNumber>
+        <hireDate/>
+        <designation>Manager</designation>
+        <salary>13000.0</salary>
+        <managerId>100</managerId>
+        <department>
+            <departmentId>20</departmentId>
+            <departmentName>Production</departmentName>
+            <managerId>201</managerId>
+        </department>
+    </emp>
+    <emp empId="202">
+        <firstName>Pat</firstName>
+        <lastName>Fay</lastName>
+        <email>PFAY</email>
+        <phoneNumber>603.123.6666</phoneNumber>
+        <hireDate/>
+        <designation>Deputy Manager</designation>
+        <salary>6000.0</salary>
+        <managerId>201</managerId>
+        <department>
+            <departmentId>20</departmentId>
+            <departmentName>Production</departmentName>
+            <managerId>201</managerId>
+        </department>
+    </emp>
+</ns2:emps>

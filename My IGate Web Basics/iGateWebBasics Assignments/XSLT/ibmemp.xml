@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="empref.xsd">
+  <employee eid="111" title="Mr">
+    <ename>
+      <fname>Samir</fname>
+      <mname>S</mname>
+      <lname>Sharma</lname>       
+    </ename>
+    <eage>45</eage>
+    <esal>100000</esal>
+    <DOJ>1959-12-23</DOJ>
+    <gender>Male</gender>
+    <landline>91-020-620416</landline>
+    <mobileno>9797979799</mobileno>
+  </employee>
+
+
+  <employee eid="222" title="Mrs">
+    <ename>
+      <fname>Gita</fname>
+      <mname>A</mname>
+      <lname>Varma</lname>
+    </ename>
+    <eage>43</eage>
+    <esal>200000</esal>
+    <DOJ>1959-12-23</DOJ>
+    <gender>Female</gender>
+    <landline>91-044-767676</landline>
+    <mobileno>3333333333</mobileno>
+  </employee>
+
+  <employee eid="333" title="Mrs">
+    <ename>
+      <fname>Sita</fname>
+      <mname>S</mname>
+      <lname>Gupta</lname>
+    </ename>
+    <eage>33</eage>
+    <esal>30000</esal>
+    <DOJ>1934-11-11</DOJ>
+    <gender>Female</gender>
+    <landline>91-043-222222</landline>
+    <mobileno>8888108810</mobileno>
+  </employee>
+
+  <employee eid="823444" title="Mrs">
+    <ename>
+      <fname>Gauri</fname>
+      <mname>GG</mname>
+      <lname>Saxena</lname>
+    </ename>
+    <eage>27</eage>
+    <esal>29000</esal>
+    <DOJ>1934-11-11</DOJ>
+    <gender>Female</gender>
+    <landline>91-043-222222</landline>
+    <mobileno>9879876666</mobileno>
+  </employee>
+
+
+</employees>
+

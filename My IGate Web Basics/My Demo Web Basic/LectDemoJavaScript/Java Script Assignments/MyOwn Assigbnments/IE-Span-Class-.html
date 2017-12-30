@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script>
+	function calculate()
+	{
+		var n1=document.getElementById("num1");
+		var n2=document.getElementById("num2");
+
+		var nn1=parseFloat(n1.value);
+		var nn2=parseFloat(n2.value);
+		var res=nn1+nn2;
+		//document.write(res);
+		result.innerHTML=res;
+	}
+</script>
+
+<style>
+	.output { font-weight: bold;}
+	#result { text-decoration: underline; }
+</style>
+
+<meta  refresh="3"   http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="pink">
+num1:<input type="text" id="num1" value=""/><br/>
+num2:<input type="text" id="num2" value=""/><br/>
+	<br/>
+	<input type="button"  name="Add" value="ADD" 
+	onclick="calculate();"/><br/>
+	
+	Addition:<span  class="output" id="result" ></span>
+</body>
+</html>

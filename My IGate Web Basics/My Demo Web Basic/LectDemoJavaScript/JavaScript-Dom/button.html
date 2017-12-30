@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="frm1" action="form_action.asp">
+  First name: <input type="text" name="fname" value="Vaishali"><br>
+  Last name: <input type="text" name="lname" value="Srivastava"><br>
+  <input type="submit" value="Submit">
+</form> 
+
+
+<p>Return the value of each element in the form:</p>
+<script>
+var x=document.getElementById("frm1");
+for (var i=0;i<x.length;i++)
+  {
+  document.write(x.elements[i].value);
+  document.write("<br>");
+  }
+</script>
+
+</body>
+</html>

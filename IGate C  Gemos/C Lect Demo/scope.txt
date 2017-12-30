@@ -1,0 +1,24 @@
+	#include <conio.h>
+	#include <stdio.h>
+
+	void func(void); 
+	countE=1;
+   static count=10; /* Global variable - static is the default */
+   
+ int  main()
+   {
+     while (count--) 
+     {
+         func();
+     }
+	 getch();
+	return 0;   
+ }   
+   void func( void )
+   {
+     static i = 5;
+     i++;
+	 countE++;
+	 printf("i is %d and count is %d  CountE: %d \n", i, count,countE);
+   }
+

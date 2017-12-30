@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<depts>  
+    <dept>
+         <departmentId>400</departmentId>
+          <departmentName>ITIM</departmentName>
+          <managerId>200</managerId>
+    </dept>   
+    <dept>
+         <departmentId>500</departmentId>
+          <departmentName>GE</departmentName>
+          <managerId>700</managerId>
+    </dept>  
+    <dept>
+         <departmentId>600</departmentId>
+          <departmentName>Assurance</departmentName>
+          <managerId>900</managerId>
+    </dept>  
+    
+</depts>

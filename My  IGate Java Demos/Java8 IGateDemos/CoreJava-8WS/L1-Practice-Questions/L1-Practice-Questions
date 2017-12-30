@@ -1,0 +1,230 @@
+What is the outcome of the   following program ?
+
+ Line:1 class CheckedException extends RuntimeException
+   		{ } 
+  		class UncheckedException extends Exception 
+   		{ } 
+  		public class Check 
+  		{
+		public static void main(String args[]) 
+		{
+			generateException1(); 
+			generateException2();
+		}
+ 		private static void generateException1()
+Line:13		{ 
+Line:14			throw new CheckedException(); 
+Line:15	} 
+Line:16		private static void generateException2() 
+Line:17		{ 
+Line:18		throw new UncheckedException(); 
+	}  } 
+	**********************************************************8
+	import java.io.*;
+ class A  implements Serializable 
+{public A() {
+	
+        System.out.println("in side A Constructor");
+ }}
+ class B extends A
+{public B() {
+        System.out.println("in side Constructor B");       
+ }}
+
+public class TestSerializable 
+{	
+	public static void main(String...args)throws Exception 
+	{
+			B b = new B();
+			ObjectOutputStream save = new ObjectOutputStream(new FileOutputStream("datafile"));
+			save.writeObject(b); 
+			save.flush();   
+			ObjectInputStream restore = new ObjectInputStream(new FileInputStream("datafile"));
+			B z = (B) restore.readObject();  
+			
+}}
+**********************************************************
+@FunctionalInterface
+public interface MaxFinder {	
+	public int maximum(int num1,int num2);	
+}
+public class MaxFinderImpl implements MaxFinder {
+	@Override
+	public int maximum(int num1, int num2) {
+		return num1>num2?num1:num2;
+	}}
+	Which of the following  could be the correct  implementation  of the MaxFinderImpl
+	using  Java 8 Lambda Expressions feature?
+	MaxFinder finder = (num1,num2) -> num1>num2?num1:num2;
+		int result = finder.maximum(10, 20);
+		System.out.println(result);
+**********************************************************
+Consider the  following List of locations.
+List<String> locations = Arrays.asList(new String[]{"Pune","Mumbai","Chennai","Banglore","Noida"});
+Which of the following is the correct way of printng locations  which length is greater than 5?
+
+		Stream<String> stream = locations.stream();
+		stream.filter((location)->location.length()>5).forEach(System.out::println);
+		
+************************************************************
+Consumer<String> consumer = (String str)-> System.out.println(str);
+Which of the following is the function of above consumer functional interface?
+
+		consumer.accept("Hello LE!");
+		consumer.get("Hello LE!");
+		consumer.test("Hello LE!");
+		consumer.apply("Hello LE!");
+********************************************
+Consider the following List.
+List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
+Which of the following gives  the number of count  of empty string from above List.
+
+System.out.println(strings.stream().filter((String string)->string.isEmpty()).count());
+****************************************
+What is is default  format for LocalDate.now()?
+***********************************
+Which of the following  will print the current  date in "27::Dec::2015" format   ?
+
+LocalDate.now().format(DateTimeFormatter.ofPattern("d::MMM::uuuu"));
+LocalDate.now().format(DateTimeFormatter.ofPattern("d::MMM::yyyy"));
+LocalDate.now().format(DateTimeFormatter.ofPattern("dd::Mon::yyyy"));
+
+27::Dec::2015
+****************************************************
+public class Test
+{
+	static int k=1;
+	{
+		k=k*2;
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!"  +k);
+	}
+}
+What is the output of above program?
+
+**************************************************
+Consider the following stream.
+Stream<String> stream = Stream.of("I","G","A","T","E","\n");	
+Which of the following will print " I  G  A  T  E  "
+stream.forEach((location)->System.out.print(location+"  "));
+
+**************************************************************
+Which of the following meta annotation specifies 
+that annotations are to be recorded in the class file by 
+the compiler but need not be retained by the VM at run time?
+
+
+@Retention(RetentionPolicy.RUNTIME)
+@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.SOURCE)
+None of the above
+******************************************************
+What happens when this code gets executed? 
+
+ public static void main(String[] args) {
+    SortedSet<Integer> set = new TreeSet<Integer>();
+    set.add(7);
+    set.add(-12);
+    SortedSet<Integer> sub = set.subSet(-100, 100);
+    sub.add(-100);
+    System.out.format("%d %d", set.size(), sub.size());
+}
+
+***********************************************8
+Will this code compile successfully? 
+List<Number> list1 = null;
+List<Integer> list2 = null;
+list1 = list2;
+
+Yes.
+No.
+
+*************************************************
+What happens when this code gets compiled and executed?
+public static void main(String[] args) {
+    SortedSet set = new TreeSet();
+    set.add(null);
+    set.add(1);
+}
+
+An NullPointerException is thrown at runtime.
+A ClassCastException is thrown at runtime.
+Compilation fails.
+None of the above.
+
+***********************************************
+Will this code compile successfully? 
+import java.util.*;
+class Test {
+    void say(Set<Double> set) {
+    }
+    void say(SortedSet<Double> set) {
+    }
+}
+
+
+*************************************************
+Consider these classes. 
+
+import java.util.*;
+class Parent {
+	void say(List<String> list) {
+		System.out.println("parent}
+}
+class Child extends Parent {
+	void say(List list) {
+		System.out.println("child}
+}
+What happens when this code is compiled and executed? 
+public static void main(String[] java) {
+	Parent c = new Child();
+	c.say(new LinkedList<String>());
+}
+
+It prints "child".
+It prints "parent".
+Compilation fails.
+
+**********************************************
+Consider the following code.
+ abstract class  AAA
+{
+	 public AAA()
+	 {
+		 System.out.println("In constructor Of A");
+	 }
+	public abstract  void show();
+	
+	public void get()
+	{
+		System.out.println("In get");
+	}	
+}
+ class BB extends AAA
+ {	
+	public void show()
+	{
+		System.out.println("In show Of B");
+	}
+	public void get()
+	{
+		System.out.println("In get Of B");
+	} }
+
+public class TestAbstractDemo 
+{
+	public static void main(String[] args) 
+	{
+		AAA a1=new BB();
+		a1.get();
+	}
+}
+What  should be the output for the execution of the above program?
+
+
+
+
+
+

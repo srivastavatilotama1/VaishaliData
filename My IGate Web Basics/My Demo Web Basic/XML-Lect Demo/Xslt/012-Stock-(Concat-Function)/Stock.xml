@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Stock.xsl"?>
+<stocks>  
+ <stock symbol = "INTC">
+      <name>Intel Corporation</name>
+</stock>
+<stock symbol = "CSCO">
+	<name>Cisco Systems, Inc.</name>
+ </stock>
+ <stock symbol = "DELL">
+	   <name>Dell Computer Corporation</name>
+ </stock>
+   <stock symbol = "MSFT">
+         <name>Microsoft Corporation</name>
+   </stock>
+<stock symbol = "SUNW">
+      <name>Sun Microsystems, Inc.</name>
+</stock>
+<stock symbol = "CMGI">
+      <name>CMGI, Inc.</name>
+   </stock>
+   </stocks>
+
+
+
+
+
+
+
+

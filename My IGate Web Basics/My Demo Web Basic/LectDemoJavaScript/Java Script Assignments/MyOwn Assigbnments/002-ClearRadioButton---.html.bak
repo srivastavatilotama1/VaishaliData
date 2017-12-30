@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>Radio Button onClick Handler</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+ function fullName() 
+ {
+ for (var i = 0; i <document.form1.fnames.length; i++)
+	{
+        if (document.form1.fnames[i].checked) 
+	  {
+            break
+        }
+    }
+    
+    alert("Welcome  " + document.form1.fnames[i].value + ".")
+}
+function clearName() 
+{
+    document.form1.fnames[3].checked=false;
+	 document.form1.fnames[2].checked=false;
+	  document.form1.fnames[1].checked=false;
+	   document.form1.fnames[0].checked=false;
+}
+
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM name="form1">
+<B>Select your Name:</B><P>
+<INPUT TYPE="radio" NAME="fnames" VALUE="Vaishali" CHECKED >Vaishali
+<INPUT TYPE="radio" NAME="fnames" VALUE="Abhi" >Abhi
+<INPUT TYPE="radio" NAME="fnames" VALUE="Nikhil">Nikhil
+<INPUT TYPE="radio" NAME="fnames" VALUE="Anita" >Anita
+<INPUT TYPE="button" NAME="Viewer" VALUE="Select UR name." onClick="fullName()">
+<INPUT TYPE="button" NAME="Clear" VALUE="Clear." onClick="clearName()">
+
+</FORM>
+</BODY>
+</HTML>
+
+           

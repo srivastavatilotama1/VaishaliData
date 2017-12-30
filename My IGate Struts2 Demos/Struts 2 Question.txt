@@ -1,0 +1,754 @@
+What is significance of method{2} attribute in Action atag?
+When actionContext is used then data is not populated in name ?
+
+
+
+
+
+
+
+
+
+
+
+**********************************************************
+Which  interceptor transfers the request parameters to the properties exposed on the ValueStack?
+
+<interceptor name="params"/> 
+<interceptor-ref name="params"/> -ans
+<interceptor-ref bean="params"/> 
+<interceptor-ref name="params"/> 
+<ref name="params"/> 
+...............................................................
+Which of the following is true about validation framework?
+
+If validation logic needs to be reusable, Then implement it in custom validator.
+If validation logic  do not needs to be reusable, Then implement it in validate () of action class.
+Both  type  validation can be used  at same time
+All of the above-   ans
+None of the above
+
+*************************************
+Which file contains java script for client side validation using validation framework in struts?
+  validation.xml
+  validator-rules.xml
+  both files
+  None
+...........................
+ If the password field has to be validated for minimum  and maximum
+length ,Then which one of the folllowing  will be the correct tag  definition
+in Action-Validation.xml file?
+
+<validators>
+	<field name="password">
+		<field  type="stringlength" >
+				<param name="maxLength">10</param>
+				<param name="minLength">6</param>
+				<message>Your password should be 6-10 characters.</message>
+		</field>
+	</field>
+</validators>
+
+<validator>
+	<field name="password">
+		<validator  type="stringlength" >
+				<param name="maxLength">10</param>
+				<param name="minLength">6</param>
+				<message>Your password should be 6-10 characters.</message>
+		</validator>
+	</field>
+</validator>
+
+<validators>
+	<field name="password">
+		<field-validator type="stringlength" >
+				<param name="maxLength">10</param>
+				<param name="minLength">6</param>
+				<message>Your password should be 6-10 characters.</message>
+		</field-validator>
+	</field>
+</validators>
+
+...ans----------
+
+
+<valid>
+	<field name="password">
+		<field type="stringlength" >
+				<param name="maxLength">10</param>
+				<param name="minLength">6</param>
+				<message>Your password should be 6-10 characters.</message>
+		</field>
+	</field>
+</valid>
+****************************************
+
+Which of the mechanism  should be used in struts fraemwork
+for custom validation?
+
+
+Overridding of validate() method in Action class.
+Overring of validation() method in Action class.
+Write Action-Validation.xml
+None of the above.
+
+**********************************************
+Assuming that there is arraylist of usernames property  defined in  
+action class  with the name userNamelist coming from database,
+Which of the following controll tag can be used to correctly
+travere a data from  username list?
+
+
+<s:iterator value="userNamelist">  
+  			<p>User Name is: <s:property name="userName"/></p>  
+</s:iterator>  
+
+
+<s:iterator value="userNamelist">  
+  			<p>User Name is: <s:property value="userName"/></p>  
+</s:iterator>--ans-
+
+<s:iterator value="userNamelist">  
+  			<p>User Name is: <s:property bean="userName"/></p>  
+</s:iterator>  
+
+<s:loop value="userNamelist">  
+  			<p>User Name is: <s:property bean="userName"/></p>  
+</s:loop>  
+
+..........................................
+Considering the property in action class with property name num,
+Which of the following is the correct tag defination  in jsp
+to check whether number is  a negative or the positive number?
+
+<s:set name="tempNum" value="num"/>   
+<s:if test="%{tempNum<0}">  
+  				<h2>Negative Number</h2>	
+</s:if> 	
+<s:else>  
+  			 <h2>Positive Number</h2>
+</s:else>
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+<s:setData name="tempNum" value="num"/>   
+<s:if test="%{tempNum<0}">  
+  				<h2>Negative Number</h2>	
+</s:if> 	
+<s:else>  
+  			 <h2>Positive Number</h2>
+</s:else>
+,,,,,,,,,,,,,,,,,,,,,,,,
+<s:set name="tempNum" value="num"/>   
+<s:if test="%{#tempNum<0}">  
+  				<h2>Negative Number</h2>	
+</s:if> 	
+<s:else>  
+  			 <h2>Positive Number</h2>
+</s:else>--ans
+,,,,,,,,,,,,,,,,,,
+<s:set name="tempNum" value="num"/>   
+<s:if test="%tempNum<0">  
+  				<h2>Negative Number</h2>	
+</s:if> 	
+<s:else>  
+  			 <h2>Positive Number</h2>
+</s:else>
+
+,,,,,,,,,,,,,,,,,,,,
+***************************************************
+Which tag assigns a property to another name?
+
+<s:bean>
+<s:set>
+<s:data>
+<s:setBean>
+***********************************************
+
+Which of the following statment is true  about struts 2 Data tag?
+
+Struts 2 Data tags, help to get the data from the ValueStack.
+Struts 2 Data tags,place the data into the ValusStack.
+The Struts 2 data tags are  used to manipulate the data displayed on a page.
+All of the above.
+******************************
+Which tag in strurs.xml is used to register a newly defined interceptor?
+
+<interceptors-ref>...</interceptors-ref> 
+ <interceptors>...</interceptors> 
+  <interceptor>...</interceptor> 
+  <interceptor-ref>...</interceptor-ref>
+  ***************************************
+  
+  Which of the following  statement is false  about interceptors?
+  
+  The Interceptors are defined in a stack that specifies the execution order. 
+  Multiple interceptors can not be associated with an action.  -ans
+  Interceptors can be bundled by using an Interceptor Stack.
+  Multiple built-in Interceptors as well as Interceptor stacks are defined in struts-default.xml file
+  
+  ***********************************
+  Which of the following  tag in struts.xml should be used
+to  bundled  the   multiple interceptors
+so that  same interceptors  can be applied to multiple actions without re-declaring .
+
+<interceptor> 
+	<stack name="myStack">
+		<interceptor-ref 		name="timer"/> 
+	</stack> 		
+</interceptor> 
+
+
+<interceptors> 
+	<stack name="myStack">
+		<interceptor-ref 		name="timer"/> 
+	</stack> 		
+</interceptors> 
+
+<interceptors> 
+	<interceptor-stack name="myStack">
+		<interceptor-ref 		name="timer"/> 
+	</interceptor-stack> 		
+</interceptors> --ans
+
+<interceptor> 
+	<interceptor-stack name="myStack">
+		<interceptor-ref 		name="timer"/> 
+	</interceptor-stack> 		
+</interceptor> 
+	***********************************
+	
+	Which of the following statement is true about the interceptorsof default stack?
+	
+	workflow interceptor  checks for the presence of error messages on the action.
+	
+	param interceptor  transfers the request parameters  to properties exposed by the ValueStack
+	
+	ConversionError  interceptor  class adds conversion errors  from the ActionContext to the field errors  of the action.
+	
+	The createSession interceptor automatically creates a HttpSession
+	
+	The logger interceptor generates the name of the Action as an output. 
+
+
+	
+	************************************
+	Which of the following class  provides default implementations of the action interface which does  data validation and localization of error messages.
+	
+	
+	ActionForm	
+	ActionContext
+	ApplicationContext
+	ActionSupport
+	
+	**********************************
+	
+	Which of the following  struts2  data tag in   jsp will allow you 
+	to generate a hyperlink  which will take you to igate page?
+	
+	<a href="<s:url var="http://www.igate.com"  />"
+				 target="_blank">IGATE</a>	
+				 
+	<a href="<s:url value="http://www.igate.com"  />"
+				 target="_blank">IGATE</a>--ans
+				 
+				 
+	 <a href="<s:link value="http://www.igate.com"  />"
+				 target="_blank">IGATE</a>
+				 
+	<a href="<s:link var="http://www.igate.com"  />"
+				 target="_blank">IGATE</a>
+**************************************************
+Which  component  in struts2   is responsible for the conversion
+of the java property  having  any type in string while rendering 
+the page?
+
+property tag takes a Java property from the ValueStack and writes it as a string into the rendering page. Here conversion is done by the OGNL type converters.
+
+
+*************************************
+In which order struts framework searches for a corresponding message bundle,
+When  we reference a message element by its key?
+ 
+
+
+	ActionClass.properties 
+	Interface.properties 
+	SuperClass.properties 
+	model.properties 
+	package.properties 
+	struts.properties 
+	global.properties 
+	
+	
+	global.properties 
+	ActionClass.properties 
+	Interface.properties 
+	SuperClass.properties 
+	model.properties 
+	package.properties 
+	struts.properties 
+	
+	
+	model.properties 
+	SuperClass.properties 
+	global.properties 
+	ActionClass.properties 
+	Interface.properties 	
+	package.properties 
+	struts.properties 
+	SuperClass.properties 
+	
+	package.properties 
+	model.properties 
+	SuperClass.properties 
+	global.properties 
+	ActionClass.properties 
+	Interface.properties 	
+	struts.properties 
+	SuperClass.properties 
+	
+*************************************
+ If we want  to develop the application for 
+ configuring  the different language messages,
+ Then what should be the correct  naming convention 
+ followed for resource bundle file name 
+ given for configuring the messages ?
+
+
+ResourceBundle_Language_Country.properties
+Country_language_ResourceBundle.properties
+ResourceBundle_Language_Country.xml
+Country_language_ResourceBundle.xml
+************************************
+What are different ways to create Action classes in Struts2?
+
+
+Implementing Action interface
+Using @Action annotation
+Extends ActionSupport class
+Any normal java class with execute() method returning String .
+All of the above.
+
+********************************
+
+Which of the following is true about struts2 interceptors?
+
+Interceptors passes request params to action classes.
+Interceptors make Servlet API request, response, session available to Action classes.
+ActionInvocation 's invoke() method  keeps track of the interceptor chain and invokes the next interceptor or action. 
+All of the above.
+
+...........................
+Which class is the Front Controller in Struts2?
+
+org.apache.struts2.dispatcher.ng.filter.PrepareAndExecuteFilter
+org.apache.struts2.dispatcher.ng.filter.StrutsExecuteFilter
+org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+org.apache.struts2.dispatcher.ng.filter.ExecuteFilter
+org.apache.struts2.dispatcher.ng.filter.StrutsFilter
+
+*******************************
+Which of the folllowing struts2 constants configured in struts.xml file
+allows to  reload properties files and provides extra logging and debugging feature enabled?
+
+
+<constant name="struts.devMode" value="true" />-ans
+<constant name="struts.multipart.maxSize" value="1000000" />
+<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+<constant name="struts.devMode" value="false" />
+
+,,,,,,,,,,,,,,,,,,,,,,,,,
+Which of the following constant has to be configured in struts.xml
+for  defining global resource bundle for localization support?
+
+struts.devMode 
+struts.convention.result.path 
+struts.custom.i18n.resources 
+struts.action.extension 
+
+***************************************
+Which of the following statement is true about namespaces
+in struts.xml file?
+
+Struts2 namespace configuration allows us to create modules easily.
+Namespace are used  to separate our action classes based on their functionality.
+Namespace allows  to handle the multiple modules by given a namespace to each module.
+Namespace can used to avoid conflicts between same action names located at different modules.
+All of the above.
+
+*************************************
+
+Which interceptor is responsible for mapping request parameters to action class Java Bean properties?
+
+com.opensymphony.xwork2.interceptor.ValidatorInterceptor 
+com.opensymphony.xwork2.interceptor.ParametersInterceptor 
+com.opensymphony.xwork2.interceptor.ParamInterceptor 
+com.opensymphony.xwork2.interceptor.Interceptor 
+
+********************************************************
+
+Which of the following interfaces are implemented by ActionSupport class?
+
+
+ Validateable
+ ValidationAware
+ TextProvider
+ LocaleProvider
+All of the above 
+
+Which of the folllowing interface has to be implemented by Action 
+class, if some data has to be kept in a session scope?
+
+
+ SessionAware
+ ApplicationAware
+ ServletRequestAware 
+ ServletResponseAware. 
+*******************************************************
+
+Which of the following tag has to be configured in struts.xml file,
+If StudentAction component returns a "control string" 
+with the name "displayGrade"    to select "displayGrade.jsp " result page 
+ that has to be rendered ?
+ [Note: Assume  that displayGrade.jsp present in jsps folder
+ of web application root.]
+
+<result name="displayGrade.jsp">jsps/displayGrade</result>
+<result name="displayGrade">jsps/displayGrade.jsp</result>
+<result name="displayGrade">jsps/displayGrade</result>
+<result forward="displayGrade">jsps/displayGrade.jsp</result>
+
+
+Which of the method of TextProvider interface  is implemented by ActionSupport class  to provides the  access of  the localized messages?
+
+getText()
+getLocale() 
+getInternationalize()
+getData();
+********************************
+
+Consider the folllowing  result tag defination.
+
+<result name="........" type="........."> </result>
+
+Which of the following  is the default type attribute value in 
+above result tag?
+
+type="redirect"
+type="dispatcher "
+type="chain"
+type="freemaker"
+type="velocity"
+********************************
+Which of the following  type attribute value    in  a   result tag will let you  redirect  to the JSP Page?
+
+<result type="redirect"></result>
+<result type="dispatcher"></result>
+<result type="chain"></result>
+<result type="velocity"></result>
+***************************************
+Consider the following snipet of StudentAction class.
+package com.igate.action;
+public class StudentAction{
+	private int rollNo;
+	private int  stuName;
+	private float stuMarks;
+	private String result;
+	//getter and setter method.
+	public String execute()
+	{
+		return "showResult";
+	}
+}
+ 
+ Which of the following are the correct  result tag definition 
+ in struts.xml file for dispacting to the showResult.jsp page
+ from StudentAction class?
+ 
+ 
+ <action name="showResultAction" class="com.igate.StudentAction">
+		<result name="showResult">/jsps/showResult.jsp</result>
+<action>
+
+<action name="showResultAction" class="com.igate.StudentAction">
+		<result name="showResult" type="dispatcher">/jsps/showResult.jsp</result>
+<action>
+
+<action name="showResultAction" class="StudentAction">
+		<result name="showResult.jsp" type="dispatcher">/jsps/showResult.jsp</result>
+<action>
+
+<action name="showResultAction" class="com.igate.StudentAction">
+		<result name="showResult.jsp">/jsps/showResult.jsp</result>
+<action>
+*****************************
+Which of the following is the correct  tag defination
+for acceing  Student  bean class  with marks and grade 
+property  directly from struts jsp pages?
+
+<s:getBean name="com.igate.dto.Student">
+	<s:param name="marks" value="89" />
+	Grade Is  = <s:property value="grade" /> 
+</s:getBean >
+
+
+ <s:bean name="com.igate.dto.Student">
+	<s:param name="marks" value="89" />
+	Grade Is  = <s:property value="grade" /> 
+</s:bean>
+
+<s:bean name="com.igate.dto.Student">
+	<s:param name="marks" value="89" />
+	Grade Is  = <s:getproperty value="grade" /> 
+</s:bean>
+
+<s:getbean name="com.igate.dto.Student">
+	<s:param name="marks" value="89" />
+	Grade Is  = <s:getproperty value="grade" /> 
+</s:getbean>
+
+************************************************
+Consider the following  code snippet.
+
+<<MyAction.java>>
+public class MyAction{
+	private String emailId;
+	//getter and setter method
+	......
+	......
+}
+************************************************
+<<igateprop.properties>>
+
+igate.email =IGATE EMAIL ADDRESS
+*************************************************
+<<enterDetails.jsp>>
+
+<body>    
+   <s:form action="..">	
+		<!--Enter Tag  Here Line-3-->
+      <s:submit name="submit" value="SUBMIT" />
+   </s:form>
+</body>
+*************************************************
+
+Which of the following tag should   be added 
+in above <<enterDetails.jsp>> page  at Line No:3 to get a  emailId 
+text box showing the label from the  
+<<igateprop.properties>> file?
+
+
+<s:textfield name="emailid" value="igate.email" size="20" />  
+<s:textfield name="emailId" label="igate.email" size="20" />   
+<s:textfield bean="emailid" name="igate.email" size="20" />    
+<s:textfield name="emailId" key="igate.email" size="20" />   
+
+ 
+ *******************************************
+  
+ Which of the following tag is used in struts.xml file
+ for  handling a exception  which will apply to all the actions?
+ 
+ 
+ <global-exception-mappings>
+				..........
+</global-exception-mappings>
+
+<exception-mapping exception="java.lang.Exception"
+       				  result="error" 
+					  ....
+</exception-mapping>
+
+<global-mappings>
+				..........
+</global-mappings>
+
+
+<exception>
+				..........
+</exception>
+
+******************************
+
+Consider that there is a company name IGATE kept in 
+a session object  with the name CompName in  action
+class using SessionAware interface as follows.
+
+session.setAttribute("CompName","IGATE");
+
+Which one of the following is correct OGNL syntax to access the 
+company name from session scope in struts jsp page?
+
+
+<s:property value="#session.CompName"/>
+<s:property value="$session.CompName"/>
+<s:property value="%ession.CompName"/>
+<s:property value="@ession.CompName"/>
+
+
+***************************
+Which  of the following  class has to be extended ,
+If we want to  write the custom converter for OGNL?
+StrutsTypeConverter
+StrutsConverter
+Converter
+StrutsType
+**************************************
+Which of the following method  is overridden by Action class? 
+ execute() 
+ service() 
+ run() 
+ destroy() 
+***********************************
+Which tag enables developers to call actions directly from a JSP page by specifying the action name and an optional namespace? 
+ bean tag 
+ push tag 
+ action tag 
+ None Of above 
+ 
+ **************************************************
+ 
+If the age variable is considered to be kept in the value stack,
+Which of the following is correct way of accessing and displaying the data in the jsp page ?
+
+<s:property property="age" />
+<s:property value="age" />
+<s:property prop="age" />
+<s:property n="age" />
+
+*****************************************
+StrutsPrepareAndExecuteFilter  class belong to,
+Which of the following  component of struts2 MVC framework?
+
+Model
+Controller
+View
+None of the above
+**************************************
+Default Interceptors   classes belong to,
+Which of the following  component of struts2 MVC framework?
+
+Model
+Controller
+View
+None of the above
+************************************
+Action  classes belong to,
+Which of the following  component of struts2 MVC framework?
+
+Model
+Controller
+View
+None of the above
+
+***************************************
+Struts UI tag library  classes belong to,
+Which of the following  component of struts2 MVC framework?
+
+Model
+Controller
+View
+None of the above
+
+***************************************
+Which of the following xml file contains the default interceptor
+declaration, which are intercepted before and after the execution of action classes?
+
+struts.xml
+struts-default.xml
+strut-default.xml
+None of the above
+
+**********************************
+
+For creating custom interceptors,
+Which of the folllowing tag definition should be used 
+in struts.xml file?
+
+ <interceptors>
+       <interceptor name="...."  class="...." />
+ </interceptors>
+ 
+ <interceptor>
+       <interceptors name="...."  class="...." />
+ </interceptor>
+ 
+ <interceptors>
+       <interceptor name="...."  bean="...." />
+ </interceptors>
+ 
+ <interceptor>
+       <interceptors name="...."  bean="...." />
+ </interceptor>
+ 
+ 
+ **********************************************
+ 
+ If the interceptors  are defined in struts.xml
+ using stack  ,Which of the following tag definition is used 
+ in xml action  to  use that stack?
+ 
+ 
+ <action name="..."   class="....."    method="....">  
+            	 <interceptor-ref name="....."/>
+              <result name="...">.....</result>
+ </action>
+ 
+ <action name="..."   bean="....."    method="....">  
+            	 <interceptorRef name="....."/>
+               <result name="...">.....</result>
+ </action>
+ 
+ <action name="..."   class="....."    method="....">  
+            	 <ref name="....."/>
+               <result name="...">.....</result>
+ </action>
+ 
+  <action name="..."   class="....."    method="....">  
+            	 <interceptor-ref bean="....."/>
+              <result name="...">.....</result>
+ </action>
+
+*****************************
+**********igate.xml********************
+<?xml version="1.0" encoding="UTF-8"?>
+..........
+<struts>
+<package name="abc" namespace="/"  extends="struts-default">
+ <action name="EmployeeAction" class="com.igate.service.EmployeeService">
+  .....
+</action>
+</package>
+</struts>
+
+Consider above igate.xml file which has EmployeeAction defined inside it.
+
+If we want to use the EmployeeAction tag definition in struts.xml,
+Which of the following is the correct way of doing it?
+
+
+
+<struts>
+ <include file="igate.xml" /> 
+</struts>
+
+<struts>
+ <import file="igate.xml" /> 
+</struts>
+
+<struts>
+ <include page="igate.xml" /> 
+</struts>
+
+None of the above.
+**********************************
+Which file is used by controller to get mapping information for request routing in struts2 ?
+
+struts-config.xml 
+struts.xml
+struts-default.xml
+None of the above
+
+
+ 
+

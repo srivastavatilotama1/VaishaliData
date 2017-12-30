@@ -1,0 +1,90 @@
+<html>
+
+<head>
+<title>New Page 1</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+</head>
+
+<body>
+
+<p><img src="Sunset.jpg" width="95" height="95"> </p>
+
+<p><br>
+<br>
+
+
+<form>
+  <table>
+    <tr>
+      <td><input type="button" value="Faster" onClick="f()"></td>
+      <td><input type="button" value="Start Animation" onClick="g()"></td>
+      <td><input type="button" value="Slower" onClick="s()"></td>
+      <td><input type="button" value="STOP" onClick="stop()"></td>
+    </tr>
+  </table>
+</form>
+
+<p><br>
+<br>
+<script>
+count = 1;
+flag=0;
+i1 = new Image();
+i2 = new Image();
+i1.src = "Blue hills.jpg";
+i2.src = "Sunset.jpg";
+
+function g()
+{
+	if(flag == 1 )
+		clearInterval(t1);
+	t1=setInterval("a()",700);
+	flag=1;
+}
+
+function f()
+{
+	if(flag == 1 )
+		clearInterval(t1);
+
+	if(flag != 0 )
+	{
+		t1=setInterval("a()",200);
+		flag = 1;
+	}
+}
+function s()
+{
+	if(flag == 1 )
+		clearInterval(t1);
+
+	if(flag != 0 )
+	{
+		t1=setInterval("a()",1200);
+		flag=1;
+	}
+}
+
+function stop()
+{
+	if(flag != 0)
+	clearInterval(t1);
+	flag=0;
+}
+
+function a()
+{
+	if( count == 1 )
+	{
+		document.images[0].src = i2.src;//a;
+		count = 0;
+	}
+	else
+	{
+		document.images[0].src = i1.src;//b;
+		count = 1;
+	}
+}
+</script> </p>
+</body>
+</html>

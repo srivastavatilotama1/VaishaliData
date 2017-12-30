@@ -1,0 +1,7 @@
+CREATE TABLE Book(book_isbn NUMBER(10) PRIMARY KEY,book_title VARCHAR2(50),
+book_price NUMBER(10,2));
+
+CREATE TABLE BookAuthor(author_id NUMBER(10) PRIMARY KEY,author_name VARCHAR2(20));
+
+CREATE TABLE Book_Author(book_isbn NUMBER(10) REFERENCES Book(book_isbn),
+author_id NUMBER(10)  REFERENCES BookAuthor(author_id));

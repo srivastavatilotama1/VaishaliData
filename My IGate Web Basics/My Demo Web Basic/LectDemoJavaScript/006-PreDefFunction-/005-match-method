@@ -1,0 +1,44 @@
+<html>
+<body>
+
+<script type="text/javascript">
+
+document.write("String Related Function"+ "<br />");
+
+var str="Hello world!";
+document.write(str.match("world") + "<br />");
+document.write(str.match("World") + "<br />");
+document.write(str.match("worlld") + "<br />");
+document.write(str.match("world!") + "<br />");
+
+var str="Visit Microsoft!";
+document.write(str.replace(/Microsoft/,"W3Schools") + "<br />");
+var d = new Date();
+document.writeln(d.toUTCString() + "<br />");
+document.writeln ("************"+d + "<br />");
+
+document.write("Date Related Function"+ "<br />");
+
+var d = new Date();
+d.setFullYear(1992,10,3);
+document.write(d+"<br />");
+document.write(escape("Need tips? Visit Java Tutorial!"));
+
+document.write("Escape Function"+ "<br />");
+
+document.write(escape("Visit=W3Schools   !") + "<br />");
+document.write(escape("?!=()#%&"));
+
+
+</script>
+
+</body>
+</html>
+
+<!--The escape() function encodes a string.
+
+This function makes a string portable, so it can be transmitted across any network to any computer that supports ASCII characters.
+
+This function encodes special characters, with the exception of: * @ - _ + . /
+
+-->

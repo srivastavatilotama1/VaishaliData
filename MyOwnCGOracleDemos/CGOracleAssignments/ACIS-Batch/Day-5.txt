@@ -1,0 +1,50 @@
+ 
+Day 5 assignments
+-----------------------------------
+
+1) CREATE VIEW member_issue_vw AS SELECT m.member_id,m.member_name,i.lib_issue_id
+from member m,issue i where m.member_id=i.members_id;
+
+2) CREATE VIEW msType_vw AS SELECT member_id,member_name,membership_type from
+member WHERE membership_type='Annual';
+
+3) CREATE VIEW msTypeLT_vw AS SELECT member_id,member_name,membership_type from member WHERE membership_type='Lifetime';
+
+   INSERT INTO msTypeLT_vw VALUES(9,'Anushka Sharma','Lifetime');
+
+   INSERT INTO msTypeLT_vw VALUES(10,'Sonia Singh','Lifetime');
+
+   SELECT * FROM msTypeLT;(To display view)
+
+4) CREATE VIEW bkCatSci_vw AS SELECT book_no,book_name,category FROM books WHERE category='Science' WIT READ ONLY CONSTRAINT cn1;
+
+5)  CREATE VIEW bksm2_vw AS SELECT m.member_id,m.member_name,i.books_no,i.issue_date FROM member m,issue i 
+    
+    WHERE i.members_id(+)=m.member_id;
+
+6)   CREATE VIEW books_vw as SELECT b.book_no,b.book_name,i.members_id,i.issue_date,i.return_date from books b,issue i WHERE b.book_no=i.books_no;
+
+7)  CREATE VIEW book_JanDec_vw AS SELECT b.book_no,b.book_name,m.member_id,m.member_name,i.issue_date,i.return_date FROM books b,     member m, issue i
+    WHERE b.book_no=i.books_no AND m.member_id=i.members_id AND
+    to_char(to_date(i.issue_date,'dd-mm-yy'),'Month') IN('January','December');(query working till second line...but not working from 3rd)
+
+8) CREATE INDEX indexbookname ON books(book_name);
+
+9) CREATE INDEX index_mtmn ON member(membership_type,member_name);
+
+10) Need to discuss on call
+
+11) CREATE USER tom IDENTIFIED BY tom;
+    
+    CREATE SCHEMA AUTHORIZATION tom
+    CREATE TABLE emp(emp no NUMBER(4) PRIMARY KEY,empname VARCHAR2(30),sal NUMBER(7))
+    INSERT INTO emp VALUES(1111,'Sonam',70000)
+    INSERT INTO emp VALUES(2222,'Anusha',30000)
+    INSERT INTO emp VALUES(3333,'Veer',40000)
+    GRANT SELECT ON emp TO harry;
+
+    CREATE PUBLIC SYNONYM myemp for harry.emp;
+
+12) To be discussed on call
+    
+

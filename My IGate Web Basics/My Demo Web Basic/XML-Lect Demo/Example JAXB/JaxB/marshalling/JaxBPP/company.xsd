@@ -1,0 +1,37 @@
+<schema targetNamespace="http://www.example.com/kogent"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:kogent="http://www.example.com/kogent">
+	<element name="Company">
+		<complexType>
+			<sequence>
+				<element name="CompanyAddress">
+					<complexType>
+						<sequence>
+							<element name="name" type="string" />
+							<element name="street" type="string" />
+							<element name="city" type="string" />
+							<element name="state" type="string" />
+							<element name="zipcode" type="string" />
+							<element name="phnum" type="string" />
+						</sequence>
+					</complexType>
+				</element>
+				<element name="departments">
+					<complexType>
+						<sequence>
+							<element name="department" type="kogent:DeptType"
+								maxOccurs="unbounded" />
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="DeptType">
+		<sequence>
+			<element name="deptmanager" type="string" />
+			<element name="cost" type="double" />
+		</sequence>
+		<attribute name="deptname" use="required" type="string" />
+	</complexType>
+</schema>

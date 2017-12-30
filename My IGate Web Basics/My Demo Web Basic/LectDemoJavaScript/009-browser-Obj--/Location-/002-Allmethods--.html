@@ -1,0 +1,43 @@
+<html>
+<head>
+<script type="text/javascript">
+
+alert(location.hostname+"********");
+document.write(location.href);
+
+document.write(location.port);
+
+
+function newDoc()
+  {
+  window.location.assign("Break.html")
+  }
+
+function reloadPage()
+  {
+  window.location.reload()
+  }
+
+  function replaceDoc()
+  {
+  window.location.replace("ifelse.html")
+  }
+
+
+
+</script>
+
+</head>
+
+<body><input type="button" value="Load new document"
+onclick="newDoc()" /></body>
+
+<input type="button" value="Reload page"
+onclick="reloadPage()" />
+
+<input type="button" value="Replace document"
+onclick="replaceDoc()" />
+
+<p><b>Note:</b> If the port number is 80 (which is the default port number), nothing will be returned!</p>
+
+</html> 

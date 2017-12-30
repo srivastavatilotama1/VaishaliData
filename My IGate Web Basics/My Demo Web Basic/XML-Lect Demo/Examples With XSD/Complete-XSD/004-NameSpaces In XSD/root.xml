@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:f="http://www.furniture.org/furniture" 
+xmlns:fr="http://www.fruit.org/fruit" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="root.xsd">
+  <fr:table>
+  	<fr:tr>
+  		<fr:td>Apple</fr:td>
+  		<fr:td>Orange</fr:td>  	
+  	</fr:tr>
+  </fr:table>  
+  
+  <f:table>
+  	<f:name>TABLE</f:name>
+  	<f:width>10</f:width>
+  	<f:length>30</f:length>
+  </f:table>
+</root>

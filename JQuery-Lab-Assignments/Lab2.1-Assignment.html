@@ -1,0 +1,40 @@
+<html>
+<head>
+<script language="javascript" src="./Scripts/jquery-2.0.0.js">
+</script>
+<script language="javascript">
+jQuery(document).ready(function ()
+{
+	//Selecting all the paragraphs
+	var paragraphs = $('p');
+	
+	//Applying Styles to all the paragraphs
+	paragraphs.css('background-color','blue');
+	paragraphs.css('color','white');
+	
+	//Applying Styles to the paragraphs under div tag (descendants)
+	var divParagraphs= $('div p');
+	divParagraphs.css('text-transform','uppercase');
+//Navigating though all paragraph tags and print the contents within it using //message box
+	//var collection = $('div,p');
+	paragraphs.each(function(){
+	alert($(this).html());
+	});
+	
+});
+
+</script>
+</head>
+<body>
+<p>First Paragraph</p>
+<p>Second Paragraph</p>
+
+<div>
+<p>First Paragraph - inside div tag </p>
+<p>Second Paragraph - inside div tag </p>
+</div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Embedding Script tag in HTML Document</title>
+<script type="text/javascript">
+var HeadVar=10;
+document.write("Script Embedding in the Head tag<br> ")
+document.write("---------------------------------<br>")
+document.write("Value Stored in Variable<i>HeadVar</i>"+HeadVar)
+</script>
+<hr>
+<script src="common.js">
+
+</script>
+</head>
+<body>
+<script>
+ 
+var BodyVar=10;
+document.write("Script Embedding in the Body tag <br>")
+document.write("---------------------------------<br>")
+document.write("Value Stored in Variable<i>bodyVar</i>"+BodyVar)
+</script>
+<hr>
+ 
+<p><i>The actual script is in external script file called common.js </i></p>
+<script>
+
+var result= common(varBody,varHead);
+document.write(+result)
+
+</script>
+</body>
+</html>

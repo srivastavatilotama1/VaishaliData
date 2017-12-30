@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shiporder orderid="889923"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceLocation="lab2-1.xsd">
+<orderperson>John Smith</orderperson>
+
+<shipto>
+	<name>ola Nordmann</name>
+	<adress>langtt 23</adress>
+	<city>4000 stavanger</city>
+	<country>Norway</country>
+</shipto>
+
+<item>
+	<title>Empire Burlesque</title>
+	<note>special edition</note>
+	<quantity>1</quantity>
+	<price>10.90</price>
+</item>
+
+<item>
+	<title>Hide Your Heart</title> 
+	<quantity>1</quantity>
+	<price>9.90</price>
+</item>
+</shiporder>
+

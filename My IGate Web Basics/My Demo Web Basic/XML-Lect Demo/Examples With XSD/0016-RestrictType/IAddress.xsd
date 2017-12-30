@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<xs:complexType name="AddressType">
+		<xs:sequence>
+			<xs:element name="Line1" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="InternalAddressType">
+		   <xs:complexContent>
+					  <xs:restriction base="AddressType">
+								 <xs:sequence>
+											<xs:element name="Line1" type="xs:string" />
+									</xs:sequence>
+					  </xs:restriction>
+		   </xs:complexContent>
+</xs:complexType>
+
+<xs:element name="InternalAddress" type="InternalAddressType"/>
+</xs:schema>

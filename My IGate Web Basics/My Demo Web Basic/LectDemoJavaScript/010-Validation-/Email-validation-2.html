@@ -1,0 +1,57 @@
+<script language = "Javascript">
+function emailcheck(str) {
+var at="@"
+var dot="."
+var lat=str.indexOf(at)
+var lstr=str.length
+var ldot=str.indexOf(dot)
+if (str.indexOf(at)==-1){
+alert("The eMail address '@' convention appears to be invalid.")
+return false
+}
+if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+alert("The eMail address '@' convention appears to be invalid.")
+return false
+}
+if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+alert("The eMail address 'dot' convention appears to be invalid.")
+return false
+}
+if (str.indexOf(at,(lat+1))!=-1){
+alert("The eMail address '@' convention appears to be invalid.")
+return false
+}
+if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+alert("The eMail address 'dot' convention appears to be invalid.")
+return false
+}
+if (str.indexOf(dot,(lat+2))==-1){
+alert("The eMail address 'dot' convention appears to be invalid.")
+return false
+}
+if (str.indexOf(" ")!=-1){
+alert("The eMail address spacing convention appears to be invalid.")
+return false
+}
+return true 
+  }
+  function ValidateForm(){
+  var emailID=document.myForm.txtEmail
+  if ((emailID.value==null)||(emailID.value=="")){
+  alert("Please Enter your Email Address")
+  emailID.focus()
+  return false
+  }
+  if (emailcheck(emailID.value)==false){
+  emailID.value=""
+  emailID.focus()
+  return false
+  }
+  return true
+  }
+</script>
+<form name="myForm" method="post" action="" onSubmit="return ValidateForm()">
+  Enter an eMail Address : 
+<input type="text" name="txtEmail"> 
+<input type="submit" name="Submit" value="Submit"> 
+</form>

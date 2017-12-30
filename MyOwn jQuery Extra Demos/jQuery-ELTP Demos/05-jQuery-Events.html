@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>jQuery-Events</title>
+<style>
+	.custom{
+		color:red;
+		background:yellow;
+		font-size:30pt;
+		font-weight:bold
+	}
+</style>
+</head>
+<body>
+	<div>
+		<input id="btnAttach" type="button" value="AttachEvent"/>
+		<input id="btnDetach" type="button" value="DetachEvent"/>
+		<input id="splBtn" type="button" value="Special Button"/>
+	</div>
+	<hr/>
+	<div>
+		<input id="btnEnter" type="button" value="Enter"/>
+		<input id="btnLeave" type="button" value="Leave"/>
+	</div>
+	<hr/>
+	<div>
+		<input id="btnEnterLeave" type="button" value="Enter / Leave"/>
+	</div>
+	<hr/>
+	<div>
+		<input id="btnOne" type="button" value="One Time"/>
+	</div>
+	<hr/>
+	<div>
+		<input id="btnAdd" type="button" value="Add Button"/>
+		<hr/>
+		<div id="target">
+		</div>
+	</div>
+	<hr/>
+	<div>
+		<input id="btnFirst" type="button" value="First"/>
+		<input id="btnSecond" type="button" value="Second"/>
+		<input id="btnData" type="button" value="Data"/>
+	</div>
+	
+</body>
+<script src="./scripts/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		/*To Bind / Attach event */
+		$('#btnAttach').bind('click',function(){
+			$('#splBtn').bind('click',sayHi);
+			alert('Event Attached');
+		});
+		
+		/*To UnBind / Detach event */
+		$('#btnDetach').bind('click',function(){
+			$('#splBtn').unbind('click');
+			alert('Event Detached');
+		});
+		
+		$('#btnEnter').bind('mouseenter',function(event){
+			alert('Mouse Pointer Entered');
+			console.log(event);
+		});
+		
+		$('#btnLeave').bind('mouseleave',function(event){
+			alert('Mouse Pointer Left');
+			console.log(event);
+		});
+		
+		$('#btnEnterLeave').bind('mouseenter mouseleave',function(ev){
+			/*if(ev.type === "mouseenter")
+				$(this).addClass('custom');
+			else
+				$(this).removeClass('custom');*/
+				$(this).toggleClass('custom');
+		});
+		
+		/*$('#btnOne').bind('click',function(){
+			sayHi();
+			$(this).unbind();//unbind all the events
+		});*/
+		
+		//One time binding
+		$('#btnOne').one('dblclick',function(){
+			sayHi();
+		});
+		
+		$('#target').on('click','.spl:button',sayHi);
+		
+		$('#btnAdd').bind('click',function(){
+			$('#target').append
+			('<input class="spl" type="button" value="Say Hi"/>')
+		});
+		
+		$('#btnFirst').bind('click',function(){
+			//Passing extraparameter
+			$('#btnSecond').trigger('karthikClick',{id:1});
+		});
+		
+		$('#btnSecond').bind('karthikClick',function(ev,extras){
+			alert('Second Button Custom Event Occured');
+			console.log(extras.id);
+		});
+		
+		/*Passing data and access it with event.data*/
+		$('#btnData').bind('click',{id:1},function(event){
+			console.log(event);
+			alert(event.data.id);
+		});
+	});
+	function sayHi(){
+		alert('Hi');
+	}
+</script>
+</html>
+<!--
+
+-->

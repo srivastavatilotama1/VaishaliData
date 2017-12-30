@@ -1,0 +1,46 @@
+<html>
+<head>
+<script>
+ function add(objId)
+{
+  var num1=window.document.form1.num1.value;
+  var num2=window.document.form1.num2.value;
+  var n1=eval(num1);
+  var n2=eval(num2);
+//document.write(objId+"   "+n1);
+
+		if(objId=="a1")
+		{
+  			var res=n1+n2;	
+  			window.document.form1.res.value=res;
+		}
+		else if(objId=="b1")
+		{
+			var res=n1-n2;	
+  			window.document.form1.res.value=res;
+		}
+}
+</script>
+</head>
+<body bgcolor="pink">
+
+<form name="form1" action="">
+
+ Num1:
+<input type="text" name="num1" value=""></input>
+<br/>
+
+ Num2:
+<input type="text" name="num2" value=""></input>
+<br/>
+
+ Result:
+<input type="text" name="res" value=""></input>
+<br/>
+
+<input  id="a1" type="button" name="opB" value="ADD"  onClick="add(this.id);"></input>
+<input id="b1" type="button" name="opB" value="SUB" onClick="add(this.id);" ></input>
+
+</form>
+</body>
+</html>

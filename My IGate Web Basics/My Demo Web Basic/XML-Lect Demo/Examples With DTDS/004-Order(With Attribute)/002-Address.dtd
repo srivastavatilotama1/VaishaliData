@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT address (((buildingnumber|landmark)|street+), city, state, zip?)>
+<!ELEMENT buildingnumber (#PCDATA)>
+<!ELEMENT landmark (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+<!ATTLIST state shortname CDATA #FIXED "MS">
+
+<!--
+<!ATTLIST Film Class CDATA >
+Simple form of defining an attribute. Attribute contains characters
+
+<!ATTLIST Film Year CDATA #REQUIRED>
+You must specify an attribute value
+
+<!ATTLIST Film Color CDATA #IMPLIED>
+You can either include or omit the attribute, no default value supplied
+
+<!ATTLIST Film Language CDATA #FIXED "Hindi”>
+You can either include or omit. If you omit, the processor will use a special default value. If you include, you must specify.
+
+-->

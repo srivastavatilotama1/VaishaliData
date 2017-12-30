@@ -1,0 +1,29 @@
+<html>
+<head>
+
+<script type="text/javascript">
+var int=self.setInterval("clock()",1000);
+document.write(int);
+function clock()
+{
+var t=new Date();
+document.getElementById("clock").value=t;
+}
+</script>
+
+
+
+</head>
+<body>
+<!--The clearInterval() method clears a timer set with the setInterval() method.
+The ID value returned by setInterval() is used as the parameter for the clearInterval() method
+-->
+
+<input type="text" id="clock" size="35" />
+
+
+<button onclick="int=window.clearInterval(int)">Stop interval</button>
+
+</body>
+</html>
+

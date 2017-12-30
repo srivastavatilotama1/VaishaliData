@@ -1,0 +1,1209 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0078)https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions -->
+<!DOCTYPE html PUBLIC "" ""><HTML class="redesign no-js" lang="en-US" 
+dir="ltr"><HEAD prefix="og: http://ogp.me/ns#"><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+   
+<META charset="utf-8">   
+<META http-equiv="X-UA-Compatible" content="IE=Edge">
+<SCRIPT type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgAEV1RTGwABU1NSAAQ="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(4),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(5),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:7,3:11,4:3,5:9,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1);t("loader").features.stn=!0,t(2),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(o){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&f&&f.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=l.proto+t.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-593.min.js"},l=e.exports={offset:i(),origin:p,features:{}};f[u]?(f[u]("DOMContentLoaded",o,!1),c[u]("load",n,!1)):(f[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</SCRIPT>
+
+<SCRIPT type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":1,"licenseKey":"42869b6ed3","agent":"js-agent.newrelic.com/nr-593.min.js","transactionName":"b1QHMUtVDRdSW0YKXVYeIxBXVxcNXFYdCEdVUEsSUF8KSkVRVxRBAlUKBkxZBgpH","applicationID":"3172075","errorBeacon":"bam.nr-data.net","applicationTime":374}</SCRIPT>
+   
+<SCRIPT>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</SCRIPT>
+           
+<SCRIPT src="Regular%20Expressions%20-%20JavaScript%20%20MDN_files/237572123.js"></SCRIPT>
+       <TITLE>Regular Expressions - JavaScript | MDN</TITLE>   
+<META name="viewport" content="width=device-width, initial-scale=1">   
+<META name="robots" content="index, follow">   <LINK href="/en-US/" rel="home">  
+ <LINK href="#copyright" rel="copyright">   <LINK href="Regular%20Expressions%20-%20JavaScript%20%20MDN_files/tabzilla-min.css" 
+rel="stylesheet" type="text/css">               <LINK href="Regular%20Expressions%20-%20JavaScript%20%20MDN_files/mdn-min.css" 
+rel="stylesheet" media="all">           <LINK href="Regular%20Expressions%20-%20JavaScript%20%20MDN_files/wiki-min.css" 
+rel="stylesheet" media="all">           <!-- common social tags -->     
+<META content="website" property="og:type">   
+<META content="https://developer.mozilla.org/media/redesign/img/opengraph-logo.png" 
+property="og:image">   
+<META content="Mozilla Developer Network" property="og:site_name">   
+<META name="twitter:card" content="summary">   
+<META name="twitter:image" content="https://developer.mozilla.org/media/redesign/img/opengraph-logo.png"> 
+  
+<META name="twitter:site" content="@NewOnMDN">   
+<META name="twitter:creator" content="@NewOnMDN">   <LINK title="Mozilla Developer Network" 
+href="https://developer.mozilla.org/en-US/search/xml" rel="search" type="application/opensearchdescription+xml"> 
+  <!-- third-generation iPad with high-resolution Retina display: -->   <LINK 
+href="https://developer.cdn.mozilla.net/media/redesign/img/favicon144.png" rel="apple-touch-icon-precomposed" 
+sizes="144x144">   <!-- iPhone with high-resolution Retina display: -->   <LINK 
+href="https://developer.cdn.mozilla.net/media/redesign/img/favicon114.png" rel="apple-touch-icon-precomposed" 
+sizes="114x114">   <!-- first- and second-generation iPad: -->   <LINK href="https://developer.cdn.mozilla.net/media/redesign/img/favicon72.png" 
+rel="apple-touch-icon-precomposed" sizes="72x72">   <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --> 
+  <LINK href="https://developer.cdn.mozilla.net/media/redesign/img/favicon57.png" 
+rel="apple-touch-icon-precomposed">   <!-- basic favicon -->           <LINK 
+href="https://developer.cdn.mozilla.net/media/redesign/img/favicon32.png" rel="shortcut icon"> 
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script src="https://developer.cdn.mozilla.net/media/js/libs/html5.js"></script>
+  <![endif]--> 
+    <LINK href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions$json" rel="alternate" 
+type="application/json">   <LINK href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" 
+rel="canonical">             <LINK title="রেগুলার এক্সপ্রেশন" href="/bn-BD/docs/Web/JavaScript/Guide/Regular_Expressions" 
+rel="alternate" hreflang="bn-BD">           <LINK title="Reguläre Ausdrücke" 
+href="/de/docs/Web/JavaScript/Guide/Regular_Expressions" rel="alternate" 
+hreflang="de">           <LINK title="Expresiones Regulares" href="/es/docs/Web/JavaScript/Guide/Regular_Expressions" 
+rel="alternate" hreflang="es">           <LINK title="Expressions rationnelles" 
+href="/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res" rel="alternate" 
+hreflang="fr">           <LINK title="正規表現" href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions" 
+rel="alternate" hreflang="ja">           <LINK title="Regular Expressions" href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions" 
+rel="alternate" hreflang="pt-BR">           <LINK title="Регулярные выражения" 
+href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions" rel="alternate" 
+hreflang="ru">           <LINK title="Regular Expressions" href="/th/docs/Web/JavaScript/Guide/Regular_Expressions" 
+rel="alternate" hreflang="th">           <LINK title="正则表达式" href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" 
+rel="alternate" hreflang="zh-CN">           <LINK title="正規表示式" href="/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions" 
+rel="alternate" hreflang="zh-TW">         <!-- document-specific social tags --> 
+  
+<META content="Regular Expressions" property="og:title">   
+<META content="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" 
+property="og:url">   
+<META name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"> 
+  
+<META name="twitter:title" content="Regular Expressions">     
+<META content="Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. These patterns are used with the exec and test methods of RegExp, and with the match, replace, search, and split methods of String. This chapter describes JavaScript regular expressions." 
+property="og:description">   
+<META name="description" content="Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. These patterns are used with the exec and test methods of RegExp, and with the match, replace, search, and split methods of String. This chapter describes JavaScript regular expressions."> 
+  
+<META name="twitter:description" content="Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. These patterns are used with the exec and test methods of RegExp, and with the match, replace, search, and split methods of String. This chapter describes JavaScript regular expressions."> 
+        
+<SCRIPT type="text/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36116321-5', 'mozilla.org');
+    ga('set', 'anonymizeIp', true);
+
+    
+    
+    
+    (function() {
+        // http://cfsimplicity.com/61/removing-analytics-clutter-from-campaign-urls
+        var win = window;
+        var removeUtms = function(){
+            var location = win.location;
+            if (location.href.indexOf('utm') != -1 && win.history.replaceState) {
+                win.history.replaceState({}, '', location.pathname);
+            }
+        };
+
+        ga('send', 'pageview', {'hitCallback': removeUtms});
+    })();
+</SCRIPT>
+   
+<META name="GENERATOR" content="MSHTML 11.00.9600.17496"></HEAD> 
+<BODY class="document  " contextmenu="edit-history-menu" data-slug="Web/JavaScript/Guide/Regular_Expressions">
+<SCRIPT type="text/javascript">
+    (function(win) {
+        'use strict';
+
+                    (function(){
+  var FLAGS = {
+    'demos_10th': true,'demos_10th_preload': true,'derby_closed': true,'dirtiness_tracking': true,'fellowship_applications_open': true,'ga_outbound_links': true,'github_beta_notice': false,'github_login': true,'kumaediting': false,'page_move': false,'promote_script': false,'redirect_messages': false,'registration_disabled': false,'search_explanation': false,'search_suggestions': false,'top_contributors': false,'wiki_spellcheck': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'render_stale_documents_async': true,'enable_optimizely': true,'welcome_email': true,'application_ACAO': false,'store_revision_ips': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+                
+        // This represents the site configuration
+        win.mdn = {
+            build: '47de0dd',
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to media (images, CSS, JS) in MDN
+            mediaPath: 'https://developer.cdn.mozilla.net/media/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+                        notifications: [],
+                        // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            searchFilters: [{"name": "Document type", "slug": "type", "order": 1, "filters": [{"name": "Tools", "slug": "tools", "shortcut": null}, {"name": "Code Samples", "slug": "code", "shortcut": null}, {"name": "How-To & Tutorial", "slug": "howto", "shortcut": null}]}, {"name": "Skill level", "slug": "skill", "order": 1, "filters": [{"name": "I'm an Expert", "slug": "advanced", "shortcut": null}, {"name": "Intermediate", "slug": "intermediate", "shortcut": null}, {"name": "I'm Learning", "slug": "beginner", "shortcut": null}]}, {"name": "Topics", "slug": "topic", "order": 1, "filters": [{"name": "Open Web Apps", "slug": "apps", "shortcut": null}, {"name": "HTML", "slug": "html", "shortcut": null}, {"name": "CSS", "slug": "css", "shortcut": null}, {"name": "JavaScript", "slug": "js", "shortcut": null}, {"name": "APIs and DOM", "slug": "api", "shortcut": null}, {"name": "Canvas", "slug": "canvas", "shortcut": null}, {"name": "SVG", "slug": "svg", "shortcut": null}, {"name": "MathML", "slug": "mathml", "shortcut": null}, {"name": "WebGL", "slug": "webgl", "shortcut": null}, {"name": "XUL", "slug": "xul", "shortcut": null}, {"name": "Marketplace", "slug": "marketplace", "shortcut": null}, {"name": "Firefox", "slug": "firefox", "shortcut": null}, {"name": "Firefox for Android", "slug": "firefox-mobile", "shortcut": "fennec"}, {"name": "Firefox for Desktop", "slug": "firefox-desktop", "shortcut": "fx"}, {"name": "Firefox OS", "slug": "firefox-os", "shortcut": "fxos"}, {"name": "Mobile", "slug": "mobile", "shortcut": null}, {"name": "Web Development", "slug": "webdev", "shortcut": null}, {"name": "Add-ons & Extensions", "slug": "addons", "shortcut": null}, {"name": "Games", "slug": "games", "shortcut": null}, {"name": "Writing Documentation", "slug": "docs", "shortcut": null}, {"name": "XPCOM", "slug": "xpcom", "shortcut": ""}]}]
+        };
+
+        // Ensures gettext always returns something, is always set
+        win.gettext = function(x) {
+            return x;
+        }
+    })(window);
+</SCRIPT>
+     
+<DIV class="global-notice">
+<DIV class="wrap center">
+<P><bdi>Apply your JS skills to key Mozilla projects as an MDN Fellow! <A href="http://mzl.la/MDNFellowship">http://mzl.la/MDNFellowship</A></bdi></P></DIV></DIV>
+<UL id="nav-access">
+  <LI><A id="skip-main" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#document-main">Skip 
+  to main content</A></LI>
+  <LI><A id="skip-language" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#language">Select 
+  language</A></LI>
+  <LI><A id="skip-search" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#q">Skip 
+  to search</A></LI></UL><!-- Header -->   <HEADER id="main-header">
+<DIV class="center"><A class="no-track" id="tabzilla" href="https://www.mozilla.org/" 
+data-infobar="update">mozilla</A>     
+<DIV class="clear header-clear"></DIV><A class="logo" href="https://developer.mozilla.org/en-US/">Mozilla 
+Developer Network</A>
+<DIV class="header-login">
+<FORM>
+<DIV class="oauth-login-container">
+<DIV tabindex="0" class="oauth-login-options"><SPAN class="oauth-login-options-text"><SPAN 
+class="oauth-login-options-text-icons">Sign in with</SPAN>                 <SPAN 
+class="oauth-login-options-text-no-icons">Sign in</SPAN>               </SPAN>   
+            <SPAN title="Persona" class="oauth-icon oauth-persona launch-persona-login" 
+data-next="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" data-service="Persona"><I 
+class="icon-user" aria-hidden="true"></I></SPAN>                           <SPAN 
+title="GitHub" class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FGuide%2FRegular_Expressions"><I 
+class="icon-github" aria-hidden="true"></I></SPAN>                       </DIV>
+<DIV class="submenu oauth-login-picker" aria-hidden="true">
+<UL>
+  <LI><A class="login-link launch-persona-login" href="https://developer.mozilla.org/en-US/users/signin" 
+  data-next="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" data-service="Persona"><I 
+  class="icon-user" aria-hidden="true"></I>Persona</A></LI>
+  <LI><A class="login-link" href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FGuide%2FRegular_Expressions" 
+  data-service="GitHub"><I class="icon-github" 
+  aria-hidden="true"></I>GitHub</A></LI></UL></DIV></DIV></FORM></DIV><NAV id="main-nav" 
+role="navigation">
+<UL>
+  <LI><A href="https://developer.mozilla.org/en-US/docs/Zones">Zones<I class="icon-caret-down" 
+  aria-hidden="true"></I></A>         
+  <DIV class="submenu submenu-single" id="nav-zones-submenu">
+  <DIV class="submenu-column">
+  <UL>
+    <LI><A href="https://developer.mozilla.org/en-US/Add-ons">Add-ons</A></LI>
+    <LI><A href="https://developer.mozilla.org/en-US/docs/Apps">App 
+    Center</A></LI>
+    <LI><A 
+    href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</A></LI>
+    <LI><A href="https://developer.mozilla.org/en-US/Marketplace">Firefox 
+    Marketplace</A></LI>
+    <LI><A href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox 
+    OS</A></LI>
+    <LI><A 
+    href="https://developer.mozilla.org/en-US/docs/Persona">Persona</A></LI></UL></DIV></DIV></LI>
+  <LI><A href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<I 
+  class="icon-caret-down" aria-hidden="true"></I></A>         
+  <DIV class="submenu" id="nav-platform-submenu">
+  <DIV class="submenu-column">
+  <DIV class="title">Technologies</DIV>
+  <UL>
+    <LI><A 
+href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</A></LI>
+    <LI><A href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</A></LI>
+    <LI><A 
+    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</A></LI>
+    <LI><A 
+    href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</A></LI>
+    <LI><A href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / 
+    DOM</A></LI>
+    <LI><A href="https://developer.mozilla.org/en-US/Apps">Apps</A></LI>
+    <LI><A 
+    href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</A></LI></UL></DIV>
+  <DIV class="submenu-column last">
+  <DIV class="title">References &amp; Guides</DIV>
+  <UL>
+    <LI><A href="https://developer.mozilla.org/en-US/Learn">Learn the 
+    Web</A></LI>
+    <LI><A 
+    href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</A></LI>
+    <LI><A 
+    href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</A></LI>
+    <LI><A href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer 
+    Guides</A></LI>
+    <LI><A 
+    href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</A></LI>
+    <LI><A href="https://developer.mozilla.org/en-US/demos/">Demos</A></LI>
+    <LI><A href="https://developer.mozilla.org/en-US/docs/Web">...more 
+    docs</A></LI></UL></DIV></DIV></LI>
+  <LI><A href="https://developer.mozilla.org/en-US/docs/Tools">Tools</A></LI>
+  <LI><A href="https://developer.mozilla.org/en-US/demos/">Demos</A></LI>
+  <LI><A 
+  href="https://developer.mozilla.org/en-US/docs/Mozilla/Connect">Connect</A></LI>
+  <LI class="nav-search-link"><A title="Search" href="https://developer.mozilla.org/en-US/search"><I 
+  class="icon-search" aria-hidden="true"></I></A></LI>
+  <LI class="main-nav-search">
+  <FORM role="search" action="/en-US/search" method="get">
+  <DIV class="search-wrap"><LABEL class="offscreen" for="main-q">Search</LABEL>  
+           <INPUT name="q" id="main-q" type="search" placeholder="Search" value="" data-value=""> 
+            <SPAN class="search-trigger"><I class="icon-search" aria-hidden="true"></I></SPAN>&nbsp; 
+           <BUTTON class="offscreen" type="submit">Search</BUTTON>         
+  </DIV></FORM></LI></UL></NAV></DIV></HEADER><!-- Content will go here -->   
+<main id="content">
+<DIV class="center clear"><!-- end is_zone -->     
+<DIV class="wiki-main-content" id="document-main">
+<DIV class="center">
+<DIV class="article-meta"><!-- action buttons -->                           
+<UL class="page-buttons" data-sticky="false">
+  <LI><BUTTON class="transparent" id="languages-menu" aria-expanded="false" 
+  aria-haspopup="true" 
+  aria-owns="languages-menu-submenu"><SPAN>Languages</SPAN><I class="icon-globe" 
+  aria-hidden="true"></I></BUTTON>         
+  <DIV class="submenu" id="languages-menu-submenu">
+  <DIV class="submenu-column">
+  <UL id="translations">
+    <LI><bdi><A title="রেগুলার এক্সপ্রেশন" href="https://developer.mozilla.org/bn-BD/docs/Web/JavaScript/Guide/Regular_Expressions" 
+    rel="internal">বাংলা (বাংলাদেশ)</A></bdi></LI>
+    <LI><bdi><A title="Reguläre Ausdrücke" href="https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Regular_Expressions" 
+    rel="internal">Deutsch</A></bdi></LI>
+    <LI><bdi><A title="Expresiones Regulares" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions" 
+    rel="internal">Español</A></bdi></LI>
+    <LI><bdi><A title="Expressions rationnelles" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res" 
+    rel="internal">Français</A></bdi></LI>
+    <LI><bdi><A title="正規表現" href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions" 
+    rel="internal">日本語</A></bdi></LI>
+    <LI><bdi><A title="Regular Expressions" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions" 
+    rel="internal">Português (do&nbsp;Brasil)</A></bdi></LI>
+    <LI><bdi><A title="Регулярные выражения" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_Expressions" 
+    rel="internal">Русский</A></bdi></LI>
+    <LI><bdi><A title="Regular Expressions" href="https://developer.mozilla.org/th/docs/Web/JavaScript/Guide/Regular_Expressions" 
+    rel="internal">ไทย</A></bdi></LI>
+    <LI><bdi><A title="正则表达式" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" 
+    rel="internal">中文 (简体)</A></bdi></LI>
+    <LI><bdi><A title="正規表示式" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions" 
+    rel="internal">正體中文 (繁體)</A></bdi></LI>
+    <LI><A href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions$locales" 
+    rel="nofollow, noindex">Add a translation</A></LI></UL></DIV></DIV></LI>
+  <LI class="page-buttons-edit"><A class="button" id="edit-button" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions$edit" 
+  data-optimizely-hook="button-edit-doc">Edit<I class="icon-pencil" aria-hidden="true"></I></A></LI>
+  <LI><BUTTON class="only-icon" id="advanced-menu" aria-expanded="false" 
+  aria-haspopup="true" aria-owns="advanced-menu-submenu"><SPAN>Advanced</SPAN><I 
+  class="icon-cog" aria-hidden="true"></I></BUTTON>         
+  <DIV class="submenu" id="advanced-menu-submenu"><!-- this page -->           
+  <DIV class="submenu-column">
+  <DIV class="title">Advanced</DIV>
+  <UL>
+    <LI><A href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions$history" 
+    rel="nofollow, noindex">History</A></LI>
+    <LI class="page-print"><A onclick="return window.print();" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#">Print 
+    this page</A></LI></UL></DIV></DIV></LI></UL><!-- crumbs -->           <NAV 
+class="crumbs" role="navigation">
+<OL aria-label="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+  <LI typeof="v:Breadcrumb"><A href="https://developer.mozilla.org/en-US" rel="v:url" 
+  property="v:title">MDN</A></LI>
+  <LI class="crumb" typeof="v:Breadcrumb"><A href="https://developer.mozilla.org/en-US/docs/Web" 
+  rel="v:url" property="v:title">Web technology for developers</A></LI>
+  <LI class="crumb" typeof="v:Breadcrumb"><A href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" 
+  rel="v:url" property="v:title">JavaScript</A></LI>
+  <LI class="crumb" typeof="v:Breadcrumb"><A href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" 
+  rel="v:url" property="v:title">JavaScript Guide</A></LI>
+  <LI class="crumb" property="v:title" typeof="v:Breadcrumb">Regular 
+  Expressions</LI></OL></NAV></DIV><!-- heading -->       
+<DIV class="document-head" id="wiki-document-head"><SPAN class="from-search-previous-box"><A 
+title="Previous Search Result" class="button from-search-previous only-icon disabled" 
+data-empty-title="No Previous Search Result"><I class="icon-chevron-left" 
+aria-hidden="true"></I></A>           </SPAN>           <SPAN class="from-search-navigate-wrap"><A 
+class="from-search-navigate" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#"><SPAN 
+class="from-search-navigate-up"><I class="icon-double-angle-up" aria-hidden="true"></I></SPAN><SPAN 
+class="from-search-navigate-down"><I class="icon-double-angle-down" aria-hidden="true"></I></SPAN></A> 
+          </SPAN>           
+<DIV class="from-search-toc"><SPAN class="title">Your Search Results</SPAN>
+<OL></OL></DIV><SPAN class="from-search-next-box"><A title="Next Search Result" 
+class="button from-search-next only-icon disabled" data-empty-title="No Previous Search Result"><I 
+class="icon-chevron-right" aria-hidden="true"></I></A>           </SPAN>         
+<H1>Regular Expressions</H1></DIV><!-- start the main content container -->      
+   
+<DIV class="wiki-right-present wiki-left-closed wiki-left-none" id="wiki-column-container"><!-- content row with three strips --> 
+          
+<DIV class="column-container column-container-reverse"><!-- TOC, approvals, etc --> 
+              
+<DIV class="column-strip wiki-column" id="wiki-right"><!-- table of contents --> 
+              
+<DIV class="toc toggleable" id="toc"><A class="title toggler" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#toc" 
+data-closed-icon="icon-minus" data-open-icon="icon-plus">In This 
+Article<I></I></A>
+<OL class="toggle-container">
+  <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Creating_a_Regular_Expression" 
+  rel="internal">Creating a Regular Expression</A>
+  <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Writing_a_Regular_Expression_Pattern" 
+  rel="internal">Writing a Regular Expression Pattern</A>
+  <OL>
+    <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Simple_Patterns" 
+    rel="internal">Using Simple Patterns</A>
+    <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters" 
+    rel="internal">Using Special Characters</A>
+    <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Parentheses" 
+    rel="internal">Using Parentheses</A></LI></OL></LI>
+  <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Working_with_Regular_Expressions" 
+  rel="internal">Working with Regular Expressions</A>
+  <OL>
+    <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Parenthesized_Substring_Matches" 
+    rel="internal">Using Parenthesized Substring Matches</A>
+    <OL>
+      <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Example_1" 
+      rel="internal">Example 1</A></LI></OL></LI>
+    <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_Searching_With_Flags" 
+    rel="internal">Advanced Searching With Flags</A></LI></OL></LI>
+  <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Examples" 
+  rel="internal">Examples</A>
+  <OL>
+    <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Changing_the_Order_in_an_Input_String" 
+    rel="internal">Changing the Order in an Input String</A>
+    <LI><A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters_to_Verify_Input" 
+    rel="internal">Using Special Characters to Verify 
+Input</A></LI></OL></LI></OL></DIV></DIV><!-- center: main article content -->   
+          
+<DIV class="column-main wiki-column text-content" id="wiki-content"><!-- just the article content --> 
+              <ARTICLE id="wikiArticle">
+<P>Regular expressions are patterns used to match character combinations in 
+strings. In JavaScript, regular expressions are also objects. These patterns are 
+used with the <A title="exec" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec"><CODE>exec</CODE></A> 
+and <A title="test" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test"><CODE>test</CODE></A> 
+methods of<A title="RegExp" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp"><CODE>RegExp</CODE></A>, 
+and with the <A title="match" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/match"><CODE>match</CODE></A>, 
+<A title="en-US/docs/JavaScript/Reference/Global_Objects/String/replace" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/replace"><CODE>replace</CODE></A>,<A 
+title="search" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/search"><CODE>search</CODE></A>, 
+and <A title="split" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/split"><CODE>split</CODE></A> 
+methods of <A title="String" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String"><CODE>String</CODE></A>. 
+This chapter describes JavaScript regular expressions.</P>
+<H2 id="Creating_a_Regular_Expression">Creating a Regular Expression</H2>
+<P>You construct a regular expression in one of two ways:</P>
+<UL>
+  <LI>Using a regular expression literal, as follows:   
+<PRE class="brush: js">var re = /ab+c/;
+</PRE>
+  <P>Regular expression literals provide compilation of the regular expression 
+  when the script is loaded. When the regular expression will remain constant, 
+  use this for better performance.</P></LI>
+  <LI>Calling the constructor function of the <CODE><A title="en-US/docs/JavaScript/Reference/Global Objects/RegExp" 
+  href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp">RegExp</A></CODE> 
+  object, as follows:   
+<PRE class="brush: js">var re = new RegExp("ab+c");
+</PRE>
+  <P>Using the constructor function provides runtime compilation of the regular 
+  expression. Use the constructor function when you know the regular expression 
+  pattern will be changing, or you don't know the pattern and are getting it 
+  from another source, such as user input.</P></LI></UL>
+<H2 id="Writing_a_Regular_Expression_Pattern">Writing a Regular Expression 
+Pattern</H2>
+<P>A regular expression pattern is composed of simple characters, such as 
+<CODE>/abc/</CODE>, or a combination of simple and special characters, such as 
+<CODE>/ab*c/</CODE> or <CODE>/Chapter (\d+)\.\d*/</CODE>. The last example 
+includes parentheses which are used as a memory device. The match made with this 
+part of the pattern is remembered for later use, as described in <A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Parenthesized_Substring_Matches">Using 
+Parenthesized Substring Matches</A>.</P>
+<H3 id="Using_Simple_Patterns">Using Simple Patterns</H3>
+<P>Simple patterns are constructed of characters for which you want to find a 
+direct match. For example, the pattern <CODE>/abc/</CODE> matches character 
+combinations in strings only when exactly the characters 'abc' occur together 
+and in that order. Such a match would succeed in the strings "Hi, do you know 
+your abc's?" and "The latest airplane designs evolved from slabcraft." In both 
+cases the match is with the substring 'abc'. There is no match in the string 
+'Grab crab' because while it contains the substring 'ab c', it does not contain 
+the exact substring 'abc'.</P>
+<H3 id="Using_Special_Characters">Using Special Characters</H3>
+<P>When the search for a match requires something more than a direct match, such 
+as finding one or more b's, or finding white space, the pattern includes special 
+characters. For example, the pattern <CODE>/ab*c/</CODE> matches any character 
+combination in which a single 'a' is followed by zero or more 'b's 
+(<CODE>*</CODE> means 0 or more occurrences of the preceding item) and then 
+immediately followed by 'c'. In the string "cbbabbbbcdebc," the pattern matches 
+the substring 'abbbbc'.</P>
+<P>The following table provides a complete list and description of the special 
+characters that can be used in regular expressions.</P>
+<TABLE class="fullwidth-table">
+  <CAPTION>Table 4.1 Special characters in regular expressions.</CAPTION>
+  <THEAD>
+  <TR>
+    <TH scope="col">Character</TH>
+    <TH scope="col">Meaning</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD><A name="special-backslash" id="special-backslash" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-backslash"><CODE>\</CODE></A></TD>
+    <TD>
+      <P>Matches according to the following rules:<BR><BR>     A backslash that 
+      precedes a non-special character indicates that the next character is 
+      special and is not to be interpreted literally. For example, a 
+      '<CODE>b</CODE>' without a preceding '\' generally matches lowercase 'b's 
+      wherever they occur. But a '<CODE>\b</CODE>' by itself doesn't match any 
+      character; it forms the special <A title="#special-word-boundary" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-word-boundary">word 
+      boundary character</A>.<BR><BR>     A backslash that precedes a special 
+      character indicates that the next character is not special and should be 
+      interpreted literally. For example, the pattern <CODE>/a*/</CODE> relies 
+      on the special character '<CODE>*</CODE>' to match 0 or more a's. By 
+      contrast, the pattern <CODE>/a\*/</CODE> removes the specialness of the 
+      '<CODE>*</CODE>' to enable matches with strings like 'a*'.<BR><BR>     Do 
+      not forget to escape \ itself while using the RegExp("pattern") notation 
+      because \ is also an escape character in strings.</P></TD></TR>
+  <TR>
+    <TD><A name="special-caret" id="special-caret" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-caret"><CODE>^</CODE></A></TD>
+    <TD>Matches beginning of input. If the multiline flag is set to true, also 
+      matches immediately after a line break character.<BR><BR>    For example, 
+      <CODE>/^A/</CODE> does not match the 'A' in "an A", but does match the 'A' 
+      in "An E".<BR><BR>    The '<CODE>^</CODE>' has a different meaning when it 
+      appears as the first character in a character set pattern. See <A title="#special-negated-character-set" 
+      href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-negated-character-set">complemented 
+      character sets</A> for details and an example.</TD></TR>
+  <TR>
+    <TD><A name="special-dollar" id="special-dollar" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-dollar"><CODE>$</CODE></A></TD>
+    <TD>
+      <P>Matches end of input. If the multiline flag is set to true, also 
+      matches immediately before a line break character.</P>
+      <P>For example, <CODE>/t$/</CODE> does not match the 't' in "eater", but 
+      does match it in "eat".</P></TD></TR>
+  <TR>
+    <TD><A name="special-asterisk" id="special-asterisk" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-asterisk"><CODE>*</CODE></A></TD>
+    <TD>
+      <P>Matches the preceding character 0 or more times. Equivalent to 
+{0,}.</P>
+      <P>For example, <CODE>/bo*/</CODE> matches 'boooo' in "A ghost booooed" 
+      and 'b' in "A bird warbled", but nothing in "A goat grunted".</P></TD></TR>
+  <TR>
+    <TD><A name="special-plus" id="special-plus" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-plus"><CODE>+</CODE></A></TD>
+    <TD>
+      <P>Matches the preceding character 1 or more times. Equivalent to 
+{1,}.</P>
+      <P>For example, <CODE>/a+/</CODE> matches the 'a' in "candy" and all the 
+      a's in "caaaaaaandy".</P></TD></TR>
+  <TR>
+    <TD><A name="special-questionmark" id="special-questionmark" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-questionmark"><CODE>?</CODE></A></TD>
+    <TD>Matches the preceding character 0 or 1 time. Equivalent to<CODE> 
+      {0,1}</CODE>.<BR><BR>    For example, <CODE>/e?le?/</CODE> matches the 
+      'el' in "angel" and the 'le' in "angle" and also the 'l' in 
+      "oslo".<BR><BR>    If used immediately after any of the quantifiers *, +, 
+      ?, or {}, makes the quantifier non-greedy (matching the fewest possible 
+      characters), as opposed to the default, which is greedy (matching as many 
+      characters as possible). For example, applying <CODE>/\d+/</CODE> to 
+      "123abc" matches "123". But applying <CODE>/\d+?/</CODE> to that same 
+      string matches only the "1".<BR><BR>    Also used in lookahead assertions, 
+      as described in the <CODE>x(?=y)</CODE> and <CODE>x(?!y)</CODE> entries of 
+      this table.<BR>    &nbsp;</TD></TR>
+  <TR>
+    <TD><A name="special-dot" id="special-dot" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-dot"><CODE>.</CODE></A></TD>
+    <TD>
+      <P>(The decimal point) matches any single character except the newline 
+      character.</P>
+      <P>For example, <CODE>/.n/</CODE> matches 'an' and 'on' in "nay, an apple 
+      is on the tree", but not 'nay'.</P></TD></TR>
+  <TR>
+    <TD><A name="special-capturing-parentheses" id="special-capturing-parentheses" 
+      href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-capturing-parentheses"><CODE>(x)</CODE></A></TD>
+    <TD>
+      <P>Matches 'x' and remembers the match, as the following example shows. 
+      The parentheses are called <EM>capturing parentheses</EM>.<BR><BR>     The 
+      '<CODE>(foo)</CODE>' and '<CODE>(bar)</CODE>' in the pattern <CODE>/(foo) 
+      (bar) \1 \2/</CODE> match and remember the first two words in the string 
+      "foo bar foo bar". The <CODE>\1 </CODE>and <CODE>\2</CODE> in the pattern 
+      match the string's last two words. Note that <CODE>\1, \2, \n</CODE> are 
+      used in the matching part of the regex. In the replacement part of a regex 
+      the syntax <CODE>$1, $2, $n</CODE> must be used, e.g.: <CODE>'bar 
+      foo'.replace( /(...) (...)/, '$2 $1' )</CODE>.</P></TD></TR>
+  <TR>
+    <TD><A name="special-non-capturing-parentheses" id="special-non-capturing-parentheses" 
+      href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-non-capturing-parentheses"><CODE>(?:x)</CODE></A></TD>
+    <TD>Matches 'x' but does not remember the match. The parentheses are 
+      called <EM>non-capturing parentheses</EM>, and let you define 
+      subexpressions for regular expression operators to work with. Consider the 
+      sample expression <CODE>/(?:foo){1,2}/</CODE>. If the expression was 
+      <CODE>/foo{1,2}/</CODE>, the <CODE>{1,2}</CODE> characters would apply 
+      only to the last 'o' in 'foo'. With the non-capturing parentheses, the 
+      <CODE>{1,2}</CODE> applies to the entire word 'foo'.</TD></TR>
+  <TR>
+    <TD><A name="special-lookahead" id="special-lookahead" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-lookahead"><CODE>x(?=y)</CODE></A></TD>
+    <TD>
+      <P>Matches 'x' only if 'x' is followed by 'y'. This is called a 
+      lookahead.</P>
+      <P>For example, <CODE>/Jack(?=Sprat)/</CODE> matches 'Jack' only if it is 
+      followed by 'Sprat'. <CODE>/Jack(?=Sprat|Frost)/</CODE> matches 'Jack' 
+      only if it is followed by 'Sprat' or 'Frost'. However, neither 'Sprat' nor 
+      'Frost' is part of the match results.</P></TD></TR>
+  <TR>
+    <TD><A name="special-negated-look-ahead" id="special-negated-look-ahead" 
+      href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-negated-look-ahead"><CODE>x(?!y)</CODE></A></TD>
+    <TD>
+      <P>Matches 'x' only if 'x' is not followed by 'y'. This is called a 
+      negated lookahead.</P>
+      <P>For example, <CODE>/\d+(?!\.)/</CODE> matches a number only if it is 
+      not followed by a decimal point. The regular expression 
+      <CODE>/\d+(?!\.)/.exec("3.141")</CODE> matches '141' but not 
+    '3.141'.</P></TD></TR>
+  <TR>
+    <TD><A name="special-or" id="special-or" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-or"><CODE>x|y</CODE></A></TD>
+    <TD>
+      <P>Matches either 'x' or 'y'.</P>
+      <P>For example, <CODE>/green|red/</CODE> matches 'green' in "green apple" 
+      and 'red' in "red apple."</P></TD></TR>
+  <TR>
+    <TD><A name="special-quantifier" id="special-quantifier" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-quantifier"><CODE>{n}</CODE></A></TD>
+    <TD>Matches exactly n occurrences of the preceding character. N must be a 
+      positive integer.<BR><BR>    For example, <CODE>/a{2}/</CODE> doesn't 
+      match the 'a' in "candy," but it does match all of the a's in "caandy," 
+      and the first two a's in "caaandy."</TD></TR>
+  <TR>
+    <TD><A name="special-quantifier-range" id="special-quantifier-range" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-quantifier-range"><CODE>{n,m}</CODE></A></TD>
+    <TD>
+      <P>Where <CODE>n</CODE> and <CODE>m</CODE> are positive integers and 
+      <CODE>n &lt;= m</CODE>. Matches at least <CODE>n</CODE> and at most 
+      <CODE>m</CODE> occurrences of the preceding character. When <CODE>m</CODE> 
+      is omitted, it's treated as ∞.</P>
+      <P>For example, <CODE>/a{1,3}/</CODE> matches nothing in "cndy", the 'a' 
+      in "candy," the first two a's in "caandy," and the first three a's in 
+      "caaaaaaandy" Notice that when matching "caaaaaaandy", the match is "aaa", 
+      even though the original string had more a's in it.</P></TD></TR>
+  <TR>
+    <TD><A name="special-character-set" id="special-character-set" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-character-set"><CODE>[xyz]</CODE></A></TD>
+    <TD>Character set. This pattern type matches any one of the characters in 
+      the brackets, including <A title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences" 
+      href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences">escape 
+      sequences</A>. Special characters like the dot(<CODE>.</CODE>) and 
+      asterisk (<CODE>*</CODE>) are not special inside a character set, so they 
+      don't need to be escaped. You can specify a range of characters by using a 
+      hyphen, as the following examples illustrate.<BR><BR>    The pattern<CODE> 
+      [a-d]</CODE>, which performs the same match as <CODE>[abcd]</CODE>, 
+      matches the 'b' in "brisket" and the 'c' in "city". The patterns 
+      <CODE>/[a-z.]+/ </CODE>and <CODE>/[\w.]+/</CODE> match the entire string 
+      "test.i.ng".</TD></TR>
+  <TR>
+    <TD><A name="special-negated-character-set" id="special-negated-character-set" 
+      href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-negated-character-set"><CODE>[^xyz]</CODE></A></TD>
+    <TD>
+      <P>A negated or complemented character set. That is, it matches anything 
+      that is not enclosed in the brackets. You can specify a range of 
+      characters by using a hyphen. Everything that works in the normal 
+      character set also works here.</P>
+      <P>For example, <CODE>[^abc]</CODE> is the same as <CODE>[^a-c]</CODE>. 
+      They initially match 'r' in "brisket" and 'h' in "chop."</P></TD></TR>
+  <TR>
+    <TD><A name="special-backspace" id="special-backspace" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-backspace"><CODE>[\b]</CODE></A></TD>
+    <TD>Matches a backspace (U+0008). You need to use square brackets if you 
+      want to match a literal backspace character. (Not to be confused with 
+      <CODE>\b</CODE>.)</TD></TR>
+  <TR>
+    <TD><A name="special-word-boundary" id="special-word-boundary" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-word-boundary"><CODE>\b</CODE></A></TD>
+    <TD>
+      <P>Matches a word boundary. A word boundary matches the position where a 
+      word character is not followed or preceeded by another word-character. 
+      Note that a matched word boundary is not included in the match. In other 
+      words, the length of a matched word boundary is zero. (Not to be confused 
+      with <CODE>[\b]</CODE>.)</P>
+      <P>Examples:<BR><CODE>/\bm/</CODE> matches the 'm' in "moon" 
+      ;<BR><CODE>/oo\b/</CODE> does not match the 'oo' in "moon", because 'oo' 
+      is followed by 'n' which is a word character;<BR><CODE>/oon\b/</CODE> 
+      matches the 'oon' in "moon", because 'oon' is the end of the string, thus 
+      not followed by a word character;<BR><CODE>/\w\b\w/</CODE> will never 
+      match anything, because a word character can never be followed by both a 
+      non-word and a word character.</P>
+      <DIV class="note">
+      <P><STRONG>Note:</STRONG>&nbsp;JavaScript's regular expression engine 
+      defines a <A class="external" href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.10.2.6">specific 
+      set of characters</A> to be "word" characters. Any character not in that 
+      set is considered a word break. This set of characters is fairly limited: 
+      it consists solely of the&nbsp;Roman alphabet in both upper- and 
+      lower-case, decimal digits, and the underscore character. Accented 
+      characters, such as "é" or "ü" are, unfortunately, treated as word 
+      breaks.</P></DIV></TD></TR>
+  <TR>
+    <TD><A name="special-non-word-boundary" id="special-non-word-boundary" 
+      href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-non-word-boundary"><CODE>\B</CODE></A></TD>
+    <TD>
+      <P>Matches a non-word boundary. This matches a position where the previous 
+      and next character are of the same type: Either both must be words, or 
+      both must be non-words. The beginning and end of a string are considered 
+      non-words.</P>
+      <P>For example, <CODE>/\B../</CODE> matches 'oo' in "noonday", and 
+      <CODE>/y\B./</CODE> matches 'ye' in "possibly yesterday."</P></TD></TR>
+  <TR>
+    <TD><A name="special-control" id="special-control" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-control"><CODE>\c<EM>X</EM></CODE></A></TD>
+    <TD>
+      <P>Where <EM>X</EM> is a character ranging from A to Z. Matches a control 
+      character in a string.</P>
+      <P>For example, <CODE>/\cM/</CODE> matches control-M (U+000D) in a 
+      string.</P></TD></TR>
+  <TR>
+    <TD><A name="special-digit" id="special-digit" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-digit"><CODE>\d</CODE></A></TD>
+    <TD>
+      <P>Matches a digit character. Equivalent to <CODE>[0-9]</CODE>.</P>
+      <P>For example, <CODE>/\d/</CODE> or <CODE>/[0-9]/</CODE> matches '2' in 
+      "B2 is the suite number."</P></TD></TR>
+  <TR>
+    <TD><A name="special-non-digit" id="special-non-digit" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-non-digit"><CODE>\D</CODE></A></TD>
+    <TD>
+      <P>Matches any non-digit character. Equivalent to <CODE>[^0-9]</CODE>.</P>
+      <P>For example, <CODE>/\D/</CODE> or <CODE>/[^0-9]/</CODE> matches 'B' in 
+      "B2 is the suite number."</P></TD></TR>
+  <TR>
+    <TD><A name="special-form-feed" id="special-form-feed" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-form-feed"><CODE>\f</CODE></A></TD>
+    <TD>Matches a form feed (U+000C).</TD></TR>
+  <TR>
+    <TD><A name="special-line-feed" id="special-line-feed" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-line-feed"><CODE>\n</CODE></A></TD>
+    <TD>Matches a line feed (U+000A).</TD></TR>
+  <TR>
+    <TD><A name="special-carriage-return" id="special-carriage-return" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-carriage-return"><CODE>\r</CODE></A></TD>
+    <TD>Matches a carriage return (U+000D).</TD></TR>
+  <TR>
+    <TD><A name="special-white-space" id="special-white-space" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-white-space"><CODE>\s</CODE></A></TD>
+    <TD>
+      <P>Matches a single white space character, including space, tab, form 
+      feed, line feed. Equivalent to <CODE>[ 
+      \f\n\r\t\v​\u00a0\u1680​\u180e\u2000​\u2001\u2002​\u2003\u2004​\u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​​\u202f\u205f​\u3000]</CODE>.</P>
+      <P>For example, <CODE>/\s\w*/</CODE> matches ' bar' in "foo 
+bar."</P></TD></TR>
+  <TR>
+    <TD><A name="special-non-white-space" id="special-non-white-space" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-non-white-space"><CODE>\S</CODE></A></TD>
+    <TD>
+      <P>Matches a single character other than white space. Equivalent to 
+      <CODE>[^ 
+      \f\n\r\t\v​\u00a0\u1680​\u180e\u2000​\u2001\u2002​\u2003\u2004​\u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​\u202f\u205f​\u3000]</CODE>.</P>
+      <P>For example, <CODE>/\S\w*/</CODE> matches 'foo' in "foo bar."</P></TD></TR>
+  <TR>
+    <TD><A name="special-tab" id="special-tab" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-tab"><CODE>\t</CODE></A></TD>
+    <TD>Matches a tab (U+0009).</TD></TR>
+  <TR>
+    <TD><A name="special-vertical-tab" id="special-vertical-tab" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-vertical-tab"><CODE>\v</CODE></A></TD>
+    <TD>Matches a vertical tab (U+000B).</TD></TR>
+  <TR>
+    <TD><A name="special-word" id="special-word" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-word"><CODE>\w</CODE></A></TD>
+    <TD>
+      <P>Matches any alphanumeric character including the underscore. Equivalent 
+      to <CODE>[A-Za-z0-9_]</CODE>.</P>
+      <P>For example, <CODE>/\w/</CODE> matches 'a' in "apple," '5' in "$5.28," 
+      and '3' in "3D."</P></TD></TR>
+  <TR>
+    <TD><A name="special-non-word" id="special-non-word" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-non-word"><CODE>\W</CODE></A></TD>
+    <TD>
+      <P>Matches any non-word character. Equivalent to 
+      <CODE>[^A-Za-z0-9_]</CODE>.</P>
+      <P>For example, <CODE>/\W/</CODE> or <CODE>/[^A-Za-z0-9_]/</CODE> matches 
+      '%' in "50%."</P></TD></TR>
+  <TR>
+    <TD><A name="special-backreference" id="special-backreference" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-backreference"><CODE>\<EM>n</EM></CODE></A></TD>
+    <TD>
+      <P>Where <EM>n</EM> is a positive integer, a back reference to the last 
+      substring matching the <EM>n</EM> parenthetical in the regular expression 
+      (counting left parentheses).</P>
+      <P>For example, <CODE>/apple(,)\sorange\1/</CODE> matches 'apple, orange,' 
+      in "apple, orange, cherry, peach."</P></TD></TR>
+  <TR>
+    <TD><A name="special-null" id="special-null" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-null"><CODE>\0</CODE></A></TD>
+    <TD>Matches a NULL (U+0000) character. Do not follow this with another 
+      digit, because <CODE>\0&lt;digits&gt;</CODE> is an octal <A title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences" 
+      href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences">escape 
+      sequence</A>.</TD></TR>
+  <TR>
+    <TD><A name="special-hex-escape" id="special-hex-escape" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-hex-escape"><CODE>\xhh</CODE></A></TD>
+    <TD>Matches the character with the code hh (two hexadecimal digits)</TD></TR>
+  <TR>
+    <TD><A name="special-unicode-escape" id="special-unicode-escape" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#special-unicode-escape"><CODE>\uhhhh</CODE></A></TD>
+    <TD>Matches the character with the code hhhh (four hexadecimal 
+  digits).</TD></TR></TBODY></TABLE>
+<P>Escaping user input to be treated as a literal string within a regular 
+expression can be accomplished by simple replacement:</P>
+<PRE class="brush: js">function escapeRegExp(string){
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&amp;");
+}</PRE>
+<H3 id="Using_Parentheses">Using Parentheses</H3>
+<P>Parentheses around any part of the regular expression pattern cause that part 
+of the matched substring to be remembered. Once remembered, the substring can be 
+recalled for other use, as described in <A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Parenthesized_Substring_Matches">Using 
+Parenthesized Substring Matches</A>.</P>
+<P>For example, the pattern <CODE>/Chapter (\d+)\.\d*/</CODE> illustrates 
+additional escaped and special characters and indicates that part of the pattern 
+should be remembered. It matches precisely the characters 'Chapter ' followed by 
+one or more numeric characters (<CODE>\d</CODE> means any numeric character and 
+<CODE>+</CODE> means 1 or more times), followed by a decimal point (which in 
+itself is a special character; preceding the decimal point with \ means the 
+pattern must look for the literal character '.'), followed by any numeric 
+character 0 or more times (<CODE>\d</CODE> means numeric character, 
+<CODE>*</CODE> means 0 or more times). In addition, parentheses are used to 
+remember the first matched numeric characters.</P>
+<P>This pattern is found in "Open Chapter 4.3, paragraph 6" and '4' is 
+remembered. The pattern is not found in "Chapter 3 and 4", because that string 
+does not have a period after the '3'.</P>
+<P>To match a substring without causing the matched part to be remembered, 
+within the parentheses preface the pattern with <CODE>?:</CODE>. For example, 
+<CODE>(?:\d+)</CODE> matches one or more numeric characters but does not 
+remember the matched characters.</P>
+<H2 id="Working_with_Regular_Expressions">Working with Regular Expressions</H2>
+<P>Regular expressions are used with the <CODE>RegExp</CODE> methods 
+<CODE>test</CODE> and <CODE>exec</CODE> and with the <CODE>String</CODE> methods 
+<CODE>match</CODE>, <CODE>replace</CODE>, <CODE>search</CODE>, and 
+<CODE>split</CODE>. These methods are explained in detail in the <A title="en-US/docs/JavaScript/Reference" 
+href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference">JavaScript 
+Reference</A>.</P>
+<TABLE class="standard-table">
+  <CAPTION>Table 4.2 Methods that use regular expressions</CAPTION>
+  <THEAD>
+  <TR>
+    <TH scope="col">Method</TH>
+    <TH scope="col">Description</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD><CODE><A title="en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec" 
+      href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec">exec</A></CODE></TD>
+    <TD>A <CODE>RegExp</CODE> method that executes a search for a match in a 
+      string. It returns an array of information.</TD></TR>
+  <TR>
+    <TD><CODE><A title="en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test" 
+      href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test">test</A></CODE></TD>
+    <TD>A <CODE>RegExp</CODE> method that tests for a match in a string. It 
+      returns true or false.</TD></TR>
+  <TR>
+    <TD><CODE><A title="en-US/docs/JavaScript/Reference/Global_Objects/String/match" 
+      href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/match">match</A></CODE></TD>
+    <TD>A <CODE>String</CODE> method that executes a search for a match in a 
+      string. It returns an array of information or null on a mismatch.</TD></TR>
+  <TR>
+    <TD><CODE><A title="en-US/docs/JavaScript/Reference/Global_Objects/String/search" 
+      href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/search">search</A></CODE></TD>
+    <TD>A <CODE>String</CODE> method that tests for a match in a string. It 
+      returns the index of the match, or -1 if the search fails.</TD></TR>
+  <TR>
+    <TD><CODE><A title="en-US/docs/JavaScript/Reference/Global_Objects/String/replace" 
+      href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/replace">replace</A></CODE></TD>
+    <TD>A <CODE>String</CODE> method that executes a search for a match in a 
+      string, and replaces the matched substring with a replacement 
+  substring.</TD></TR>
+  <TR>
+    <TD><CODE><A title="en-US/docs/JavaScript/Reference/Global_Objects/String/split" 
+      href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/split">split</A></CODE></TD>
+    <TD>A <CODE>String</CODE> method that uses a regular expression or a fixed 
+      string to break a string into an array of substrings.</TD></TR></TBODY></TABLE>
+<P>When you want to know whether a pattern is found in a string, use the 
+<CODE>test</CODE> or <CODE>search</CODE> method; for more information (but 
+slower execution) use the <CODE>exec</CODE> or <CODE>match</CODE> methods. If 
+you use <CODE>exec</CODE> or <CODE>match</CODE> and if the match succeeds, these 
+methods return an array and update properties of the associated regular 
+expression object and also of the predefined regular expression object, 
+<CODE>RegExp</CODE>. If the match fails, the <CODE>exec</CODE> method returns 
+<CODE>null</CODE> (which coerces to <CODE>false</CODE>).</P>
+<P>In the following example, the script uses the <CODE>exec</CODE> method to 
+find a match in a string.</P>
+<PRE class="brush: js">var myRe = /d(b+)d/g;
+var myArray = myRe.exec("cdbbdbsbz");
+</PRE>
+<P>If you do not need to access the properties of the regular expression, an 
+alternative way of creating <CODE>myArray</CODE> is with this script:</P>
+<PRE class="brush: js">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+</PRE>
+<P>If you want to construct the regular expression from a string, yet another 
+alternative is this script:</P>
+<PRE class="brush: js">var myRe = new RegExp("d(b+)d", "g");
+var myArray = myRe.exec("cdbbdbsbz");
+</PRE>
+<P>With these scripts, the match succeeds and returns the array and updates the 
+properties shown in the following table.</P>
+<TABLE class="fullwidth-table">
+  <CAPTION>Table 4.3 Results of regular expression execution.</CAPTION>
+  <THEAD>
+  <TR>
+    <TH scope="col">Object</TH>
+    <TH scope="col">Property or index</TH>
+    <TH scope="col">Description</TH>
+    <TH scope="col">In this example</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD rowspan="4"><CODE>myArray</CODE></TD>
+    <TD>&nbsp;</TD>
+    <TD>The matched string and all remembered substrings.</TD>
+    <TD><CODE>["dbbd", "bb"]</CODE></TD></TR>
+  <TR>
+    <TD><CODE>index</CODE></TD>
+    <TD>The 0-based index of the match in the input string.</TD>
+    <TD><CODE>1</CODE></TD></TR>
+  <TR>
+    <TD><CODE>input</CODE></TD>
+    <TD>The original string.</TD>
+    <TD><CODE>"cdbbdbsbz"</CODE></TD></TR>
+  <TR>
+    <TD><CODE>[0]</CODE></TD>
+    <TD>The last matched characters.</TD>
+    <TD><CODE>"dbbd"</CODE></TD></TR>
+  <TR>
+    <TD rowspan="2"><CODE>myRe</CODE></TD>
+    <TD><CODE>lastIndex</CODE></TD>
+    <TD>The index at which to start the next match. (This property is set only 
+      if the regular expression uses the g option, described in <A href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_Searching_With_Flags">Advanced 
+      Searching With Flags</A>.)</TD>
+    <TD><CODE>5</CODE></TD></TR>
+  <TR>
+    <TD><CODE>source</CODE></TD>
+    <TD>The text of the pattern. Updated at the time that the regular 
+      expression is created, not executed.</TD>
+    <TD><CODE>"d(b+)d"</CODE></TD></TR></TBODY></TABLE>
+<P>As shown in the second form of this example, you can use a regular expression 
+created with an object initializer without assigning it to a variable. If you 
+do, however, every occurrence is a new regular expression. For this reason, if 
+you use this form without assigning it to a variable, you cannot subsequently 
+access the properties of that regular expression. For example, assume you have 
+this script:</P>
+<PRE class="brush: js">var myRe = /d(b+)d/g;
+var myArray = myRe.exec("cdbbdbsbz");
+console.log("The value of lastIndex is " + myRe.lastIndex);
+</PRE>
+<P>This script displays:</P>
+<PRE>The value of lastIndex is 5
+</PRE>
+<P>However, if you have this script:</P>
+<PRE class="brush: js">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+console.log("The value of lastIndex is " + /d(b+)d/g.lastIndex);
+</PRE>
+<P>It displays:</P>
+<PRE>The value of lastIndex is 0
+</PRE>
+<P>The occurrences of <CODE>/d(b+)d/g</CODE> in the two statements are different 
+regular expression objects and hence have different values for their 
+<CODE>lastIndex</CODE> property. If you need to access the properties of a 
+regular expression created with an object initializer, you should first assign 
+it to a variable.</P>
+<H3 id="Using_Parenthesized_Substring_Matches">Using Parenthesized Substring 
+Matches</H3>
+<P>Including parentheses in a regular expression pattern causes the 
+corresponding submatch to be remembered. For example, <CODE>/a(b)c/</CODE> 
+matches the characters 'abc' and remembers 'b'. To recall these parenthesized 
+substring matches, use the <CODE>Array</CODE> elements <CODE>[1]</CODE>, ..., 
+<CODE>[n]</CODE>.</P>
+<P>The number of possible parenthesized substrings is unlimited. The returned 
+array holds all that were found. The following examples illustrate how to use 
+parenthesized substring matches.</P>
+<H4 id="Example_1">Example 1</H4>
+<P>The following script uses the <A title="en-US/docs/JavaScript/Reference/Global Objects/String/replace" 
+href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/replace"><CODE>replace()</CODE></A> 
+method to switch the words in the string. For the replacement text, the script 
+uses the <CODE>$1</CODE> and <CODE>$2</CODE> in the replacement to denote the 
+first and second parenthesized substring matches.</P>
+<PRE class="brush: js">var re = /(\w+)\s(\w+)/;
+var str = "John Smith";
+var newstr = str.replace(re, "$2, $1");
+console.log(newstr);
+</PRE>
+<P>This prints "Smith, John".</P>
+<H3 id="Advanced_Searching_With_Flags">Advanced Searching With Flags</H3>
+<P>Regular expressions have four optional flags that allow for global and case 
+insensitive searching. These flags can be used separately or together in any 
+order, and are included as part of the regular expression.</P>
+<TABLE class="standard-table">
+  <CAPTION>Table 4.4 Regular expression flags.</CAPTION>
+  <THEAD>
+  <TR>
+    <TH scope="col">Flag</TH>
+    <TH scope="col">Description</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD><CODE>g</CODE></TD>
+    <TD>Global search.</TD></TR>
+  <TR>
+    <TD>i</TD>
+    <TD>Case-insensitive search.</TD></TR>
+  <TR>
+    <TD>m</TD>
+    <TD>Multi-line search.</TD></TR>
+  <TR>
+    <TD>y</TD>
+    <TD>Perform a "sticky" search that matches starting at the current 
+      position in the target string.</TD></TR></TBODY></TABLE>
+<P></P>
+<DIV class="blockIndicator standardNote standardNoteBlock">
+<P><A 
+href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/3">Firefox 
+3 note</A></P>
+<P style="font-weight: 400;">Support for the <CODE>y</CODE> flag was added in 
+Firefox 3. The <CODE>y</CODE> flag fails if the match doesn't succeed at the 
+current position in the target string.</P></DIV>
+<P></P>
+<P>To include a flag with the regular expression, use this syntax:</P>
+<PRE class="brush: js">var re = /pattern/flags;
+</PRE>
+<P>or</P>
+<PRE class="brush: js">var re = new RegExp("pattern", "flags");
+</PRE>
+<P>Note that the flags are an integral part of a regular expression. They cannot 
+be added or removed later.</P>
+<P>For example, <CODE>re = /\w+\s/g</CODE> creates a regular expression that 
+looks for one or more characters followed by a space, and it looks for this 
+combination throughout the string.</P>
+<PRE class="brush: js">var re = /\w+\s/g;
+var str = "fee fi fo fum";
+var myArray = str.match(re);
+console.log(myArray);
+</PRE>
+<P>This displays ["fee ", "fi ", "fo "]. In this example, you could replace the 
+line:</P>
+<PRE class="brush: js">var re = /\w+\s/g;
+</PRE>
+<P>with:</P>
+<PRE class="brush: js">var re = new RegExp("\\w+\\s", "g");
+</PRE>
+<P>and get the same result.</P>
+<P>The <CODE>m</CODE> flag is used to specify that a multiline input string 
+should be treated as multiple lines. If the <CODE>m</CODE> flag is used, 
+<CODE>^</CODE> and <CODE>$</CODE> match at the start or end of any line within 
+the input string instead of the start or end of the entire string.</P>
+<H2 id="Examples">Examples</H2>
+<P>The following examples show some uses of regular expressions.</P>
+<H3 id="Changing_the_Order_in_an_Input_String">Changing the Order in an Input 
+String</H3>
+<P>The following example illustrates the formation of regular expressions and 
+the use of <CODE>string.split()</CODE> and <CODE>string.replace()</CODE>. It 
+cleans a roughly formatted input string containing names (first name first) 
+separated by blanks, tabs and exactly one semicolon. Finally, it reverses the 
+name order (last name first) and sorts the list.</P>
+<PRE class="brush: js">// The name string contains multiple spaces and tabs,
+// and may have multiple spaces between first and last names.
+var names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ; Chris Hand ";
+
+var output = ["---------- Original String\n", names + "\n"];
+
+// Prepare two regular expression patterns and array storage.
+// Split the string into array elements.
+
+// pattern: possible white space then semicolon then possible white space
+var pattern = /\s*;\s*/;
+
+// Break the string into pieces separated by the pattern above and
+// store the pieces in an array called nameList
+var nameList = names.split(pattern);
+
+// new pattern: one or more characters then spaces then characters.
+// Use parentheses to "memorize" portions of the pattern.
+// The memorized portions are referred to later.
+pattern = /(\w+)\s+(\w+)/;
+
+// New array for holding names being processed.
+var bySurnameList = [];
+
+// Display the name array and populate the new array
+// with comma-separated names, last first.
+//
+// The replace method removes anything matching the pattern
+// and replaces it with the memorized string—second memorized portion
+// followed by comma space followed by first memorized portion.
+//
+// The variables $1 and $2 refer to the portions
+// memorized while matching the pattern.
+
+output.push("---------- After Split by Regular Expression");
+
+var i, len;
+for (i = 0, len = nameList.length; i &lt; len; i++){
+  output.push(nameList[i]);
+  bySurnameList[i] = nameList[i].replace(pattern, "$2, $1");
+}
+
+// Display the new array.
+output.push("---------- Names Reversed");
+for (i = 0, len = bySurnameList.length; i &lt; len; i++){
+  output.push(bySurnameList[i]);
+}
+
+// Sort by last name, then display the sorted array.
+bySurnameList.sort();
+output.push("---------- Sorted");
+for (i = 0, len = bySurnameList.length; i &lt; len; i++){
+  output.push(bySurnameList[i]);
+}
+
+output.push("---------- End");
+
+console.log(output.join("\n"));
+</PRE>
+<H3 id="Using_Special_Characters_to_Verify_Input">Using Special Characters to 
+Verify Input</H3>
+<P>In the following example, the user is expected to enter a phone number. When 
+the user presses the "Check" button, the script checks the validity of the 
+number. If the number is valid (matches the character sequence specified by the 
+regular expression), the script shows a message thanking the user and confirming 
+the number. If the number is invalid, the script informs the user that the phone 
+number is not valid.</P>
+<P>Within non-capturing parentheses <CODE>(?:</CODE> , the regular expression 
+looks for three numeric characters <CODE>\d{3}</CODE> OR <CODE>|</CODE> a left 
+parenthesis <CODE>\(</CODE> followed by three digits<CODE> \d{3}</CODE>, 
+followed by a close parenthesis <CODE>\)</CODE>, (end non-capturing parenthesis 
+<CODE>)</CODE>), followed by one dash, forward slash, or decimal point and when 
+found, remember the character <CODE>([-\/\.])</CODE>, followed by three digits 
+<CODE>\d{3}</CODE>, followed by the remembered match of a dash, forward slash, 
+or decimal point <CODE>\1</CODE>, followed by four digits 
+<CODE>\d{4}</CODE>.</P>
+<P>The <CODE>Change</CODE> event activated when the user presses Enter sets the 
+value of <CODE>RegExp.input</CODE>.</P>
+<PRE class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;  
+  &lt;head&gt;  
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;  
+    &lt;meta http-equiv="Content-Script-Type" content="text/javascript"&gt;  
+    &lt;script type="text/javascript"&gt;  
+      var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;  
+      function testInfo(phoneInput){  
+        var OK = re.exec(phoneInput.value);  
+        if (!OK)  
+          window.alert(RegExp.input + " isn't a phone number with area code!");  
+        else
+          window.alert("Thanks, your phone number is " + OK[0]);  
+      }  
+    &lt;/script&gt;  
+  &lt;/head&gt;  
+  &lt;body&gt;  
+    &lt;p&gt;Enter your phone number (with area code) and then click "Check".
+        &lt;br&gt;The expected format is like ###-###-####.&lt;/p&gt;
+    &lt;form action="#"&gt;  
+      &lt;input id="phone"&gt;&lt;button onclick="testInfo(document.getElementById('phone'));"&gt;Check&lt;/button&gt;
+    &lt;/form&gt;  
+  &lt;/body&gt;  
+&lt;/html&gt;
+</PRE>
+<DIV>
+<P style="text-align: right;"><SPAN style="float: left;"><A title="Expressions and operators" 
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">« 
+Previous</A></SPAN><A title="Statements (Control Flow)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Statements">Next 
+»</A></P></DIV></ARTICLE><!-- contributors -->                 
+<DIV class="wiki-block contributors">
+<H2 class="offscreen">Document Tags and Contributors</H2><!-- tags if present --> 
+                  
+<DIV class="tag-attach-list contributors-sub"><I class="icon-tags" aria-hidden="true"></I><STRONG>Tags:</STRONG>&nbsp; 
+                   
+<UL class="tags tags-small">
+  <LI><A 
+href="https://developer.mozilla.org/en-US/docs/tag/Guide">Guide</A></LI>
+  <LI><A 
+  href="https://developer.mozilla.org/en-US/docs/tag/Reference">Reference</A></LI>
+  <LI><A 
+  href="https://developer.mozilla.org/en-US/docs/tag/R%C3%A9f%C3%A9rence">Référence</A></LI>
+  <LI><A href="https://developer.mozilla.org/en-US/docs/tag/Regular%20Expressions">Regular 
+  Expressions</A></LI>
+  <LI><A 
+  href="https://developer.mozilla.org/en-US/docs/tag/JavaScript">JavaScript</A></LI>
+  <LI><A 
+  href="https://developer.mozilla.org/en-US/docs/tag/Intermediate">Intermediate</A></LI></UL> 
+                  </DIV>
+<DIV class="contributors-sub"><I class="icon-group" 
+aria-hidden="true"></I><STRONG>Contributors to this page:</STRONG> <A href="https://developer.mozilla.org/en-US/profiles/lmorchard">lmorchard</A>, 
+<A 
+href="https://developer.mozilla.org/en-US/profiles/webapphero">webapphero</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/TTO">TTO</A>, <A href="https://developer.mozilla.org/en-US/profiles/Revolt">Revolt</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/edymtt">edymtt</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/jensen">jensen</A>, <A href="https://developer.mozilla.org/en-US/profiles/boobl">boobl</A>, 
+<A 
+href="https://developer.mozilla.org/en-US/profiles/daniel0mullins">daniel0mullins</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/JesseW">JesseW</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/Penny">Penny</A>, <A href="https://developer.mozilla.org/en-US/profiles/teddybeard">teddybeard</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/user01">user01</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/Minat">Minat</A>, <A href="https://developer.mozilla.org/en-US/profiles/mjhm">mjhm</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/LoTD">LoTD</A>, <A href="https://developer.mozilla.org/en-US/profiles/Lamina-Paj">Lamina-Paj</A>, 
+<A 
+href="https://developer.mozilla.org/en-US/profiles/sonujaiswar">sonujaiswar</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/JanakaJR">JanakaJR</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/BenoitL">BenoitL</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/schooley">schooley</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/jbnicolai">jbnicolai</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/DarrinKoltow">DarrinKoltow</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/btrager">btrager</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/morello">morello</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</A>, <A href="https://developer.mozilla.org/en-US/profiles/MartinRinehart">MartinRinehart</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/jdphenix">jdphenix</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/Aqw">Aqw</A>, <A href="https://developer.mozilla.org/en-US/profiles/neilpquinn">neilpquinn</A>, 
+<A 
+href="https://developer.mozilla.org/en-US/profiles/bradleymeck">bradleymeck</A>, 
+<A 
+href="https://developer.mozilla.org/en-US/profiles/RustyDoorknobs">RustyDoorknobs</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/Kizer">Kizer</A>, <A href="https://developer.mozilla.org/en-US/profiles/xfq">xfq</A>, 
+<A 
+href="https://developer.mozilla.org/en-US/profiles/FernandoBasso">FernandoBasso</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/arai">arai</A>, <A href="https://developer.mozilla.org/en-US/profiles/Rob%20W">Rob 
+W</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/ironpingwin">ironpingwin</A>, 
+<A 
+href="https://developer.mozilla.org/en-US/profiles/SphinxKnight">SphinxKnight</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/dwcook">dwcook</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/ethertank">ethertank</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/BYK">BYK</A>, <A href="https://developer.mozilla.org/en-US/profiles/rodneyrehm">rodneyrehm</A>, 
+<A 
+href="https://developer.mozilla.org/en-US/profiles/juicehonky">juicehonky</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/jscape">jscape</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</A>, <A href="https://developer.mozilla.org/en-US/profiles/berkerpeksag">berkerpeksag</A>, 
+<A href="https://developer.mozilla.org/en-US/profiles/bmenasha">bmenasha</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/zachleat">zachleat</A>, <A 
+href="https://developer.mozilla.org/en-US/profiles/Major%20Small">Major 
+Small</A> </DIV>
+<DIV class="contributors-sub"><I class="icon-clock-o" 
+aria-hidden="true"></I><STRONG>Last updated by:</STRONG>                       
+<A href="https://developer.mozilla.org/en-US/profiles/jdphenix">jdphenix</A>,    
+                   <time datetime="2015-02-07T17:18:01-08:00">Feb 7, 2015 
+5:18:01 PM</time>                     </DIV></DIV></DIV></DIV></DIV></DIV></DIV><!-- ends "main-content" --> 
+  
+<MENU id="edit-history-menu" type="context"><menuitem label="Edit page" 
+  data-action="$edit"></menuitem>     <menuitem label="View page history" 
+  data-action="$history"></menuitem>   </MENU></DIV></main><!-- Footer -->   
+<FOOTER>
+<DIV class="center">
+<DIV class="column-container">
+<DIV class="column-main">
+<P><bdi>© 2005-2015 Mozilla Developer Network and individual contributors<BR> 
+Content is available under <A href="https://developer.mozilla.org/en-US/docs/Project:MDN/About#Copyrights_and_licenses">these 
+licenses</A> · <A href="https://developer.mozilla.org/en-US/docs/Project:MDN/About">About 
+MDN</A> · <A href="https://www.mozilla.org/about/legal/terms/mozilla">Terms</A> 
+· <A href="https://www.mozilla.org/privacy/websites/">Privacy</A> · <A href="https://www.mozilla.org/privacy/websites/#cookies">Cookies</A> 
+· <A href="https://github.com/mozilla/kuma">Contribute to the code</A></bdi>     
+   </P></DIV>
+<DIV class="column-strip">
+<FORM class="languages go" action="/en-US/docs/Web" method="get"><LABEL for="language">Other 
+languages:</LABEL>       <SELECT name="next" class="wiki-l10n" id="language" 
+dir="ltr"><OPTION value="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" 
+  selected="">          English (US)         </OPTION>                   <OPTION 
+  value="/bn-BD/docs/Web/JavaScript/Guide/Regular_Expressions">বাংলা (বাংলাদেশ)  
+           </OPTION>          <OPTION value="/de/docs/Web/JavaScript/Guide/Regular_Expressions">Deutsch 
+            </OPTION>          <OPTION value="/es/docs/Web/JavaScript/Guide/Regular_Expressions"> 
+             Español           </OPTION>          <OPTION value="/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res"> 
+             Français           </OPTION>          <OPTION value="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">日本語 
+            </OPTION>          <OPTION value="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">Português 
+  (do&nbsp;Brasil)           </OPTION>          <OPTION value="/ru/docs/Web/JavaScript/Guide/Regular_Expressions">Русский 
+            </OPTION>          <OPTION value="/th/docs/Web/JavaScript/Guide/Regular_Expressions">ไทย 
+            </OPTION>          <OPTION value="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">中文 
+  (简体)           </OPTION>          <OPTION value="/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions">正體中文 
+  (繁體)           </OPTION>      </SELECT>       <NOSCRIPT>&lt;button 
+type="submit"&gt;Go&lt;/button&gt;</NOSCRIPT>     
+</FORM></DIV></DIV></DIV></FOOTER><!-- site js -->     
+<SCRIPT src="Regular%20Expressions%20-%20JavaScript%20%20MDN_files/build_47de0dd.js"></SCRIPT>
+         <!--[if lte IE 8]><script src="/media/js/libs/selectivizr-1.0.2/selectivizr-build.js"></script><![endif]--> 
+    
+<SCRIPT src="Regular%20Expressions%20-%20JavaScript%20%20MDN_files/include.js"></SCRIPT>
+ 
+<FORM id="_persona_login" action="/users/persona/signin" method="post" 
+data-request='{"siteName": "Mozilla Developer Network", "siteLogo": "/media/redesign/img/opengraph-logo.png"}' 
+data-csrf-token-url="/users/persona/csrf"><INPUT name="csrfmiddlewaretoken" id="_persona_csrf_token" type="hidden"> 
+  <INPUT name="next" id="_persona_next_url" type="hidden">   <INPUT name="process" id="_persona_process" type="hidden"> 
+  <INPUT name="assertion" id="_persona_assertion" type="hidden"> </FORM>
+<SCRIPT src="Regular%20Expressions%20-%20JavaScript%20%20MDN_files/main-min.js"></SCRIPT>
+           
+<SCRIPT>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </SCRIPT>
+               
+<SCRIPT src="Regular%20Expressions%20-%20JavaScript%20%20MDN_files/wiki-min.js"></SCRIPT>
+           
+<SCRIPT type="text/javascript">
+      if(window.jQuery) jQuery('.from-search-toc').mozSearchResults('');
+  </SCRIPT>
+ </BODY></HTML>

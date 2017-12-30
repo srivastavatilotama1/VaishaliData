@@ -1,0 +1,114 @@
+<!-- 
+jQuery Dom page loaded dom is created only once
+For recreating dom page has to be refreshed...
+************************
+element is a raw dom object in each method.
+$element is jquery dom object
+*************
+Using $(this) we can access current raw dom object
+***********
+Get all UL
+<<<$('ul');>>>
+***********************
+get no of ul tag
+<<<$('ul').length>>>
+***********************
+Get the no of  child of ul tag[immediate children only]
+<<<$('ul>li').size();>>>
+****************************
+get the no of children object of ul tag
+$('ul').children();
+<<<<li>Mobile</li>,<li>TV</li>......>>>
+**********************************8
+gel no  of child of ul
+$('ul').children().length;
+<<<4>>>
+*********************
+get immediate parent of  ul tag.
+$('ul').parent();
+************************
+Get parent of parent  of parent of ul tag
+$('ul').parent().parent();
+<<will get body tag>>>
+******************************
+get the first children of ul tag
+$('ul').children().eq(0);
+<<we will get mobile tag>>>
+****************
+Get first child of ul
+$('ul').children().first();
+<<will get mobile>>>
+*******************************
+$('ul').children().nextUntil(1);
+<<till tv in reverse order will get the elelement>>>
+*********************
+getelement to strt with first index up to 4
+$('ul').children().slice(1,4);
+<<<will get from tv to cooler>>>
+******************************
+//prepend and append is used to add the 
+data inside the elelement
+prepend the div data
+<<<$('#targetDiv2').prepend('Prepend-1');>>
+****************************
+append the div data
+$('#targetDiv2').append('Append-1');
+****************************
+add  textbox element before element
+<<<$('#targetDiv2').before
+('Salary: <input type="text" name="txtSal" 
+value="100"/>');>>>
+-->
+<html>
+	<head>
+	<title>jQuery Dom </title>
+	<style type="text/css">
+		.blueDiv{background-color:blue; color:white;}
+		.redDiv{background-color:red; color:white;}
+	</style>
+	<script language="javascript" src="../Scripts/jquery-2.0.0.js">
+	</script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{     
+			var results="";
+		 var $paragraphs=$('p');
+		 
+		 $paragraphs.css('color','red');
+		 //change a color pf para one by one
+		 $paragraphs.each(function(index,element){			
+		 $(element).css('color','blue');
+		 
+		 //put all p in div
+		  results+=   index+" :"+ $(element).text()+"<br/>";
+		 });	 
+			
+		$('#targetDiv').html(results);
+	});
+</script>
+</head>
+<body>
+<p>First....</p>
+<p>Second....</p>
+<p>Third....</p>
+<hr/>
+<div id="targetDiv"></div>
+<hr/>
+<div id ="parent1">
+	<div id="parent2">
+		<ul>
+			<li>Mobile</li>
+			<li>TV</li>
+			<li>Computer</li>
+			<li>Cooler</li>
+		</ul>
+	</div>
+</div>
+
+<hr/>
+
+<div id="targetDiv2">Hello
+
+</div>
+</body>
+</html>

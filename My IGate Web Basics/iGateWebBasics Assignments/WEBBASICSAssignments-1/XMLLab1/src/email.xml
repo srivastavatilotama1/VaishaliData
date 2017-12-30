@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emailTo>
+	<email>
+	<to>abc@igate.com</to>
+	<from>def@igate.com</from>
+	<cc>a1@igate.com</cc>
+	<bcc>a2@igate.com</bcc>
+	<subject>Hello...</subject>
+	<body>welcome to IGATE!!!</body>
+	</email>
+	<email>
+	<to>a12@igate.com</to>
+	<from>d34@igate.com</from>
+	<cc>b1@igate.com</cc>
+	<bcc>b2@igate.com</bcc>
+	<subject>Hello...</subject>
+	<body>welcome to IGATE!!!</body>
+	</email>
+</emailTo>

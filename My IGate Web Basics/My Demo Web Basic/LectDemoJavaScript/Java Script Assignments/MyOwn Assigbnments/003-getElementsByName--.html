@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>DOM Example</title>
+<script>
+
+//var oAllElements = document.getElementsByTagName("*");
+//This line of code returns all the elements contained in document regardless of their tag names.
+
+function show()
+{
+
+var oRadios = document.getElementsByName("radColor");
+		alert(oRadios[0].getAttribute("value") +"   "+oRadios[1].getAttribute("value")+"    "+oRadios[2].getAttribute("value")  ); 
+}
+</script>
+</head>
+<body>
+<form method="post" action="A.html" onsubmit=show()>
+<fieldset>
+<legend>What color do you like?</legend>
+<input type="radio" name="radColor" value="red" /> Red<br />
+<input type="radio" name="radColor" value="green" /> Green<br />
+<input type="radio" name="radColor" value="blue" /> Blue<br />
+</fieldset>
+<input type="submit" value="Submit" />
+</form>
+</body>
+</html>

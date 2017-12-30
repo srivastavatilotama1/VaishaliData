@@ -1,0 +1,12 @@
+<!ATTLIST employee
+    id ID #REQUIRED
+    supervisor IDREF #IMPLIED>
+]>
+
+
+<employee id="E234" supervisor="E567">
+	<name>Harry</name>
+</employee>
+<employee id="E567“>
+	<name>John</name>
+</employee>

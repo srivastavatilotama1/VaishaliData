@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE orders SYSTEM "order.dtd">	
+<orders>
+		<order>		
+				<orderid>1</orderid>
+				<customername year="1222">Nova Systems</customername>
+				<orderdate>10-april-2001</orderdate>
+				<salesperson>Jack Nicholson</salesperson>
+				<shippingaddress>12,green park</shippingaddress>
+			</order>
+			
+			<order>
+				<orderid>2</orderid>
+				<customername year="1000">Iflex Systems</customername>
+				<orderdate>20-april-2001</orderdate>
+				<salesperson>Bill Gates</salesperson>
+				<shippingaddress> M.G.Road </shippingaddress>
+			</order>
+</orders>

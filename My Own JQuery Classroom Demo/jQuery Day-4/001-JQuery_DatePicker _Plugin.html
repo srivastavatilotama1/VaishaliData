@@ -1,0 +1,45 @@
+<!-- 
+What is plug-in?
+Extra feature addded to application.
+it is a software.
+can it be exceuted on its own?no.
+it is a piece of software which enhance
+the existing application.
+Ex Mozila theare  are plugin for debugging. 
+--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head> 
+ 
+<meta http-equiv="Content-Type" 
+content="text/html; charset=UTF-8" />
+<title>jQuery UI</title> 
+
+<link type="text/css" 
+href="jquery-ui-1.8.16.custom/css/sunny/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+<script src="jquery-ui-1.8.16.custom/js/jquery-1.6.2.min.js"></script>
+<script src="jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$( "#radio" ).buttonset();
+	$('#datepicker').datepicker
+	({ changeMonth: true, changeYear: true});
+});
+</script>
+</head>
+<body>
+	<h2>Favorite Game</h2>
+		<div id="radio">
+			<input type="radio" id="radio1" name="radio" />
+				<label for="radio1">Cricket</label>
+			<input type="radio" id="radio2" name="radio" />
+				<label for="radio2">Tennis</label>
+			<input type="radio" id="radio3" name="radio" />
+				<label for="radio3">Chess</label>
+	</div>
+<br/>
+<label>Date of Birth : </label>
+<input type="text" id="datepicker">
+</body>
+</html>

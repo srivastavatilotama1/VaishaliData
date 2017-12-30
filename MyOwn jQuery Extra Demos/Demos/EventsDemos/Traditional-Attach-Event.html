@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Traditional event Handling</title>
+<style type="text/css">
+.highlight{background-color:yellow;};
+</style>
+<script type="text/javascript" src="../Scripts/jquery-1.6.2.js"></script>
+<script type="text/javascript">
+		$(document).ready(function()
+		{
+			//Handle events the old-fashioned way
+			var button = document.getElementById('SubmitButton');
+			if (document.addEventListener) {
+				button.addEventListener('click', function () { alert('Clicked Button'); }, false);
+			}
+			else {
+				button.attachEvent('onclick', function () { alert('Clicked IE Button'); });
+			}
+		});
+</script>
+</head>
+<body>
+<table>
+<tr>
+<td>FirstName : </td>
+<td><input id="txtFirstName" type="text" /></td>
+</tr>
+<tr>
+<td>LastName : </td>
+<td><input id="txtLastName" type="text" /></td>
+</tr>
+<tr>
+<td>About ME : </td>
+<td><textarea id="comments">Comments</textarea></td>
+</tr>
+<tr>
+<td colspan="2"><input id="SubmitButton" type="submit" value="Submit"/></td>
+</tr>
+</table>
+</body>
+</html>

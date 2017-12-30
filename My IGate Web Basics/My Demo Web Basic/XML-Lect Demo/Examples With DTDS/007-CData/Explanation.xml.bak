@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE explanation SYSTEM "Explanation.dtd">	
+<explanation> A typical circle element is written as:
+	<![CDATA[
+			<circle radius=”15”>
+			<position x=”30” y=”50”/>
+			</circle>
+
+ function matchwo(a,b)
+		      {
+		         if (a < b && a < 0) then
+		         {   
+		            return 1   
+		         }
+		         else
+		         {   
+		            return 0   
+		         }
+		      }
+	]]>
+</explanation>

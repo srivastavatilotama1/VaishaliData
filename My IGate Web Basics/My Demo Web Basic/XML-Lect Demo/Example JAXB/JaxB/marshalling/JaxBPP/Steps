@@ -1,0 +1,2 @@
+c:\>JaxBPP>xjc  -p vai.men -d src  company.xsd
+-d specify that in  current folder in src source file will be created.

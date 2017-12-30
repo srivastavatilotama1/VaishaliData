@@ -1,0 +1,8 @@
+CREATE TABLE Author(authorId NUMBER PRIMARY KEY,firstName VARCHAR2(15),
+middleName VARCHAR2(15),lastName VARCHAR2(15),phoneNo NUMBER(10));
+
+
+
+
+
+

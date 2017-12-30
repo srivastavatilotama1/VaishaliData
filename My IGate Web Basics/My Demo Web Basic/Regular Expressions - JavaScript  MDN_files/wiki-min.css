@@ -1,0 +1,2982 @@
+.wiki-left-closed#wiki-column-container #wiki-content {
+	width: 74.25%;
+}
+.wiki-right-closed#wiki-column-container #wiki-content {
+	width: 74.25%;
+}
+.wiki-left-closed.wiki-right-closed#wiki-column-container #wiki-content {
+	margin: 0px;
+}
+#page-buttons .submenu {
+	background: rgb(234, 239, 242); padding: 20px; top: 40px; width: 160px !important; right: 0px; border-top-color: rgb(187, 191, 194); border-top-width: 1px; border-top-style: solid; display: none; position: absolute; z-index: 3; box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+}
+.page-buttons .submenu {
+	background: rgb(234, 239, 242); padding: 20px; top: 40px; width: 160px !important; right: 0px; border-top-color: rgb(187, 191, 194); border-top-width: 1px; border-top-style: solid; display: none; position: absolute; z-index: 3; box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+}
+#page-buttons .submenu .submenu-close {
+	top: 20px; right: 0px; display: none; position: absolute;
+}
+.page-buttons .submenu .submenu-close {
+	top: 20px; right: 0px; display: none; position: absolute;
+}
+html[dir=rtl] #page-buttons .submenu .submenu-close {
+	left: 0px; right: auto;
+}
+html[dir=rtl] .page-buttons .submenu .submenu-close {
+	left: 0px; right: auto;
+}
+#page-buttons .submenu .submenu-close i {
+	margin-left: 0px;
+}
+.page-buttons .submenu .submenu-close i {
+	margin-left: 0px;
+}
+@media all and (max-width:1024px)
+{
+#page-buttons .submenu .submenu-close {
+	display: block;
+}
+.page-buttons .submenu .submenu-close {
+	display: block;
+}
+}
+#page-buttons .submenu .submenu-column {
+	width: 100%; vertical-align: text-top; display: inline-block;
+}
+.page-buttons .submenu .submenu-column {
+	width: 100%; vertical-align: text-top; display: inline-block;
+}
+#page-buttons .submenu :nth-child(2n).submenu-column {
+	padding-left: 20px; border-left-color: rgb(212, 221, 228); border-left-width: 1px; border-left-style: dotted;
+}
+.page-buttons .submenu :nth-child(2n).submenu-column {
+	padding-left: 20px; border-left-color: rgb(212, 221, 228); border-left-width: 1px; border-left-style: dotted;
+}
+html[dir=rtl] #page-buttons .submenu :nth-child(2n).submenu-column {
+	padding-right: 20px; padding-left: 0px; border-right-color: rgb(212, 221, 228); border-left-color: currentColor; border-right-width: 1px; border-left-width: 0px; border-right-style: dotted; border-left-style: none;
+}
+html[dir=rtl] .page-buttons .submenu :nth-child(2n).submenu-column {
+	padding-right: 20px; padding-left: 0px; border-right-color: rgb(212, 221, 228); border-left-color: currentColor; border-right-width: 1px; border-left-width: 0px; border-right-style: dotted; border-left-style: none;
+}
+#page-buttons .submenu a {
+	padding: 5px 0px; font-size: 0.85rem; text-decoration: none; display: block;
+}
+.page-buttons .submenu a {
+	padding: 5px 0px; font-size: 0.85rem; text-decoration: none; display: block;
+}
+#page-buttons .submenu a:active {
+	text-decoration: underline;
+}
+#page-buttons .submenu a:focus {
+	text-decoration: underline;
+}
+#page-buttons .submenu a:hover {
+	text-decoration: underline;
+}
+.page-buttons .submenu a:active {
+	text-decoration: underline;
+}
+.page-buttons .submenu a:focus {
+	text-decoration: underline;
+}
+.page-buttons .submenu a:hover {
+	text-decoration: underline;
+}
+#page-buttons .submenu::after {
+	border: 10px solid transparent; border-image: none; width: 0px; height: 0px; content: " ";
+}
+#page-buttons .submenu::before {
+	border: 10px solid transparent; border-image: none; width: 0px; height: 0px; content: " ";
+}
+.page-buttons .submenu::after {
+	border: 10px solid transparent; border-image: none; width: 0px; height: 0px; content: " ";
+}
+.page-buttons .submenu::before {
+	border: 10px solid transparent; border-image: none; width: 0px; height: 0px; content: " ";
+}
+#page-buttons .submenu::before {
+	border-bottom-color: rgb(234, 239, 242); position: absolute; z-index: 2;
+}
+.page-buttons .submenu::before {
+	border-bottom-color: rgb(234, 239, 242); position: absolute; z-index: 2;
+}
+#page-buttons .submenu::after {
+	border-bottom-color: rgb(187, 191, 194); position: absolute; z-index: 1;
+}
+.page-buttons .submenu::after {
+	border-bottom-color: rgb(187, 191, 194); position: absolute; z-index: 1;
+}
+@media all and (max-width:768px)
+{
+#page-buttons .submenu .submenu-column {
+	padding-left: 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+#page-buttons .submenu :nth-child(2n).submenu-column {
+	padding-left: 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+.page-buttons .submenu .submenu-column {
+	padding-left: 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+.page-buttons .submenu :nth-child(2n).submenu-column {
+	padding-left: 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+html[dir=rtl] #page-buttons .submenu .submenu-column {
+	padding-right: 0px; padding-left: 0px; border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir=rtl] #page-buttons .submenu :nth-child(2n).submenu-column {
+	padding-right: 0px; padding-left: 0px; border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir=rtl] .page-buttons .submenu .submenu-column {
+	padding-right: 0px; padding-left: 0px; border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir=rtl] .page-buttons .submenu :nth-child(2n).submenu-column {
+	padding-right: 0px; padding-left: 0px; border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+}
+@media all and (max-width:480px)
+{
+#page-buttons .submenu {
+	width: auto;
+}
+.page-buttons .submenu {
+	width: auto;
+}
+#page-buttons .submenu .submenu-column {
+	width: auto; display: block;
+}
+.page-buttons .submenu .submenu-column {
+	width: auto; display: block;
+}
+}
+html[dir=rtl] #page-buttons .submenu {
+	left: 0px; right: auto;
+}
+html[dir=rtl] .page-buttons .submenu {
+	left: 0px; right: auto;
+}
+#page-buttons .submenu bdi {
+	text-align: left;
+}
+.page-buttons .submenu bdi {
+	text-align: left;
+}
+html[dir=rtl] #page-buttons .submenu bdi {
+	text-align: right;
+}
+html[dir=rtl] .page-buttons .submenu bdi {
+	text-align: right;
+}
+#page-buttons .submenu::before {
+	top: -18px; right: 10px;
+}
+.page-buttons .submenu::before {
+	top: -18px; right: 10px;
+}
+html[dir=rtl] #page-buttons .submenu::before {
+	left: 10px; right: auto;
+}
+html[dir=rtl] .page-buttons .submenu::before {
+	left: 10px; right: auto;
+}
+#page-buttons .submenu::after {
+	top: -20px; right: 10px;
+}
+.page-buttons .submenu::after {
+	top: -20px; right: 10px;
+}
+html[dir=rtl] #page-buttons .submenu::after {
+	left: 10px; right: auto;
+}
+html[dir=rtl] .page-buttons .submenu::after {
+	left: 10px; right: auto;
+}
+.reviews {
+	background: rgb(251, 248, 233); border-color: rgb(249, 243, 217); color: rgb(77, 78, 83);
+}
+.warning-review.warning {
+	background: rgb(251, 248, 233); border-color: rgb(249, 243, 217); color: rgb(77, 78, 83);
+}
+article {
+	position: relative;
+}
+article a {
+	text-decoration: none;
+}
+article a:active {
+	text-decoration: underline;
+}
+article a:focus {
+	text-decoration: underline;
+}
+article a:hover {
+	text-decoration: underline;
+}
+article a.new {
+	color: rgb(153, 0, 0);
+}
+.title {
+	clear: both; margin-bottom: 10px; position: relative;
+}
+.title::after {
+	clear: both; display: table; content: " ";
+}
+.document-list {
+	margin-bottom: 20px; list-style-type: disc; list-style-position: inside;
+}
+.document-list li {
+	margin-bottom: 7px;
+}
+.document-list li:last-child {
+	margin-bottom: 0px;
+}
+:not([href^='https://mdn.mozillademos.org']):not(.ignore-external).external-icon {
+	white-space: pre-line;
+}
+html[dir=ltr] :not([href^='https://mdn.mozillademos.org']):not(.ignore-external).external-icon::before {
+	font-family: FontAwesome; font-size: 0.64rem; margin-right: 3px; display: inline-block; content: "\f08e"; opacity: 0.5;
+}
+html[dir=rtl] :not([href^='https://mdn.mozillademos.org']):not(.ignore-external).external-icon::after {
+	font-family: FontAwesome; font-size: 0.64rem; margin-right: 3px; display: inline-block; content: "\f08e"; opacity: 0.5;
+}
+html[dir=rtl] :not([href^='https://mdn.mozillademos.org']):not(.ignore-external).external-icon::after {
+	transform: rotateY(180deg);
+}
+:not([href^='https://mdn.mozillademos.org']):not(.ignore-external).external-icon:focus::after {
+	text-decoration: none;
+}
+:not([href^='https://mdn.mozillademos.org']):not(.ignore-external).external-icon:focus::before {
+	text-decoration: none;
+}
+:not([href^='https://mdn.mozillademos.org']):not(.ignore-external).external-icon:hover::after {
+	text-decoration: none;
+}
+:not([href^='https://mdn.mozillademos.org']):not(.ignore-external).external-icon:hover::before {
+	text-decoration: none;
+}
+.wiki-main-content {
+	background: rgb(255, 255, 255); min-height: 300px;
+}
+.wiki-main-content .center {
+	padding-right: 0px; padding-left: 0px;
+}
+#wiki-left {
+	position: relative;
+}
+#wiki-content {
+	min-height: 1px;
+}
+#wiki-left {
+	min-height: 1px;
+}
+#wiki-right {
+	min-height: 1px;
+}
+.wiki-left-closed.wiki-right-closed#wiki-column-container #wiki-content {
+	width: auto; float: none;
+}
+.wiki-left-closed.wiki-right-closed#wiki-column-container .column-container-reverse {
+	margin-left: 0px;
+}
+@media all and (max-width:1200px)
+{
+:not(.wiki-left-closed).wiki-left-present #wiki-content {
+	width: 74.25%; margin-right: 0px;
+}
+:not(.wiki-left-closed).wiki-left-present #wiki-right {
+	width: 74.25%; margin-right: 0px;
+}
+:not(.wiki-left-closed).wiki-left-present #wiki-right {
+	padding-bottom: 40px;
+}
+:not(.wiki-left-closed).wiki-left-present #wiki-right #toc {
+	padding: 10px 20px;
+}
+:not(.wiki-left-closed).wiki-left-present #wiki-right #toc .toggler {
+	color: rgb(0, 149, 221); pointer-events: auto;
+}
+:not(.wiki-left-closed).wiki-left-present #wiki-right #toc .toggler i {
+	display: inline-block;
+}
+:not(.wiki-left-closed).wiki-left-present #wiki-right #toc .toggle-container {
+	display: none;
+}
+.no-js :not(.wiki-left-closed).wiki-left-present #wiki-right #toc .toggle-container {
+	display: block;
+}
+:not(.wiki-left-closed).wiki-left-present #wiki-left {
+	float: none;
+}
+}
+@media all and (max-width:1024px)
+{
+#wiki-content {
+	width: auto !important; padding-bottom: 40px; margin-right: 0px; float: none;
+}
+#wiki-left {
+	width: auto !important; padding-bottom: 40px; margin-right: 0px; float: none;
+}
+#wiki-right {
+	width: auto !important; padding-bottom: 40px; margin-right: 0px; float: none;
+}
+#wiki-right #toc {
+	padding: 10px 20px;
+}
+#wiki-right #toc .toggler {
+	color: rgb(0, 149, 221); pointer-events: auto;
+}
+#wiki-right #toc .toggler i {
+	display: inline-block;
+}
+#wiki-right #toc .toggle-container {
+	display: none;
+}
+.no-js #wiki-right #toc .toggle-container {
+	display: block;
+}
+#wiki-column-container {
+	width: auto !important;
+}
+#wiki-content {
+	width: auto !important;
+}
+#quick-links-toggle {
+	display: none;
+}
+#wiki-controls {
+	display: none;
+}
+}
+@media print
+{
+#wiki-controls {
+	display: none;
+}
+#wiki-left {
+	display: none;
+}
+#wiki-right {
+	display: none;
+}
+}
+.wiki-block {
+	padding-top: 40px; padding-right: 0px; padding-left: 0px; clear: both; margin-top: 40px; border-top-color: rgb(234, 239, 242); border-top-width: 1px; border-top-style: solid;
+}
+.wiki-block::after {
+	clear: both; display: table; content: " ";
+}
+details summary + .wiki-block {
+	padding-top: 20px; margin-top: 0px;
+}
+#trans-meta .wiki-block {
+	border: 0px currentColor; border-image: none; padding-top: 0px;
+}
+#trans-version .wiki-block {
+	border: 0px currentColor; border-image: none; padding-top: 0px;
+}
+#trans-meta :last-child.wiki-block {
+	margin-bottom: 40px;
+}
+.quick-links {
+	font-size: 0.85rem; margin-bottom: 20px; position: relative;
+}
+.quick-links a {
+	color: rgb(77, 78, 83);
+}
+.quick-links a.new {
+	color: rgb(153, 0, 0);
+}
+.quick-links .title {
+	margin-bottom: 0px;
+}
+.quick-links li {
+	padding-top: 8px; position: relative;
+}
+.quick-links li li {
+	padding-left: 20px;
+}
+html[dir=rtl] .quick-links li li {
+	padding-right: 20px; padding-left: 0px;
+}
+.quick-links ul ul {
+	display: none;
+}
+.no-js .quick-links ul ul {
+	display: block;
+}
+#quick-links-toggle {
+	color: rgb(77, 78, 83); padding-left: 20px; display: inline-block;
+}
+.quick-links .title {
+	color: rgb(77, 78, 83); padding-left: 20px; display: inline-block;
+}
+.quick-links li.toggleable a {
+	color: rgb(77, 78, 83); padding-left: 20px; display: inline-block;
+}
+html[dir=rtl] #quick-links-toggle {
+	padding-right: 20px; padding-left: 0px;
+}
+html[dir=rtl] .quick-links .title {
+	padding-right: 20px; padding-left: 0px;
+}
+html[dir=rtl] .quick-links li.toggleable a {
+	padding-right: 20px; padding-left: 0px;
+}
+.quick-links .title {
+	overflow: hidden; position: relative; -ms-text-overflow: ellipsis; max-width: 100%;
+}
+.quick-links a {
+	overflow: hidden; position: relative; -ms-text-overflow: ellipsis; max-width: 100%;
+}
+.see-also {
+	padding: 4px 4px 4px 6px !important; margin-left: -6px !important;
+}
+.quick-links .see-also {
+	background: rgb(244, 247, 248) !important; padding: 4px 42px; width: 100%; margin-left: -22px; display: inline-block !important; box-sizing: border-box; -moz-box-sizing: border-box;
+}
+#quick-links-toggle i[class^=icon-] {
+	left: -6px; top: 1px; font-size: 1rem; position: absolute;
+}
+.quick-links i[class^=icon-] {
+	left: -6px; top: 1px; font-size: 1rem; position: absolute;
+}
+html[dir=rtl] #quick-links-toggle i[class^=icon-] {
+	left: auto; right: -6px;
+}
+html[dir=rtl] .quick-links i[class^=icon-] {
+	left: auto; right: -6px;
+}
+#quick-links-toggle i[class^=icon-] div {
+	display: none;
+}
+#quick-links-toggle i[class^=icon-] p {
+	display: none;
+}
+.quick-links i[class^=icon-] div {
+	display: none;
+}
+.quick-links i[class^=icon-] p {
+	display: none;
+}
+#quick-links-toggle i[class^=icon-] a {
+	text-decoration: none;
+}
+.quick-links i[class^=icon-] a {
+	text-decoration: none;
+}
+#quick-links-toggle i[class^=icon-] a:active {
+	text-decoration: underline;
+}
+#quick-links-toggle i[class^=icon-] a:focus {
+	text-decoration: underline;
+}
+#quick-links-toggle i[class^=icon-] a:hover {
+	text-decoration: underline;
+}
+.quick-links i[class^=icon-] a:active {
+	text-decoration: underline;
+}
+.quick-links i[class^=icon-] a:focus {
+	text-decoration: underline;
+}
+.quick-links i[class^=icon-] a:hover {
+	text-decoration: underline;
+}
+.reviews {
+	border-width: 5px; border-style: solid; padding: 10px; font-size: 0.85rem; margin-bottom: 20px;
+}
+.reviews p {
+	margin: 0px;
+}
+.reviews li {
+	padding-top: 8px;
+}
+.contributors {
+	color: rgb(119, 119, 119); font-size: 0.85rem;
+}
+.contributors i[class^=icon-] {
+	margin-right: 10px; margin-left: 0px;
+}
+html[dir=rtl] .contributors i[class^=icon-] {
+	margin-right: 0px; margin-left: 10px;
+}
+.contributors-sub {
+	padding: 4px 0px;
+}
+@media print
+{
+.contributors {
+	display: none;
+}
+}
+#toc {
+	background: rgb(244, 247, 248); padding: 20px 15px;
+}
+#toc a {
+	text-decoration: none;
+}
+#toc a:active {
+	text-decoration: underline;
+}
+#toc a:focus {
+	text-decoration: underline;
+}
+#toc a:hover {
+	text-decoration: underline;
+}
+#toc > ol {
+	font-size: 0.85rem;
+}
+#toc li {
+	padding-top: 10px; position: relative;
+}
+#toc li::before {
+	left: -30px; text-align: left; color: rgb(72, 72, 72); position: absolute;
+}
+html[dir=rtl] #toc li::before {
+	left: auto; text-align: right; right: -30px;
+}
+#toc li li {
+	padding-left: 20px;
+}
+#toc .toggler {
+	color: inherit; pointer-events: none;
+}
+#toc .toggler i {
+	display: none;
+}
+#toc .title {
+	margin-bottom: 0px;
+}
+#toc a.title {
+	text-decoration: none; position: relative;
+}
+body .topicpage-table {
+	border: currentColor; border-image: none; width: auto; clear: both; display: block; border-collapse: collapse;
+}
+body .topicpage-table td {
+	padding: 0px; border: currentColor; border-image: none; vertical-align: top; display: block;
+}
+body .topicpage-table th {
+	padding: 0px; border: currentColor; border-image: none; vertical-align: top; display: block;
+}
+body .topicpage-table tr {
+	padding: 0px; border: currentColor; border-image: none; vertical-align: top; display: block;
+}
+.topicpage-table h2 {
+	font-family: "Open Sans Light",sans-serif;
+}
+.topicpage-table ul {
+	padding-left: 20px;
+}
+.topicpage-table small {
+	font-size: 12px;
+}
+@media all and (min-width:1050px)
+{
+body .topicpage-table {
+	display: table; border-collapse: separate; border-spacing: 20px 0;
+}
+body .topicpage-table tr {
+	display: table-row;
+}
+body .topicpage-table .section {
+	width: 50%; display: table-cell;
+}
+body .topicpage-table td {
+	width: 50%; display: table-cell;
+}
+body .topicpage-table th {
+	width: 50%; display: table-cell;
+}
+body .topicpage-table :first-of-type.section {
+	padding-right: 20px; margin-right: 20px; border-right-color: rgb(234, 239, 242); border-right-width: 6px; border-right-style: solid;
+}
+body .topicpage-table td:first-of-type {
+	padding-right: 20px; margin-right: 20px; border-right-color: rgb(234, 239, 242); border-right-width: 6px; border-right-style: solid;
+}
+body .topicpage-table th:first-of-type {
+	padding-right: 20px; margin-right: 20px; border-right-color: rgb(234, 239, 242); border-right-width: 6px; border-right-style: solid;
+}
+html[dir=rtl] body .topicpage-table :first-of-type.section {
+	padding-right: 0px; padding-left: 20px; margin-right: 0px; border-right-color: currentColor; border-left-color: rgb(234, 239, 242); border-right-width: medium; border-left-width: 6px; border-right-style: none; border-left-style: solid;
+}
+html[dir=rtl] body .topicpage-table td:first-of-type {
+	padding-right: 0px; padding-left: 20px; margin-right: 0px; border-right-color: currentColor; border-left-color: rgb(234, 239, 242); border-right-width: medium; border-left-width: 6px; border-right-style: none; border-left-style: solid;
+}
+html[dir=rtl] body .topicpage-table th:first-of-type {
+	padding-right: 0px; padding-left: 20px; margin-right: 0px; border-right-color: currentColor; border-left-color: rgb(234, 239, 242); border-right-width: medium; border-left-width: 6px; border-right-style: none; border-left-style: solid;
+}
+}
+.no-details summary {
+	cursor: pointer;
+}
+.no-details summary::before {
+	font-size: 1.25em; margin-top: -0.15em; margin-left: -15px; float: left; content: "+";
+}
+html[dir=rtl] .no-details summary::before {
+	margin-right: -15px; margin-left: 0px; float: right;
+}
+.open.no-details summary::before {
+	margin-top: -0.2em; margin-left: -13px; content: "–";
+}
+html[dir=rtl] .open.no-details summary::before {
+	margin-right: -13px; margin-left: 0px;
+}
+#kserrors ul {
+	padding-left: 0px !important; list-style-type: none;
+}
+.kserrors-details {
+	padding: 20px 0px;
+}
+@media all and (max-width:1024px)
+{
+.page-print {
+	display: none;
+}
+}
+@media print
+{
+a.edit-section {
+	display: none;
+}
+}
+@media print
+{
+#offline-dialog-content {
+	display: none;
+}
+}
+.document-head {
+	clear: both; position: relative;
+}
+.document-head h1 {
+	margin-bottom: 20px;
+}
+.contributor-avatars {
+	background: rgba(234, 239, 243, 0.4); padding: 10px 10px 6px; color: rgb(119, 119, 119); font-size: 0.85rem; margin-top: -20px; margin-bottom: 20px; border-top-color: rgb(241, 241, 241); border-bottom-color: rgb(241, 241, 241); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.contributor-avatars ul {
+	transition:opacity; margin-left: 2px; display: inline; opacity: 0.7; -webkit-transition: opacity; -moz-transition: opacity;
+}
+.contributor-avatars ul.focused {
+	opacity: 1;
+}
+.contributor-avatars ul:hover {
+	opacity: 1;
+}
+.contributor-avatars ul li {
+	margin: 0px 5px 4px 0px;
+}
+.contributor-avatars ul li {
+	display: inline-block;
+}
+.no-js .contributor-avatars ul li.hidden {
+	display: inline-block;
+}
+.contributor-avatars ul li.hidden {
+	display: none;
+}
+.contributor-avatars ul a {
+	transition:all; display: inline-block; -webkit-transition: all; -moz-transition: all;
+}
+.contributor-avatars ul a:focus {
+	outline: 0px; transform: scale(1.7); -webkit-transform: scale(1.7);
+}
+.contributor-avatars ul a:hover {
+	outline: 0px; transform: scale(1.7); -webkit-transform: scale(1.7);
+}
+.contributor-avatars .avatar {
+	border-radius: 2px; vertical-align: text-bottom; max-width: 20px; opacity: 0;
+}
+.contributor-avatars .loaded.avatar {
+	opacity: 1;
+}
+.contributor-avatars button {
+	padding: 5px 0px; color: rgb(119, 119, 119); text-transform: none; font-size: 0.85rem; margin-left: -2px;
+}
+.contributor-avatars button:focus {
+	color: rgb(77, 78, 83);
+}
+.contributor-avatars button:hover {
+	color: rgb(77, 78, 83);
+}
+.from-search {
+	padding-left: 40px;
+}
+.from-search .from-search-navigate {
+	display: inline-block;
+}
+.from-search h1 {
+	display: inline-block;
+}
+.from-search .from-search-next {
+	display: block;
+}
+.from-search .from-search-previous {
+	display: block;
+}
+.from-search-next {
+	top: 17px; font-size: 24px; display: none; position: absolute;
+}
+.from-search-previous {
+	top: 17px; font-size: 24px; display: none; position: absolute;
+}
+.disabled.from-search-next {
+	opacity: 0.3;
+}
+.disabled.from-search-previous {
+	opacity: 0.3;
+}
+.from-search-previous {
+	left: 0px;
+}
+.from-search-next {
+	right: 0px;
+}
+.from-search-navigate {
+	top: 4px; width: 20px; height: 38px; color: rgb(206, 209, 210); font-size: 1.14rem; display: none; position: relative;
+}
+.from-search-navigate-down {
+	left: 0px; font-size: 0.85rem; position: absolute;
+}
+.from-search-navigate-up {
+	left: 0px; font-size: 0.85rem; position: absolute;
+}
+.from-search-navigate-up {
+	top: 0px;
+}
+.from-search-navigate-down {
+	bottom: 0px;
+}
+.from-search-toc {
+	background: rgb(234, 239, 242); padding: 20px; border: 1px solid rgb(187, 191, 194); border-image: none; left: 66px; top: 0px; width: 200px; color: rgb(136, 136, 136); font-size: 0.85rem; display: none; position: absolute; z-index: 2; box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+}
+.from-search-toc .submenu-close {
+	top: 20px; right: 0px; display: none; position: absolute;
+}
+html[dir=rtl] .from-search-toc .submenu-close {
+	left: 0px; right: auto;
+}
+.from-search-toc .submenu-close i {
+	margin-left: 0px;
+}
+@media all and (max-width:1024px)
+{
+.from-search-toc .submenu-close {
+	display: block;
+}
+}
+.from-search-toc .submenu-column {
+	width: 100%; vertical-align: text-top; display: inline-block;
+}
+.from-search-toc :nth-child(2n).submenu-column {
+	padding-left: 20px; border-left-color: rgb(212, 221, 228); border-left-width: 1px; border-left-style: dotted;
+}
+html[dir=rtl] .from-search-toc :nth-child(2n).submenu-column {
+	padding-right: 20px; padding-left: 0px; border-right-color: rgb(212, 221, 228); border-left-color: currentColor; border-right-width: 1px; border-left-width: 0px; border-right-style: dotted; border-left-style: none;
+}
+.from-search-toc a {
+	padding: 5px 0px; font-size: 0.85rem; text-decoration: none; display: block;
+}
+.from-search-toc a:active {
+	text-decoration: underline;
+}
+.from-search-toc a:focus {
+	text-decoration: underline;
+}
+.from-search-toc a:hover {
+	text-decoration: underline;
+}
+.from-search-toc::after {
+	border: 10px solid transparent; border-image: none; width: 0px; height: 0px; content: " ";
+}
+.from-search-toc::before {
+	border: 10px solid transparent; border-image: none; width: 0px; height: 0px; content: " ";
+}
+.from-search-toc::before {
+	border-bottom-color: rgb(234, 239, 242); position: absolute; z-index: 2;
+}
+.from-search-toc::after {
+	border-bottom-color: rgb(187, 191, 194); position: absolute; z-index: 1;
+}
+@media all and (max-width:768px)
+{
+.from-search-toc .submenu-column {
+	padding-left: 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+.from-search-toc :nth-child(2n).submenu-column {
+	padding-left: 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+html[dir=rtl] .from-search-toc .submenu-column {
+	padding-right: 0px; padding-left: 0px; border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir=rtl] .from-search-toc :nth-child(2n).submenu-column {
+	padding-right: 0px; padding-left: 0px; border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+}
+@media all and (max-width:480px)
+{
+.from-search-toc {
+	width: auto;
+}
+.from-search-toc .submenu-column {
+	width: auto; display: block;
+}
+}
+.from-search-toc::after {
+	display: none;
+}
+.from-search-toc::before {
+	display: none;
+}
+.from-search-toc ol {
+	padding-left: 20px; list-style-type: decimal;
+}
+.from-search-toc a.current {
+	color: rgb(136, 136, 136); cursor: default; pointer-events: none;
+}
+@media print
+{
+.from-search {
+	padding-left: 0px;
+}
+.from-search-navigate-wrap {
+	padding-left: 0px;
+}
+.from-search-next-box {
+	padding-left: 0px;
+}
+.from-search-previous-box {
+	padding-left: 0px;
+}
+}
+.article-meta {
+	min-height: 41px;
+}
+#edit-document #article-head {
+	position: relative;
+}
+.crumbs {
+	font-size: 0.85rem; margin-bottom: 10px;
+}
+.crumbs li {
+	margin-right: 10px; display: inline-block;
+}
+html[dir=rtl] .crumbs li {
+	margin-right: 0px; margin-left: 10px;
+}
+.crumbs a {
+	display: block;
+}
+.crumbs a::after {
+	color: rgb(193, 194, 196); font-family: FontAwesome; font-size: 70%; text-decoration: none; margin-left: 4px !important; display: inline-block; content: "\f054";
+}
+html[dir=rtl] .crumbs a::after {
+	margin-right: 4px !important; margin-left: 0px !important; content: "\f053";
+}
+.crumbs a {
+	text-decoration: none;
+}
+.crumbs a:active {
+	text-decoration: underline;
+}
+.crumbs a:focus {
+	text-decoration: underline;
+}
+.crumbs a:hover {
+	text-decoration: underline;
+}
+@media print
+{
+.crumbs {
+	display: none;
+}
+}
+#page-buttons {
+	padding: 5px 0px; width: auto; float: right;
+}
+.page-buttons {
+	padding: 5px 0px; width: auto; float: right;
+}
+html[dir=rtl] #page-buttons {
+	float: left;
+}
+html[dir=rtl] .page-buttons {
+	float: left;
+}
+.fixed#page-buttons {
+	z-index: 50; -ms-overflow-y: inherit;
+}
+.fixed.page-buttons {
+	z-index: 50; -ms-overflow-y: inherit;
+}
+#page-buttons > li {
+	text-align: left; margin-left: 10px; display: inline-block; position: relative;
+}
+.page-buttons > li {
+	text-align: left; margin-left: 10px; display: inline-block; position: relative;
+}
+html[dir=rtl] #page-buttons > li {
+	text-align: right;
+}
+html[dir=rtl] .page-buttons > li {
+	text-align: right;
+}
+#page-buttons > li a {
+	font-size: 0.85rem;
+}
+#page-buttons > li button {
+	font-size: 0.85rem;
+}
+#page-buttons > li input[type=button] {
+	font-size: 0.85rem;
+}
+#page-buttons > li input[type=submit] {
+	font-size: 0.85rem;
+}
+.page-buttons > li a {
+	font-size: 0.85rem;
+}
+.page-buttons > li button {
+	font-size: 0.85rem;
+}
+.page-buttons > li input[type=button] {
+	font-size: 0.85rem;
+}
+.page-buttons > li input[type=submit] {
+	font-size: 0.85rem;
+}
+#page-buttons > li .transparent {
+	padding-right: 0px; padding-left: 0px;
+}
+.page-buttons > li .transparent {
+	padding-right: 0px; padding-left: 0px;
+}
+#page-buttons > li i[class^=icon-] {
+	font-size: 1.14rem;
+}
+.page-buttons > li i[class^=icon-] {
+	font-size: 1.14rem;
+}
+@media all and (max-width:768px)
+{
+.page-buttons > li.page-buttons-edit {
+	display: none;
+}
+}
+@media print
+{
+.page-buttons {
+	display: none;
+}
+}
+.move-page #page-buttons {
+	margin: 20px 0px; top: auto; text-align: left; right: auto; float: none; position: relative;
+}
+#translate-document header .page-buttons {
+	clear: both; margin-bottom: 0px;
+}
+#edit-document .page-buttons {
+	z-index: 1;
+}
+#new-document .page-buttons {
+	z-index: 1;
+}
+#translate-document .page-buttons {
+	z-index: 1;
+}
+#edit-document .page-buttons {
+	padding: 0px; text-align: right; margin-bottom: -10px; float: none;
+}
+#new-document .page-buttons {
+	padding: 0px; text-align: right; margin-bottom: -10px; float: none;
+}
+#translate-document .page-buttons {
+	padding: 0px; text-align: right; margin-bottom: -10px; float: none;
+}
+.move-page .page-buttons {
+	padding: 0px; text-align: right; margin-bottom: -10px; float: none;
+}
+html[dir=rtl] #edit-document .page-buttons {
+	text-align: left;
+}
+html[dir=rtl] #new-document .page-buttons {
+	text-align: left;
+}
+html[dir=rtl] #translate-document .page-buttons {
+	text-align: left;
+}
+html[dir=rtl] .move-page .page-buttons {
+	text-align: left;
+}
+#edit-document .page-buttons li {
+	margin-bottom: 10px;
+}
+#new-document .page-buttons li {
+	margin-bottom: 10px;
+}
+#translate-document .page-buttons li {
+	margin-bottom: 10px;
+}
+.move-page .page-buttons li {
+	margin-bottom: 10px;
+}
+#edit-document .page-buttons a {
+	border: 0px currentColor; border-image: none; display: inline-block; box-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+}
+#edit-document .page-buttons button {
+	border: 0px currentColor; border-image: none; display: inline-block; box-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+}
+#new-document .page-buttons a {
+	border: 0px currentColor; border-image: none; display: inline-block; box-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+}
+#new-document .page-buttons button {
+	border: 0px currentColor; border-image: none; display: inline-block; box-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+}
+#translate-document .page-buttons a {
+	border: 0px currentColor; border-image: none; display: inline-block; box-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+}
+#translate-document .page-buttons button {
+	border: 0px currentColor; border-image: none; display: inline-block; box-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+}
+.move-page .page-buttons a {
+	border: 0px currentColor; border-image: none; display: inline-block; box-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+}
+.move-page .page-buttons button {
+	border: 0px currentColor; border-image: none; display: inline-block; box-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+}
+div.note {
+	background: rgba(231, 228, 157, 0.25); padding: 10px 15px; border: 5px solid rgba(231, 228, 157, 0.15); color: rgba(0, 0, 0, 0.65); font-style: italic; margin-bottom: 20px;
+}
+div.note > p:last-child {
+	margin-bottom: 0px;
+}
+.moreinfo {
+	background: rgb(244, 247, 248); padding: 24px 24px 24px 30px; margin-bottom: 24px; position: relative;
+}
+.moreinfo dl {
+	margin-bottom: 0px;
+}
+.moreinfo dd {
+	margin-bottom: 10px;
+}
+.moreinfo dd:last-child {
+	margin-bottom: 0px;
+}
+.moreinfo::after {
+	left: 0px; top: 5px; border-top-color: transparent; border-bottom-color: transparent; border-left-color: rgb(255, 255, 255); border-top-width: 24px; border-bottom-width: 24px; border-left-width: 15px; border-top-style: solid; border-bottom-style: solid; border-left-style: solid; display: block; position: absolute; content: "";
+}
+.summary {
+	background: rgb(244, 247, 248); padding: 20px; font-weight: 700; margin-bottom: 20px;
+}
+.summary > p:last-child {
+	margin-bottom: 0px;
+}
+.notice {
+	border-width: 2px; border-style: solid; padding: 10px; font-size: 1rem; margin-bottom: 20px;
+}
+.notice :last-child {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+.warning {
+	background: rgba(193, 56, 50, 0.85); margin: 0px 0px 20px; padding: 10px; border: 5px solid rgba(0, 0, 0, 0.1); color: rgb(255, 255, 255); font-size: 1rem; font-style: italic;
+}
+.warning :last-child {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+.warning pre:last-child {
+	padding-bottom: 15px;
+}
+.warning-review.warning a {
+	border-color: rgb(0, 149, 221); color: rgb(0, 149, 221);
+}
+.warning-review.warning a:hover {
+	border-color: rgb(0, 149, 221); color: rgb(0, 149, 221);
+}
+.warning-review.warning a:visited {
+	border-color: rgb(0, 149, 221); color: rgb(0, 149, 221);
+}
+.footnote {
+	font-size: 60%; vertical-align: super;
+}
+.column-container #wikiArticle .themeUpdated {
+	display: none;
+}
+.equalColumnHeights {
+	display: table; border-collapse: separate; border-spacing: 20px;
+}
+.equalColumnHeights div {
+	width: 50%; height: 100%; display: table-cell;
+}
+table#fullwidth-table td.thirdColumn {
+	width: 30%;
+}
+.greenBg {
+	width: 30%; background-color: rgb(128, 255, 128);
+}
+.lightGreenBg {
+	background-color: rgb(220, 255, 220);
+}
+.yellowBg {
+	background-color: rgb(255, 255, 220);
+}
+.orangeBg {
+	background-color: rgb(255, 160, 100);
+}
+.redBg {
+	background-color: rgb(255, 102, 102);
+}
+.callout-link-container {
+	height: 100%; position: relative;
+}
+.callout-link-wrapper {
+	padding-top: 32px;
+}
+.callout-link {
+	right: 0px; bottom: 0px; font-size: 14px; font-style: italic; font-weight: 400; display: block; position: absolute;
+}
+#wikiArticle i[class^=icon-] {
+	margin-left: 0px;
+}
+.centered iframe {
+	margin: 0px auto; border: currentColor; border-image: none; display: block;
+}
+@media all and (min-width:1050px)
+{
+.landing {
+	display: table-row;
+}
+}
+.landingPageBox {
+	padding: 0px; width: 100%; margin-bottom: 3px; border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.landingPageBox ul {
+	padding-left: 44px;
+}
+.wideColumnBox {
+	column-width: 375px; -moz-column-width: 375px; -webkit-column-width: 375px; -ms-column-width: 375px;
+}
+.wideColumnBoxList li {
+	line-height: 1.5; padding-left: 0px; list-style-type: none; page-break-inside: avoid;
+}
+.multiColumnList {
+	column-width: 250px; -moz-column-width: 250px; -webkit-column-width: 250px; -ms-column-width: 250px;
+}
+.multiColumnList li {
+	line-height: 1.5; padding-left: 0px; list-style-type: none; page-break-inside: avoid;
+}
+.smallMultiColumnList {
+	column-width: 120px; -moz-column-width: 120px; -webkit-column-width: 120px; -ms-column-width: 120px;
+}
+.smallMultiColumnList li {
+	padding-left: 0px; list-style-type: none; page-break-inside: avoid;
+}
+.horizFlexboxContainer {
+	flex-flow:column nowrap; display: flex; justify-content: center; align-items: center; align-content: center; -webkit-flex-flow: column; -webkit-justify-content: center; -webkit-align-content: center; -webkit-align-items: center; -webkit-flex-direction: column;
+}
+.smallTextMultiColumnBoxHeading {
+	padding: 10px; flex:0 1 auto; width: 75%; font-weight: 700; background-color: rgb(224, 226, 228); -webkit-flex: 0 1 auto;
+}
+.smallTextMultiColumnBoxList {
+	padding: 10px; flex:0 1 auto; width: 75%; order: 2; background-color: rgb(244, 247, 248); -webkit-flex: 0 1 auto; -webkit-order: 2;
+}
+.smallTextMultiColumnBoxList ul {
+	padding-left: 0px; margin-bottom: 0px; column-width: 100px; -moz-column-width: 100px; -webkit-column-width: 100px; -ms-column-width: 100px;
+}
+.smallTextMultiColumnBoxList li {
+	padding-left: 0px; font-size: 80%; list-style-type: none;
+}
+@media all and (max-width:768px)
+{
+.smallTextMultiColumnBoxHeading {
+	width: 90%;
+}
+.smallTextMultiColumnBoxList {
+	width: 90%;
+}
+}
+.fancyTOC {
+	columns: auto 18em; margin-bottom: 1em; counter-reset: fancyTOC; column-gap: 20px; -moz-columns: 18em; -webkit-columns: 18em;
+}
+.fancyTOC .button {
+	color: rgb(255, 255, 255); line-height: 1.5; overflow: hidden; font-size: 1.5em; margin-right: 0px; margin-bottom: 0.25em; display: block; page-break-inside: avoid; break-inside: avoid-column; background-color: rgb(162, 76, 76); -webkit-column-break-inside: avoid; column-break-inside: avoid;
+}
+.fancyTOC a::before {
+	content: counter(fancyTOC) ". "; counter-increment: fancyTOC;
+}
+.fancyTOC a::after {
+	content: " »"; speak: none;
+}
+.fancyTOC .button:active {
+	background-color: rgb(194, 108, 108);
+}
+.fancyTOC .button:focus {
+	background-color: rgb(194, 108, 108);
+}
+.fancyTOC .button:hover {
+	background-color: rgb(194, 108, 108);
+}
+s.deprecatedElement {
+	text-decoration: none; opacity: 0.3;
+}
+s.nonStdElement {
+	text-decoration: none; opacity: 0.3;
+}
+s.obsoleteElement {
+	text-decoration: none; opacity: 0.3;
+}
+div.widgeted.index {
+	columns: auto 10em; -moz-columns: 10em; -webkit-columns: 10em;
+}
+div.widgeted.index li {
+	padding-left: 18px;
+}
+div.widgeted.index li.html5 {
+	background-position: left 4px; background-image: url("/files/3855/HTML5_Badge_16.png"); background-repeat: no-repeat;
+}
+[dir=rtl] div.widgeted.index li {
+	padding-right: 18px;
+}
+[dir=rtl] div.widgeted.index li.html5 {
+	background-position: right 4px; background-image: url("/files/3855/HTML5_Badge_16.png"); background-repeat: no-repeat;
+}
+[dir=rtl] div.widgeted.index span {
+	padding-right: 24px;
+}
+div.widgeted.index li.webcomp::after {
+	font-family: FontAwesome; content: " \f085";
+}
+.cleared {
+	clear: both;
+}
+.clearLeft {
+	clear: left;
+}
+#wikiArticle .breadcrumbs {
+	margin-bottom: 1em; display: block;
+}
+table.html5ArticleToc {
+	border: 0px transparent; width: 100%; background-color: transparent;
+}
+.html5ArticleToc thead th {
+	padding: 0.5em 1em;
+}
+.html5ArticleToc tbody td {
+	vertical-align: middle;
+}
+.html5ArticleToc ul {
+	margin: 0px; padding: 0px;
+}
+.html5ArticleToc ul li {
+	margin: 0px 0.25em; display: inline;
+}
+table.withoutBorder {
+	border: currentColor; border-image: none;
+}
+table.withoutBorder td {
+	border: currentColor; border-image: none;
+}
+table.withoutBorder th {
+	border: currentColor; border-image: none;
+}
+table.withoutBorder tr {
+	border: currentColor; border-image: none;
+}
+td.horizontalLine {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+td.column {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+td.bottomPart {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+td.verticalText {
+	width: 3em; transform: rotate(-90deg); -webkit-transform: rotate(-90deg);
+}
+table.blockTable {
+	border-collapse: collapse;
+}
+table.blockTable {
+	margin: 1px; padding: 1px;
+}
+table.blockTable td {
+	margin: 1px; padding: 1px;
+}
+table.blockTable .verticalColumn {
+	border-right-color: currentColor; border-left-color: currentColor; border-right-width: medium; border-left-width: medium; border-right-style: none; border-left-style: none;
+}
+div.index {
+	columns: auto 18em; -moz-columns: 18em; -webkit-columns: 18em;
+}
+div.index > span {
+	font-family: Georgia,Times,"Times New Roman",serif; font-size: 1.6em;
+}
+div.index ol {
+	padding-left: 0px; margin-left: 0px; list-style-type: none;
+}
+div.index ul {
+	padding-left: 0px; margin-left: 0px; list-style-type: none;
+}
+.cssprop {
+	background-color: rgba(255, 203, 0, 0.1);
+}
+[dir=ltr] .cssprop {
+	margin: 0px 0px 20px; padding: 14px 0px 14px 40px; clear: left; border-left-color: rgba(255, 203, 0, 0.5); border-left-width: 6px; border-left-style: solid;
+}
+[dir=rtl] .cssprop {
+	margin: 0px 0px 20px; padding: 14px 40px 14px 0px; clear: right; border-right-color: rgba(255, 203, 0, 0.5); border-right-width: 6px; border-right-style: solid;
+}
+.cssprop li {
+	margin: 0px; padding: 3px; display: table-row;
+}
+.cssprop li dfn {
+	padding: 0px 5px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; display: table-cell; white-space: pre; cursor: inherit;
+}
+.cssprop li dfn::after {
+	content: ":";
+}
+.cssprop li li {
+	line-height: 1; display: list-item; list-style-type: disc;
+}
+.htmlelt {
+	padding: 11px 22px; display: table; background-color: rgba(255, 149, 0, 0.1);
+}
+[dir=ltr] .htmlelt {
+	clear: left; border-left-color: rgba(255, 149, 0, 0.5); border-left-width: 6px; border-left-style: solid;
+}
+[dir=rtl] .htmlelt {
+	clear: right; border-right-color: rgba(255, 149, 0, 0.5); border-right-width: 6px; border-right-style: solid;
+}
+.htmlelt li {
+	margin: 0px; padding: 3px; text-align: left; display: table-row;
+}
+.htmlelt li dfn {
+	padding: 0px 5px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; display: table-cell; white-space: pre; cursor: inherit;
+}
+.htmlelt li dfn::after {
+	content: ":";
+}
+.htmlelt li li {
+	line-height: 1; display: list-item; list-style-type: disc;
+}
+.audionodebox {
+	padding: 11px 22px; display: table; background-color: rgba(117, 195, 165, 0.1);
+}
+[dir=ltr] .audionodebox {
+	clear: left; border-left-color: rgba(117, 195, 165, 0.5); border-left-width: 6px; border-left-style: solid;
+}
+[dir=rtl] .audionodebox {
+	clear: right; border-right-color: rgba(117, 195, 165, 0.5); border-right-width: 6px; border-right-style: solid;
+}
+.audionodebox li {
+	margin: 0px; padding: 3px; text-align: left; display: table-row;
+}
+.summary-box-events li {
+	margin: 0px; padding: 3px; text-align: left; display: table-row;
+}
+.summary-box-js li {
+	margin: 0px; padding: 3px; text-align: left; display: table-row;
+}
+.audionodebox li dfn {
+	padding: 0px 5px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; display: table-cell; white-space: pre; cursor: inherit;
+}
+.summary-box-events li dfn {
+	padding: 0px 5px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; display: table-cell; white-space: pre; cursor: inherit;
+}
+.summary-box-js li dfn {
+	padding: 0px 5px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; display: table-cell; white-space: pre; cursor: inherit;
+}
+.audionodebox li dfn::after {
+	content: ":";
+}
+.summary-box-events li dfn::after {
+	content: ":";
+}
+.summary-box-js li dfn::after {
+	content: ":";
+}
+.audionodebox li li {
+	line-height: 1; display: list-item; list-style-type: disc;
+}
+.summary-box-events li li {
+	line-height: 1; display: list-item; list-style-type: disc;
+}
+.summary-box-js li li {
+	line-height: 1; display: list-item; list-style-type: disc;
+}
+table.HTMLElmNav {
+	border-width: 5px; margin: 1em auto;
+}
+table.HTMLElmNav td {
+	text-align: center;
+}
+table.HTMLElmNav th {
+	text-align: center;
+}
+.method {
+	margin-top: 1em; margin-bottom: 2em; margin-left: 10px;
+}
+.method > .name {
+	font-size: 13pt; margin-bottom: 0.2em; display: block;
+}
+.method > .name > .param::after {
+	padding-right: 0.5em; content: ",";
+}
+.method > .name > :last-of-type.param::after {
+	content: "";
+}
+.method > .name > .param > .name::after {
+	font-weight: 400; content: " as ";
+}
+.method > .name > :not(.required).param {
+	font-style: italic;
+}
+.method > .name > :not(.required).param::before {
+	content: "[";
+}
+.method > .name > :not(.required).param::after {
+	content: "]";
+}
+.method > .description {
+	color: rgb(68, 68, 68); font-size: 10pt; font-style: italic; margin-bottom: 7px; display: block;
+}
+.method > .name > .returns::before {
+	font-style: italic; font-weight: 400; content: " returns ";
+}
+.method > .name > .returns {
+	font-weight: 700;
+}
+.method > .params {
+	color: rgb(85, 85, 85); display: block;
+}
+.method > .params > .param {
+	margin-bottom: 5px; display: block;
+}
+.method > .params > .param > .name {
+	font-weight: 700; margin-right: 0.5em; display: inline-block; min-width: 80px;
+}
+.method > .params > .param > .description {
+	width: 300px; margin-right: 30px; vertical-align: top; display: inline-block;
+}
+.method > .params > .param > .type {
+	width: 150px; font-weight: 700; vertical-align: top; display: inline-block;
+}
+.method > .params > .param > .type::before {
+	color: rgb(136, 136, 136); font-weight: 400; content: "Type ";
+}
+.method > .params > .param > .default {
+	width: 150px; font-weight: 700; vertical-align: top; display: inline-block;
+}
+.method > .params > .param > .default::before {
+	color: rgb(136, 136, 136); font-weight: 400; content: "Default ";
+}
+.geckoVersionNote {
+	border-left-color: rgb(0, 0, 136); border-left-width: 5px; border-left-style: solid; background-color: rgb(224, 224, 255);
+}
+.geckoVersionNote p {
+	border: 0px currentColor; border-image: none; padding-left: 4px;
+}
+.geckoVersionHeading {
+	font: 16px/1.7 Verdana, Tahoma, sans-serif; height: 42px; color: rgb(255, 255, 255); margin-top: 0px; margin-bottom: 4px; margin-left: 0px; font-size-adjust: none; font-stretch: normal; background-color: rgb(0, 0, 136);
+}
+.geckoVersionHeading a:link {
+	color: rgb(221, 221, 221);
+}
+.geckoVersionHeading a:visited {
+	color: rgb(238, 238, 238);
+}
+.geckoVersionHeading a:focus {
+	color: rgb(255, 221, 221);
+}
+.geckoVersionHeading a:hover {
+	color: rgb(255, 221, 221);
+}
+.experimentalIcon {
+	border: 3px solid orange; border-image: none; width: 4px; height: 4px; color: orange; display: inline-block; background-color: rgb(255, 255, 255);
+}
+.nonstandardIcon {
+	border: 1px solid red; border-image: none; width: 8px; height: 8px; color: red; display: inline-block; background-color: red;
+}
+.obsoleteIcon {
+	border: 1px solid rgb(0, 0, 0); border-image: none; width: 8px; height: 8px; color: rgb(0, 0, 0); display: inline-block; background-color: rgb(0, 0, 0);
+}
+.deprecatedIcon {
+	border: 3px solid rgb(0, 0, 0); border-image: none; width: 4px; height: 4px; color: rgb(0, 0, 0); display: inline-block; background-color: rgb(255, 255, 255);
+}
+.indexListRow {
+	flex-flow:row wrap; display: flex; justify-content: flex-start; align-items: flex-start; align-content: stretch; -webkit-justify-content: flex-start; -webkit-align-content: stretch; -webkit-align-items: flex-start; -webkit-flex-direction: row; -webkit-flex-wrap: wrap;
+}
+.indexListTerm {
+	flex:0 1 auto; order: 0; align-self: flex-start; -webkit-flex: 0 1 auto; -webkit-order: 0; -webkit-align-self: flex-start;
+}
+.indexListBadges {
+	flex:0 1 auto; padding-left: 6px; margin-right: 6px; order: 0; align-self: flex-end; -webkit-flex: 0 1 auto; -webkit-order: 0; -webkit-align-self: flex-end;
+}
+.badge {
+	padding: 0.1em 0.6em; border-radius: 8px; border: 1px solid rgb(170, 170, 170); border-image: none; top: -2px; height: 1.4em; line-height: 1.3; font-size: 70%; font-weight: 700; vertical-align: middle; display: inline-block; position: relative; cursor: default;
+}
+.badgeText {
+	-ms-hyphens: none; -moz-hyphens: none; -webkit-hyphens: none; hyphens: none;
+}
+.banner {
+	margin: 10px 0px; padding: 2px 10px; overflow: hidden; font-size: 12px; font-weight: 400; display: block;
+}
+.bannerHeading {
+	text-align: inherit; padding-bottom: 2px; font-weight: 700;
+}
+.bannerText {
+	text-align: center; font-weight: 400;
+}
+.icon {
+	padding-left: 3.1em;
+}
+[dir=rtl] .icon {
+	padding-right: 3.1em; padding-left: 0.8em;
+}
+.icon::before {
+	background: no-repeat center / 2.6em rgb(255, 255, 255); border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(170, 170, 170) currentColor rgb(170, 170, 170) rgb(170, 170, 170); border-radius: 100%; border-image: none; left: -2px; top: 50%; width: 2.8em; height: 2.8em; margin-top: -1.5em; position: absolute; content: ""; box-sizing: border-box; -moz-box-sizing: border-box;
+}
+[dir=rtl] .icon::before {
+	border-width: 1px 1px 1px medium; border-style: solid solid solid none; border-color: rgb(170, 170, 170) rgb(170, 170, 170) rgb(170, 170, 170) currentColor; border-image: none; left: auto; right: -2px;
+}
+.nonstandardBadge {
+	background: linear-gradient(to right, rgb(240, 222, 0) 30%, rgb(240, 255, 25)); color: rgb(0, 0, 0); text-shadow: 1px 1px 0px #ddd;
+}
+.geckoVersionBadge {
+	background: rgba(117, 195, 165, 0.44); border: 5px solid rgba(0, 0, 0, 0.05); border-image: none; color: rgb(0, 0, 0); text-shadow: 1px 1px 0px #ddd;
+}
+.firefoxVersionBadge {
+	color: rgb(0, 0, 0); overflow: hidden; white-space: nowrap; text-shadow: 1px 1px 0px #ccc; background-image: linear-gradient(to right, rgb(254, 223, 158) 30%, rgb(254, 241, 212)); background-repeat: no-repeat; background-size: contain; background-color: rgb(254, 223, 158);
+}
+.firefoxVersionBadge a:link {
+	color: rgb(0, 0, 0); text-decoration: underline;
+}
+.firefoxVersionBadge a:visited {
+	color: rgb(0, 0, 0); text-decoration: underline;
+}
+.firefoxVersionBadge a:hover {
+	color: rgb(136, 85, 51); text-decoration: none;
+}
+.firefoxVersionBadge a:active {
+	color: rgb(136, 85, 136); text-decoration: none;
+}
+.unimplementedBadge {
+	border-color: rgb(255, 20, 147); color: rgb(0, 0, 0); text-shadow: 1px 1px 0px #ddd; background-color: rgb(255, 182, 193);
+}
+.obsoleteBadge {
+	background: linear-gradient(to right, rgb(254, 188, 188) 30%, ivory); border-color: red; color: rgb(0, 0, 0); text-shadow: 1px 1px 0px #ddd;
+}
+.deprecatedBadge {
+	background: linear-gradient(to right, rgb(204, 204, 255) 30%, rgb(238, 238, 255)); border-color: rgb(0, 0, 255); color: rgb(0, 0, 0); text-shadow: 1px 1px 0px #ddd;
+}
+.experimentalBadge {
+	background: linear-gradient(to right, rgb(255, 239, 217) 40%, rgb(255, 253, 224)); color: rgb(0, 0, 0); text-shadow: 1px 1px 0px #ddd;
+}
+.privilegedBadge {
+	background: linear-gradient(to right, rgb(255, 189, 25) 30%, rgb(255, 178, 0)); color: rgb(0, 0, 0); text-shadow: 1px 1px 0px #ddd;
+}
+[dir=rtl] .privilegedBadge {
+	background: linear-gradient(to left, rgb(255, 189, 25) 30%, rgb(255, 178, 0));
+}
+.privilegedBadge.icon::before {
+	background-image: url("https://mdn.mozillademos.org/files/5061/firefoxos-logo-sm.png"); background-color: orange;
+}
+table.compat-table {
+	margin: 0px; border: 1px solid transparent; border-image: none; border-collapse: collapse;
+}
+table.compat-table td {
+	background: rgb(255, 255, 255); padding: 5px; border: 1px solid rgba(212, 221, 228, 0.25); border-image: none; font-size: 12px; vertical-align: top; -ms-word-wrap: break-word;
+}
+table.compat-table td.header {
+	background: 0px 0px; padding: 2px 4px 8px; border: 1px solid rgba(212, 221, 228, 0); border-image: none; line-height: 100%; font-family: "Open Sans Light",sans-serif; font-size: 16px; font-weight: 200;
+}
+table.compat-table th {
+	background: 0px 0px; padding: 2px 4px 8px; border: 1px solid rgba(212, 221, 228, 0); border-image: none; line-height: 100%; font-family: "Open Sans Light",sans-serif; font-size: 16px; font-weight: 200;
+}
+div.action-driven {
+	margin: 0.8em; vertical-align: top; float: none; display: inline-block; min-height: 8.5em; box-shadow: 0.2em 0.1em 0.1em gray;
+}
+div.action-driven > div {
+	font: 400 20px/normal "Bebas Neue", "League Gothic", Haettenschweiler, Impact, "Arial Narrow", Meiryo, sans-serif; text-transform: uppercase; font-size-adjust: none; font-stretch: normal;
+}
+.experimental.notice {
+	border-width: 5px !important; border-style: solid !important; border-color: rgba(0, 0, 0, 0.05); background-color: rgba(255, 203, 0, 0.5);
+}
+.card-grid > li > span:first-of-type {
+	font-weight: 700;
+}
+ul.card-grid {
+	padding-left: 0px; list-style-type: none;
+}
+ul.card-grid li {
+	padding: 10px; margin-bottom: 25px;
+}
+@media only screen and (min-width:760px)
+{
+ul.card-grid {
+	list-style: none; padding-left: 40px;
+}
+.card-grid {
+	padding-bottom: 25px; border-spacing: 30px 0;
+}
+.card-grid > li > span:first-of-type {
+	font-weight: 400;
+}
+.card-grid > li {
+	margin: 3px 12px 20px; padding: 20px; border-radius: 6px; width: 200px; vertical-align: top; display: table-cell; position: relative; z-index: 1; -ms-word-wrap: break-word; min-height: 130px; box-shadow: 0px 2px 4px rgba(0,0,0,0.1); background-clip: padding-box; background-color: rgb(204, 204, 204);
+}
+.card-grid > li::before {
+	left: 1px; top: 1px; right: 1px; position: absolute; z-index: -1;
+}
+.card-grid > li img {
+	float: left; max-width: 35%;
+}
+.double-card {
+	width: 430px !important;
+}
+.card-grid > li > ul > li {
+	padding-top: 6px; padding-bottom: 0px; margin-bottom: 0px; list-style-type: disc;
+}
+.card-grid > li > ul {
+	margin-bottom: 25px;
+}
+.card-grid > li span {
+	line-height: 22px; letter-spacing: -1px; font-family: "Open Sans Light",Arial,Helvetica,sans-serif; font-size: 22px; margin-bottom: 12px; display: block;
+}
+}
+.card-grid > li {
+	border-radius: 0px; box-shadow: 3px 3px 0px 3px rgba(212,221,228,0.5); background-image: none; background-color: rgba(234, 239, 242, 0.5);
+}
+dl {
+	margin-bottom: 20px;
+}
+.headingWithIndicator {
+	clear: both;
+}
+.headingWithIndicator::after {
+	clear: both; display: table; content: " ";
+}
+.headingWithIndicator h1 {
+	float: left;
+}
+.headingWithIndicator h2 {
+	float: left;
+}
+.headingWithIndicator h3 {
+	float: left;
+}
+.headingWithIndicator h4 {
+	float: left;
+}
+.headingWithIndicator h5 {
+	float: left;
+}
+.headingWithIndicator h6 {
+	float: left;
+}
+.blockIndicator {
+	background: none; margin: 0px 0px 1.5em; padding: 10px 10px 0px; border: 5px solid currentColor; border-image: none; font-size: 12px;
+}
+.indicatorInHeadline {
+	background: none; margin: 0px 0px 1.5em; padding: 10px 10px 0px; border: 5px solid currentColor; border-image: none; font-size: 12px;
+}
+.inlineIndicator {
+	background: none; margin: 0px 0px 1.5em; padding: 10px 10px 0px; border: 5px solid currentColor; border-image: none; font-size: 12px;
+}
+.overheadIndicator {
+	background: none; margin: 0px 0px 1.5em; padding: 10px 10px 0px; border: 5px solid currentColor; border-image: none; font-size: 12px;
+}
+.redesign .blockIndicator {
+	padding: 10px;
+}
+.redesign .indicatorInHeadline {
+	padding: 10px;
+}
+.redesign .inlineIndicator {
+	padding: 10px;
+}
+.redesign .overheadIndicator {
+	padding: 10px;
+}
+.blockIndicator > :last-child {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+.overheadIndicator > :last-child {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+.blockIndicator pre {
+	color: rgb(77, 78, 83);
+}
+.overheadIndicator pre {
+	color: rgb(77, 78, 83);
+}
+.redesign .indicatorInHeadline {
+	border-width: 0px 0px 0px 4px; padding: 6px 6px 4px; border-radius: 2px; line-height: normal; letter-spacing: 1px; font-family: Helvetica,Arial,sans-serif; font-size: 10px; font-weight: 400; margin-left: 11px; vertical-align: top; display: inline-block; min-width: 20px;
+}
+.redesign .inlineIndicator {
+	border-width: 0px 0px 0px 4px; padding: 6px 6px 4px; border-radius: 2px; line-height: normal; letter-spacing: 1px; font-family: Helvetica,Arial,sans-serif; font-size: 10px; font-weight: 400; margin-left: 11px; vertical-align: top; display: inline-block; min-width: 20px;
+}
+.inlineIndicator {
+	border-width: 1px; border-style: solid; margin: 0px 2px; padding: 0px 2px; font-size: 12px; white-space: nowrap;
+}
+.megaWarningInline {
+	border-width: 1px; border-style: solid; margin: 0px 2px; padding: 0px 2px; font-size: 12px; white-space: nowrap;
+}
+.todoInline {
+	border-left-width: 8px; white-space: normal;
+}
+.megaWarningInline {
+	background: red; border-color: rgb(129, 129, 81); color: rgb(255, 255, 255); font-size: small; font-weight: 700; vertical-align: middle; float: right;
+}
+.noscriptInline {
+	font-weight: 700;
+}
+.notXPCOMInline {
+	font-weight: 700;
+}
+.standardNoteBlock {
+	margin: 10px 0px; padding: 0px 10px; border: 1px solid rgb(0, 0, 0); border-image: none; text-align: center; overflow: hidden;
+}
+.standardNoteHeader {
+	margin: 10px 0px; padding: 0px 10px; border: 1px solid rgb(0, 0, 0); border-image: none; text-align: center; overflow: hidden;
+}
+.blockIndicator p {
+	margin: 4px 0px;
+}
+.draftHeader strong {
+	padding-top: 10px; display: block;
+}
+.draftHeader div {
+	padding-bottom: 10px; font-size: x-small;
+}
+html[dir=rtl] .warningHeader {
+	background-position: 99% 10px !important; padding: 1em 130px 1em 1em !important;
+}
+.indicatorInHeadline {
+	padding: 1px 2px; border: 1px solid rgb(0, 0, 0); border-image: none; font-size: 12px; vertical-align: middle; float: right; white-space: nowrap;
+}
+.standardNoteMethod {
+	padding: 1px 2px; border: 1px solid rgb(0, 0, 0); border-image: none; font-size: 12px; vertical-align: middle; float: right; white-space: nowrap;
+}
+[dir=rtl] .indicatorInHeadline {
+	float: left;
+}
+[dir=rtl] .standardNoteMethod {
+	float: left;
+}
+.deprecatedMethod {
+	font-weight: 700;
+}
+.noscriptMethod {
+	font-weight: 700;
+}
+.renamedMethod {
+	font-weight: 700;
+}
+.unimplementedMethod {
+	font-weight: 700;
+}
+.draft {
+	background: rgb(255, 255, 204); border-color: rgb(153, 153, 0);
+}
+.redesign .draft {
+	background: rgba(255, 203, 0, 0.5); border-color: rgba(0, 0, 0, 0.05);
+}
+.htmlVer {
+	background: rgb(204, 238, 238); border-color: rgb(38, 115, 115);
+}
+.redesign .htmlVer {
+	border-color: rgba(0, 0, 0, 0.05);
+}
+.nonStandard {
+	background: rgba(193, 56, 50, 0.85); border-color: rgba(0, 0, 0, 0.05); color: rgb(255, 255, 255);
+}
+.nonStandard a {
+	color: rgb(255, 255, 0); text-decoration: none; border-bottom-color: rgb(255, 255, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.nonStandard a:hover {
+	color: rgb(255, 255, 0); text-decoration: none; border-bottom-color: rgb(255, 255, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.nonStandard a:visited {
+	color: rgb(255, 255, 0); text-decoration: none; border-bottom-color: rgb(255, 255, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.warning a {
+	color: rgb(255, 255, 0); text-decoration: none; border-bottom-color: rgb(255, 255, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.warning a:hover {
+	color: rgb(255, 255, 0); text-decoration: none; border-bottom-color: rgb(255, 255, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.warning a:visited {
+	color: rgb(255, 255, 0); text-decoration: none; border-bottom-color: rgb(255, 255, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.unimplemented {
+	background: rgba(193, 56, 50, 0.35); border-color: rgba(0, 0, 0, 0.05);
+}
+.deprecated {
+	background: rgba(0, 0, 0, 0.1); border-color: rgba(0, 0, 0, 0.05);
+}
+.domLevel {
+	border-color: rgba(0, 0, 0, 0.05);
+}
+.todo {
+	border-color: rgba(0, 0, 0, 0.05);
+}
+.jsMinVer {
+	background: rgb(255, 255, 225); border-color: rgba(0, 0, 0, 0.05);
+}
+.mbMinVer {
+	background: rgb(255, 255, 225); border-color: rgba(0, 0, 0, 0.05);
+}
+.minVer {
+	background: rgb(255, 255, 225); border-color: rgba(0, 0, 0, 0.05);
+}
+.mobileOnly {
+	background: rgb(255, 225, 190); border-color: rgba(0, 0, 0, 0.05);
+}
+.prefixBox {
+	background: rgb(228, 237, 247); border-color: rgba(0, 0, 0, 0.05);
+}
+.experimental {
+	background: rgb(255, 239, 217); border-color: rgba(0, 0, 0, 0.05);
+}
+.readOnly {
+	background: rgba(0, 0, 0, 0.65); border-color: rgba(0, 0, 0, 0.15); color: rgb(255, 255, 255);
+}
+.noscript {
+	background: red; border-color: rgba(0, 0, 0, 0.05); color: rgb(255, 255, 255);
+}
+.projectSpecific {
+	background: rgb(255, 225, 190); border-color: rgb(129, 129, 81);
+}
+.translationInProgress {
+	background: rgb(163, 245, 163); border-color: rgba(0, 0, 0, 0.05);
+}
+.previousPage {
+	margin-right: 20px; margin-bottom: 20px; float: left;
+}
+html[dir=rtl] .previousPage {
+	margin-right: 0px; margin-left: 20px; float: right;
+}
+.nextPage {
+	margin-top: 20px; margin-left: 20px; float: right;
+}
+html[dir=rtl] .nextPage {
+	margin-right: 20px; margin-left: 0px; float: left;
+}
+a.liveSample {
+	margin: 0px 3px 1em; color: rgb(255, 255, 255); font-size: 1.25em; display: inline-block;
+}
+a.liveSample:link {
+	background-color: rgb(0, 102, 153);
+}
+a.liveSample:visited {
+	background-color: rgb(0, 102, 153);
+}
+a.liveSample:focus {
+	background-color: rgb(0, 153, 230);
+}
+a.liveSample:hover {
+	background-color: rgb(0, 153, 230);
+}
+[dir=rtl] a.liveSample {
+	background-position: left 40% !important; padding: 0.35em 0.75em 0.2em !important;
+}
+.standardSidebar {
+	background: rgb(238, 238, 238); margin: 0px 0px 15px 15px; padding: 5px 15px; font-size: 0.85em; float: right; position: relative; z-index: 2;
+}
+html[dir=rtl] .standardSidebar {
+	margin: 0px 15px 15px 0px; float: left;
+}
+@media all and (max-width:480px)
+{
+html .standardSidebar {
+	margin: 0px 0px 15px; float: none;
+}
+}
+.correct {
+	color: green;
+}
+.incorrect {
+	color: red;
+}
+.best {
+	color: rgb(51, 153, 102);
+}
+.done {
+	text-decoration: line-through;
+}
+.tuto_details {
+	padding: 0.5em; border: 1px solid rgb(51, 102, 187); border-image: none; margin-bottom: 1em;
+}
+.tuto_example {
+	padding: 0.5em; border: 1px solid rgb(51, 102, 187); border-image: none; margin-bottom: 1em;
+}
+.tuto_details {
+	background: rgb(244, 244, 244);
+}
+.tuto_example {
+	background: rgb(255, 255, 244);
+}
+.tuto_type {
+	text-align: left; font-weight: 700;
+}
+a.tutospecial:link {
+	background: rgb(85, 85, 85); padding: 1px 10px; border-radius: 3px; border: 1px outset rgba(50, 50, 50, 0.5); border-image: none; color: rgb(255, 255, 255); font-family: georgia,serif; font-size: 14px; font-style: italic; text-decoration: none;
+}
+a.tutospecial:visited {
+	background: rgb(85, 85, 85); padding: 1px 10px; border-radius: 3px; border: 1px outset rgba(50, 50, 50, 0.5); border-image: none; color: rgb(255, 255, 255); font-family: georgia,serif; font-size: 14px; font-style: italic; text-decoration: none;
+}
+a.tutospecial:active {
+	background-color: rgb(102, 102, 102);
+}
+a.tutospecial:focus {
+	background-color: rgb(102, 102, 102);
+}
+a.tutospecial:hover {
+	background-color: rgb(102, 102, 102);
+}
+#tutochallenge {
+	display: none;
+}
+#tutochallenge a.hideAnswer {
+	text-align: right; font-size: 12px; display: block;
+}
+:target#tutochallenge {
+	display: block;
+}
+#tutochallenge + a {
+	text-align: right; font-size: 12px; display: block;
+}
+:target#tutochallenge + a {
+	display: none;
+}
+div.bug {
+	overflow: hidden;
+}
+div.warning {
+	overflow: hidden;
+}
+.page-content dd {
+	margin: 0.5em;
+}
+[dir=rtl] #nav-main .menu:hover #nav-sub-docs {
+	margin-left: -300px;
+}
+[dir=rtl] .hasJS #nav-main #nav-sub-docs {
+	margin-left: -300px;
+}
+[dir=rtl] #nav-main #nav-sub-docs li {
+	float: right;
+}
+[dir=rtl] #nav-main #nav-sub-docs p {
+	text-align: left;
+}
+[dir=rtl] .page-content ul {
+	padding-right: 22px; padding-left: 0px;
+}
+[dir=rtl] .page-content dd {
+	padding-right: 15px; padding-left: 0px;
+}
+table.fxosScreenGrid {
+	border: currentColor; border-image: none;
+}
+table.fxosScreenGrid tr {
+	border: currentColor; border-image: none;
+}
+table.fxosScreenGrid td {
+	border: currentColor; border-image: none; width: 340px; vertical-align: top;
+}
+table.fxosScreenGrid th {
+	border: currentColor; border-image: none; width: 340px; vertical-align: top;
+}
+div.fxosLiveSampleWrapper {
+	padding: 6px 4px; border: 1px solid rgb(184, 178, 164); border-image: none; width: 328px; text-align: center; background-color: rgb(243, 236, 221);
+}
+.rightButtonBox {
+	width: 250px; float: right; position: relative; z-index: 2;
+}
+[dir=rtl] .rightButtonBox {
+	margin: 0px 15px 15px 0px; float: left;
+}
+.bug-resolved {
+	text-decoration: line-through;
+}
+.spec-CR::before {
+	font: 700 0.7em/normal Helvetica, Arial, sans-serif; margin: 0.2em 0.6em 0px 0px; padding: 0.45em 0.35em 0.35em; border-radius: 2px; letter-spacing: 1px; min-width: 20px; font-size-adjust: none; font-stretch: normal;
+}
+.spec-Draft::before {
+	font: 700 0.7em/normal Helvetica, Arial, sans-serif; margin: 0.2em 0.6em 0px 0px; padding: 0.45em 0.35em 0.35em; border-radius: 2px; letter-spacing: 1px; min-width: 20px; font-size-adjust: none; font-stretch: normal;
+}
+.spec-ED::before {
+	font: 700 0.7em/normal Helvetica, Arial, sans-serif; margin: 0.2em 0.6em 0px 0px; padding: 0.45em 0.35em 0.35em; border-radius: 2px; letter-spacing: 1px; min-width: 20px; font-size-adjust: none; font-stretch: normal;
+}
+.spec-Living::before {
+	font: 700 0.7em/normal Helvetica, Arial, sans-serif; margin: 0.2em 0.6em 0px 0px; padding: 0.45em 0.35em 0.35em; border-radius: 2px; letter-spacing: 1px; min-width: 20px; font-size-adjust: none; font-stretch: normal;
+}
+.spec-PR::before {
+	font: 700 0.7em/normal Helvetica, Arial, sans-serif; margin: 0.2em 0.6em 0px 0px; padding: 0.45em 0.35em 0.35em; border-radius: 2px; letter-spacing: 1px; min-width: 20px; font-size-adjust: none; font-stretch: normal;
+}
+.spec-RC::before {
+	font: 700 0.7em/normal Helvetica, Arial, sans-serif; margin: 0.2em 0.6em 0px 0px; padding: 0.45em 0.35em 0.35em; border-radius: 2px; letter-spacing: 1px; min-width: 20px; font-size-adjust: none; font-stretch: normal;
+}
+.spec-REC::before {
+	font: 700 0.7em/normal Helvetica, Arial, sans-serif; margin: 0.2em 0.6em 0px 0px; padding: 0.45em 0.35em 0.35em; border-radius: 2px; letter-spacing: 1px; min-width: 20px; font-size-adjust: none; font-stretch: normal;
+}
+.spec-RFC::before {
+	font: 700 0.7em/normal Helvetica, Arial, sans-serif; margin: 0.2em 0.6em 0px 0px; padding: 0.45em 0.35em 0.35em; border-radius: 2px; letter-spacing: 1px; min-width: 20px; font-size-adjust: none; font-stretch: normal;
+}
+.spec-Standard::before {
+	font: 700 0.7em/normal Helvetica, Arial, sans-serif; margin: 0.2em 0.6em 0px 0px; padding: 0.45em 0.35em 0.35em; border-radius: 2px; letter-spacing: 1px; min-width: 20px; font-size-adjust: none; font-stretch: normal;
+}
+.spec-WD::before {
+	font: 700 0.7em/normal Helvetica, Arial, sans-serif; margin: 0.2em 0.6em 0px 0px; padding: 0.45em 0.35em 0.35em; border-radius: 2px; letter-spacing: 1px; min-width: 20px; font-size-adjust: none; font-stretch: normal;
+}
+.spec-ED::before {
+	color: rgb(230, 25, 25); border-left-color: rgb(230, 25, 25); border-left-width: 4px; border-left-style: solid; content: "ED"; background-color: rgba(230, 25, 25, 0.25);
+}
+.spec-WD::before {
+	color: rgb(230, 110, 51); border-left-color: rgb(230, 110, 51); border-left-width: 4px; border-left-style: solid; content: "WD"; background-color: rgba(230, 110, 51, 0.25);
+}
+.spec-CR::before {
+	color: rgb(0, 151, 142); border-left-color: rgb(0, 151, 142); border-left-width: 4px; border-left-style: solid; content: "CR"; background-color: rgba(0, 151, 142, 0.25);
+}
+.spec-RC::before {
+	color: rgb(0, 151, 142); border-left-color: rgb(0, 151, 142); border-left-width: 4px; border-left-style: solid; content: "CR"; background-color: rgba(0, 151, 142, 0.25);
+}
+.spec-RC::before {
+	content: "RC";
+}
+.spec-PR::before {
+	color: rgb(114, 172, 53); border-left-color: rgb(114, 172, 53); border-left-width: 4px; border-left-style: solid; content: "PR"; background-color: rgba(114, 172, 53, 0.25);
+}
+.spec-REC::before {
+	color: rgb(48, 156, 64); border-left-color: rgb(48, 156, 64); border-left-width: 4px; border-left-style: solid; content: "REC"; background-color: rgba(48, 156, 64, 0.25);
+}
+.spec-Living::before {
+	color: rgb(0, 83, 159); border-left-color: rgb(0, 83, 159); border-left-width: 4px; border-left-style: solid; content: "LS"; background-color: rgba(0, 83, 159, 0.25);
+}
+.spec-RFC::before {
+	color: rgb(0, 83, 159); border-left-color: rgb(0, 83, 159); border-left-width: 4px; border-left-style: solid; content: "RFC"; background-color: rgba(0, 83, 159, 0.25);
+}
+.spec-Standard::before {
+	color: rgb(0, 83, 159); border-left-color: rgb(0, 83, 159); border-left-width: 4px; border-left-style: solid; content: "ST"; background-color: rgba(0, 83, 159, 0.25);
+}
+.spec-Draft::before {
+	color: rgb(230, 110, 51); border-left-color: rgb(230, 110, 51); border-left-width: 4px; border-left-style: solid; content: "D"; background-color: rgba(230, 110, 51, 0.25);
+}
+.spec-ED {
+	color: rgb(230, 25, 25);
+}
+.spec-WD {
+	color: rgb(230, 110, 51);
+}
+.spec-CR {
+	color: rgb(0, 151, 142);
+}
+.spec-RC {
+	color: rgb(0, 151, 142);
+}
+.spec-PR {
+	color: rgb(114, 172, 53);
+}
+.spec-REC {
+	color: rgb(48, 156, 64);
+}
+.spec-RFC {
+	color: rgb(48, 156, 64);
+}
+.spec-Living {
+	color: rgb(0, 83, 159);
+}
+.spec-Standard {
+	color: rgb(0, 83, 159);
+}
+.spec-Draft {
+	color: rgb(230, 110, 51);
+}
+.templateLink {
+	padding: 1px; border: 1px solid rgb(204, 204, 204); border-image: none;
+}
+#wikiArticle i.icon-beaker {
+	cursor: default;
+}
+#wikiArticle i.icon-stethoscope {
+	cursor: default;
+}
+#wikiArticle i.icon-thumbs-down-alt {
+	cursor: default;
+}
+#wikiArticle i.icon-trash {
+	cursor: default;
+}
+#wikiArticle i.icon-warning-sign {
+	cursor: default;
+}
+#wikiArticle i.icon-beaker {
+	color: rgb(0, 153, 221);
+}
+#wikiArticle i.icon-warning-sign {
+	color: rgb(221, 187, 0);
+}
+#wikiArticle i.icon-thumbs-down-alt {
+	color: rgb(0, 0, 0);
+}
+#wikiArticle i.icon-trash {
+	color: rgb(221, 0, 0);
+}
+#wikiArticle i.icon-stethoscope {
+	color: rgb(72, 61, 139);
+}
+dd.landingPageList {
+	page-break-after: avoid;
+}
+dt.landingPageList {
+	page-break-after: avoid;
+}
+.bannerWrapper {
+	overflow: hidden; padding-right: 2px;
+}
+.mozOnlyBanner {
+	border-radius: 18px 6px 6px 18px; height: 36px; color: rgb(255, 255, 255); overflow: hidden; font-family: "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif; box-shadow: 0px 0px 3px #111; background-image: url("https://developer.mozilla.org/files/5429/firefox.png"), radial-gradient(16px at 18px 18px, rgba(0, 0, 0, 0.7) 0px, rgba(0, 0, 0, 0.5) 11px, rgba(0, 0, 0, 0) 18px), linear-gradient(to right, rgb(195, 59, 29) 40%, rgb(221, 168, 32)); background-repeat: no-repeat; background-size: contain; background-color: rgb(195, 59, 29);
+}
+.mozOnlyBanner dt {
+	padding-bottom: 0px; padding-left: 42px; font-size: 16px; font-weight: 700; margin-bottom: 0px; margin-left: 0px; text-shadow: 1px 1px 0px #222;
+}
+.mozOnlyBanner dd {
+	padding-top: 0px; padding-left: 42px; font-size: 11px; margin-top: 0px; margin-left: 0px; text-shadow: 1px 1px 0px #222;
+}
+[lang=ja] #doc-contributors time[datetime*='200']::after {
+	color: red; content: " (???????? 2 ??????????)";
+}
+.htab {
+	margin: 0px auto 1em; display: inline-block;
+}
+.htab > ul {
+	margin: 0px auto; padding: 0px; top: 0px; width: 150px; text-align: left; display: inline; position: relative;
+}
+.htab > ul > li {
+	margin: auto; padding: 5px 6px 3px; border-radius: 0px; border: 1px solid rgba(212, 221, 228, 0); border-image: none; height: 32px; text-align: left; color: rgb(77, 78, 83); font-family: "Open Sans Light",sans-serif; font-size: 14px; font-weight: 200; display: inline; list-style-type: none; position: relative; opacity: 0.75; background-color: rgb(241, 246, 248) !important;
+}
+.htab > ul > li.selected {
+	border-width: 2px 0px 0px; border-style: solid; border-color: rgb(212, 221, 228) rgba(212, 221, 228, 0.25) rgba(212, 221, 228, 0.25); border-image: none; padding-top: 4px; font-weight: 700; position: relative; z-index: 10; opacity: 1 !important; background-color: rgb(234, 239, 242) !important;
+}
+.htab > ul > li.selected a {
+	color: rgb(0, 0, 0);
+}
+.htab > div {
+	padding: 12px; border: 0px solid rgba(212, 221, 228, 0.25); border-image: none; margin-top: 0px; position: relative; z-index: 9; -ms-word-wrap: break-word; background-color: rgb(234, 239, 242);
+}
+.htab > ul {
+	cursor: pointer;
+}
+.htab > ul > li {
+	cursor: pointer;
+}
+.htab > ul > li > a {
+	cursor: pointer;
+}
+.htab > ul > li > a {
+	padding: 2px 18px 4px; text-decoration: none;
+}
+.htab > ul > li > a:focus {
+	text-decoration: underline;
+}
+.htab > ul > li > a:hover {
+	text-decoration: underline;
+}
+.summary-box-events {
+	padding: 11px 22px; display: table; background-color: rgba(0, 150, 221, 0.1);
+}
+[dir=ltr].redesign .summary-box-events {
+	clear: left; border-left-color: rgba(0, 150, 221, 0.5); border-left-width: 6px; border-left-style: solid;
+}
+[dir=rtl].redesign .summary-box-events {
+	clear: right; border-right-color: rgba(0, 150, 221, 0.5); border-right-width: 6px; border-right-style: solid;
+}
+.summary-box-js {
+	padding: 11px 22px; display: table; background-color: rgba(230, 96, 0, 0.1);
+}
+[dir=ltr].redesign .summary-box-js {
+	clear: left; border-left-color: rgba(230, 96, 0, 0.5); border-left-width: 6px; border-left-style: solid;
+}
+[dir=rtl].redesign .summary-box-js {
+	clear: right; border-right-color: rgba(230, 96, 0, 0.5); border-right-width: 6px; border-right-style: solid;
+}
+.redesign .optional {
+	background: rgba(0, 83, 159, 0.2); border-color: rgba(0, 0, 0, 0.05);
+}
+.redesign .standardNote {
+	background: rgba(0, 83, 159, 0.2); border-color: rgba(0, 0, 0, 0.05);
+}
+.renamed {
+	background: rgba(0, 83, 159, 0.2); border-color: rgba(0, 0, 0, 0.05);
+}
+.redesign .notXPCOM {
+	background: rgba(230, 96, 0, 0.45); border-color: rgba(0, 0, 0, 0.05);
+}
+.redesign .obsolete {
+	background: rgba(230, 96, 0, 0.45); border-color: rgba(0, 0, 0, 0.05);
+}
+.quick-links .sidebar-icon i[class^=icon-] {
+	left: 12px; top: 10px; display: block; position: absolute; opacity: 0.3;
+}
+.communitybox {
+	background-image: url("/media/redesign/img/blueprint.png"); background-color: rgb(0, 83, 159);
+}
+.communitybox {
+	color: rgb(255, 255, 255);
+}
+.communitybox a {
+	color: rgb(255, 255, 255);
+}
+.communitybox a:focus {
+	color: rgb(255, 255, 255);
+}
+.communitybox a:hover {
+	color: rgb(255, 255, 255);
+}
+.communitybox a:visited {
+	color: rgb(255, 255, 255);
+}
+.communitybox .communitysubhead {
+	padding-bottom: 6px; font-size: 16px; font-weight: 700; margin-top: 11px;
+}
+.communitybox ul {
+	padding-left: 0px; margin-bottom: 0px; list-style-type: none;
+}
+.communitybox ul.communitymailinglist li {
+	margin-top: 6px; margin-right: 4px; display: inline-block;
+}
+.communitybox ul.communitymailinglist a {
+	background: rgba(255, 255, 255, 0.3); padding: 3px 6px; border-radius: 3px; color: rgb(255, 255, 255); display: inline-block;
+}
+.communitybox .communitycontact {
+	font-size: 14px; margin-top: 13px;
+}
+.communitybox .communitycontact a {
+	border-bottom-color: rgba(255, 255, 255, 0.6); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.communitybox .communitycontact a:focus {
+	text-decoration: none; border-bottom-color: rgba(255, 255, 255, 0.9); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.communitybox .communitycontact a:hover {
+	text-decoration: none; border-bottom-color: rgba(255, 255, 255, 0.9); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.communitybox strong {
+	font-size: 15px; font-weight: 700;
+}
+a:not(.new).glossaryLink:active {
+	color: inherit; text-decoration: none; border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: dashed; cursor: help;
+}
+a:not(.new).glossaryLink:focus {
+	color: inherit; text-decoration: none; border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: dashed; cursor: help;
+}
+a:not(.new).glossaryLink:hover {
+	color: inherit; text-decoration: none; border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: dashed; cursor: help;
+}
+a:not(.new).glossaryLink:link {
+	color: inherit; text-decoration: none; border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: dashed; cursor: help;
+}
+a:not(.new).glossaryLink:visited {
+	color: inherit; text-decoration: none; border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: dashed; cursor: help;
+}
+a.download-button {
+	padding: 10px; border-radius: 4px; text-align: center; color: rgb(255, 255, 255); margin-bottom: 20px; display: inline-block; white-space: nowrap; box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.2), inset 0px -1px 0px 0px rgba(0,0,0,0.3); text-shadow: 0px 1px 0px rgba(0,0,0,0.25); background-color: rgb(129, 188, 46);
+}
+a.download-button:hover {
+	color: rgb(200, 200, 200);
+}
+a.download-button:link {
+	color: rgb(255, 255, 255);
+}
+a.download-button:visited {
+	color: rgb(255, 255, 255);
+}
+a.download-button .right-align {
+	float: right;
+}
+li.download-box {
+	text-align: center; position: relative;
+}
+li.download-box img {
+	float: none;
+}
+li.download-box p {
+	padding-bottom: 3em;
+}
+.download-box .download-button {
+	left: 50%; bottom: 0px; position: absolute; transform: translate(-50%, 0px); -webkit-transform: translate(-50%, 0);
+}
+@media all and (max-width:768px)
+{
+.download-desc > span:first-child {
+	font-weight: 700; display: block;
+}
+}
+span.comment {
+	display: none;
+}
+pre span.comment {
+	display: inline;
+}
+div.addpage-button {
+	width: 100%; text-align: center;
+}
+a.addpage-button {
+	padding: 18px 40px; border-radius: 6px; text-align: center; color: rgb(255, 255, 255); font-size: 28px; margin-bottom: 20px; display: inline-block; white-space: nowrap; box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.2), inset 0px -1px 0px 0px rgba(0,0,0,0.3); text-shadow: 0px 1px 0px rgba(0,0,0,0.25); background-color: rgb(112, 163, 0);
+}
+a.addpage-button:hover {
+	color: rgb(200, 200, 200);
+}
+a.addpage-button:link {
+	color: rgb(255, 255, 255);
+}
+a.addpage-button:visited {
+	color: rgb(255, 255, 255);
+}
+a.addpage-button div {
+	text-align: center; color: rgb(255, 255, 255); font-size: 11px;
+}
+a.addpage-button .right-align {
+	float: right;
+}
+.text-content table.learn-box {
+	border-width: 1px 1px 1px 5px; border-style: solid; border-color: rgb(246, 152, 85); border-image: none;
+}
+.text-content table.learn-box th {
+	border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(246, 152, 85) currentColor rgb(246, 152, 85) rgb(246, 152, 85); padding: 6px; border-image: none; text-align: right; font-family: "Open Sans",sans-serif; font-weight: 700; vertical-align: top; background-color: rgb(252, 225, 206);
+}
+.text-content table.learn-box td {
+	border-width: 1px 1px 1px medium; border-style: solid solid solid none; border-color: rgb(246, 152, 85) rgb(246, 152, 85) rgb(246, 152, 85) currentColor; border-image: none; font-style: italic; box-shadow: none; background-color: rgb(254, 249, 245);
+}
+.fa-trash::before {
+	content: "\f014";
+}
+.parent-suggest-container {
+	position: relative;
+}
+.show.parent-suggest-container .parent-suggest-link {
+	display: none;
+}
+.show.parent-suggest-container #parent-suggest-input-container {
+	transition:opacity, top 0.4s; left: 0px; top: -22px; display: block; opacity: 1; -webkit-transition: opacity, top .4s; -moz-transition: opacity, top .4s;
+}
+#parent-suggest-input-container {
+	background: -ms-linear-gradient(rgb(234, 239, 242), rgb(212, 221, 228)); padding: 10px; border: 1px solid rgb(212, 221, 228); border-image: none; left: -90000px; top: -10px; margin-left: 20px; position: absolute; opacity: 0; box-shadow: 0px 5px 10px #ccc;
+}
+#parent-suggest-input-container::after {
+	border: 7px solid transparent; border-image: none; width: 0px; height: 0px; position: absolute; content: " ";
+}
+#parent-suggest-input-container::before {
+	border: 7px solid transparent; border-image: none; width: 0px; height: 0px; position: absolute; content: " ";
+}
+#parent-suggest-input-container::before {
+	left: -7px; top: 20px; border-right-color: rgb(223, 230, 235); border-left-color: currentColor; border-right-width: 7px; border-left-width: 0px; border-right-style: solid; border-left-style: none;
+}
+#parent-suggest-input-container::after {
+	left: -6px; top: 21px; border-right-color: rgb(223, 230, 235); border-left-color: currentColor; border-right-width: 6px; border-left-width: 0px; border-right-style: solid; border-left-style: none;
+}
+.parent-suggest-link {
+	color: rgb(0, 149, 221); text-transform: none; margin-left: 40px; display: inline-block;
+}
+.parent-suggest-link:hover {
+	text-decoration: underline;
+}
+#parent-suggestion {
+	width: 300px;
+}
+.move-descendants {
+	background: rgb(234, 239, 242); padding: 10px 10px 0px; border: 1px solid rgb(223, 230, 235); border-image: none; margin-bottom: 20px; resize: vertical;
+}
+.move-descendants a {
+	margin: 0px 0px 10px; display: inline-block;
+}
+#doc-source textarea {
+	width: 100%; height: 400px;
+}
+.delete-document textarea {
+	width: 500px; margin-bottom: 20px; max-width: 100%;
+}
+.delete-document label {
+	display: block;
+}
+#delete-revision label {
+	margin: 15px 0px 0px; font-size: 16px; display: block;
+}
+#delete-revision textarea {
+	width: 90%; height: 80px; margin-bottom: 20px;
+}
+.zone-landing h1 {
+	width: 48.5%;
+}
+.zone {
+	background-position: 0px 0px, 0px 0px, 0px 0px; background-image: url("/media/redesign/img/header-background.png"), url("/media/redesign/img/mdn-header-gradient.png"); background-repeat: repeat, repeat-x; background-color: rgb(0, 83, 159);
+}
+.zone #main-header .logo {
+	background-position: 0px -41px;
+}
+.zone main > .center {
+	margin: 0px; padding: 0px; width: auto; max-width: none;
+}
+.zone #main-nav > ul > li > a {
+	color: rgb(255, 255, 255);
+}
+.zone .submenu-close {
+	color: rgb(255, 255, 255);
+}
+.zone .user-state {
+	color: rgb(255, 255, 255);
+}
+.zone .user-state a {
+	color: rgb(255, 255, 255);
+}
+.zone #main-nav > ul > li .search-wrap {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+.zone #main-nav > ul > li .search-wrap .search-trigger {
+	color: rgb(255, 255, 255) !important;
+}
+.zone #main-nav > ul > li .search-wrap i {
+	color: rgb(255, 255, 255) !important;
+}
+.zone #main-nav > ul > li .search-wrap input {
+	color: rgb(255, 255, 255) !important;
+}
+.zone #main-header {
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+.zone .oauth-login-options {
+	color: rgb(255, 255, 255);
+}
+.zone .user-state a {
+	color: rgb(255, 255, 255);
+}
+.zone .user-state a:focus {
+	color: rgb(255, 255, 255);
+}
+.zone .user-state a:hover {
+	color: rgb(255, 255, 255);
+}
+.zone .user-state a:visited {
+	color: rgb(255, 255, 255);
+}
+.zone .user-state > i[class^=icon-] {
+	color: rgb(255, 255, 255);
+}
+.zone main {
+	background: 0px 0px;
+}
+.zone .wiki-main-content {
+	padding-top: 30px !important;
+}
+.zone .wiki-main-content .center {
+	padding-right: 24px; padding-left: 24px;
+}
+.zone-landing h1 {
+	color: rgb(255, 255, 255); clear: both;
+}
+.zone-landing .zone-landing-header-preview {
+	color: rgb(255, 255, 255); margin-top: 20px;
+}
+.zone-landing .zone-landing-header-preview .column-strip {
+	position: relative;
+}
+.zone-landing .zone-landing-header-preview .column-strip .zone-landing-header-preview-base {
+	width: 100%; position: absolute; z-index: 2;
+}
+.zone-landing .zone-landing-header-preview .column-strip .zone-landing-header-spacing {
+	float: left;
+}
+.zone-landing .crumbs {
+	color: rgb(255, 255, 255);
+}
+.zone-landing .crumbs a {
+	color: rgba(255, 255, 255, 0.7);
+}
+.zone-landing .summary {
+	display: none;
+}
+.zone-landing h3.title {
+	margin: 6px 0px 0px; font-size: 1rem;
+}
+.zone-landing-header {
+	position: relative;
+}
+.zone-landing-header > .center {
+	padding-top: 30px;
+}
+.zone-landing-header .masthead-text p {
+	font-size: 1.14rem; font-weight: 200;
+}
+.zone-landing-header .zone-image {
+	background-position: 95% 0px; top: 100px; width: 468px; right: 0px; bottom: 0px; display: block; position: absolute; background-repeat: no-repeat;
+}
+html[dir=rtl] .zone-landing-header .zone-image {
+	left: 0px; right: auto;
+}
+.zone-landing-header a.button {
+	color: rgb(255, 255, 255);
+}
+.zone-landing-header button {
+	color: rgb(255, 255, 255);
+}
+.zone-landing-header a:not(.transparent).button {
+	box-shadow: inset 0px -1px rgba(0,0,0,0.1); background-color: rgba(0, 0, 0, 0.1);
+}
+.zone-landing-header button:not(.transparent) {
+	box-shadow: inset 0px -1px rgba(0,0,0,0.1); background-color: rgba(0, 0, 0, 0.1);
+}
+.zone-landing-lists li {
+	padding: 8px 0px;
+}
+.zone-landing-lists li > padding-bottom:last-child {
+	padding: 0px;
+}
+.zone-article-header {
+	padding: 20px 0px; overflow: hidden;
+}
+.zone-article-header .zone-title {
+	letter-spacing: -1px; font-size: 2.14rem;
+}
+.zone-article-header .zone-title a {
+	color: rgb(255, 255, 255); font-family: "Open Sans Light",sans-serif;
+}
+.zone-article-header .zone-image {
+	top: 0px; width: 200px; height: 400px; right: 0px; display: block; position: absolute; background-repeat: no-repeat; background-size: contain;
+}
+html[dir=rtl] .zone-article-header .zone-image {
+	left: 0px; right: auto;
+}
+.zone-content {
+	padding-top: 38px;
+}
+.zone-content a {
+	text-decoration: none;
+}
+.zone-content a:active {
+	text-decoration: underline;
+}
+.zone-content a:focus {
+	text-decoration: underline;
+}
+.zone-content a:hover {
+	text-decoration: underline;
+}
+.zone-subnav-container {
+	background: rgb(255, 255, 255); margin-bottom: 20px; position: relative; z-index: 10;
+}
+.zone-callout {
+	background: rgb(244, 247, 248); margin: 30px 0px; padding: 20px; position: relative;
+}
+.zone-callout table {
+	width: 100%;
+}
+.zone-callout td {
+	padding-right: 20px; vertical-align: bottom;
+}
+.dev-program-block {
+	margin-bottom: 40px;
+}
+.dev-program-block ul {
+	margin-bottom: 0px;
+}
+.dev-program-block > :last-child {
+	margin-bottom: 0px;
+}
+.dev-program-first {
+	margin-top: -80px;
+}
+.dev-program-callouts .dev-program-callout {
+	background: rgb(244, 247, 248); padding: 20px;
+}
+.dev-program-explanation {
+	background: rgb(244, 247, 248); padding: 20px;
+}
+.dev-program-callouts .dev-program-callout > p:last-child {
+	margin-bottom: 0px;
+}
+.dev-program-explanation > p:last-child {
+	margin-bottom: 0px;
+}
+.dev-program-callouts {
+	margin-right: 3%; margin-left: 3%;
+}
+.dev-program-callouts .dev-program-callout h2 {
+	font-size: 1.14rem;
+}
+.stack-form {
+	margin-bottom: 24px;
+}
+.stack-form input {
+	width: 90%; display: inline-block;
+}
+.stack-form .stack-icon {
+	width: 16px; height: 16px; margin-right: 10px; display: inline-block; background-image: url("/media/redesign/img/stackoverflow.png");
+}
+.dev-program-hacks h3 {
+	font-size: 1.14rem; margin-bottom: 4px;
+}
+.dev-program-hacks p {
+	color: rgb(187, 187, 187); font-size: 0.85rem; margin-bottom: 10px;
+}
+.dev-program-hacks p a {
+	color: rgb(119, 119, 119);
+}
+.dev-program-events table.dev-program-table {
+	border: 0px currentColor; border-image: none; width: 100%;
+}
+.dev-program-events table.dev-program-table td {
+	border: 0px currentColor; border-image: none; width: 33%;
+}
+@media all and (max-width:1024px)
+{
+.zone-landing .zone-subnav-container {
+	margin-top: 0px;
+}
+.zone-landing .zone-landing-header-preview .column-strip .zone-landing-header-preview-base {
+	position: static;
+}
+.zone-landing .zone-landing-header-preview .masthead-text .zone-landing-header-preview-base {
+	position: static;
+}
+.zone-landing-header-preview .column-strip {
+	width: 48%;
+}
+.zone-landing-header-preview .masthead-text {
+	width: 48%;
+}
+.zone-article-header .zone-image {
+	opacity: 0.2;
+}
+.zone-landing-header .zone-image {
+	opacity: 0.2;
+}
+}
+@media all and (max-width:768px)
+{
+.zone-article-header .zone-image {
+	display: none;
+}
+.zone-landing-header .zone-image {
+	display: none;
+}
+.zone-landing h1 {
+	width: auto;
+}
+.zone-landing-header {
+	display: block;
+}
+}
+.revision-diff {
+	clear: both;
+}
+.revision-diff dt {
+	clear: both; font-style: normal; font-weight: 700; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: dotted;
+}
+.revision-diff .rev-from {
+	width: 49%; float: left;
+}
+.revision-diff .rev-to {
+	width: 49%; float: right;
+}
+.revision-diff h3 {
+	margin: 5px 0px 0px; font-weight: 700;
+}
+table.diff {
+	background: rgb(255, 255, 255); margin: 5px 0px 15px; border: 1px solid rgb(204, 204, 204); border-image: none; width: 100%; clear: both; font-family: "Courier New","Andale Mono",monospace;
+}
+td.diff_header {
+	text-align: right;
+}
+.diff_next {
+	background-color: silver;
+}
+.diff_add {
+	background-color: rgb(170, 255, 170);
+}
+.diff_chg {
+	background-color: rgb(255, 255, 119);
+}
+.diff_sub {
+	background-color: rgb(255, 170, 170);
+}
+.slug-change {
+	background: rgb(212, 221, 228); margin: 4px 0px; padding: 4px 6px; border-radius: 4px; border: 1px solid rgb(202, 225, 244); border-image: none; clear: both; font-size: 0.85rem; display: inline-block;
+}
+.slug-change i[class^=icon-] {
+	margin-left: 0px;
+}
+html[dir=rtl] .slug-change i[class^=icon-] {
+	margin-right: 0px; margin-left: 0px;
+}
+.slug-change span {
+	white-space: nowrap;
+}
+.slug-change a {
+	color: rgb(68, 68, 68);
+}
+code[class*=language-] {
+	text-align: left; font-family: Consolas,Monaco,"Andale Mono",monospace; word-spacing: normal; white-space: pre; direction: ltr; -ms-word-break: normal; -ms-hyphens: none; -moz-hyphens: none; -webkit-hyphens: none; hyphens: none; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4;
+}
+pre[class*=language-] {
+	text-align: left; font-family: Consolas,Monaco,"Andale Mono",monospace; word-spacing: normal; white-space: pre; direction: ltr; -ms-word-break: normal; -ms-hyphens: none; -moz-hyphens: none; -webkit-hyphens: none; hyphens: none; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4;
+}
+code[class*=language-] ::selection {
+	background: rgb(179, 212, 252); text-shadow: none;
+}
+code[class*=language-]::selection {
+	background: rgb(179, 212, 252); text-shadow: none;
+}
+pre[class*=language-] ::selection {
+	background: rgb(179, 212, 252); text-shadow: none;
+}
+pre[class*=language-]::selection {
+	background: rgb(179, 212, 252); text-shadow: none;
+}
+@media print
+{
+code[class*=language-] {
+	text-shadow: none;
+}
+pre[class*=language-] {
+	text-shadow: none;
+}
+}
+pre[class*=language-] {
+	padding: 1em; overflow: auto;
+}
+:not(pre) > code[class*=language-] {
+	background: rgb(245, 242, 240);
+}
+pre[class*=language-] {
+	background: rgb(245, 242, 240);
+}
+:not(pre) > code[class*=language-] {
+	padding: 0.1em; border-radius: 0.3em;
+}
+.cdata.token {
+	color: rgb(112, 128, 144);
+}
+.comment.token {
+	color: rgb(112, 128, 144);
+}
+.doctype.token {
+	color: rgb(112, 128, 144);
+}
+.prolog.token {
+	color: rgb(112, 128, 144);
+}
+.punctuation.token {
+	color: rgb(153, 153, 153);
+}
+.namespace {
+	opacity: 0.7;
+}
+.boolean.token {
+	color: rgb(153, 0, 85);
+}
+.constant.token {
+	color: rgb(153, 0, 85);
+}
+.number.token {
+	color: rgb(153, 0, 85);
+}
+.property.token {
+	color: rgb(153, 0, 85);
+}
+.symbol.token {
+	color: rgb(153, 0, 85);
+}
+.tag.token {
+	color: rgb(153, 0, 85);
+}
+.attr-name.token {
+	color: rgb(102, 153, 0);
+}
+.builtin.token {
+	color: rgb(102, 153, 0);
+}
+.selector.token {
+	color: rgb(102, 153, 0);
+}
+.string.token {
+	color: rgb(102, 153, 0);
+}
+.language-css .string.token {
+	background: hsla(0, 0%, 100%, 0.5); color: rgb(166, 127, 89);
+}
+.style .string.token {
+	background: hsla(0, 0%, 100%, 0.5); color: rgb(166, 127, 89);
+}
+.entity.token {
+	background: hsla(0, 0%, 100%, 0.5); color: rgb(166, 127, 89);
+}
+.operator.token {
+	background: hsla(0, 0%, 100%, 0.5); color: rgb(166, 127, 89);
+}
+.url.token {
+	background: hsla(0, 0%, 100%, 0.5); color: rgb(166, 127, 89);
+}
+.variable.token {
+	background: hsla(0, 0%, 100%, 0.5); color: rgb(166, 127, 89);
+}
+.atrule.token {
+	color: rgb(0, 119, 170);
+}
+.attr-value.token {
+	color: rgb(0, 119, 170);
+}
+.keyword.token {
+	color: rgb(0, 119, 170);
+}
+.function.token {
+	color: rgb(221, 74, 104);
+}
+.important.token {
+	color: rgb(238, 153, 0);
+}
+.regex.token {
+	color: rgb(238, 153, 0);
+}
+.important.token {
+	font-weight: 700;
+}
+.entity.token {
+	cursor: help;
+}
+pre[data-line] {
+	padding: 1em 0px 1em 3em; position: relative;
+}
+.line-highlight {
+	background: hsla(24, 20%, 50%, 0.08); left: 0px; right: 0px; line-height: inherit; padding-top: inherit; padding-right: 0px; padding-bottom: inherit; padding-left: 0px; margin-top: 1em; white-space: pre; position: absolute; pointer-events: none;
+}
+.line-highlight::before {
+	font: 700 65%/1.5 sans-serif; padding: 0px 0.5em; border-radius: 999px; left: 0.6em; top: 0.4em; text-align: center; color: rgb(244, 241, 239); vertical-align: 0.3em; position: absolute; min-width: 1em; content: attr(data-start); font-size-adjust: none; font-stretch: normal; box-shadow: 0px 1px #fff; text-shadow: none; background-color: hsla(24, 20%, 50%, 0.4);
+}
+[data-end].line-highlight::after {
+	font: 700 65%/1.5 sans-serif; padding: 0px 0.5em; border-radius: 999px; left: 0.6em; top: 0.4em; text-align: center; color: rgb(244, 241, 239); vertical-align: 0.3em; position: absolute; min-width: 1em; content: attr(data-start); font-size-adjust: none; font-stretch: normal; box-shadow: 0px 1px #fff; text-shadow: none; background-color: hsla(24, 20%, 50%, 0.4);
+}
+[data-end].line-highlight::after {
+	top: auto; bottom: 0.4em; content: attr(data-end);
+}
+.token a {
+	color: inherit;
+}
+pre[data-number] {
+	padding: 1em 0px 1em 3em; position: relative;
+}
+.redesign pre[data-number] {
+	padding-left: 30px;
+}
+.line-number {
+	background: 0px 0px; left: 0px; right: 0px; line-height: inherit; padding-top: inherit; padding-right: 0px; padding-bottom: inherit; padding-left: 0px; margin-top: 1em; white-space: pre; position: absolute; pointer-events: none;
+}
+.line-number::before {
+	font: 700 65%/1.5 sans-serif; padding: 0px 0.5em; border-radius: 999px; border: 0px currentColor; border-image: none; left: 0.6em; top: 0.4em; text-align: center; color: rgb(153, 153, 153); vertical-align: 0.3em; position: absolute; min-width: 1em; content: attr(data-start); font-size-adjust: none; font-stretch: normal; text-shadow: none;
+}
+[data-end].line-number::after {
+	font: 700 65%/1.5 sans-serif; padding: 0px 0.5em; border-radius: 999px; border: 0px currentColor; border-image: none; left: 0.6em; top: 0.4em; text-align: center; color: rgb(153, 153, 153); vertical-align: 0.3em; position: absolute; min-width: 1em; content: attr(data-start); font-size-adjust: none; font-stretch: normal; text-shadow: none;
+}
+[data-end].line-number::after {
+	top: auto; bottom: 0.4em; content: attr(data-end);
+}
+.key.token {
+	color: rgb(153, 102, 0);
+}
+:not(pre):not(code) > code[class*=language-] {
+	background: url("/media/redesign/img/blueprint-dark.png") top rgb(250, 251, 252); color: rgb(77, 78, 83); border-left-color: rgb(85, 138, 187); border-left-width: 6px; border-left-style: solid; -ms-hyphens: none; -moz-hyphens: none; -webkit-hyphens: none; hyphens: none; -moz-tab-size: 4; tab-size: 4;
+}
+pre.syntaxbox {
+	background: url("/media/redesign/img/blueprint-dark.png") top rgb(250, 251, 252); color: rgb(77, 78, 83); border-left-color: rgb(85, 138, 187); border-left-width: 6px; border-left-style: solid; -ms-hyphens: none; -moz-hyphens: none; -webkit-hyphens: none; hyphens: none; -moz-tab-size: 4; tab-size: 4;
+}
+pre.twopartsyntaxbox {
+	background: url("/media/redesign/img/blueprint-dark.png") top rgb(250, 251, 252); color: rgb(77, 78, 83); border-left-color: rgb(85, 138, 187); border-left-width: 6px; border-left-style: solid; -ms-hyphens: none; -moz-hyphens: none; -webkit-hyphens: none; hyphens: none; -moz-tab-size: 4; tab-size: 4;
+}
+pre[class*=language-] {
+	background: url("/media/redesign/img/blueprint-dark.png") top rgb(250, 251, 252); color: rgb(77, 78, 83); border-left-color: rgb(85, 138, 187); border-left-width: 6px; border-left-style: solid; -ms-hyphens: none; -moz-hyphens: none; -webkit-hyphens: none; hyphens: none; -moz-tab-size: 4; tab-size: 4;
+}
+code[class*=language-] > code[class*=language-] {
+	
+}
+pre[class*=language-] {
+	margin: 0px 0px 20px;
+}
+pre[class*=language-] span.comment {
+	display: inherit;
+}
+code[class*=language-] {
+	color: rgb(77, 78, 83); text-shadow: none;
+}
+pre[class*=language-] {
+	color: rgb(77, 78, 83); text-shadow: none;
+}
+pre em code[class*=language-] {
+	background: 0px 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+pre.syntaxbox {
+	background: rgb(221, 228, 233);
+}
+pre.twopartsyntaxbox {
+	background: rgb(221, 228, 233);
+}
+pre.twopartsyntaxbox {
+	margin-bottom: 0px;
+}
+pre.syntaxbox code[class*=language-] {
+	white-space: pre-line;
+}
+pre.twopartsyntaxbox code[class*=language-] {
+	white-space: pre-line;
+}
+.syntaxbox-help {
+	width: 1.1em; height: 1.2em; text-align: center; overflow: hidden; font-size: 20px; margin-top: -4px; margin-left: -1.1em; float: left; position: relative; opacity: 0;
+}
+.isOpaque.syntaxbox-help {
+	opacity: 1;
+}
+.syntaxbox-help:focus {
+	opacity: 1;
+}
+.syntaxbox-help:hover {
+	opacity: 1;
+}
+.error pre[class*=language-] {
+	background: 0px 0px; margin: 10px 0px 0px;
+}
+:not(pre) > code[class*=language-].example-bad::before {
+	border-radius: 100%; left: 6px; top: 14px; font-family: FontAwesome; font-size: 20px; position: absolute; z-index: 10; speak: none;
+}
+:not(pre) > code[class*=language-].example-good::before {
+	border-radius: 100%; left: 6px; top: 14px; font-family: FontAwesome; font-size: 20px; position: absolute; z-index: 10; speak: none;
+}
+pre[class*=language-].example-bad::before {
+	border-radius: 100%; left: 6px; top: 14px; font-family: FontAwesome; font-size: 20px; position: absolute; z-index: 10; speak: none;
+}
+pre[class*=language-].example-good::before {
+	border-radius: 100%; left: 6px; top: 14px; font-family: FontAwesome; font-size: 20px; position: absolute; z-index: 10; speak: none;
+}
+:not(pre) > code[class*=language-].example-good::before {
+	background: rgb(248, 250, 242); color: rgb(112, 163, 0); content: "\f118";
+}
+pre[class*=language-].example-good::before {
+	background: rgb(248, 250, 242); color: rgb(112, 163, 0); content: "\f118";
+}
+:not(pre) > code[class*=language-].example-bad::before {
+	background: rgb(254, 245, 244); color: rgb(234, 59, 40); content: "\f119";
+}
+pre[class*=language-].example-bad::before {
+	background: rgb(254, 245, 244); color: rgb(234, 59, 40); content: "\f119";
+}
+:not(pre) > code[class*=language-].example-good {
+	background: linear-gradient(rgba(0, 0, 0, 0) 9px, rgba(0, 0, 0, 0.02) 9px, rgba(0, 0, 0, 0.02) 10px) 0% 0% / 10px 10px, linear-gradient(90deg, rgba(0, 0, 0, 0) 9px, rgba(0, 0, 0, 0.02) 9px, rgba(0, 0, 0, 0.02) 10px) 0% 0% / 10px 10px, linear-gradient(rgba(0, 0, 0, 0) 29px, rgba(0, 0, 0, 0.02) 29px, rgba(0, 0, 0, 0.02) 30px) 0% 0% / 30px 30px, linear-gradient(90deg, rgba(0, 0, 0, 0) 29px, rgba(0, 0, 0, 0.02) 29px, rgba(0, 0, 0, 0.02) 30px) 0% 0% / 30px 30px, linear-gradient(rgb(248, 250, 242), rgb(248, 250, 242)) 0% 0% / cover; border-left-color: rgb(112, 163, 0); border-left-width: 6px; border-left-style: solid;
+}
+pre[class*=language-].example-good {
+	background: linear-gradient(rgba(0, 0, 0, 0) 9px, rgba(0, 0, 0, 0.02) 9px, rgba(0, 0, 0, 0.02) 10px) 0% 0% / 10px 10px, linear-gradient(90deg, rgba(0, 0, 0, 0) 9px, rgba(0, 0, 0, 0.02) 9px, rgba(0, 0, 0, 0.02) 10px) 0% 0% / 10px 10px, linear-gradient(rgba(0, 0, 0, 0) 29px, rgba(0, 0, 0, 0.02) 29px, rgba(0, 0, 0, 0.02) 30px) 0% 0% / 30px 30px, linear-gradient(90deg, rgba(0, 0, 0, 0) 29px, rgba(0, 0, 0, 0.02) 29px, rgba(0, 0, 0, 0.02) 30px) 0% 0% / 30px 30px, linear-gradient(rgb(248, 250, 242), rgb(248, 250, 242)) 0% 0% / cover; border-left-color: rgb(112, 163, 0); border-left-width: 6px; border-left-style: solid;
+}
+:not(pre) > code[class*=language-].example-bad {
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.01) 45%, rgba(0, 0, 0, 0.01) 55%, rgba(0, 0, 0, 0) 55%) 0% 0% / 10px 10px, linear-gradient(135deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.01) 45%, rgba(0, 0, 0, 0.01) 55%, rgba(0, 0, 0, 0) 55%) 0% 0% / 10px 10px, linear-gradient(45deg, rgba(0, 0, 0, 0) 20px, rgba(0, 0, 0, 0.01) 20px, rgba(0, 0, 0, 0.01) 21px, rgba(0, 0, 0, 0) 21px) 0% 0% / 30px 30px, linear-gradient(135deg, rgba(0, 0, 0, 0) 20px, rgba(0, 0, 0, 0.01) 20px, rgba(0, 0, 0, 0.01) 21px, rgba(0, 0, 0, 0) 21px) 0% 0% / 30px 30px, linear-gradient(rgb(254, 245, 244), rgb(254, 245, 244)) 0% 0% / cover; border-left-color: rgb(234, 59, 40); border-left-width: 6px; border-left-style: solid;
+}
+pre[class*=language-].example-bad {
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.01) 45%, rgba(0, 0, 0, 0.01) 55%, rgba(0, 0, 0, 0) 55%) 0% 0% / 10px 10px, linear-gradient(135deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.01) 45%, rgba(0, 0, 0, 0.01) 55%, rgba(0, 0, 0, 0) 55%) 0% 0% / 10px 10px, linear-gradient(45deg, rgba(0, 0, 0, 0) 20px, rgba(0, 0, 0, 0.01) 20px, rgba(0, 0, 0, 0.01) 21px, rgba(0, 0, 0, 0) 21px) 0% 0% / 30px 30px, linear-gradient(135deg, rgba(0, 0, 0, 0) 20px, rgba(0, 0, 0, 0.01) 20px, rgba(0, 0, 0, 0.01) 21px, rgba(0, 0, 0, 0) 21px) 0% 0% / 30px 30px, linear-gradient(rgb(254, 245, 244), rgb(254, 245, 244)) 0% 0% / cover; border-left-color: rgb(234, 59, 40); border-left-width: 6px; border-left-style: solid;
+}

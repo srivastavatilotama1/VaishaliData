@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:emps xmlns:ns2="com.emp.vinsys">
+    <emp empId="386">
+        <empName>
+            <fn>Vaishali</fn>
+            <mn>Abhi</mn>
+            <ln>Srivastava</ln>
+        </empName>
+        <empSal>200000.0</empSal>
+        <empGender>70</empGender>
+    </emp>
+    <emp empId="222">
+        <empName>
+            <fn>Umesh</fn>
+            <mn>N</mn>
+            <ln>Bahir</ln>
+        </empName>
+        <empSal>100000.0</empSal>
+        <empGender>77</empGender>
+    </emp>
+</ns2:emps>

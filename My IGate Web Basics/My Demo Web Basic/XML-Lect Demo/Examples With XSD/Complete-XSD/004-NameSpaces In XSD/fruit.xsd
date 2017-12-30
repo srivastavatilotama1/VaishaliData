@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.fruit.org/fruit"
+	xmlns:fr="http://www.fruit.org/fruit" elementFormDefault="qualified">	
+				<element name="table" >
+					<complexType>
+						<sequence>
+							<element name="tr" >
+								<complexType>
+									<sequence>
+									<element name="td" type="string" maxOccurs="unbounded"/>									
+									</sequence>								
+								</complexType>
+							</element>							
+						</sequence>
+					</complexType>
+				</element>		
+</schema>

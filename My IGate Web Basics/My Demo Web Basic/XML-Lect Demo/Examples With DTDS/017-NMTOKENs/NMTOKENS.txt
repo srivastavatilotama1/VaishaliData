@@ -1,0 +1,12 @@
+NMTOKEN is used for strings that can contain characters, 
+digits, underscores, colons, periods and dashes
+
+Use NMTOKENS if string has white spaces as attribute value
+
+In DTD
+<!ATTLIST test
+            a CDATA #IMPLIED
+            b NMTOKEN #REQUIRED
+            c NMTOKENS #REQUIRED>
+In XML
+<test a=">;d&lt;1>" b="a1:12" c="3.4 div -4"/>

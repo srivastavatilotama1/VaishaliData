@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Employees  (Employee+)>
+<!ELEMENT Employee (EmpId, EmpName, EmpEMail)>
+<!ELEMENT EmpName (FName, MName,LName)>
+<!ELEMENT EmpId (#PCDATA)>
+<!ELEMENT FName (#PCDATA)>
+<!ELEMENT MName (#PCDATA)>
+<!ELEMENT LName (#PCDATA)>
+<!ELEMENT EmpEMail  (#PCDATA)>
+<!ATTLIST EmpId  age CDATA #IMPLIED>
+
+
+<!ELEMENT Employees ( Employee+)>
+<!ELEMENT Employee (EmpId, EmpName, EmpEmail)>
+<!ELEMENT EmpId  (#PCDATA)>
+<!ATTLIST  EmpId  age  CDATA  #IMPLIED >
+<!ELEMENT EmpName  (FNAME, MNAME, LNAME)>
+<!ELEMENT FNAME  (#PCDATA)>
+<!ELEMENT MNAME  (#PCDATA)>
+<!ELEMENT LNAME  (#PCDATA)>
+<!ELEMENT EmpEmail  (#PCDATA)>

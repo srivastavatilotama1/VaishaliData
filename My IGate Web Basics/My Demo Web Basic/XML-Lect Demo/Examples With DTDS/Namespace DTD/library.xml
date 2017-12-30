@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library SYSTEM "C:\VaishaliTemp\WiproXMLCode\library.dtd">
+<library>
+	    <m2:book xmlns:m2='http://www.simple.org/general'>
+        <m2:message>Welcome to ABC Library</m2:message>
+    </m2:book>
+    <m3:book xmlns:m3='http://www.simple.org/technical'>
+        <m3:title>Java</m3:title>
+        <m3:author>Schildt</m3:author>
+    </m3:book>
+</library>

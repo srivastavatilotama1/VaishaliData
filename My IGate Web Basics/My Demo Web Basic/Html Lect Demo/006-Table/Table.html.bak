@@ -1,0 +1,44 @@
+<html>
+<body>
+
+<h4>IBM Strategic Business Unit</h4>  
+<table border="1">
+<caption>IBM Strategic Business Unit</caption>
+
+<tr>
+  <td>Unit Name</td>
+  <td>Description</td>
+</tr>   
+<tr>
+  <td>BCS</td>
+  <td>Business Consultancy Services</td>
+</tr>
+</table>
+
+<h4>With a thick border:</h4>  
+<table border="8">
+<tr>
+  <td>RollNo</td>
+  <td>name</td>
+</tr>   
+<tr>
+  <td>R02</td>
+  <td>vaishali</td>
+</tr>
+</table>
+
+<h4>With a very thick border:</h4>  
+<table border="15">
+<tr>
+  <td>RollNo</td>
+  <td>name</td>
+</tr>   
+<tr>
+  <td>R03</td>
+  <td>Vaishali</td>
+</tr>
+</table>
+
+</body>
+</html>
+

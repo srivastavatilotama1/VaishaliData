@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/projectList" xmlns:tns="http://www.example.org/projectList" elementFormDefault="qualified">
+
+    <xsd:element name=“projectId” type=“xsd:positiveInteger”/>
+    <xsd:element name=“projectName” type=“xsd:string”/>
+    <xsd:element name=“customer” type=“xsd:string”/>
+    <xsd:element name=“plannedStartDate” type=“xsd:date”/>
+    <xsd:element name=“plannedEndDate” type=“xsd:date”/>
+
+    <xsd:element name=“employeeId” type=“xsd:positiveInteger”/>
+    <xsd:element name=“firstName” type=“xsd:string”/>
+    <xsd:element name=“middleName” type=“xsd:string”/>
+    <xsd:element name=“lastName” type=“xsd:string”/>
+    <xsd:element name=“designation” type=“xsd:string”/>
+    <xsd:element name=“role” type=“xsd:string”/>
+
+    <xsd:complexType name=“typeTeamMember”>
+        <xsd:sequence>
+            <xsd:element ref=“employeeId”>
+            <xsd:element ref=“firstName”>
+            <xsd:element ref=“middleName”>
+            <xsd:element ref=“lastName”>
+            <xsd:element ref=“designation”>
+            <xsd:element ref=“role”>
+        </xsd:sequence>
+        <xsd:attribute name=“memberNumber” type=“xsd:positiveInteger” use=“required”/>
+    </xsd:complexType>
+
+    <xsd:element name=“teamMember” type=“typeTeamMember”/>
+
+    <xsd:complexType name=“typeTeam”>
+        <xsd:sequence>
+            <xsd:element ref=“teamMember” maxOccurs=“unbounded”/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name=“team” type=“typeTeam”/>
+
+    <xsd:complexType name=“typeProject”>
+        <xsd:sequence>
+            <xsd:element ref=“projectId”/>
+            <xsd:element ref=“projectName”/>
+            <xsd:element ref=“customer”/>
+            <xsd:element ref=“plannedStartDate”/>
+            <xsd:element ref=“plannedEndDate”/>
+            <xsd:element ref=“team”/>
+        </xsd:sequence>
+        <xsd:attribute name=“projectNumber” type=“xsd:positiveInteger” use=“required”/>
+    </xsd:complexType>
+
+    <xsd:element name=“project” type=“typeProject”/>
+
+    <xsd:complexType name=“typeProjectList”>
+        <xsd:sequence>
+            <xsd:element ref=“project” maxOccurs=“unbounded”/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name=“projectList” type=“typeProjectList”/>
+
+</schema>
+
+
+

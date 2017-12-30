@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml:stylesheet type="text/xsl" href="movies.xsl"?>
+<movies>
+	<movie type="comedy" rating="A3" review="6" year="1987">
+		<title>Raising Arizona</title>
+		<writer>Ethan Arizona</writer>
+		<writer>Joel Coen</writer>
+		<producer>Ethan Coen</producer>
+		<director>Joel Coen</director>
+		<actor>Nicolas Cage</actor>
+		<actor>Holly Hunter</actor>
+		<comments>A classic love story</comments>
+	</movie>
+	<movie type="comedy" rating="B2" review="6" year="1998">
+		<title>Midnight Run</title>
+		<writer>Georger Gallo</writer>
+		<producer>Martin Breast </producer>
+		<director>Martin Breast</director>
+		<actor>Robert De Niro</actor>
+		<actor>Charlse Grodin</actor>
+		<comments>A classic love story</comments>
+	</movie>
+</movies>

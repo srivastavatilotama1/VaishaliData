@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empdetails>
+	<emp>
+		<Ecode>1111</Ecode>
+		<Enmae>
+			<Fname>Seema</Fname>
+			<LName>Daivi</LName>
+		</Enmae>
+		<doj>9/8/97</doj>
+		<totexp>12</totexp>
+		<department>
+			<unit>3d</unit>
+			<loc>Mumbai</loc>
+		</department>
+		<designation>4</designation>
+		<sal>21000</sal>
+		<grade>b</grade>
+	</emp>
+	<emp>
+		<Ecode>2222</Ecode>
+		<Enmae>
+			<Fname>Bharathi</Fname>
+			<LName>Mantri</LName>
+		</Enmae>
+		<doj>12/1/99</doj>
+		<totexp>5</totexp>
+		<department>
+			<unit>4a</unit>
+			<loc>Pune</loc>
+		</department>
+		<designation>2</designation>
+		<sal>12000</sal>
+		<grade>a</grade>
+	</emp>
+</empdetails>

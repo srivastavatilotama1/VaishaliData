@@ -1,0 +1,700 @@
+lab 4
+
+query 1
+
+
+  1  DECLARE
+  2                CURSOR c_max_sal(deptno NUMBER) IS
+  3             SELECT MAX(staff_sal)
+  4             FROM staff_masters
+  5             WHERE dept_code=deptno;
+  6             v_max_sal staff_masters.staff_sal%TYPE;
+  7   BEGIN
+  8                  OPEN c_max_sal(&deptno);
+  9                     FETCH c_max_sal INTO
+ 10                             v_max_sal ;
+ 11                     DBMS_OUTPUT.PUT_LINE('THe maximum salary is '|| v_max_sal);
+ 12*  END;
+SQL> /
+
+
+result---
+
+
+Enter value for deptno: 20
+old   8:                 OPEN c_max_sal(&deptno);
+new   8:                 OPEN c_max_sal(20);
+THe maximum salary is 62000
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+
+*******************************************************************************************************************************************
+query 2
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  CREATE OR REPLACE FUNCTION computeage
+  2             (dob IN date)
+  3     RETURN NUMBER
+  4     AS
+  5     v_age NUMBER(10,4);
+  6  BEGIN
+  7     v_age:=(sysdate-dob)/365;
+  8     RETURN v_age;
+  9* END;
+SQL> /
+
+Function created.
+
+SQL> variable age NUMBER;
+SQL> EXECUTE :age:=computeage('13-apr-92');
+
+PL/SQL procedure successfully completed.
+
+SQL> print age;
+
+       AGE
+----------
+   22.6985
+
+SQL> 
+
+
+
+
+*******************************************************************************************************************************************
+
+query 3
+
+
+
+  1  CREATE OR REPLACE
+  2     PROCEDURE updateuppercase(
+  3                     i_st_code IN staff_masters.staff_code%TYPE,
+  4              o_upper_name OUT staff_masters.staff_name%TYPE)
+  5             AS
+  6             v_st_name staff_masters.staff_name%TYPE;
+  7                     null_staff_name EXCEPTION;
+  8     BEGIN
+  9                     IF(v_st_name =null)THEN
+ 10                     RAISE null_staff_name;
+ 11                     END IF;
+ 12                     SELECT staff_name INTO  v_st_name
+ 13                     FROM staff_masters WHERE staff_code=i_st_code ;
+ 14             IF(v_st_name is null)THEN
+ 15                     RAISE null_staff_name;
+ 16                     END IF;
+ 17             o_upper_name:=UPPER(v_st_name );
+ 18             UPDATE staff_masters SET staff_name=o_upper_name
+ 19             WHERE staff_code=i_st_code ;
+ 20     EXCEPTION
+ 21                     WHEN null_staff_name THEN
+ 22                             DBMS_OUTPUT.PUT_LINE('no name for this staff');
+ 23*    END;
+SQL> /
+
+Procedure created.
+
+SQL> variable b_upper_nm VARCHAR2(20);
+SQL> EXECUTE updateuppercase(100001,:b_upper_nm);
+old Salary:17000NEw Salary :17000Difference:0
+
+PL/SQL procedure successfully completed.
+
+SQL> print b_upper_nm;
+
+B_UPPER_NM
+--------------------------------
+ARVIND
+
+SQL> 
+
+     
+
+
+
+*******************************************************************************************************************************************
+query 4
+
+
+CREATE OR REPLACE
+   PROCEDURE getmgrname(
+                   i_st_code IN staff_masters.staff_code%TYPE,
+                   o_staff_code OUT staff_masters.staff_code%TYPE,
+           o_staff_name OUT staff_masters.staff_name%TYPE,
+           o_staff_dept OUT staff_masters.dept_code%TYPE,
+           o_mgr_name OUT  staff_masters.staff_name%TYPE)
+   AS
+   BEGIN
+                   SELECT staff.staff_code ,staff.staff_name,staff.dept_code,
+                   staff1.staff_name
+                   INTO o_staff_code ,o_staff_name,
+                   o_staff_dept , o_mgr_name
+                   FROM staff_masters staff,staff_masters staff1
+                    WHERE staff.mgr_code=staff1.staff_code
+                   AND staff.staff_Code=i_st_code  ;
+   END;
+
+variable b_staff_cd NUMBER;
+variable b_st_name varchar2(20);
+variable b_dept_cd NUMBER;
+variable b_mg_nm varchar2(20);
+
+
+ EXECUTE getmgrname(100001,:b_staff_cd,:b_st_name,:b_dept_cd,:b_mg_nm);
+
+
+
+B_STAFF_CD
+----------
+ 100001
+
+
+B_ST_NAME
+--------------------------------
+ ARVIND
+
+ B_DEPT_CD
+----------
+ 30
+
+
+B_MG_NM
+--------------------------------
+	Allen
+
+
+
+
+
+*******************************************************************************************************************************************
+
+query 5
+
+
+
+  1  CREATE OR REPLACE FUNCTION returncost(
+  2              i_stf_code IN staff_masters.staff_code%TYPE)
+  3             RETURN NUMBER
+  4            AS
+  5          v_staff_sal staff_masters.staff_sal%TYPE;
+  6          v_hiredate DATE;
+  7               v_total_sal NUMBER(10,2);
+  8          v_spcl_allow NUMBER(10);
+  9          v_exp NUMBER(10,2);                        BEGIN
+ 10               SELECT staff_sal,hiredate  INTO v_staff_sal ,v_hiredate
+ 11               FROM staff_masters
+ 12               WHERE staff_code=i_stf_code ;
+ 13               v_exp:=(sysdate-v_hiredate )/365;
+ 14     IF(v_exp<1) THEN
+ 15             v_spcl_allow :=0;
+ 16     ELSIF(v_exp>=1 AND v_exp<2) THEN
+ 17             v_spcl_allow :=(v_staff_sal *0.1);
+ 18     ELSIF(v_exp>=2 AND v_exp<4) THEN
+ 19             v_spcl_allow :=(v_staff_sal*0.2);
+ 20          ELSE
+ 21             v_spcl_allow :=(v_staff_sal*0.3);
+ 22          END IF;
+ 23             v_total_sal:=(0.15*v_staff_sal )+(0.2*v_staff_sal )+(0.3*v_staff_sal )+ v_spcl_allow ;
+ 24             RETURN v_total_sal;
+ 25* END;
+SQL> /
+
+
+ variable b_total_sal NUMBER;
+
+
+
+SQL> execute :b_total_sal:=returncost(100004);
+
+PL/SQL procedure successfully completed.
+
+SQL> PRINT b_total_sal;
+
+B_TOTAL_SAL
+-----------
+      38000
+
+SQL> 
+
+
+
+
+*******************************************************************************************************************************************
+query 6
+
+ 1  CREATE OR REPLACE PROCEDURE staffdetails
+ 2  AS
+ 3  CURSOR c_staff_details IS
+ 4  SELECT staff.staff_name,dept.dept_name,design.design_name,
+ 5  staff.staff_sal,staff.dept_code
+ 6  FROM staff_masters staff, department_masters dept,
+ 7  designation_masters design
+ 8  WHERE staff.dept_code=dept.dept_code
+ 9  AND staff.design_code=design.design_code;
+10  v_avg_sal NUMBER(10,2);
+11  v_staff_name staff_masters.staff_name%TYPE;
+12  v_dept_name department_masters.dept_name%TYPE;
+13  v_design designation_masters.design_name%TYPE;
+14  v_Sal staff_masters.staff_sal%TYPE;
+15  v_status VARCHAR2(100);
+16  v_Dept_no department_masters.dept_code%TYPE;
+17  no_match_exe EXCEPTION;
+18  BEGIN
+19  IF NOT c_staff_details%ISOPEN THEN
+20  OPEN c_staff_details;
+21  END IF;
+22  FETCH c_Staff_details INTO v_staff_name,v_dept_name,v_Design,v_sal,v_dept_no;
+23  IF(c_Staff_details%NOTFOUND) THEN
+24  RAISE no_match_exe;
+25  END IF;
+26  LOOP
+27  SELECT AVG(staff_sal) INTO v_avg_sal
+28  FROM staff_masters
+29  WHERE dept_code=v_dept_no;
+30  IF(v_sal=v_avg_sal) THEN
+31  v_status:='Equal';
+32  ELSIF(v_sal<v_avg_sal) THEN
+33  v_Status:='Lesser';
+34  ELSE
+35  v_status:='Greater';
+36  END IF;
+37  DBMS_OUTPUT.PUT_LINE('Name:'||v_staff_name||'Dept name:'|| v_dept_name||
+38  'Designation:'||v_Design||'Salary:'||v_sal||'Status:'||v_status);
+39  FETCH c_staff_Details INTO v_Staff_name,v_Dept_name,v_design,v_sal,v_dept_no;
+40  EXIT WHEN c_staff_details%NOTFOUND;
+41  END LOOP;
+42  EXCEPTION
+43  WHEN no_match_exe THEN
+44  DBMS_OUTPUT.PUT_LINE('Table is empty');
+45* END;
+QL> /
+
+rocedure created.
+
+QL> execute staffdetails;
+
+L/SQL procedure successfully completed.
+
+QL> set serveroutput on;
+QL> /
+
+rocedure created.
+
+QL> execute staffdetails;
+ame:SmithDept name:ElectricalsDesignation:ReaderSalary:62000Status:Greater
+ame:RahulDept name:ElectricalsDesignation:ProfessorSalary:22000Status:Lesser
+ame:AnilDept name:ElectricalsDesignation:ProfessorSalary:40000Status:Lesser
+ame:AllenDept name:ElectronicsDesignation:ReaderSalary:42000Status:Greater
+ame:RamDept name:ElectronicsDesignation:ReaderSalary:32000Status:Greater
+ame:ARVINDDept name:ElectronicsDesignation:ProfessorSalary:17000Status:Lesser
+ame:RavirajDept name:MechanicsDesignation:ProfessorSalary:18000Status:Equal
+
+L/SQL procedure successfully completed.
+
+QL> 
+
+
+*******************************************************************************************************************************************
+query 7
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1    CREATE OR REPLACE PROCEDURE staffupdate
+  2    (i_staff_code IN staff_masters.staff_code%TYPE)
+  3    AS
+  4    v_hiredate staff_masters.hiredate%TYPE;
+  5    v_old_sal staff_masters.staff_sal%TYPE;
+  6    v_add_sal staff_masters.staff_sal%TYPE;
+  7    v_new_sal staff_masters.staff_sal%TYPE;
+  8    v_exp NUMBER(10,2);
+  9    BEGIN
+ 10    SELECT staff_sal,hiredate INTO v_old_sal,v_hiredate
+ 11    FROM staff_masters
+ 12    WHERE staff_code=i_staff_code;
+ 13    v_exp:=(sysdate-v_hiredate)/365;
+ 14    IF(v_exp<2) THEN
+ 15    v_add_sal:=0;
+ 16    ELSIF(v_exp>2 AND v_exp<5)THEN
+ 17    v_add_sal:=(v_old_sal*20)/100;
+ 18    ELSE
+ 19    v_add_sal:=(v_old_sal*25)/100;
+ 20    END IF;
+ 21    v_new_sal:=v_old_Sal+v_add_Sal;
+ 22    UPDATE staff_masters SET staff_Sal=v_new_sal
+ 23    WHERE staff_code=i_staff_code;
+ 24    INSERT INTO staff_masters_back(staff_code,staff_sal)
+ 25    VALUES(i_staff_code,v_old_sal);
+ 26    DBMS_OUTPUT.PUT_LINE('old salary:'||v_old_sal||'New salary:'||v_new_sal||'Table updated ');
+ 27    EXCEPTION
+ 28    WHEN no_data_found THEN
+ 29    DBMS_OUTPUT.PUT_LINE('Invalid staff_code');
+ 30* END;
+ 31  /
+
+Procedure created.
+
+
+
+
+
+
+SQL> EXECUTE staffupdate(100001);
+old Salary:17000NEw Salary :21250Difference:4250
+old salary:17000New salary:21250Table updated
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT * FROM staff_masters_back;
+
+STAFF_CODE  STAFF_SAL
+---------- ----------
+    100001      17000
+
+SQL> 
+
+
+
+*******************************************************************************************************************************************
+query 8
+  1  CREATE OR REPLACE PROCEDURE bookcheck
+  2  (i_book_code IN book_masters.book_code%TYPE)
+  3  AS
+  4  v_staff_code staff_masters.staff_code%TYPE;
+  5  v_staff_name staff_masters.staff_name%TYPE;
+  6  v_student_code student_masters.student_code%TYPE;
+  7  v_student_name student_masters.student_name%TYPE;
+  8  v_issue_date DATE;
+  9  v_design designation_masters.design_name%TYPE;
+ 10  v_expected_return_date DATE;
+ 11  v_actual_return_date date;
+ 12  BEGIN
+ 13  SELECT staff_code,student_code,book_issue_date,
+ 14  book_expected_return_date,book_actual_return_date
+ 15  INTO
+ 16  v_staff_code,v_student_code,v_issue_date,
+ 17  v_expected_return_date,v_actual_return_date
+ 18  FROM book_transactions
+ 19  WHERE book_code=i_book_code;
+ 20  IF(v_student_code IS NULL)THEN
+ 21  IF(v_actual_return_date IS NULL) THEN
+ 22  SELECT staff.staff_name,design.design_name
+ 23  INTO v_staff_name,v_design
+ 24  FROM staff_masters staff,designation_masters design
+ 25  WHERE staff.design_code=design.design_code
+ 26  AND staff.staff_code=v_staff_code;
+ 27  DBMS_OUTPUT.PUT_LINE('staff_code:'||v_staff_code||
+ 28  'Name:'||v_staff_name||'issue date:'||v_issue_date||
+ 29  'designation:'||v_design||
+ 30  'Expected return date:'||v_expected_return_date);
+ 31  ELSE
+ 32  DBMS_OUTPUT.PUT_LINE('book returned');
+ 33  END IF;
+ 34  IF(v_actual_return_date IS NULL) THEN
+ 35  SELECT student_name
+ 36  INTO v_student_name
+ 37  FROM student_masters
+ 38  WHERE student_code=v_student_code;
+ 39  DBMS_OUTPUT.PUT_LINE('student code:'||v_student_code||
+ 40  'Name:'||v_student_name||'issue date:'||v_issue_date||
+ 41  'expected return date:'||v_expected_return_date);
+ 42  ELSE
+ 43  DBMS_OUTPUT.PUT_LINE('book returned');
+ 44  END IF;
+ 45  END IF;
+ 46  EXCEPTION
+ 47  WHEN no_data_found THEN
+ 48  dbms_output.PUT_LINE('invalid book code');
+ 49* END;
+SQL> /
+
+Procedure created.
+
+SQL> EXECUTE bookcheck(10000006);
+
+PL/SQL procedure successfully completed.
+
+SQL> SET serveroutput on;
+SQL> /
+
+Procedure created.
+
+SQL> 
+SQL> EXECUTE bookcheck(10000006);
+
+PL/SQL procedure successfully completed.
+
+SQL> EXECUTE bookcheck(10000008);
+book returned
+book returned
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+
+*******************************************************************************************************************************************
+query 9  
+
+
+SQL> CREATE TABLE staff_allowance(staff_code NUMBER(10),doj date ,experience NUMBER(10),
+  2  allowance NUMBER(10,2));
+
+Table created.
+
+SQL> ed
+Wrote file afiedt.buf
+INITIALIZATION 
+
+  1  CREATE OR REPLACE PACKAGE staffallowance AS
+  2  FUNCTION getexp
+  3  (i_hiredate IN staff_masters.hiredate%TYPE)
+  4  RETURN NUMBEr;
+  5  PROCEDURE salupdate
+  6  (i_exp IN NUMBER);
+  7* END staffallowance;
+SQL> /
+
+Package created.
+
+SQL> 
+
+
+BODY
+
+SQL> CREATE OR REPLACE PACKAGE BODY staffallowance AS
+  2  FUNCTION getexp
+  3  (i_hiredate IN staff_masters.hiredate%TYPE)
+  4  RETURN NUMBEr
+  5  AS
+  6  v_exp NUMBER(10,2);
+  7  BEGIN
+  8     v_exp:=(sysdate-i_hiredate)/365;
+  9     v_exp:=ROUND(v_exp);
+ 10     RETURN v_exp;
+ 11  END getexp;
+ 12  PROCEDURE salupdate
+ 13  (i_exp IN NUMBER)
+ 14  AS
+ 15     v_allow NUMBER(10,2);
+ 16     v_staff_code staff_masters.staff_code%TYPE;
+ 17     v_hiredate DATE;
+ 18  BEGIN
+ 19     v_allow:=i_exp*3000;
+ 20     SELECT staff_code,hiredate
+ 21     INTO v_staff_code,v_hiredate
+ 22     FROM staff_masters
+ 23     WHERE ROUND((sysdate-hiredate)/365)=i_exp;
+ 24     INSERT INTO staff_allowance VALUES
+ 25     (v_staff_code,v_hiredate,i_exp,v_allow);
+ 26     DBMS_OUTPUT.PUT_LINE('allowance calculated');
+ 27  END salupdate;
+ 28  END staffallowance;
+ 29  /
+
+Package body created.
+
+
+
+EXECUTION
+
+SQL> EXECUTE :b_exp:=staffallowance.getexp('11-Dec-03');
+
+PL/SQL procedure successfully completed.
+
+SQL> SET serveroutput on;
+SQL> EXECUTE staffallowance.salupdate(:b_exp);
+allowance calculated
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT * FROM staff_allowance;
+
+STAFF_CODE DOJ       EXPERIENCE  ALLOWANCE
+---------- --------- ---------- ----------
+    100009 11-DEC-03         11      33000
+
+SQL> 
+
+*******************************************************************************************************************************************
+query 10
+
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  CREATE OR REPLACE PROCEDURE insertbook
+  2             (i_book_code IN book_masters.book_code%TYPE,
+  3             i_student_code IN student_masters.student_code%TYPE,
+  4             i_staff_code IN staff_masters.staff_code%TYPE)
+  5     AS
+  6             v_issue_date DATE;
+  7             v_expected_return_date DATE;
+  8  BEGIN
+  9             v_issue_date:=sysdate;
+ 10             v_expected_return_date:=sysdate+10;
+ 11             IF(to_char(v_expected_return_date,'D')=1)THEN
+ 12             v_expected_return_date:=v_expected_return_date+1;
+ 13             ELSIF(to_char(v_expected_return_date,'D')=7)THEN
+ 14             v_expected_return_date:=v_expected_return_date+2;
+ 15     END IF;
+ 16             INSERT INTO book_transactions VALUES
+ 17             (i_book_code,i_student_code,i_staff_code,v_issue_date,
+ 18             v_expected_return_date,NULL);
+ 19             DBMS_OUTPUT.PUT_LINE('values inserted');
+ 20* END;
+SQL> /
+
+Procedure created.
+
+
+
+
+
+
+SQL> EXECUTE insertbook(10000005,1008,NULL);
+values inserted
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT * FROM book_transactions;
+
+ BOOK_CODE STUDENT_CODE STAFF_CODE BOOK_ISSU BOOK_EXPE BOOK_ACTU
+---------- ------------ ---------- --------- --------- ---------
+  10000006         1012            02-FEB-11 09-FEB-11
+  10000008                  100006 10-MAR-11 17-MAR-11 15-MAR-11
+  10000009                  100010 01-APR-11 08-APR-11 10-APR-11
+  10000004         1015            12-FEB-11 19-FEB-11
+  10000005                  100007 14-MAR-11 21-MAR-11 21-MAR-11
+  10000007                  100007 01-APR-11 07-APR-11 06-APR-11
+  10000007                  100006 01-APR-10 07-APR-10 06-APR-10
+  10000005         1009            31-MAY-11 08-JUN-11 08-JUN-11
+  10000005         1008            28-AUG-14 08-SEP-14
+
+9 rows selected.
+
+
+*******************************************************************************************************************************************
+query 12
+
+
+
+  1   CREATE OR REPLACE PROCEDURE update_salary(emp_id NUMBER) IS
+  2   v_name VARCHAR2(15);
+  3   v_newsal NUMBER;
+  4   BEGIN
+  5   UPDATE emp_copy SET sal=sal*1.1
+  6   WHERE empno=emp_id;
+  7   SELECT ename,sal INTO v_name,v_newsal
+  8   FROM emp_copy
+  9   WHERE empno=emp_id;
+ 10   DBMS_OUTPUT.PUT_LINE('Emp name:'|| v_name);
+ 11   DBMS_OUTPUT.PUT_LINE('Ename:'||v_newsal);
+ 12* END;
+ 13  /
+
+Procedure created.
+
+SQL> SELECT * FROM emp_copy;
+
+no rows selected
+
+SQL> EXECUTE update_salary (7369);
+BEGIN update_salary (7369); END;
+
+*
+ERROR at line 1:
+ORA-01403: no data found
+ORA-06512: at "TRG809.UPDATE_SALARY", line 7
+ORA-06512: at line 1
+
+CORRECT program
+
+*******************************************************************************************************************************************
+query 14
+
+
+
+  1  CREATE OR REPLACE PROCEDURE empdetails
+  2     (i_dept_no IN department_masters.dept_code%TYPE)
+  3  AS
+  4     CURSOR c_emp_details IS
+  5     SELECT ename,job,sal,comm
+  6     FROM emptable
+  7     WHERE deptno=i_dept_no;
+  8             v_emp_name emptable.ename%TYPE;
+  9             v_job emptable.job%TYPE;
+ 10             v_sal emptable.sal%TYPE;
+ 11             v_comm emptable.comm%TYPE;
+ 12             v_no_emp NUMBER(10):=0;
+ 13             v_tot_sal NUMBER(10):=0;
+ 14             v_max_sal NUMBER(10):=0;
+ 15             v_avg_sal NUMBER(10,2);
+ 16  BEGIN
+ 17     IF NOT c_emp_details%ISOPEN THEN
+ 18     open c_emp_details;
+ 19     END IF;
+ 20     LOOP
+ 21             FETCH c_emp_details INTO v_emp_name,v_job,v_sal,
+ 22             v_comm;
+ 23     EXIT WHEN c_emp_details%NOTFOUND;
+ 24             v_no_emp:=v_no_emp+1;
+ 25             v_tot_sal:=v_tot_sal+v_sal;
+ 26     IF(v_sal>v_max_sal)ThEN
+ 27             v_max_sal:=v_sal;
+ 28     END IF;
+ 29             DBMS_OUTPUT.PUT_LINE('employee name:'||v_emp_name);
+ 30             DBMS_OUTPUT.PUT_LINE('employee job:'||v_job);
+ 31             DBMS_OUTPUT.PUT_LINE('employee salary :'||v_sal);
+ 32             DBMS_OUTPUT.PUT_LINE('employee commision:'||v_comm);
+ 33             DBMS_OUTPUT.PUT_LINE('******************************************');
+ 34     END LOOP;
+ 35             v_avg_sal:=v_tot_sal/v_no_emp;
+ 36             DBMS_OUTPUT.PUT_LINE('NUMBER OF emplyees:'||v_no_emp);
+ 37             DBMS_OUTPUT.PUT_LINE('Total salary:'||v_tot_sal);
+ 38             DBMS_OUTPUT.PUT_LINE('Maximum salary:'||v_max_sal);
+ 39             DBMS_OUTPUT.PUT_LINE('average salary:'||v_avg_sal);
+ 40* END;
+
+
+
+
+SQL> EXECUTE emptable(20);
+BEGIN emptable(20); END;
+
+      *
+ERROR at line 1:
+ORA-06550: line 1, column 7:
+PLS-00221: 'EMPTABLE' is not a procedure or is undefined
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+
+SQL> EXECUTE empdetails(20);
+employee name:becker
+employee job:manager
+employee salary :2800
+employee commision:4
+******************************************
+employee name:bill
+employee job:clerk
+employee salary :3000
+employee commision:0
+******************************************
+NUMBER OF emplyees:2
+Total salary:5800
+Maximum salary:3000
+average salary:2900
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+
+*******************************************************************************************************************************************
+
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:simpleType name="phonePat">
+		<xs:restriction base="xs:string">
+			<xs:length value="15"/>
+			<xs:pattern value="\d{4}-\d{4}-\d{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ageLimit">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:maxInclusive value="100"/>
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+<xs:simpleType name="salVal">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RS"/>
+			<xs:enumeration value="R"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+<xs:element name="employees">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="employee" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+<xs:element name="employee">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="employeeName"/>
+				<xs:element ref="empPhone"/>
+				<xs:element ref="age"/>
+				<xs:element ref="salary"/>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="employeeName">
+							<xs:complexType>	
+									<xs:sequence>
+											<xs:element name="fname" type="xs:string"/>
+													<xs:element name="mname" type="xs:string"/>
+													<xs:element name="lname" type="xs:string"/>
+									</xs:sequence>
+						</xs:complexType>
+	</xs:element>
+	
+<xs:element name="empPhone" type="phonePat"/>
+
+<xs:element name="age" type="ageLimit"/>
+
+<xs:element name="salary">
+		<xs:complexType>
+				<xs:simpleContent>
+						<xs:extension base="xs:integer">
+									<xs:attribute name="currency" type="salVal"/>
+							</xs:extension>
+					    </xs:simpleContent>
+	       	</xs:complexType>
+</xs:element>
+
+</xs:schema>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    
+<constant name="struts.devMode" value="true" />
+<constant name="struts.multipart.maxSize" value="1000000" />
+<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+
+
+<!-- HelloWorld  Actin -->
+   <package name="helloworld" extends="struts-default" namespace="/"   > 
+            <interceptors>
+        		 <interceptor name="myinterceptor"
+          		  class="com.igate.interceptor.MyInterceptor" />
+        		 
+       			 <interceptor-stack name="basicStack">
+  					 <interceptor-ref name="exception"/>
+   					<!-- <interceptor-ref name="servlet-config"/> -->
+  					 <interceptor-ref name="prepare"/>
+   					<interceptor-ref name="checkbox"/>
+   					<interceptor-ref name="params"/>
+  					 <interceptor-ref name="conversionError"/>
+				</interceptor-stack>
+     	 </interceptors>
+     	 
+        <!-- <global-results>
+           <result name="error">/error.jsp</result>
+        </global-results>
+        
+		<global-exception-mappings>
+				<exception-mapping exception="java.lang.Exception" 
+				    result= "error" />
+		</global-exception-mappings>
+ -->
+         
+     	 
+      <action name="getSayHello" 
+            class="com.igate.basic.action.HelloWorldAction" 
+            method="execute">  
+            	 <interceptor-ref name="basicStack"/>          
+				 <interceptor-ref name="params"/>
+         		<interceptor-ref name="timer" />
+         		<interceptor-ref name="myinterceptor" />
+         		
+         	<!-- <exception-mapping exception="java.lang.NullPointerException"
+       				  result="error" />  -->
+              <result name="success">sayHello.jsp</result>
+             <result name="error">error.jsp</result>
+      </action>
+      
+      <action name="enterNameAction">
+            <result >/enterName.jsp</result>
+      </action>   
+      
+       <action name="redirectToGoogle">
+            <result  type="redirect">
+                 <param name="location">
+             			https://www.google.com
+            	</param >
+			</result>
+      </action>  
+      
+        <action name="populateRegister" 
+             class="com.igate.basic.action.RegisterAction">
+             <result name="input">jsps/Register.jsp</result>
+            <result name="registerSuccess">jsps/Welcome.jsp</result>
+             <result name="registerFail">jsps/Register.jsp</result>
+        </action>  
+        
+      <action name="locale" 
+         class="com.igate.basic.action.Locale"
+         method="execute">
+         <result name="displayLocaleRegister" type="chain">populateRegister</result>
+      </action>      
+   </package>  
+   
+   <!-- Login Related Actions -->
+ 	<package name="loginPkg" extends="struts-default" >               
+       <action name="showLoginPage" >
+            <result >jsps/Login.jsp</result>
+      </action>  
+               
+      <action name="*Login"  method="{1}" 
+            class="com.igate.basic.action.LoginAction" >
+             <result name="populate">jsps/Login.jsp</result>
+             <result name="successLogin" type="dispatcher">jsps/successLogin.jsp</result>
+            <result name="errorLogin" type="dispatcher">jsps/failureLogin.jsp</result>
+            <result name="userNotExists" type="dispatcher">jsps/Register.jsp</result>
+            
+          <!--
+           <result name="success" type="freemarker">
+            <param name="location">/hello.fm</param>
+         </result>
+             -->
+      </action>                  
+    </package>  	
+ 	
+ <!-- Data Tag Realted Action --> 	
+ <package name="dataTagPkg" extends="struts-default">         
+     <action name="urlTagAction" 
+		class="com.igate.basic.action.URLTagAction" >
+		<result name="success">jsps/dataTagSuccess.jsp</result>
+	</action> 	    
+   </package>
+   
+ <!-- Employee Related  Action --> 	 
+ <package name="empPkg" extends="struts-default">             
+       <action name="addEmpOperation"  method="add"
+           class="com.igate.basic.action.EmployeeAction">
+   			 <result name="displayAddEmp">jsps/AddEmp.jsp</result>   			
+   		 </action>
+   		 
+        <action name="addEmpOperation"  method="add"
+           class="com.igate.basic.action.EmployeeAction">
+   			 <result name="displayAddEmp">jsps/AddEmp.jsp</result>   			
+   		 </action>
+   		 
+   		  <action name="updateEmpOperation"  method="update"
+           class="com.igate.basic.action.EmployeeAction">
+   			 <result name="displayUpdateEmp">jsps/EditEmp.jsp</result>   			
+   		 </action>
+   		 
+   		  <action name="deleteEmpOperation"  method="delete"
+           class="com.igate.basic.action.EmployeeAction">
+   			 <result name="displayDeleteEmp">jsps/DeleteEmp.jsp</result>   			
+   		 </action>
+   		 
+   		  <action name="listallEmpOperation"  method="listAll"
+           class="com.igate.basic.action.EmployeeAction">
+   			 <result name="listAllEmp">jsps/ListAllEmp.jsp</result>   			
+   		 </action>
+   		 
+       
+   </package>  
+   
+  <!-- Student Related  Action --> 	
+  <package name="stuActionPkg" extends="struts-default">    
+           
+     <action name="displayStudentJsp">
+		<result>jsps/enterStudentDetails.jsp</result>
+	</action> 
+	
+      <action name="getStudentGrade"  
+           class="com.igate.basic.action.StudentAction">
+		<result name="getGradePage">jsps/getStudentGrade.jsp</result>
+	</action> 	    	    
+   </package>
+  
+ 
+</struts>

@@ -1,0 +1,90 @@
+Q1)	How to display errors in details.?
+Q2)	What is size of char and varchar2?
+Ans:- Char-255
+       Char(2)-32767
+       Varchar2-2000 bytes 
+         Varchar2(5)-32767
+
+Q3)	R They different in sql and plsql?
+what is  difference between unique constraints created  
+and unique index created on  deptname column.?
+
+What is inline view 
+Start with connect by
+check option in view.
+what is difference in number and binary_integer data   type in oracle??
+
+Can we rename more than one column in table,
+*******************************Error*************
+SQL> ed
+Wrote file afiedt.buf
+
+  1* create sequence v_emp_seq start with 4   minvalue 1 maxvalue 10 increment by 2 CYCLE
+SQL> /
+create sequence v_emp_seq start with 4   minvalue 1 maxvalue 10 increment by 2 CYCLE
+*
+ERROR at line 1:
+ORA-04013: number to CACHE must be less than one cycle
+
+
+*****************************************************
+ 
+select ename,job,sum(sal,comm) "income" from emp;
+/
+
+***********************************************
+SQL> select to_char(staff_dob,'month,dd,yyyy')from staff_masters where to_char(staff_dob,'day') = AN
+Y('saturday','sunday');
+
+SQL> select to_char(staff_dob,'month,dd,yyyy')from staff_masters where to_char(staff_dob,'day')='sat
+urday';
+
+
+*********************************************
+SQL> select round(sysdate,'yyyy') from dual;
+
+ROUND(SYS
+---------
+01-JAN-14
+
+SQL> select round(sysdate,'mon')from dual;
+
+ROUND(SYS
+---------
+01-APR-14
+
+SQL>  select round(sysdate,'dd')from dual;
+
+ROUND(SYS
+---------
+10-APR-14
+
+SQL> select round(sysdate,'day') from dual;
+
+ROUND(SYS
+---------
+13-APR-14
+
+SQL> select round(sysdate,'yy')from dual;
+
+ROUND(SYS
+---------
+01-JAN-14
+
+SQL> 
+.......................
+SQL>  select s.student_code,s.student_name,b.book_code,b.book_name
+  2   from student_masters s,book_masters b,book_transactions bt where
+  3   s.student_code=bt.student_code and b.book_code=bt.book_code;
+ for today date
+.......................
+
+ select s.student_code,s.student_name,d.dept_name,
+ s.subject1+s.subject2+s.subject3 "Total marks"
+ ,des.design_name from student_masters s,department_masters d,
+ designation_masters des where s.dept_code= d.dept_code
+ and  s.design_code=des.design_code and des.design_name='HOD'
+ /
+
+
+ 

@@ -1,0 +1,7 @@
+C:\VaishaliTempWS\XMLWS\JavaToXml\src>schemagen Employess.java Employee.java Emp
+NameType.java
+***************************************
+schemagen -cp bin src\com\theopentutorials\jaxb\beans\Employee.java
+
+where to find class files  -cp oR -classpath
+where to keep class file -d

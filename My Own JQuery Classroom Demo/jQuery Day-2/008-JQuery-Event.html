@@ -1,0 +1,45 @@
+<!-- 
+hover () method is a stubstitute of bind() 
+forhandling mouse event
+
+click()
+change()-dropdown list select
+dblclick()
+mouseeneter() mouseleave()  bind() 
+live() die() delegate() undelegate()
+-->
+<html>
+	<head>
+	<title>jQuery Dom </title>
+	<style type="text/css">
+		.style1{background-color:blue; color:white;font-size:20pt}
+	</style>
+	<script language="javascript" src="../Scripts/jquery-2.0.0.js">
+	</script>
+	
+<script type="text/javascript">
+	$(document).ready(function()
+	{ 
+		WireEvents();
+	});
+	function WireEvents()
+	{	
+		$('#targetDivId').hover(mouseEnterHandler,mouseLeaveHandler);
+	}
+	function mouseEnterHandler(event)
+	{	
+			$(this).addClass('style1');
+					
+	}
+	function mouseLeaveHandler(event)
+	{			
+		$(this).removeClass('style1');		
+	}		
+</script>
+</head>
+<body  bgcolor="pink">
+	<form>
+		<div id="targetDivId">IGate</div>
+	</form>
+</body>
+</html>

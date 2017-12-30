@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % reject "IGNORE">
+<!ENTITY % accept "INCLUDE">
+<![ %reject; [
+<!ELEMENT message ( approved, signature )>
+]]>
+<![ %accept; [
+   <!ELEMENT message ( approved, reason, signature )>
+   	]]>
+   	<!ELEMENT approved EMPTY>
+   	<!ATTLIST approved flag ( true | false ) "false">
+   	<!ELEMENT reason ( #PCDATA )>
+
+<!ELEMENT signature ( #PCDATA )>
+
+
+
+
+
+
+

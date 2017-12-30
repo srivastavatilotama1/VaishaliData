@@ -1,0 +1,47 @@
+package com.igate.demo2.util.test;
+
+import com.igate.demo2.util.Addition;
+
+import junit.framework.TestCase;
+
+
+
+public class Addition_test extends TestCase  
+{  
+ private int x = 0;  
+private int y = 0;  
+
+ protected void setUp()  
+
+  {  
+
+  x = 4;  
+
+ y = 5;  
+
+ }  
+ protected void tearDown()  
+
+  {  
+
+   x = 0;  
+
+   y = 0;  
+
+ }  
+
+ public void testAddition()  
+
+{  
+
+  System.out.println("Test use of Addition class");  
+
+  int z = Addition.twoValues(x,y);  
+
+System.out.println("    Result: " + z);  
+
+ assertEquals(11,z);  // The test  
+
+ }  
+
+} 

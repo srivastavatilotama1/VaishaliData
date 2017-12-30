@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml:stylesheet type="text/xsl" href="actors.xsl"?>
+<movies>
+<movie type="comedy" rating ="A3" review="6" year="1987">
+		<title>Raising Arisona</title>
+		<writer>Ethan Coen</writer>
+		<writer>Joel Coen</writer>
+		<producer>Ethan Coen</producer>
+		<director>Joel Coen</director>
+		<actor>Nicolas Sage</actor>
+		<actor>Holly Hunter</actor>
+		<actor>John Goodman</actor>
+		<comments>A Classic Love Story</comments>
+</movie>
+
+<movie type="comedy" rating ="B2" review="6" year="1988">
+		<title>Mid Night Run</title>
+		<writer>Georger Gallo</writer>
+		<writer>Joel coen</writer>
+		<producer>Martin Brest</producer>
+		<director>Martin Brest</director>
+		<actor>Robert De Niro</actor>
+		<actor>Charlse Grodin</actor>
+		<comments>A Road Comedy</comments>
+</movie>
+</movies>

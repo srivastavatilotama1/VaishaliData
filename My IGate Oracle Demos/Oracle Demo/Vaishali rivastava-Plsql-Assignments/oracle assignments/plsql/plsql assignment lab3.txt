@@ -1,0 +1,203 @@
+query 3.1
+DECLARE
+                   v_staff_code staff_masters.staff_code%TYPE;
+                   v_staff_nm staff_masters.staff_name%TYPE;
+                   v_staff_sal staff_masters.staff_sal%TYPE;
+           v_dept_code staff_masters.dept_code%TYPE;
+                   CURSOR c_staff_details IS
+                    SELECT staff_code,staff_name,staff_sal
+                   FROM staff_masters
+                            WHERE dept_code=&v_dept_code;
+                   no_row_exe EXCEPTION;
+ BEGIN
+                   IF NOT c_staff_details%ISOPEN THEN
+                   OPEN c_staff_details;
+                    END IF;
+           FETCH c_staff_details INTO v_staff_code,v_staff_nm,v_staff_sal ;
+           IF (c_staff_details%NOTFOUND) THEN
+                   RAISE no_row_exe;
+           END IF;
+           LOOP
+                           DBMS_OUTPUT.PUT_LINE(
+                           ' CODE: ' ||v_staff_code||
+                           ' Name:'  ||v_staff_nm||
+                   ' Salary:'  ||v_staff_sal);
+                   FETCH c_staff_details INTO v_staff_code,v_staff_nm,v_staff_sal;
+                           EXIT WHEN c_staff_details%NOTFOUND;
+           END LOOP;
+EXCEPTION
+                   WHEN no_row_exe THEN
+                   DBMS_OUTPUT.PUT_LINE(v_dept_code ||'dept code does not exist or is having no rows');
+END;
+
+
+
+result--
+
+SQL> /
+Enter value for v_dept_code: 20
+old   9:                         WHERE dept_code=&v_dept_code;
+new   9:                         WHERE dept_code=20;
+CODE: 100004 Name:Anil Salary:40000
+CODE: 100007 Name:Smith Salary:62000
+CODE: 100009 Name:Rahul Salary:22000
+
+PL/SQL procedure successfully completed.
+/
+
+
+
+
+
+**************************************************************************************************************************************************************
+query 2
+
+ DECLARE
+V_BONUS V_SAL%TYPE;
+  2  V_SAL STAFF_MASTERS.STAFF_SAL%TYPE;
+  3  
+  4  BEGIN
+  5  SELECT STAFF_SAL INTO V_SAL
+  6  FROM STAFF_MASTERS
+  7  WHERE MGR_CODE=100007;
+  8  V_BONUS:=2*V_SAL;
+  9  DBMS_OUTPUT.PUT_LINE('STAFF SALARY IS:'||V_SAL);
+ 10  DBMS_OUTPUT.PUT_LINE('STAFF BONUS IS:'||V_BONUS);
+ 11  EXCEPTION
+ 12  WHEN NO_DATA_FOUND THEN
+ 13  DBMS_OUTPUT.PUT_LINE('GIVEN CODE IS NOT VALID  .ENTER VALID CODE');
+ 14* END;
+
+
+  1  DECLARE
+  2  V_SAL STAFF_MASTERS.STAFF_SAL%TYPE;
+  3  V_BONUS V_SAL%TYPE;
+  4  BEGIN
+  5  SELECT STAFF_SAL INTO V_SAL
+  6  FROM STAFF_MASTERS
+  7  WHERE MGR_CODE=100007;
+  8  V_BONUS:=2*V_SAL;
+  9  DBMS_OUTPUT.PUT_LINE('STAFF SALARY IS:'||V_SAL);
+ 10  DBMS_OUTPUT.PUT_LINE('STAFF BONUS IS:'||V_BONUS);
+ 11  EXCEPTION
+ 12  WHEN NO_DATA_FOUND THEN
+ 13  DBMS_OUTPUT.PUT_LINE('GIVEN CODE IS NOT VALID  .ENTER VALID CODE');
+ 14* END;
+SQL> /
+STAFF SALARY IS:32000
+STAFF BONUS IS:64000
+
+PL/SQL procedure successfully completed.
+
+
+*********************************************************************************************************************************
+QUERY 3.4
+INCORRECT CODE
+
+
+
+
+  1  DECLARE
+  2  fname emp.ename%TYPE;
+  3  BEGIN
+  4  SELECT ename INTO fname
+  5  FROM emp
+  6  WHERE 1=2;
+  7  DBMS_OUTPUT.PUT_LINE('This statement will print');
+  8  EXCEPTION
+  9  EHEN OTHERs THEN
+ 10  DBMS_OUTPUT.PUT_LINE('some inner block error');
+ 11  END;
+ 12  EXCEPTION
+ 13  WHEN NO_DATA_FOUND THEN    
+ 14  DBMS_OUTPUT.PUT_LINE('NO DATA FOUND IN FNAME');
+ 15  WHEN OTHERS THEN
+ 16  DBMS_OUTPUT.PUT_LINE('SOME OUTER BLOCK ERROR');
+ 17* END;
+ 18  /
+EHEN OTHERs THEN
+*
+
+
+
+
+correct CODE
+
+
+
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  fname STAFF_MASTERS.STAFF_NAME%TYPE;
+  3  BEGIN
+  4  SELECT STAFF_NAME INTO fname
+  5  FROM STAFF_MASTERS
+  6  WHERE 1=2;
+  7  DBMS_OUTPUT.PUT_LINE('This statement will print');
+  8  EXCEPTION
+  9  WHEN NO_DATA_FOUND THEN    
+ 10  DBMS_OUTPUT.PUT_LINE('NO DATA FOUND IN FNAME');
+ 11  WHEN OTHERS THEN
+ 12  DBMS_OUTPUT.PUT_LINE('SOME OUTER BLOCK ERROR');
+ 13* END;
+ 14  /
+NO DATA FOUND IN FNAME
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+
+************************************************************************************************************************************
+QUERY 3.5
+SQL> ED
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  fname STAFF_MASTERS.STAFF_NAME%TYPE;
+  3  BEGIN
+  4  SELECT STAFF_NAME INTO fname
+  5  FROM STAFF_MASTERS
+  6  WHERE STAFF_CODE=100001;
+  7  DBMS_OUTPUT.PUT_LINE('This statement will print');
+  8  EXCEPTION
+  9  WHEN NO_DATA_FOUND THEN    
+ 10  DBMS_OUTPUT.PUT_LINE('NO DATA FOUND IN FNAME');
+ 11  WHEN OTHERS THEN
+ 12  DBMS_OUTPUT.PUT_LINE('SOME OUTER BLOCK ERROR');
+ 13* END;
+ 14  /
+This statement will print
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+*****************************************************************************************************************************
+query 3.6
+
+
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2     v_comm emptable.comm%TYPE;
+  3     null_comm_exe exception;
+  4  BEGIN
+  5     SELECT comm INTO v_comm
+  6     FROM emptable
+  7     WHERE empno=1001;
+  8     IF(v_comm is null) THEn
+  9       RAISE null_comm_exe;
+ 10     END IF;
+ 11     DBMS_OUTPUT.PUT_LINE('the comminsion is '||v_comm);
+ 12  EXCEPTION
+ 13     WHEN null_comm_exe THEN
+ 14     DBMS_OUTPUT.PUT_LINE('null commission for emp no 1001');
+ 15* END;
+ 16  /
+the comminsion is 2
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+****************************************************************************************************************************

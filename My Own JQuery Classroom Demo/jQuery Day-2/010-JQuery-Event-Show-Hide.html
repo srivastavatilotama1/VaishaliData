@@ -1,0 +1,48 @@
+<!-- 
+show()  hide()  toggle()
+slideUp()   slideDown()
+ fadeIn() fadeOut() fadeTo()
+ animate()
+-->
+<html>
+	<head>
+	<title>jQuery Dom </title>
+	<style type="text/css">
+		.style1{background-color:blue; color:white;font-size:20pt}
+	</style>
+	<script language="javascript" src="./Scripts/jquery-1.6.4.min.js">
+	</script>
+	
+<script type="text/javascript">
+	$(document).ready(function(){ 
+		$('#btnOneId').bind("click",function(){
+		//three values slow(600ms) normal(400ms) fast(200ms)
+				$('#targetDiv').show('slow');
+		});
+		
+		$('#btnTwoId').bind("click",function(){
+				$('#targetDiv').hide('slow');
+		});	
+		
+		$('#btnThirdId').bind("click",function(){
+				$('#targetDiv').toggle('slow');
+		});	
+		
+		$('#btnForthId').bind("click",function(){
+				$('#targetDiv').slideUp(3000,function(){
+				alert("slided ......")});
+		});	
+	});			
+	
+</script>
+</head>
+<body  bgcolor="pink">
+	<form>
+		<input type="button" id="btnOneId" value="Show"/><br/>
+		<input type="button" id="btnTwoId" value="Hide"/><br/>
+		<input type="button" id="btnThirdId" value="Toggle"/><br/>	
+		<input type="button" id="btnForthId" value="Slide"/><br/>				
+	</form>
+	<div id="targetDiv" class="style1">IGate</div>
+</body>
+</html>

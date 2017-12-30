@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Document Demo</title>
+<script type="text/javascript">
+function validate()
+{
+	var barbieV=document.form1.Barbie.value;
+	var calcV=document.form1.Calc.value;
+	var mobileV=document.form1.Mobile.value;
+	var dvdV=document.form1.DVD.value;
+	var mobile=parseInt(mobileV);
+	var calc=parseInt(calcV);
+	var barbie=parseInt(barbieV);
+	var dvd=parseInt(dvdV);
+	if((barbieV.length==0)&&(calcV.length==0)&&(mobileV.length==0)&&(dvdV.length==0))
+	{
+		alert("No item selected");
+	}
+	else
+	{
+	var myWindow=open('','MYWindow','height=200,width=300');
+	myWindow.document.writeln("<table border='1' cellspacing='1'>");
+	myWindow.document.writeln("<tr><td>PRODUCT</td><td>QUANTITY</td><td>PRICE</td><td>TOTAL</td></tr>");
+	if(barbieV.length!=0)
+		{
+		myWindow.document.writeln("<tr><td>Barbie</td><td>"+barbie+"</td><td>20</td><td>"+barbie*20+"</td></tr>");
+		}
+	if(calcV.length!=0)
+	{
+	myWindow.document.writeln("<tr><td>Calculator</td><td>"+calc+"</td><td>30</td><td>"+calc*30+"</td></tr>");
+	}
+	if(mobileV.length!=0)
+	{
+	myWindow.document.writeln("<tr><td>Mobile</td><td>"+mobile+"</td><td>40</td><td>"+mobile*50+"</td></tr>");
+	}
+	if(dvdV.length!=0)
+	{
+	myWindow.document.writeln("<tr><td>LG DVD</td><td>"+dvd+"</td><td>50</td><td>"+dvd*50+"</td></tr>");
+	}
+	myWindow.document.writeln("</table>");
+	}
+}
+</script>
+</head>
+<body>
+<h2 align="left">PRODUCT</h2>
+<form name="form1">
+<table border="1" cellspacing="1">
+<tr>
+	<td><b>Name</b></td>
+	<td><b>Description</b></td>
+	<td><b>Price</b></td>
+	<td><b>Qty</b></td>
+</tr>
+<tr>
+	<td>Barbie Doll</td>
+	<td>Beautiful</td>
+	<td>20</td>
+	<td><input type="text" size="8" name="Barbie" value=""/></td>
+</tr>
+<tr>
+	<td>Calculator</td>
+	<td>Calculator with latest features</td>
+	<td>30</td>
+	<td><input type="text" size="8" name="Calc" value=""/></td>
+</tr>
+<tr>
+	<td>Mobile Phone</td>
+	<td>Camera, JavaGames,GPRS</td>
+	<td>40</td>
+	<td><input type="text" size="8" name="Mobile" value=""/></td>
+</tr>
+<tr>
+	<td>LG DVD</td>
+	<td>5 disc changer</td>
+	<td>40</td>
+	<td><input type="text" size="8" name="DVD" value=""/></td>
+</tr>
+</table>
+<input type="button" value="order" onClick="validate()"/>
+</form>
+</body>
+</html>

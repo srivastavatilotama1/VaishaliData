@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function products()
+{
+	var b_doll=document.form1.bdoll.value;
+	var b_cal=document.form1.bcal.value;
+	var b_mob=document.form1.bmob.value;
+	var b_dvd=document.form1.bdvd.value;
+	var mywindow;
+	if((b_doll.length==0)||(b_cal.length==0)||(b_mob.length==0)||(b_dvd.length==0))
+		{
+			alert("no items selected");
+		}
+	else
+		{
+			mywindow=open('','mywin','height=300,width=300,scrollbar=Yes')
+			mywindow.document.writeln("<table border='2'><tr><th>products</th></tr><tr><th>Price</th></tr><tr><th>Quantity</th></tr>")
+		
+			if(b_doll.length!=0)
+				{
+				mywindow.document.writeln("<tr><td>Barbie doll</td><td>"+b_doll+"</td><td>10</td><td>"+bdoll*10+"</td><tr>")
+				}
+			if(b_cal.length!=0)
+			{
+			mywindow.document.writeln("<tr><td>calculator</td><td>"+b_cal+"</td><td>20</td><td>"+bcal*20+"</td><tr>")
+			}
+			if(b_mob.length!=0)
+			{
+			mywindow.document.writeln("<tr><td>mob</td><td>"+b_mob+"</td><td>30</td><td>"+bmob*30+"</td><tr>")
+			}
+			if(b_dvd.length!=0)
+			{
+			mywindow.document.writeln("<tr><td>dvd</td><td>"+b_dvd+"</td><td>40</td><td>"+bdvd*40+"</td><tr>")
+			}
+		}
+	mywindow.document.close();
+	mywindow.focus();
+	}
+</script>
+</head>
+<body>
+<form name="form1" action="">
+<table border="1" cellspacing="8" bordercolor="blue">
+<tr><td colspan="4" align="center"><h1></h1></td></tr>
+<caption>PRODUCTS</caption>
+<tr>
+<th>NAME</th>
+<th>DESCRIPTION</th>
+<th>PRICE</th>
+<th>QUANTITY</th>
+</tr>
+
+<tr>
+<td>Barbie</td>
+<td>Beautiful</td>
+<td>20</td>
+<td><input type="text" name="bdoll" value=""></td>
+</tr>
+
+<tr>
+<td>Calculator</td>
+<td>Calculator with latest features</td>
+<td>30</td>
+<td><input type="text" name="bcal" value=""></td>
+</tr>
+ 
+ 
+ <tr>
+<td>Mobile Phone</td>
+<td>Camera,JAva,Games,GPRS</td>
+<td>40</td>
+<td><input type="text" name="bmob" value=""></td>
+</tr>
+
+<tr>
+<td>LG DVD</td>
+<td>5 Disc changer</td>
+<td>50</td>
+<td><input type="text" name="bdvd" value=""> </td>
+</tr>
+
+<tr><td colspan="3"><input type="button" name="order" value="order" onClick="products()"></td></tr>
+</table>
+</form>
+</body>
+</html>

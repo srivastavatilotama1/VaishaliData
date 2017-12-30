@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MarkedUpDesc  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MarkedUpDesc.xsd">
+	 This is an 
+	 <Bold>Example</Bold> or
+      <Italic>Mixed</Italic> Content,   Note there are elements mixed in with the elements data.
+
+</MarkedUpDesc>

@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+	<SCRIPT LANGUAGE="JavaScript" SRC="CalendarPopup.js"></SCRIPT>
+
+	<SCRIPT LANGUAGE="JavaScript">
+	var cal = new CalendarPopup();
+		function checkDate() {
+			alert("In this func-----");
+			var frmDate = document.example.date1.value;
+			var toDate = document.example.date2.value;
+			alert(frmDate);
+			alert(toDate);
+
+			if(toDate < frmDate) {
+				alert("To Date should be greater than from Date!");
+				return false;
+			}
+			return true;			
+		}
+	</SCRIPT>
+</HEAD>
+<BODY>
+
+<FORM NAME="example" onSubmit="return checkDate()">
+<br>
+
+<INPUT TYPE="text" NAME="date1" VALUE="" SIZE=25 readOnly="readOnly">
+<A HREF="#"
+   onClick="cal.select(document.forms['example'].date1,'anchor1','MM/dd/yyyy'); return false;"
+   NAME="anchor1" ID="anchor1">From Date</A>
+
+<INPUT TYPE="text" NAME="date2" VALUE="" SIZE=25 readOnly="readOnly">
+<A HREF="#"
+   onClick="cal.select(document.forms['example'].date2,'anchor1','MM/dd/yyyy'); return false;"
+   NAME="anchor1" ID="anchor1">To Date</A><br>
+
+<input type="submit" name="submit" value="submit"/>
+</FORM>
+
+</BODY>
+</HTML>

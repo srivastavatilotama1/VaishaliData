@@ -1,0 +1,199 @@
+query 5.1
+
+
+  1  CREATE TABLE emptable(
+  2  empno NUMBER(4) primary key,
+  3  ename varchar2(10),
+  4  job varchar2(50),
+  5  mgr number(4),
+  6  hiredate date,
+  7  sal number(7,2),
+  8  comm number(7,2),
+  9* deptno number(2))
+SQL> /
+
+Table created.
+
+
+**********************************************************************************************************************************************
+ query 5.2
+
+
+     EMPNO ENAME      JOB                                                       MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- -------------------------------------------------- ---------- --------- ------
+      7369 smith                                                                                     800                    20
+      7499 Allen                                                                                    1600                    30
+      7529 ward                                                                                     1250                    30
+      7566 JONES                                                                                    2975                    20
+      7654 MARTIN                                                                                   1250                    30
+      7698 BLAKE                                                                                    2850                    30
+      7782 CLARK                                                                                    2450                    10
+      7788 SCOTT                                                                                    3000                    20
+      7839 KING                                                                                     5000                    10
+      7844 TURNER                                                                                   1500                    30
+      7876 ADAMS                                                                                    1100                    20
+      7900 JAMES                                                                                     950                    30
+      7902 FORD                                                                                     3000                    20
+      7934 MILLER                                                                                   1300                    10
+
+14 rows selected.
+
+
+
+*****************************************************************************************************************************************
+query 5.3
+
+
+ UPDATE emptable SET job=(SELECT job FROM emptable
+ WHERE empno=7788),deptno=(SELECT deptno FROM
+ emptable  WHERE empno=7788 )WHERE empno=7698
+
+
+1 row updated.
+
+*****************************************************************************************************************************************
+query 5.4
+
+
+  1* DELETE FROM emptable WHERE empno=7934
+SQL> /
+
+1 rows deleted.
+
+*************************************************************************************************************************
+query 5.5
+
+
+  1  UPDATE EMPTABLE SET deptno=(SELECT deptno FROM EMPTABLE WHERE empno=7788)
+  2* WHERE empno=7698
+SQL> /
+
+1 rows updated.
+
+
+
+********************************************************************************************************************************************
+query 5.6
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  INSERT INTO emptable
+  2* VALUES(&empno,'&NAME','&JOB','&MGR','&hiredate',&SAL,&COMM,&deptno)
+SQL> /
+Enter value for empno: 1001
+Enter value for name: allen
+Enter value for job: clerk
+Enter value for mgr: 1001
+Enter value for hiredate: 12-jan-01
+Enter value for sal: 3000
+Enter value for comm: 2
+Enter value for deptno: 10
+old   2: VALUES(&empno,'&NAME','&JOB','&MGR','&hiredate',&SAL,&COMM,&deptno)
+new   2: VALUES(1001,'allen','clerk','1001','12-jan-01',3000,2,10)
+
+1 row created.
+
+
+
+SQL> /
+Enter value for empno: 1002
+Enter value for name: becker
+Enter value for job: manager
+Enter value for mgr: 1000
+Enter value for hiredate: 4-nov-98
+Enter value for sal: 2800
+Enter value for comm: 4
+Enter value for deptno: 20
+old   2: VALUES(&empno,'&NAME','&JOB','&MGR','&hiredate',&SAL,&COMM,&deptno)
+new   2: VALUES(1002,'becker','manager','1000','4-nov-98',2800,4,20)
+
+1 row created.
+
+SQL> /
+Enter value for empno: 1003
+Enter value for name: bill
+Enter value for job: clerk
+Enter value for mgr: 1002
+Enter value for hiredate: 4-nov-92
+Enter value for sal: 3000
+Enter value for comm: 0
+Enter value for deptno: 20
+old   2: VALUES(&empno,'&NAME','&JOB','&MGR','&hiredate',&SAL,&COMM,&deptno)
+new   2: VALUES(1003,'bill','clerk','1002','4-nov-92',3000,0,20)
+
+1 row created.
+
+
+
+SQL> /
+Enter value for empno: 1001
+Enter value for name: george
+Enter value for job: analyst
+Enter value for mgr: 0
+Enter value for hiredate: 08-sept-92
+Enter value for sal: 5000
+Enter value for comm: 0
+Enter value for deptno: 10
+old   2: VALUES(&empno,'&NAME','&JOB','&MGR','&hiredate',&SAL,&COMM,&deptno)
+new   2: VALUES(1001,'george','analyst','0','08-sept-92',5000,0,10)
+VALUES(1001,'george','analyst','0','08-sept-92',5000,0,10)
+                                   *
+1 row created
+*********************************************************************************************************************************************
+
+query 5.6
+
+
+
+  1  CREATE TABLE PROJECT (
+  2  PROJID VARCHAR (10) PRIMARY KEY,
+  3  PROJ_NAME VARCHAR(25),
+  4  START_DATE DATE,
+  5* END_DATE DATE)
+SQL> /
+
+Table created.
+
+\
+
+
+b)
+
+
+  1  INSERT INTO PROJECT
+  2* VALUES (1000,'JAVA','13-apr-1992','13-apr-2012')
+SQL> /
+
+1 row created.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  INSERT INTO PROJECT
+  2* VALUES (1001,'TESTING','15-apr-1992','15-apr-2012')
+SQL> /
+
+1 row created.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  INSERT INTO PROJECT
+  2* VALUES (1002,'DOTNET','16-apr-1992','16-apr-2012')
+SQL> /
+
+1 row created.
+
+
+
+SQL> SELECT * FROM project;
+
+PROJID     PROJ_NAME                 START_DAT END_DATE
+---------- ------------------------- --------- ---------
+1000       JAVA                      13-APR-92 13-APR-12
+1001       TESTING                   15-APR-92 15-APR-12
+1002       DOTNET                    16-APR-92 16-APR-12
+
+

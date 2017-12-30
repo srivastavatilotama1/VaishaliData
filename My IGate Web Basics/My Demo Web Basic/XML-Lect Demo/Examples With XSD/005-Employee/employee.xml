@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="employee.xsd">
+		<employee eid="01" >
+				<employeeName>BillClinton</employeeName>
+				 <age>23</age>
+				<salary>40000</salary>
+				<address>
+						<city>Pune</city>
+						<state>MS</state>
+						<country>India</country>
+				</address>
+		</employee>
+</employees>

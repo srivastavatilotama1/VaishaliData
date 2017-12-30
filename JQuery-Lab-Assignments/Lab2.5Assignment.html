@@ -1,0 +1,36 @@
+<html>
+<head>
+<style type="text/css">
+.blueDiv{background-color:blue; color:white;}
+.redDiv{background-color:red; color:white;}
+</style>
+
+<script language="javascript" src="./Scripts/jquery-2.0.0.js">
+</script>
+<script language="javascript">
+$(document).ready(function()
+{
+	var $radChecked = $(':radio:checked');
+	$("#targetDiv").text('')
+	.append("<b>Index: </b>" +$radChecked.index() + "<br/>")
+	.append("<b>Value: </b>" +$radChecked.val());
+});
+</script>
+</head>
+<body>
+<table> 
+<tr>
+ <td>
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female" 
+checked="checked">Female
+</td>
+ </tr>
+<tr>
+ <td>
+<div id="targetDiv" />
+ </td>
+ </tr>
+</table>
+</body>
+</html>

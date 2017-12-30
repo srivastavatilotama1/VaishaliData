@@ -1,0 +1,60 @@
+DEBUG - This is Debug Message
+INFO - This is log message 
+WARN - This is warning message
+ERROR - This is error level message
+FATAL - This is fatal error message
+ERROR - 1
+DEBUG - This is Debug Message
+INFO - This is log message 
+WARN - This is warning message
+ERROR - This is error level message
+FATAL - This is fatal error message
+ERROR - 1
+<log4j:event logger="TestLoggerDemo" timestamp="1407818215711" level="DEBUG" thread="main">
+<log4j:message><![CDATA[This is Debug Message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestLoggerDemo" timestamp="1407818215711" level="INFO" thread="main">
+<log4j:message><![CDATA[This is log message ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestLoggerDemo" timestamp="1407818215711" level="WARN" thread="main">
+<log4j:message><![CDATA[This is warning message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestLoggerDemo" timestamp="1407818215711" level="ERROR" thread="main">
+<log4j:message><![CDATA[This is error level message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestLoggerDemo" timestamp="1407818215711" level="FATAL" thread="main">
+<log4j:message><![CDATA[This is fatal error message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestLoggerDemo" timestamp="1407818215711" level="ERROR" thread="main">
+<log4j:message><![CDATA[1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestLoggerDemo" timestamp="1407818485393" level="DEBUG" thread="main">
+<log4j:message><![CDATA[This is Debug Message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestLoggerDemo" timestamp="1407818485409" level="INFO" thread="main">
+<log4j:message><![CDATA[This is log message ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestLoggerDemo" timestamp="1407818485409" level="WARN" thread="main">
+<log4j:message><![CDATA[This is warning message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestLoggerDemo" timestamp="1407818485409" level="ERROR" thread="main">
+<log4j:message><![CDATA[This is error level message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestLoggerDemo" timestamp="1407818485409" level="FATAL" thread="main">
+<log4j:message><![CDATA[This is fatal error message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestLoggerDemo" timestamp="1407818485409" level="ERROR" thread="main">
+<log4j:message><![CDATA[1]]></log4j:message>
+</log4j:event>
+

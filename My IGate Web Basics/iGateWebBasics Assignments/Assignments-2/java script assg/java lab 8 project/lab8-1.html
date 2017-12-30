@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script>
+
+
+
+function loan_amount()
+{ 
+	var amt=document.form2.amount.value;
+	if(amt.length==0)
+	{
+	alert("enter amount")
+	document.form2.amount.value=""
+	}
+	 else if(isNaN(amt))
+	{
+		alert("enter numbers only")
+	}
+    else if(amt>=1500000)
+		{
+		alert("amount should not greater than 15 lakhs")
+		}
+}
+function loan_rate()
+{
+	var rate=document.form2.rate.value;
+	if(rate.length==0)
+	{
+	alert("enter rate of interest")
+	}
+	 else if(isNaN(rate))
+	{
+		alert("enter valid rate")
+	}
+}
+function loan_peroid()
+{ 
+	
+	var loan_time=document.form2.time.value;
+	if( loan_time.length==0)
+	{
+	alert("enter peroid of loan")
+	}
+	 else if(isNaN( loan_time))
+	{
+		alert("enter valid period")
+	}
+	 else if((loan_time<7) || (loan_time>15))
+		 {
+		 alert("Repayment period must be between 7 and 15 years")
+		 
+		 }
+}
+
+function calculate()
+{	
+	var amt=document.form2.amount.value;
+	var rate=document.form2.rate.value;
+	var loan_time=document.form2.time.value;
+	var interest=(amt*rate*loan_time)/100;
+	var monthly_pay=(amt+interest)/12;
+	document.form2.monthly_payment.value=monthly_pay;	
+	var Total_pay=amt+interest;
+	document.form2. Total_payment.value=Total_pay;
+	var totalinterest_pay= interest;
+	document.form2. totalinterest_payment.value=totalinterest_pay;		
+}
+
+</script>
+</head>
+<body>
+<form name="form2" >
+ <p>Enter Loan Information:</p>
+<table>
+	<tr>
+		<td>1)Amount of the loan(any currency):</td>
+		<td><input type="text" name="amount" value="" onblur="loan_amount()"></td>
+	</tr>
+   <tr>
+   		<td>2)Annual percentage Rate of Interest):</td>
+		<td><input type="text" name="rate" value="" onblur="loan_rate()"> </td>
+   </tr>
+   <tr>
+   		<td>3)Repayment period in years</td>
+		<td><input type="text" name="time" value="" onblur="loan_peroid()"></td>
+	</tr>
+</table>
+<input type="button" name="compute" value="compute" onClick="calculate()">
+<p> Payment Information:</p>
+	<table>
+		<tr>	
+			<td>4)Your monthly payment will be</td>
+			<td><input type="text" name="monthly_payment" value=""></td>	
+		</tr>
+	<tr>
+			<td>5)Your total payment will be</td>
+			<td><input type="text" name="Total_payment" value=""></td>
+	</tr>
+   <tr>
+   		<td>4)Your total interest payment will be</td>
+		<td><input type="text" name="totalinterest_payment" value=""></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

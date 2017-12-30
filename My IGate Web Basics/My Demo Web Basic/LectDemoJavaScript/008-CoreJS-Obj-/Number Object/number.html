@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function myFunction1()
+{
+var num = new Number(13.3714);
+var n = num.toPrecision(2);
+
+var x = document.getElementById("demo1");
+x.innerHTML=n
+}
+</script>
+
+<p id="demo1">Click the button to display the largest possible number in JavaScript.</p>
+<p id="demo2">Click the button to display the formatted number.</p>
+
+
+<button onclick="myFunction1()">Try it1</button>
+<button onclick="myFunction2()">Try it2</button>
+
+
+<script>
+function myFunction2()
+{
+document.getElementById("demo2").innerHTML=Number.MAX_VALUE;
+}
+</script>
+
+</body>
+</html>

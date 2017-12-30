@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Company xmlns="http://www.example.com/kogent">
+    <CompanyAddress>
+        <name>Vinsys It Services</name>
+        <street>Karve Road</street>
+        <city>PUNE</city>
+        <state>MS</state>
+        <zipcode>4049090</zipcode>
+        <phnum>88888</phnum>
+    </CompanyAddress>
+    <departments>
+        <department deptname="Account">
+            <deptmanager>swapnil</deptmanager>
+            <cost>2000.0</cost>
+        </department>
+        <department deptname="IT">
+            <deptmanager>Rahul</deptmanager>
+            <cost>3000.0</cost>
+        </department>
+    </departments>
+</Company>

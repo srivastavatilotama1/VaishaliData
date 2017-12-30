@@ -1,0 +1,171 @@
+.leftdiv{
+	width:50%;
+	float:left;
+ }
+
+ .rightdiv{
+	width:50%;
+	float:left;
+ }
+
+ fieldset{
+	width:70%;
+	border:0;
+	padding:0;
+	margin:0;
+ }
+
+ .leftdiv label{
+	width:150px;
+	display:block;
+	float:left;
+	clear:left;
+ }
+
+ .rightdiv label{
+   width:150px;
+   display:block;
+   float:left;
+   clear:left;
+ }
+
+ .iClass{
+    position:static;
+	width:150px;
+ }
+
+ .doy{
+	position:static;
+	width:43px;
+  }
+
+  .dod{
+	position:static;
+	width:35px;
+  }
+  
+  .dom{
+	position:static;
+	width:35px;
+  }
+
+ .balance1{
+	float:left;
+	clear:left;
+ }
+
+ .balance2{
+	float:left;
+	clear:left;
+ }
+
+ .transparentblock{
+	color: lightgrey;
+}
+
+.validation-failed{
+	color:red;
+	border:1px solid red;
+}
+
+body{ 
+	background: #FFFFCC;
+	font-family: Arial, Hevetica Neue, Sans-Serif;
+	font-size: 0.9em;
+}
+
+ .wrapper{
+	border-right: #000 1px solid;
+	padding-right: 3px;
+	border-top: #000 1px solid; 
+	padding-left: 3px;
+	left: -3px; 
+	padding-bottom: 8px;
+	border-left: #000 1px solid;
+	padding-top: 3em;
+	border-bottom: #000 1px solid; 
+	position: relative; 
+	top: -8px; 
+	background-color: #FFFFFF;
+}
+
+.context-box{
+	z-index: 110;
+}
+
+.context-help{
+	font-size: 0.9em; 
+	color: blue;
+	font-family: Arial, Hevetica Neue, Sans-Serif; 
+}
+
+.context-error{
+    font-size:0.9em;
+	color:red;
+	font-family:Arial, Hevetica Neue, Sans-Serif;
+}
+
+.dividerQ input{
+margin-top:4px;
+margin-left:10px;
+}
+
+.radio{
+margin:0px 3px 0px 0px;
+border:0 !important;
+border-color: #B4D8E9;
+}
+
+.radioLabel{
+clear:none;
+width:auto;
+display:inline;
+float:none;
+padding-right: 10px;
+padding-bottom:5px;
+}
+
+.headerLabel{
+margin: 0 30px 0 10px;
+}
+
+.firstdiv{
+font-size:1.3em;
+color:red;
+}
+
+.seconddiv{
+font-size:1.3em;
+color:red;
+}
+
+.thirddiv{
+font-size:1.3em;
+color:red;
+}
+
+.fourthdiv{
+font-size:1.3em;
+color:red;
+}
+
+.fifthdiv{
+font-size:1.3em;
+color:red;
+}
+
+.sixthdiv{
+font-size:1.3em;
+color:red;
+}
+
+.seventhdiv{
+font-size:1.3em;
+color:red;
+}
+
+.eigthdiv{
+font-size:1.3em;
+color:red;
+}
+

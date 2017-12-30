@@ -1,0 +1,6 @@
+2014-08-12 11:17:04,916 [main] DEBUG - This is debug level  message 
+2014-08-12 11:17:04,917 [main] INFO - This is info level  message 
+2014-08-12 11:17:04,917 [main] WARN - This is warn level  message 
+2014-08-12 11:17:04,917 [main] ERROR - This is error level  message 
+2014-08-12 11:17:04,917 [main] DEBUG - This is debug level  message 
+2014-08-12 11:17:04,917 [main] FATAL - This is fatal level  message 

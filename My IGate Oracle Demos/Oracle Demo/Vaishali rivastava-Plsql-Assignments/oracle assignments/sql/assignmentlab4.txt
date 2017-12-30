@@ -1,0 +1,625 @@
+LAB 4
+
+QUERY1
+  1    CREATE TABLE customer_table(
+  2     customerid NUMBER(5) PRIMARY KEY,
+  3      cust_name NUMBER(10) ,
+  4      address1 VARCHAR2(30),
+  5*    address2 VARCHAR2(30))
+  6  /
+
+Table created
+
+
+
+*********************************************************************************************************************************
+QUERY2
+
+
+  1  ALTER TABLE customer_table
+  2* MODIFY (cust_name VARCHAR2(30) NOT NULL)
+SQL> /
+
+Table altered.
+
+
+  1  ALTER TABLE customer_table
+  2* RENAME column cust_name TO customername
+SQL> /
+
+Table altered.
+
+
+*********************************************************************************************************************************
+query3
+
+
+  1  ALTER TABLE customer_table
+  2* ADD(gender VARCHAR2(1),Age NUMBER(3),PhoneNO NUMBER(10))
+SQL> /
+
+Table altered.
+
+
+
+ b) 1  ALTER TABLE customer_table
+  2* RENAME TO cust_table
+SQL> /
+
+Table altered.
+
+SQL> 
+
+
+*********************************************************************************************************************************
+query4
+
+
+  1  INSERT INTO cust_table
+  2* VALUES(1000,'Allen','#115 Chicago','#115 chicago','M',25,7878776)
+SQL> /
+
+1 row created.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  INSERT INTO cust_table
+  2* VALUES(1001,'George','#116 France','#116 France','M',25,7878776)
+SQL> /
+
+1 row created.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  INSERT INTO cust_table
+  2* VALUES(1002,'Becker','#114 New york','#114 NEW York','M',45,431525)
+SQL> /
+
+1 row created.
+
+SQL> 
+
+
+CUSTOMERID CUSTOMERNAME                   ADDRESS1                       ADDRESS2                       G        AGE    PHONENO
+---------- ------------------------------ ------------------------------ ---------------------------
+      1000 Allen                          #115 Chicago                   #115 chicago                   M         25    7878776
+      1001 George                         #116 France                    #116 France                    M         25    7878776
+      1002 Becker                         #114 New york                  #114 NEW York                  M         45     431525
+
+
+
+*********************************************************************************************************************************
+QUERY 5
+Wrote file afiedt.buf
+
+  1  ALTER TABLE cust_table
+  2* RENAME column customerid to custid_prim
+SQL> /
+
+Table altered.
+
+SQL> 
+
+ALTER TABLE cust_table
+ADD CONSTRAINT cus_id_con primary key (custid_prim)
+
+Table altered
+
+
+*********************************************************************************************************************************
+query 6
+
+
+  1  INSERT INTO cust_table
+  2*   VALUES(1002,'John','#114 New york','#114 NEW York','M',45,439525)
+SQL> /
+INSERT INTO cust_table
+*
+ERROR at line 1:
+ORA-00001: unique constraint (TRG809.SYS_C00161957) violated
+
+
+
+
+*********************************************************************************************************************************
+query 7
+
+
+  1  ed
+SQL> /
+
+1 row created.
+
+
+
+*********************************************************************************************************************************
+query8
+
+
+  1* ALTER TABLE cust_table drop constraint cus_id_con
+SQL> /
+ALTER TABLE cust_table drop constraint cus_id_con
+                                       *
+ERROR at line 1:
+ORA-02443: Cannot drop constraint  - nonexistent constraint
+
+
+SQL> 
+
+*********************************************************************************************************************************
+query 9
+
+
+  1  INSERT INTO cust_table
+  2* VALUES(1002,'becker','#114 new york','#114 NEw york','M',45,431525,50)
+SQL> /
+INSERT INTO cust_table
+            *
+ERROR at line 1:
+ORA-00913: too many values
+
+
+  1  INSERT INTO cust_table
+  2*  VALUES(1003,'Nanapatekar','#115 INDIA','#115 INDIA','M',45,20000,50)
+SQL> /
+INSERT INTO cust_table
+            *
+ERROR at line 1:
+ORA-00913: too many values
+
+
+
+
+
+
+
+*********************************************************************************************************************************
+query 10
+
+
+SQL> TRUNCATE table cust_table;
+
+Table truncated.
+
+
+
+*********************************************************************************************************************************
+query 11
+
+
+SQL> ALTER table cust_table
+  2  ADD(e_mail VARCHAR2(30));
+
+Table altered.
+
+*********************************************************************************************************************************
+query 12
+
+  1  ALTER TABLE cust_table
+  2* DROP column e_mail
+SQL> /
+
+Table altered.
+
+
+*********************************************************************************************************************************
+query 13
+
+  1  ALTER TABLE cust_table
+  2* ADD (emailid VARCHAR2(30))
+SQL> /
+
+Table altered.
+
+
+*********************************************************************************************************************************
+query 14
+
+
+
+  1  ALTER TABLE cust_table
+  2* SET unused column emailid
+SQL> /
+
+Table altered.
+*********************************************************************************************************************************
+query 15
+
+  1  ALTER TABLE cust_table
+  2* drop unused column
+SQL> /
+
+Table altered.
+
+
+*********************************************************************************************************************************
+query 16
+
+
+  1* comment on table cust_table is'customer details'
+SQL> /
+
+Comment created.
+
+*********************************************************************************************************************************
+query 17
+  1  SELECT comments from user_tab_comments
+  2* WHERE table_name='cust_table'
+SQL> /
+
+no rows selected
+
+
+*********************************************************************************************************************************
+query 20
+
+ 1  CREATE TABLE supplies AS
+ 2  SELECT custid_prim AS suppid,customername AS sname,address1 as addr1,address2 as addr2,phoneno 
+ 3* FROM cust_table
+QL> /
+
+able created.
+
+*********************************************************************************************************************************
+query 21
+
+  1* DROP table supplies
+SQL> /
+
+Table dropped.
+
+
+
+  
+  1    CREATE TABLE customermaster
+  2    (customerid number(5) constraint custid_pk primary key,custmername varchar2(30) NOT NULL,addr
+  3* varchar2(30) not null,address2 varchar2(30),gender varchar2(1),age number(3),phoneno number(10)
+  4  /
+
+Table created.
+
+*********************************************************************************************************************************
+query 22
+
+CREATE sequence sequence1
+increment by 1
+start with 1000
+MAx value 1005
+no cycle
+
+sequence created
+
+
+  1    CREATE TABLE accountmaster
+  2    (customerid number(5) ,accountnumber number(10,2) constraint acc_pk primary key  ,
+  3  accounttype char(3),
+  4* ledgerbalance NUMBER(10,2) NOT NULL)
+SQL> /
+
+Table created.
+
+SQL> 
+
+
+*********************************************************************************************************************************
+query 23
+
+
+  1  ALTER TABLE accountmaster
+  2* ADD constraint cust_acc foreign key(customerid) references customermaster(customerid)
+SQL> /
+
+Table altered.
+
+
+
+*********************************************************************************************************************************
+query 24
+
+
+  1  INSERT INTO customermaster
+  2*  VALUES(1000,'Allen','#115 Chicago','#115 chicago','M',25,7878776)
+SQL> /
+
+1 row created.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  INSERT INTO customermaster
+  2*  VALUES(1001,'George','#116 France','#116 France','M',25,7878776)
+SQL> /
+
+1 row created.
+
+
+INSERT INTO customermaster
+ VALUES(1002,'Becker','#114 New york','#114 new york','M',45,431525)
+
+1 row created
+
+
+*********************************************************************************************************************************
+query 25
+
+
+Wrote file afiedt.buf
+
+  1  ALTER TABLE accountmaster
+  2* modify(accounttype check(accounttype='NRI' or accounttype='Ind'))
+SQL> /
+
+Table altered.
+
+
+*********************************************************************************************************************************
+query 26
+
+Wrote file afiedt.buf
+
+  1    INSERT INTO accountmaster
+  2*   VALUES(1000,2000,'NRI',5000)
+SQL> /
+
+1 row created.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1    INSERT INTO accountmaster
+  2*   VALUES(1001,2002,'NRI',1000)
+SQL> /
+
+1 row created.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1    INSERT INTO accountmaster
+  2*   VALUES(1002,2003,'ind',10000)
+SQL> /
+
+1 row created.
+
+1    INSERT INTO accountmaster
+  2*   VALUES(1003,2003,'ind',10000)
+SQL> /
+
+1 row created.
+
+1    INSERT INTO accountmaster
+  2*   VALUES(1004,2003,'ind',10000)
+SQL> /
+
+1 row created.
+
+
+
+
+
+
+
+
+*********************************************************************************************************************************
+query 27
+
+
+  1  ALTER TABLE accountmaster
+  2* drop constraint  cust_acc
+SQL> /
+
+Table altered.
+
+*********************************************************************************************************************************
+query 28
+
+  1  ALTER TABLE accountmaster
+  2  add constraint cust_acc foreign key(customerid) references customermaster(customerid)
+  3* ON delete cascade
+SQL> /
+
+Table altered.
+
+
+
+*********************************************************************************************************************************
+query 29
+
+  1* CREATE table accountdetails as SELECT * from accountmaster
+SQL> /
+
+Table created.
+
+
+*********************************************************************************************************************************
+query 30 
+
+
+
+  1* RENAME  accountdetails TO backupdetails
+SQL> /
+
+Table renamed.
+
+\
+*********************************************************************************************************************************
+query 31
+
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  CREATE VIEW acc_view AS
+  2  SELECT acc.customerid "customercode",cus.custmername "accountholdername" ,
+  3  acc.accountnumber "accountnumber",
+  4  acc.accounttype "TYpe", acc.ledgerbalance "Balance"
+  5  FROM accountmaster acc,customermaster cus
+  6* WHERE acc.customerid=cus.customerid
+SQL> /
+
+View created.
+
+SQL> SELECT * from acc_view;
+
+customercode accountholdername              accountnumber TYp    Balance
+------------ ------------------------------ ------------- --- ----------
+        1000 Allen                                   2000 NRI       5000
+        1001 George                                  2002 NRI       1000
+        1002 Becker                                  2003 ind      10000
+
+SQL> 
+*********************************************************************************************************************************
+query 32
+
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  CREATE OR REPLACE view vAccs_dtls
+  2  AS
+  3  SELECT a.customerid,c.custmername,a.accounttype,a.ledgerbalance
+  4  FROM accountmaster a,customermaster c
+  5  WHERE a.customerid=c.customerid
+  6  and a.accounttype='ind'
+  7* AND a.ledgerbalance>10000 with read only
+SQL> /
+
+View created.
+
+*********************************************************************************************************************************
+query 33
+
+
+  1  CREATE VIEW accsvw10 AS
+  2  SELEcT *
+  3  from staff_masters
+  4* with read only
+SQL> /
+
+View created.
+
+
+*********************************************************************************************************************************
+query 34
+ 
+Wrote file afiedt.buf
+
+  1  SELECT dept_name
+  2  FROM(select s.staff_Sal,d.dept_name
+  3  FROM staff_masters s,department_masters d
+  4  WHERE s.dept_code=d.dept_code
+  5  ORDER BY s.staff_sal desc)
+  6* WHERE rownum=1
+SQL> /
+
+DEPT_NAME
+--------------------------------------------------
+Electricals
+
+*********************************************************************************************************************************
+query 35
+
+  1  SELECT rnk,staff_name,dept_code,staff_sal
+  2  FROM (SELECT staff_name,dept_code,staff_sal,RANK() over
+  3  (partition by dept_code order by staff_sal desc) as rnk
+  4  FROM staff_masters)
+  5* WHERE rnk<=2
+SQL> /
+
+       RNK STAFF_NAME                                          DEPT_CODE  STAFF_SAL
+---------- -------------------------------------------------- ---------- ----------
+         1 Smith                                                      20      62000
+         2 Anil                                                       20      40000
+         1 Allen                                                      30      42000
+         2 Ram                                                        30      32000
+         1 Raviraj                                                    40      18000
+         1 samir                                                              43000
+         2 priya                                                              20000
+
+7 rows selected.
+
+
+
+
+*********************************************************************************************************************************
+query 36
+
+
+  1  CREATE SEQUENCE seq_dept1
+  2  INCREMENT BY 10
+  3  start with 40
+  4  maxvalue 200
+  5* nocycle
+SQL> /
+
+Sequence created.
+
+*********************************************************************************************************************************
+query 37
+
+INSERT INTO department_masters
+values(seq_dept1.NEXTVAL,'football')
+INSERT INTO department_masters
+values(seq_dept1.NEXTVAL,'logistics','noida')
+INSERT INTO department_masters
+values(seq_dept1.NEXTVAL,'finance','delhi')
+/
+
+3 rows inserted
+
+
+*********************************************************************************************************************************
+query 38
+
+
+  1  ALTER sequence seq_dept1
+  2* increment by 5
+  3  /
+
+Sequence altered.
+*********************************************************************************************************************************
+query 39
+
+
+SQL> drop sequence seq_dept1;
+
+Sequence dropped.
+
+*********************************************************************************************************************************
+query 40
+
+
+  1  CREATE index no_name
+  2* On department_masters(dept_code,dept_name)
+SQL> /
+
+Index created.
+*********************************************************************************************************************************
+query 41
+
+
+  1  SELECT * FROM user_indexes
+  2* WHERE index_name='no_name'
+SQL> /
+
+no rows selected
+*********************************************************************************************************************************
+query 42
+
+
+  1* CREATE public synonym synemp for staff_masters
+SQL> /
+CREATE public synonym synemp for staff_masters
+*
+ERROR at line 1:
+ORA-01031: insufficient privileges
+
+*********************************************************************************************************************************
+query 43
+
+
+*********************************************************************************************************************************

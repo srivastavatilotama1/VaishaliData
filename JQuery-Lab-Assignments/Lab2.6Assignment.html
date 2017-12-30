@@ -1,0 +1,68 @@
+<html>
+<head>
+<style type="text/css">
+.blueDiv{background-color:blue; color:white;}
+.redDiv{background-color:red; color:white;}
+</style>
+
+<script language="javascript" src="./Scripts/jquery-2.0.0.js">
+</script>
+<script language="javascript">
+$(document).ready(function()
+{
+	var collectionTr=$('tr');
+	var result = "";
+	collectionTr.each(
+		function(index)
+		{
+			result+=$(this).text();
+		});
+		alert(result);
+		
+		$('#StatesDiv').html(result);
+/*var result = "";
+		$('div.One,div.Two,div.Three').each(
+		function(index)
+		{
+			result+=index+" "+$(this).text()+"<li/>";
+		});
+		$('#OutputDiv').html(result);
+		//try with element*/
+	
+});
+</script>
+</head>
+<body>
+	<table id="region" border="2" bordercolor="black">
+	<thead>
+		<tr>
+			<th>State</th>
+			<th>Capital</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Andhrapradesh</td>
+		<td>Hyderabad</td>
+	</tr>
+	<tr>
+		<td>Karnataka</td>
+		<td>Bangalore</td>
+	</tr>
+	<tr>
+		<td>Maharashtra</td>
+		<td>Mumbai</td>
+	</tr>
+	<tr>
+		<td>Tamilnadu</td>
+		<td>Chennai</td>
+	</tr>
+	</tbody>
+</table>
+
+
+<div id="StatesDiv"></div>
+<div id="CapitalDiv"></div>
+
+</body>
+</html>

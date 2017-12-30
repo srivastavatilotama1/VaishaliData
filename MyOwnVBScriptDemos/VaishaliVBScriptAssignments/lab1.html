@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=10"/>
+	<script language="Vbscript"  type="text/vbscript"> 
+	function calculate()
+		var1 = document.getElementById("D").value
+		msgbox(" Var 1 :"&var1)
+		var2 =  document.getElementById("T").value
+		msgbox(" Var 2 :"&var2)
+		var3 = var1/var2
+		document.getElementById("S").value =var3
+	End function
+ </script>
+</head>
+<body>
+	<form>
+		<h1><center>Speed Calculator</h1>
+		<table align = "center">
+		<tr>
+			<td>Distance
+			<td><input type ="text" name="dis" id=D 
+			required title ="enter speed in miles" ><td>miles
+		</tr>
+		<tr>
+			<td>Time
+			<td><input type = "text" name ="time" id =T 
+			required  title ="enter time in hour" ><td>hours
+		</tr>
+		<tr> 
+			<td colspan = 2 align= "center" >
+			<input type ="button" value ="calculate speed" 
+			onclick="calculate()">
+		</tr>
+		<tr>
+			<td>Speed
+			<td> <input type ="text" name ="speed" id =S >
+			<td> miles per hours
+		</tr>
+		<tr>
+			<td>
+			<input type ="reset" name= "reset" >
+		</tr>
+	</table>
+	</form>
+</html>

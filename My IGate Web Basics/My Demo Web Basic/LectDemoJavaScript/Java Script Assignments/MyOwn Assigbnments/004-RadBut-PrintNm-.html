@@ -1,0 +1,38 @@
+<html>
+<head>
+<script>
+function welbutton(thisform)
+{
+	myOption = -1;
+	for (i=thisform.myradiobutton.length-1; i > -1; i--)
+	{
+		if (thisform.myradiobutton[i].checked) 
+		{
+			myOption = i; 
+			i = -1;
+		}
+	}
+	if (myOption == -1) 
+	{
+		alert("You must select a radio button");
+		return false;
+	}
+
+	//alert("Welcome " + myOption + " which has a value of "+ thisform.myradiobutton[myOption].value);
+	alert("Welcome "+ thisform.myradiobutton[myOption].value);
+	//thisform.submit(); // this line submits the form after validation
+}
+
+
+</script>
+</head>
+	<form name="myform" action="test.html">
+
+		<input type="radio" value="Nikhil" name="myradiobutton" />Nikhil<br />
+		<input type="radio" value="Vaishali" name="myradiobutton" />Vaishali<br />
+		<input type="radio" value="Abhi" name="myradiobutton" />Abhi<br />&nbsp;<br />
+		<input type="submit" name="submitit" onclick="welbutton("myform");return false;" " value="Welcome" />
+		<input type="reset" name="reset" value="Clear" />
+
+	</form>
+</html>

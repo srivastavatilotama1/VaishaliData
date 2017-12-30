@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<projectList>
+
+    <project projectNumber="1">
+
+        <projectId>ABC123</projectId>
+        <projectName>Financial Accounting System</projectName>
+        <customer>Shell Oil Inc.</customer>
+        <plannedStartDate>2008-02-01</plannedStartDate>
+        <plannedEndDate>2008-10-31</plannedEndDate>
+
+        <team>
+
+            <teamMember memberNumber="1">
+
+                <employeeId>123456</employeeId>
+                <firstName>Subhash</firstName>
+                <middleName>Chandra</middleName>
+                <lastName>Bose</lastName>
+                <designation>PM</designation>
+                <role>Project Manager</role>
+
+            </teamMember>
+
+            <teamMember memberNumber="2">
+
+                <employeeId>234567</employeeId>
+                <firstName>Sardar</firstName>
+                <middleName>Vallabhai</middleName>
+                <lastName>Patel</lastName>
+                <designation>PL</designation>
+                <role>Project Leader</role>
+
+            </teamMember>
+
+        </team>
+
+    </project>
+
+    <project projectNumber="2">
+
+        <projectId>DEF555</projectId>
+        <projectName>Credit Card System</projectName>
+        <customer>American Express Inc.</customer>
+        <plannedStartDate>2008-02-15</plannedStartDate>
+        <plannedEndDate>2008-11-30</plannedEndDate>
+
+        <team>
+
+            <teamMember memberNumber="1">
+
+                <employeeId>345678</employeeId>
+                <firstName>Mohandas</firstName>
+                <middleName>Karamchand</middleName>
+                <lastName>Gandhi</lastName>
+                <designation>PM</designation>
+                <role>Project Manager</role>
+
+            </teamMember>
+
+            <teamMember memberNumber="2">
+
+                <employeeId>456789</employeeId>
+                <firstName>Jawahar</firstName>
+                <middleName>Lal</middleName>
+                <lastName>Nehru</lastName>
+                <designation>PL</designation>
+                <role>Project Leader</role>
+
+            </teamMember>
+
+        </team>
+
+    </project>
+
+
+</projectList>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InternalAddress xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Vaishali/To%20Mail/XML/XML-Demo/Examples%20With%20XSD/RestrictType/IAddress.xsd">
+	<Line1>Desk 4, Second Floo</Line1>
+</InternalAddress>

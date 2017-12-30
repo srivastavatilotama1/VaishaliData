@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE projectList SYSTEM "projectList.dtd">
+<projectList>
+
+		<project projectNumber="05">
+				<projectId>P01</projectId>
+				<projectName>On Line Banking</projectName>
+				<customer>ICICI</customer>
+				<plannedStartDate>12-02-2011</plannedStartDate>
+				<plannedEndDate>12-12-2012</plannedEndDate>
+				<team>
+							<teamMember memberNumber="1">
+									<employeeId>E01</employeeId>
+									<firstName>Vaishali</firstName>
+									<middleName>A</middleName>
+									<lastName>Srivastava</lastName>
+									<designation>Associate</designation>
+									<role>Developer</role>
+						</teamMember>
+				</team>
+		</project>
+		<project projectNumber="03">
+			<projectId>P02</projectId>
+				<projectName>Share Trading System</projectName>
+				<customer>HDFC</customer>
+				<plannedStartDate>02-02-2012</plannedStartDate>
+				<plannedEndDate>11-10-2013</plannedEndDate>
+				<team>
+							<teamMember memberNumber="1">
+									<employeeId>E13</employeeId>
+									<firstName>Abhishek</firstName>
+									<middleName>H</middleName>
+									<lastName>Srivastava</lastName>
+									<designation>Sr.Associate</designation>
+									<role> Sr.Developer</role>
+						</teamMember>
+				</team>
+		</project>
+</projectList>

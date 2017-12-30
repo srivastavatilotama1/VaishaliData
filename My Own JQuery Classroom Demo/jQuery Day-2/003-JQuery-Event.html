@@ -1,0 +1,45 @@
+<!-- 
+*****************
+What is event bubbling?
+In javascript events hget buubbled up  with the parent .
+ex. button click bubbled with form and
+form bubbled with body and body bubbled with html tag.
+***************
+in jquery 2 types of code we do not have to 
+write for all brwsers.
+-->
+<html>
+	<head>
+	<title>jQuery Dom </title>
+	<style type="text/css">
+		.style1{background-color:blue; color:white}
+		.style2{font-size:20pt}
+		.style3{background-color:red; color:white;font-size:50pt}
+	</style>
+	<script language="javascript" src="../Scripts/jquery-2.0.0.js">
+	</script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{     
+		$('#btnClick').click(SayHi);		
+	});
+	function  SayHi()
+	{		
+			$('#txtNameId').val("Welcome To IGate");
+			$('#txtEventTypeId').val(event.type);			
+			alert(" Back Button Clicked...");
+	}
+</script>
+</head>
+<body  bgcolor="pink">
+	<form name="form1" action="" method="post">
+		Enter UR Name:
+		<input type="text" name="txtName" 
+		id="txtNameId" value=""/><br/>
+		Event Type:<input type="text" name="txtEventType" 
+		id="txtEventTypeId" value=""/><br/>
+		<input type="button" name="btnBack" value="Back"
+		id="btnClick"/><br/>
+	</form>	
+</body>
+</html>

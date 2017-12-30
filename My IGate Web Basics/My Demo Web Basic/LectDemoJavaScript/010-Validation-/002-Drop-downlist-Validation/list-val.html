@@ -1,0 +1,76 @@
+<html>
+ 		<head>
+ 			 <title>How to Validate Drop-Down List Box Using JavaScript</title>
+			<script type="text/javascript" language="javascript">
+			function validateListBox()
+			{
+
+				var listBoxSelection=document.getElementById("listNumbers").value;
+
+					if(listBoxSelection==0)
+					{
+
+						alert("Please select a day");
+
+						return false;
+
+					}
+					else
+					{
+
+						alert("Ok your selection is valid");
+
+						return true;
+
+					}
+
+			return true;
+
+			}
+
+		</script>
+ </head>
+
+<body>
+
+
+Html Code 
+
+
+
+<table border="0">
+
+<tr>
+
+<td>Validate Drop-Down Box </td>
+
+<td><select name="listNumbers" id="listNumbers">
+
+<option value="0" selected="selected">Select One</option>
+
+<option value="1">1</option>
+
+<option value="2">2</option>
+
+<option value="3">3</option>
+
+<option value="4">4</option>
+
+<option value="5">5</option>
+
+<option value="6">6</option>
+
+<option value="7">7</option>
+
+</select></td>
+
+<td><input name="btnSelectNumber" type="button" id="btnSelectNumber" value="Select Number" onclick="javascript:validateListBox();" /></td>
+
+</tr> 
+
+</table>
+
+</body>
+
+</html>
+

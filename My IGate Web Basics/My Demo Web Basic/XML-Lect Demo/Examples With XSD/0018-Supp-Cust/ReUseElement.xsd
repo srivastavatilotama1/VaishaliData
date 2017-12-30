@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:complexType name="AddressType">
+		   <xs:sequence>
+			  <xs:element name="Line1" type="xs:string"/>
+			  <xs:element name="Line2" type="xs:string"/>
+		   </xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="Customer">
+   <xs:complexType>
+      <xs:sequence>
+         <xs:element name="Dob"     type="xs:date"/>
+         <xs:element name="Address" type="AddressType"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:element> 
+
+<xs:element name="supplier">
+   <xs:complexType>
+      <xs:sequence> 
+         <xs:element name="address" type="AddressType"/>
+         <xs:element name="phone"   type="xs:integer"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:element>
+
+
+</xs:schema>

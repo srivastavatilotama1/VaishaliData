@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>
+		Form Example</title>
+	</head>
+	<body bgcolor=pink >
+		<center>
+			<h3> Data Entry Form</h3>
+			
+			<form>
+				<table>
+					<tr>
+						<td>Name</td>
+						<td>
+							<input type="text" name="t1"> 
+						</td>
+					</tr>
+					<tr>
+						<td>Gender</td>
+						<td>
+							<input type="radio" name="r1" value="m"> Male 
+							<input type="radio" name="r1" value="f">Female
+						</td>
+					</tr>
+					
+					<tr><td>Qualification</td>
+						<td>
+							<select name="s">
+								<option >Select</option>
+								<option value="M.Sc">M Sc</option>
+								<option value="M.A.">MA</option>
+								<option value="other">other</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<input type="checkbox" name="vehicle" value="Bike" /> I have a bike<br />
+						<input type="checkbox" name="vehicle" value="Car" /> I have a car 
+					</tr>	
+					<tr>
+						<td> <input type="submit" value="submit"> </td>
+						<td> <input type="reset" value="reset"> </td>
+					</tr>
+				</table>
+			</form>
+		</center>
+		
+	</body>
+</html>

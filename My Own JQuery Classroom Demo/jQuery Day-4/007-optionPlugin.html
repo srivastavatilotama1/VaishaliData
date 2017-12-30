@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>jQuery Plugin</title>
+<script type="text/javascript" src="..\Scripts\jquery-1.4.1.js"></script>
+<script type="text/javascript" src="jquery.optionPlugin.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#target1").optionPlugin({fgColor:'brown',bgColor:'yellow'});
+	$("#target2").optionPlugin();
+});
+</script>
+</head>
+<body>
+<div id="target1">Highlighting Target</div>
+<div id="target2">Highlighting Default Target</div>
+</body>
+</html>

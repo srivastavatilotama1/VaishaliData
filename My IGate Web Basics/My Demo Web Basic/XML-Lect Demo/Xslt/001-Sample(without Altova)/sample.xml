@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="sample.xsl"?>
+
+<projectList>
+
+    <project projectNumber="1">
+
+        <projectId>ABC123</projectId>
+        <projectName>Credit Card System</projectName>
+
+    </project>
+
+    <project projectNumber="2">
+
+        <projectId>XYZ456</projectId>
+        <projectName>Banking System</projectName>
+
+    </project>
+
+</projectList>

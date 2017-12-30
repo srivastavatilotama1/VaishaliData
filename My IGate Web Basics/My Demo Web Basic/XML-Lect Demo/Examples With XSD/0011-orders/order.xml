@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="order.xsd">
+	<order>
+		
+        <orderid>1</orderid>
+		<customername>Nova Systems</customername>
+		<orderdate>10-april-2001</orderdate>
+		<salesperson>Jack Nicholson</salesperson>
+		<shippingaddress>12,green park</shippingaddress>
+	</order>
+	<order>
+		<orderid>2</orderid>
+		<customername>Iflex Systems</customername>
+		<orderdate>20-april-2001</orderdate>
+		<salesperson>Bill Gates</salesperson>
+		<shippingaddress> M.G.Road </shippingaddress>
+	</order>
+</orders>

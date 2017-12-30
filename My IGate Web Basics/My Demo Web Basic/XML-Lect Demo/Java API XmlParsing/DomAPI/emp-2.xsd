@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified"  targetNamespace="www.vaishali.com" xmlns:vai="www.vaishali.com">
+
+	<xs:simpleType name="phonePat">
+		<xs:restriction base="xs:string">
+			<xs:length value="15"/>
+			<xs:pattern value="\d{4}-\d{4}-\d{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ageLimit">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:maxInclusive value="100"/>
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+<xs:simpleType name="salVal">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RS"/>
+			<xs:enumeration value="R"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<xs:simpleType name="empIdRes">
+		<xs:restriction base="xs:ID">
+			<xs:pattern value="E-[0-9][0-9][0-9][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	
+	<xs:element name="empPhone" type="vai:phonePat"/>
+
+<xs:element name="salary">
+		<xs:complexType>
+				<xs:simpleContent>
+						<xs:extension base="xs:integer">
+									<xs:attribute name="currency" type="vai:salVal"/>
+							</xs:extension>
+					    </xs:simpleContent>
+	       	</xs:complexType>
+</xs:element>
+
+
+<xs:complexType name="nameType">
+ 			 <xs:sequence>
+ 				   <xs:element name="fname" type="xs:string"/>
+  				  <xs:element name="mname" type="xs:string"/>
+  				  <xs:element name="lname" type="xs:string"/>
+  			</xs:sequence>
+  		<xs:attribute name="title" type="xs:string"/>
+</xs:complexType>
+
+	
+	<xs:complexType name="empNameType">
+ 			 <xs:sequence>
+ 				   <xs:element name="empname" type="vai:nameType"/>
+  				</xs:sequence>
+  		</xs:complexType>
+
+
+<xs:complexType name="empType">
+ 	 <xs:complexContent>
+ 		   <xs:extension base="vai:empNameType">
+      			<xs:sequence>
+       					 <xs:element name="age" type="vai:ageLimit"/>
+       				 	<xs:element ref="vai:empPhone"/>
+       				 	<xs:element ref="vai:salary"/>		
+       					 <xs:element name="birthdate" type="xs:dateTime"/>
+      			</xs:sequence>
+     		 <xs:attribute name="gender" type="xs:string"/>
+     		  <xs:attribute name="eid" type="vai:empIdRes"/>
+
+    	</xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+	
+<xs:element name="employees">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element   name="employee"   type="vai:empType"  minOccurs="1"    maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>

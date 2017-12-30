@@ -1,0 +1,52 @@
+<project default="run" basedir=".">
+  <property name="src.dir" location="src"/>
+  <property name="lib.dir" location="lib"/>
+  <property name="build.dir" location="build"/>
+  
+<path id="classpath.path">
+	<!--<fileset dir="${src.dir}"/>-->
+	<fileset dir="${lib.dir}" includes="ojdbc6.jar"/>	
+</path>
+   
+   
+  <target name="clean" description="Clean all build targets">
+    <delete dir="${build.dir}"/>
+  </target>
+   
+  <target name="init">
+    <mkdir dir="${build.dir}"/>
+  	<mkdir dir="${lib.dir}"/>
+  	
+  		<!-- Copy the primary program and modules -->
+  	<copy todir="${lib.dir}">
+  			<fileset dir="C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib" includes="*.jar"/>
+  	</copy>
+  	
+  </target>
+   
+  <target name="compile" depends="init" description="Compile program">
+		<javac srcdir="${src.dir}" destdir="${build.dir}">
+			<classpath refid="classpath.path"/>
+ 	  </javac> 
+  </target>
+   
+  <target name="run" depends="compile" description="Run program">
+  	  <java classname="TestJdbcResultSetDemo">
+	  <classpath refid="classpath.path"/>
+      <classpath>
+        <pathelement location="${build.dir}"/>
+      </classpath>
+    </java>
+  </target>
+  
+  <!--<target name="run-base" depends="compile" description="Run program">
+    <java classname="TestJdbcResultSetDemo">
+		<classpath refid="classpath.path"/>
+      <classpath>
+       		 <pathelement location="${build.dir}"/>
+      </classpath>
+    </java>
+  </target>-->
+  
+  
+</project>

@@ -1,0 +1,16 @@
+myemployees
+{
+background-color: #ffffff;
+width: 100%;
+}
+myemployee
+{
+display: block;
+margin-bottom: 30pt;
+margin-left: 0;
+}
+description
+{
+color: #FF0F00;
+font-size: 20pt;
+}

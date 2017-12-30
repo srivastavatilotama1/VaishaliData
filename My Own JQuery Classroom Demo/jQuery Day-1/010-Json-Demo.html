@@ -1,0 +1,22 @@
+<html>
+	<head>
+	<title>Selectors By Tag Name</title>
+	<style type="text/css">
+		.blueDiv{background-color:blue; color:white;}
+		.redDiv{background-color:red; color:white;}
+	</style>
+	<script language="javascript" src="../../Scripts/jquery-2.0.0.js">
+	</script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+			var employee="{\"ID\":821210,\"Name\":\"vaishali\"}";
+			var parsedJson=$.parseJSON(employee);
+			alert(parsedJson.Name +" : "+parsedJson.ID);
+	});
+</script>
+</head>
+<body>
+Hello...............
+</body>
+</html>

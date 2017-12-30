@@ -1,0 +1,19 @@
+<html>
+
+<!--The go() method loads a specific URL from the history list.
+
+The parameter can either be a number which goes to the URL within the specific position (-1 goes back one page, 
+1 goes forward one page), or a string. The string must be a partial or full URL, and the function 
+will go to the first URL that matches the string history.back() history.forward() -->
+<head>
+<script type="text/javascript">
+function goBack()
+  {
+	alert("There are currently " + history.length + " pages in history.");
+
+  window.history.go(-1)
+  }
+</script>
+</head>
+<body><input type="button" value="Back" onclick="goBack()" /></body>
+</html>

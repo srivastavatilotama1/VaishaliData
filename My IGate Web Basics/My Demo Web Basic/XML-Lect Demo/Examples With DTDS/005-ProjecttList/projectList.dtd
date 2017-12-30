@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT projectList (project+)>
+<!ELEMENT project (projectId, projectName, customer, plannedStartDate, plannedEndDate, team)>
+<!ELEMENT team (teamMember+)>
+<!ELEMENT teamMember (employeeId, firstName, middleName, lastName, designation, role )>
+<!ELEMENT projectId (#PCDATA)>
+<!ELEMENT projectName (#PCDATA)>
+<!ELEMENT customer (#PCDATA) >
+<!ELEMENT plannedStartDate (#PCDATA)>
+<!ELEMENT plannedEndDate (#PCDATA)>
+<!ELEMENT employeeId (#PCDATA)>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT middleName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT designation (#PCDATA)>
+<!ELEMENT role (#PCDATA)>
+<!ATTLIST project projectNumber CDATA #REQUIRED>
+<!ATTLIST teamMember memberNumber CDATA #REQUIRED>

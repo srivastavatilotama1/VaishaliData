@@ -1,0 +1,32 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script> 
+var all=document.cookie;
+
+if(all==="")
+{
+	document.write("No Cookies are set");
+}
+else
+{
+	var list=all.split(";");
+	for(var i=0;i<list.length;i++)
+	{
+		var cookie=list[i];
+		var p=cookie.indexOf("=");
+
+		var cooknm=cookie.substring(0,p);
+		var cookval=cookie.substring(p+1);
+		document.write(" MyCookeName is: "+cooknm+"  Cookie Value: "+cookval);
+				
+	}
+}
+</script>
+</body>
+</html>

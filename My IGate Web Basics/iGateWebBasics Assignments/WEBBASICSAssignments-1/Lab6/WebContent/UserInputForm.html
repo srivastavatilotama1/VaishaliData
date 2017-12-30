@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>User Input form</title>
+</head>
+<body bgcolor="cyan">
+<form>
+<p>
+<label>Enter the password
+<input type="password" name="usename" size="20" value="abc" tabindex="3">
+</label>
+<input type="hidden" name="coname" value="PCS">
+Enter your surname:
+<input type="text" name="surname" size="20" readonly value="Dodla" tabindex="2" maxlenght="30">
+<br><br>
+Address:<textarea name="addr" Rows="5" cols="40" tabindex="0" accesskey="A">Enter ur address</textarea>
+<br><br>
+Select the training programs attended:<br>
+<input type="checkbox" name="COBOL" value="grp1">COBOL
+<input type="checkbox" name="IDMS" value="grp2" checked>IDMS
+<input type="checkbox" name="JAVA" value="grp3">JAVA<br>
+Select the group you belong to:<br>
+<input type="radio" name="s-grp" value="grp1">Group1
+<input type="radio" name="s-grp" value="grp2" checked>Group2
+<input type="radio" name="s-grp" value="grp3">Group3
+<input type="radio" name="s-grp" value="grp4">Others<br>
+Which training program you would like to attend:
+<select name="pref">
+<option value="JS">JavaScript
+<option value="COBRA">COBRA
+<option value="VBS">Visual Basic 6
+</select>
+</p>
+<input type="file" name="fnm" size="5" value="fonts.html">
+<br>
+<input type="button" name="but" value="Exit">
+<input type="submit" value="Save" name="s-but">
+<input type="reset" name="reset" value="Reset">
+
+</form>
+
+</body>
+</html>

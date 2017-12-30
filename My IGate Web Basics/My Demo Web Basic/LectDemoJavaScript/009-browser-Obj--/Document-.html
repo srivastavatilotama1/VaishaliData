@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+		 <TITLE> Document Object</TITLE>
+		 <script type="text/javascript"> 		 		
+							
+				function formReset()
+				{
+				document.getElementById("Head").style.color = "red";
+				document.getElementById("myForm").reset()
+				}
+				
+		</script> 
+
+  </HEAD>
+
+ <BODY>
+ <h2 id="Head" style="color:blue">This is a Heading</h2>
+
+<form id="myForm">
+	 Enter your name: <input id="Box" type="text"/>
+	<input type="button" onclick="formReset()" value="Reset">
+</form>
+
+  
+ </BODY>
+</HTML>

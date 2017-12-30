@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT orders (order+)>
+<!ELEMENT order (orderid,customername,orderdate,salesperson,shippingaddress)>
+<!ELEMENT orderid (#PCDATA)>
+<!ELEMENT customername (#PCDATA)>
+<!ATTLIST  customername year  CDATA #REQUIRED>
+<!ELEMENT orderdate (#PCDATA)>
+<!ELEMENT salesperson (#PCDATA)>
+<!ELEMENT shippingaddress (#PCDATA)>

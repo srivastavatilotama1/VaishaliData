@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE note SYSTEM "note.dtd">
+<!--<note>
+	<to>Tove</to>
+	<from>Jani</from>
+	<heading>Reminder</heading>
+	<body>Don't forget me this weekend!</body>
+</note> 
+-->
+
+<!--
+<note>hello
+	<to>Tove</to>
+	<from>Jani</from>
+	<heading >ffff</heading >
+</note>
+//this is for any
+-->
+
+
+
+<!--<note>Hello </note>  This is valid 
+-->
+
+<note>hello 
+	<to>Tove</to>
+	<from>Jani</from> <from>Jani</from>
+</note> 

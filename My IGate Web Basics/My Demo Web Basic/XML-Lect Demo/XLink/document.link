@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<document xmlns="http://example.org/xmlns/2002/document" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <heading id="someHeading">Some Document</heading>
+  <para>Here is <anchor xlink:type="simple" xlink:href="#someHeading">a link</anchor> to the header.</para>
+  <para>It is an anchor that points to the element with the id "someHeading" on the current page.</para>
+</document>

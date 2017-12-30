@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT breakfast ((tea|coffee), orangejuice?,((egg+, (bacon|sausage)) | cereal) , toast,lunch)>
+<!ELEMENT tea (#PCDATA)>
+<!ELEMENT coffee (#PCDATA)>
+<!ELEMENT orangejuice (#PCDATA)>
+<!ELEMENT egg (#PCDATA)>
+<!ELEMENT bacon (#PCDATA)>
+<!ELEMENT sausage (#PCDATA)>
+<!ELEMENT cereal (#PCDATA)>
+<!ELEMENT toast (#PCDATA)>
+<!ELEMENT lunch EMPTY>

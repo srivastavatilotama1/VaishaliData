@@ -1,0 +1,65 @@
+<!--
+chrome.exe -allow-file-access-from-files -disable-web-security
+-->
+<html>
+	<head>
+	<style>
+		.style1{background-color:cyan;color:green;}
+		.style2{font-size:20pt}			
+		.style3{background-color:red;color:white;font-size:50pt}		
+	</style>
+	<script language="javascript" src="Scripts/jquery-2.0.0.js">
+	</script>		
+	<script language="javascript">
+		$(document).ready(function(){ 
+			WireEvents();
+		});		
+		function WireEvents()
+		{
+			$('#btnBindId').bind('mouseenter mouseleave',clickHandlerBind);
+			$('#btnUnbindId').bind('click',clickHandlerUnbind);			
+			$('#paraId').bind('click',clickParaHandler);
+		
+		}		
+		function clickHandlerBind(event)
+		{	
+			if(event.type=="mouseenter")
+			{
+				alert(" Mouse  enter ...");
+			}
+			else
+				alert(" Mouse  Leave ...");
+			
+		}
+		
+		function clickHandlerUnbind(event)
+		{
+		 $('#paraId').unbind();
+		 $('#btnBindId').unbind("mouseenter");
+		}
+		
+		function clickParaHandler(event)
+		{
+		alert( " paragraph was clicked");
+		}
+	</script>
+	</head>
+	<body>
+			<form>
+			Enter UR name:
+			<input type="text" name="txtName" 
+			id="txtNameId" value=""/><br>
+			
+			EventType:<input type="text" name="txtEventType"
+			id="txtEventTypeId" value=""/><br/>
+			
+			<input type="button" name="btnBind" value="BIND"
+			id="btnBindId"/>
+			<input type="button" name="btnBind" value="Unbind"
+			id="btnUnbindId"/>
+			
+			</form>
+			<p id="paraId"> Hello</p>
+			
+	</body>
+</html>

@@ -1,0 +1,1 @@
+<?xml version='1.0' encoding='UTF-8'?><!ELEMENT library (m2:book|m3:book)*><!ELEMENT m2:book (m2:message)*><!ATTLIST m2:book xmlns:m2 CDATA #IMPLIED><!ELEMENT m2:message (#PCDATA)><!ELEMENT m3:book (m3:title|m3:author)*><!ATTLIST m3:book xmlns:m3 CDATA #IMPLIED><!ELEMENT m3:title (#PCDATA)><!ELEMENT m3:author (#PCDATA)>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml:stylesheet type="text/xsl" href="address.xsl"?>
+<addressbook>
+	<contact>
+		<name>NarendraP</name>
+		<address>A/8,'Sonal' Apartment, Andheri(W)</address>
+		<city>Mumbai</city>
+		<state>Maharashtra</state>
+		<zip>400054</zip>
+		<phone>
+			<voice>8350039</voice>
+			<fax>8350139</fax>
+		</phone>
+		<email>narendrap@rediffmail.com</email>
+		<web>http://www.patni.com/narendra</web>
+		<company>Patni Computer System &amp; Hardware</company>
+	</contact>
+	<contact>
+		<name>Sachin Tendulkar</name>
+		<address>'Kanchan' Society, S.V Raod,Dadar(w)</address>
+		<city>Mumbai</city>
+		<state>Maharashtra</state>
+		<zip>400012</zip>
+		<phone>
+			<voice>4250039</voice>
+			<fax>4250139</fax>
+		</phone>
+		<email>sachin@rediffmail.com</email>
+		<web>http://www.patni.com/sachin</web>
+		<company>Patni Computer System &amp; Hardware</company>
+	</contact>
+</addressbook>

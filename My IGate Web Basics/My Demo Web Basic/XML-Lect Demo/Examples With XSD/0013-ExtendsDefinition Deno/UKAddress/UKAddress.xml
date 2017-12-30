@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UKAddress  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="UKAddress.xsd">
+		<Line1>34 thingy street</Line1>
+	   <Line2>someplace</Line2>
+	   <County>somerset</County>
+	   <Postcode>w1w8uu</Postcode>
+</UKAddress>

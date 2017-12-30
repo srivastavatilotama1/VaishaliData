@@ -1,0 +1,238 @@
+query 2.3
+ 
+
+
+DECLARE
+    CURSOR c_staff_sal_details IS
+    SELECT * FROM staff_masters
+    WHERE dept_code=&dept_code;
+    v_staff_details staff_masters%ROWTYPE;
+	
+ BEGIN
+    IF NOT c_staff_sal_details%ISOPEN THEN
+            OPEN c_staff_sal_details;
+            END IF;
+	
+	END IF;
+    LOOP
+            FETCH c_staff_sal_details INTO v_staff_details;
+            EXIT WHEN c_staff_sal_details%NOTFOUND;
+            DBMS_OUTPUT.PUT_LINE(
+                    ' CODE: ' ||v_staff_details.staff_code||
+                    ' Name:'  ||v_staff_details.staff_name||
+                  ' Salary:'  ||v_staff_details.staff_sal);
+    END LOOP;
+ END;
+
+result--
+
+
+ 18* END;
+SQL> /
+Enter value for dept_code: 20
+old   4:    WHERE dept_code=&dept_code;
+new   4:    WHERE dept_code=20;
+CODE: 100004 Name:Anil Salary:20000
+CODE: 100007 Name:Smith Salary:62000
+CODE: 100009 Name:Rahul Salary:22000
+
+PL/SQL procedure successfully completed.
+
+*****************************************************************************************************************************
+query 2.4
+
+ DECLARE
+            v_staff_code staff_masters.staff_code%TYPE;
+            v_staff_name staff_masters.staff_name%TYPE;
+            v_staff_sal staff_masters.staff_sal%TYPE;
+            v_percent staff_masters.staff_sal%TYPE;
+    		CURSOR c_staff_sal IS
+   	 	SELECT staff_code,staff_sal
+    		FROM staff_masters
+    		WHERE dept_code=&v_dept_code;
+ BEGIN
+     		IF NOT c_staff_sal%ISOPEN THEN
+            	OPEN c_staff_sal;
+            	END IF;
+       LOOP
+            	FETCH c_staff_sal INTO v_staff_code,v_staff_sal;
+            	EXIT WHEN c_staff_sal%NOTFOUND;
+       		v_percent:=( v_staff_sal*(30/100));
+   		 IF (v_percent<5000) THEN
+        		UPDATE staff_masters
+                	SET staff_sal=(staff_sal+v_percent)
+             		WHERE staff_code=v_staff_code;
+    		 	DBMS_OUTPUT.PUT_LINE('code:'|| v_staff_code||'increased by'
+    			|| v_percent);
+    	ELSE
+    			UPDATE staff_masters
+                	SET staff_sal=(staff_sal+5000)
+             		WHERE staff_code=v_staff_code;
+     			DBMS_OUTPUT.PUT_LINE('code:'|| v_staff_code||'increased by'
+    			||5000);
+   	 END IF;
+    END LOOP;
+ END;
+
+result---
+
+
+SQL> /
+Enter value for v_dept_code: 20
+old   9:    WHERE dept_code=&v_dept_code;
+new   9:    WHERE dept_code=20;
+code:100004 increased by 5000
+code:100007 increased by 5000
+code:100009 increased by 390
+
+PL/SQL procedure successfully completed.
+
+
+
+
+*****************************************************************************************************************************
+
+query 2.5
+
+
+
+ 
+ DECLARE
+               v_dept_code student_masters.dept_code%TYPE;
+               CURSOR c_student_marks_details IS
+               SELECT   stu.student_code,stu.student_name,sm.subject1,sm.subject2,sm.subject3
+               FROM student_masters stu,student_marks sm
+               WHERE stu.student_code=sm.student_code
+                  AND stu.dept_code=&v_dept_code ;
+                  v_student_code student_marks.student_code%TYPE;
+                  v_student_name student_masters.student_name%TYPE;
+                  v_subject1 student_marks.subject1%TYPE;
+                  v_subject2 student_marks.subject2%TYPE;
+                  v_subject3 student_marks.subject3%TYPE;
+                  v_percentage NUMBER(4);
+                  v_Total NUMBER(10);
+                  v_grade VARCHAR2(2);
+  BEGIN
+             IF NOT c_student_marks_details%ISOPEN THEN
+                 OPEN c_student_marks_details;
+             END IF;
+             IF( c_student_marks_details%NOTFOUND)THEN
+               DBMS_OUTPUT.PUT_LINE('Entered department does not exist or have no students');
+             ELSE
+              LOOP
+                   FETCH c_student_marks_details INTO v_student_code,  v_student_name,
+                    v_subject1,v_subject2,v_subject3;
+                    EXIT WHEN c_student_marks_details%NOTFOUND;
+                    v_Total:=(v_subject1+v_subject2+v_subject3);
+                    v_percentage:=(v_Total/3);
+                        IF (v_percentage>=80) THEN
+                                v_grade:='A';
+                        ELSIF (v_percentage<80) AND (v_percentage>=70) THEN
+                                v_grade:='B';
+                        ELSIF (v_percentage<70) AND (v_percentage>=60) THEN
+                                v_grade:='C';
+                        ELSE
+                                v_grade:='D';
+             END IF;
+                  DBMS_OUTPUT.PUT_LINE(
+                     '  CODE: '     ||v_student_code||
+                     '  Name: '     ||v_student_name||
+                     '  subject1:'  ||v_subject1||
+                     '  subject2:'  ||v_subject2||
+                     '  subject3:'  ||v_subject3||
+                     '  TOTAL:'     ||v_Total||
+                     '  Percent:'   ||v_percentage||
+                     '  Grade:'     ||v_grade);
+              END LOOP;
+         END IF;
+  END;
+
+result---
+
+
+SQL> /
+Enter value for v_dept_code: 20
+old   7:             AND stu.dept_code=&v_dept_code ;
+new   7:             AND stu.dept_code=20 ;
+CODE: 1003  Name: Ajay  subject1:87  subject2:54  subject3:65  TOTAL:206  Percent:69  Grade:C
+CODE: 1003  Name: Ajay  subject1:78  subject2:56  subject3:55  TOTAL:189  Percent:63  Grade:C
+CODE: 1007  Name: Mehul  subject1:68  subject2:78  subject3:74  TOTAL:220  Percent:73  Grade:B
+CODE: 1007  Name: Mehul  subject1:67  subject2:79  subject3:49  TOTAL:195  Percent:65  Grade:C
+CODE: 1013  Name: Anil  subject1:66  subject2:74  subject3:88  TOTAL:228  Percent:76  Grade:B
+CODE: 1013  Name: Anil  subject1:75  subject2:58  subject3:65  TOTAL:198  Percent:66  Grade:C
+CODE: 1021  Name: Sumit  subject1:87  subject2:54  subject3:65  TOTAL:206  Percent:69  Grade:C
+CODE: 1021  Name: Sumit  subject1:78  subject2:79  subject3:78  TOTAL:235  Percent:78  Grade:B
+
+PL/SQL procedure successfully completed.
+
+
+
+
+*****************************************************************************************************************************
+
+query 2.6
+
+
+
+ 
+ DECLARE
+               CURSOR cur_staff_dept_det(deptcode NUMBER) IS
+   SELECT *
+   FROM staff_masters
+  WHERE dept_code=deptcode;
+    rec_staff_details cur_staff_dept_det%ROWTYPE;
+  BEGIN
+                 OPEN cur_staff_dept_det(&deptno);
+              LOOP
+    FETCH cur_staff_dept_det INTO
+     rec_staff_details ;
+    EXIT WHEN cur_staff_dept_det%NOTFOUND;
+    DBMS_OUTPUT.PUT_LINE(
+    ' staff Code:'||rec_staff_details.staff_code||
+    ' NAME:'||rec_staff_details.staff_name||
+    ' Designation:'||rec_staff_details.design_code||
+      ' Hiredate:'||rec_staff_details.HireDate||
+    ' staff dob:'||rec_staff_details.staff_dob||
+    ' Dept code:'||rec_staff_details.dept_code||
+    ' Salary:'||rec_staff_details.staff_sal);
+              END LOOP;
+   CLOSE cur_staff_dept_det;
+  END;
+
+
+RESULT--
+
+Enter value for deptno: 20
+old   8:                 OPEN cur_staff_dept_det(&deptno);
+new   8:                 OPEN cur_staff_dept_det(20);
+staff Code:100004 NAME:Anil Designation:102 Hiredate:11-MAR-01 staff
+dob:22-APR-77 Dept code:20 Salary:40000
+staff Code:100007 NAME:Smith Designation:103 Hiredate:12-MAR-02 staff
+dob:19-JUL-73 Dept code:20 Salary:62000
+staff Code:100009 NAME:Rahul Designation:102 Hiredate:11-DEC-03 staff
+dob:16-JAN-78 Dept code:20 Salary:22000
+
+PL/SQL procedure successfully completed.
+
+
+
+*****************************************************************************************************************************
+
+*****************************************************************************************************************************
+*****************************************************************************************************************************
+
+*****************************************************************************************************************************
+
+*****************************************************************************************************************************
+*****************************************************************************************************************************
+
+*****************************************************************************************************************************
+
+*****************************************************************************************************************************
+*****************************************************************************************************************************
+
+*****************************************************************************************************************************
+
+*****************************************************************************************************************************
+*****************************************************************************************************************************
+

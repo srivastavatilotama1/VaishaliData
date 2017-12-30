@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet version="1.0"  href="lab3-1.xsl" type="text/xsl"?>
+<adressbook>
+			<contact>
+					<name>NarendraP</name>
+					<adress>A/8,'Sonal'Apartment,Andheri(W)</adress>
+					<city>Mumbai</city>
+					<state>Maharashtra</state>
+					<zip>400054</zip>
+						<phone>
+								<voice>8350039</voice>
+								<fax>8350139</fax>
+						</phone>
+					<email>narendrap@rediffmail.com</email>
+					<web>http://www.patni.com/narendra</web>
+					<company>patni computer system &amp;Hardware</company>
+			</contact>
+					
+			<contact>
+					<name>Sachin Tendulkar</name>
+					<adress>Kanchan,SV road,Dadar</adress>
+					<city>Mumbai</city>
+					<state>Maharashtra</state>
+					<zip>400012</zip>
+						<phone>
+								<voice>4218933</voice>
+								<fax>4214545</fax>
+						</phone>
+					<email>sachin@cricket.com</email>
+					<web>http://www.crickonline.com/sachin</web>
+					<company>ICC &apos;s club of india</company>
+				</contact>
+</adressbook>				

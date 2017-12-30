@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT circle (position)>
+	<!ATTLIST circle  	radius CDATA #REQUIRED >
+<!ELEMENT position EMPTY>
+<!--	<!ATTLIST position	x CDATA #REQUIRED y CDATA #REQUIRED >-->
+
+
+<!ATTLIST position	x CDATA #REQUIRED y CDATA #REQUIRED  z (5|10|15) #IMPLIED u CDATA "50" company CDATA #FIXED "Microsoft"> 
+	<!--
+<!ATTLIST circle radius CDATA “1” >
+This indicates that the value of radius will be 1 if the attribute is not specified for a <circle> element.
+	-->
+	<!--
+		 #IMPLIED   attribute does not have to  be included.
+
+
+
+An attribute that you declare as #FIXED must always have the default value. For example:
+
+<!ATTLIST circle
+color (red|blue|green) #REQUIRED
+line_thickness medium #FIXED
+>
+-->
+	

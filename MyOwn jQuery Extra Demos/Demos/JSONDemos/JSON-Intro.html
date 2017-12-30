@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>JSON Introduction</title>
+<script type="text/javascript">
+var jsonObject = {"EmployeeID":714709, "Name":"Karthik M","Department":"Training","ISContract":false}
+var parsedJson = eval(jsonObject);
+var contractEmployee = ""
+if(parsedJson.ISContract)
+ contractEmployee = "Yes";
+ else
+ contractEmployee = "No";
+var result = "<table border='1'><tr><td>EmployeeID</td><td>Name</td><td>Department</td><td>Contract Employee</td><tr>"	
+					+"<td>"+parsedJson.EmployeeID+"</td>"
+					+"<td>"+parsedJson.Name+"</td>"
+					+"<td>"+parsedJson.Department+"</td>"
+					+"<td>"+contractEmployee+"</td>"
+					+"</tr></table>";
+document.write(result);					
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article>
+	<title>artticle</title>
+	<date>date>December 6, 2000</date>
+	<author>
+			<fname>Tem</fname>
+			<lname>Nieto</lname>
+	</author>
+	<summary>XML is pretty easy.</summary>
+	<content>Once you have mastered HTML, XML is easily
+				learned. You must remember that XML is not for
+				displaying information but for managing information.
+	</content>
+</article>

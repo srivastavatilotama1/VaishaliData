@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="SizeByNumberType">
+			<xs:simpleType>
+				   <xs:restriction base="xs:positiveInteger">
+								  <xs:maxInclusive value="21"/>
+				   </xs:restriction>
+			</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="SizeByStringNameType">
+			<xs:simpleType>
+				   <xs:restriction base="xs:string">
+							  <xs:enumeration value="small"/>
+							  <xs:enumeration value="medium"/>
+							  <xs:enumeration value="large"/>
+				   </xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="USClothingSizeType">
+		<xs:simpleType>
+			<xs:union memberTypes="SizeByNumberType SizeByStringNameType" />
+		</xs:simpleType>
+	</xs:element>
+
+</xs:schema>

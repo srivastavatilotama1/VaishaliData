@@ -1,0 +1,27 @@
+<table border="1">
+	<caption>ROWSPAN Example</caption>
+	<tr>
+		<th>Group Name</th>
+		<th>SubGroup Name</th>
+		<th>Group Name</th>
+		<th>SubGroup Name</th>
+	</tr>
+	<TR>
+		<td ROWSPAN="4">  Group 1</td>
+		<td>1a</td> 
+		<td ROWSPAN="4">  Group 2</td>
+		<td>2a</td>
+	</tr>
+	<tr>
+		<td>1b</td>
+		<td>2b</td>
+	</tr>
+	<tr>
+		<td>1c</td>
+		<td>2c</td>
+	</tr>
+	<tr>
+		<td>1d</td>
+		<td>2d</td>
+	</tr>
+</table>

@@ -1,0 +1,53 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+
+
+<html>
+	<!-- Fig.: DOMExample.html -->
+	<!-- DOM with JavaScript        -->
+	<head>
+		<title>A DOM Example</title>
+	</head>
+	<body>
+		<script type = "text/javascript" language = "JavaScript">
+			var xmlDocument = new ActiveXObject( "Microsoft.XMLDOM" );
+			xmlDocument.load( "article.xml" );
+
+			var element = xmlDocument.documentElement;
+
+		   document.writeln( "<p>Here is the root node of the document:" );
+		   document.writeln( "<strong>" + element.nodeName  + "</strong>" );
+		   document.writeln(  "<br>The following are its child elements:" );
+		   document.writeln( "</p><ul>" );
+
+		// traverse all child nodes of root element
+
+		for ( i = 0; i < element.childNodes.length; i++ ) 
+		{
+			var curNode = element.childNodes.item( i );
+			// print node name of each child element
+
+			  document.writeln( "<li><strong>" + curNode.nodeName    + "</strong></li>" );  
+         }
+         document.writeln( "</ul>" );
+        
+         // get the first child node of root element
+          var currentNode = element.firstChild;
+          document.writeln( "<p>The first child of root node is:" );
+          document.writeln( "<strong>" + currentNode.nodeName+ "</strong>" );
+		  document.writeln( "<br>whose next sibling is:" );
+
+		// get the next sibling of first child
+
+		   var nextSib = currentNode.nextSibling;
+		   document.writeln( "<strong>" + nextSib.nodeName       + "</strong>." );
+		  document.writeln( "<br>Value of <strong>" + nextSib.nodeName  + "</strong> elements	:           " 		);      
+         var value = nextSib.firstChild;
+         // print the text value of the sibling
+         document.writeln( "<em>" + value.nodeValue + "</em>" );
+
+   document.writeln( "<br>Parent node of " );	
+      document.writeln( "<string>" + nextSib.nodeName       + "</strong> is:" );
+         document.writeln( "<strong>" + nextSib.parentNode.nodeName       + "</strong>.</p>" );	
+         </script>
+      </body>
+</html>

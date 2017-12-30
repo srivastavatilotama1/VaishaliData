@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars xmlns="http://www.ociweb.com/cars" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.ociweb.com/cars Cars.xsd ">
+	<car year="2001">
+		<make>BMW</make>
+		<model>Z3</model>
+		<color>yellow</color>
+	</car>
+	<car year="2001">
+		<make>Honda</make>
+		<model>Odyssey</model>
+		<color>green</color>
+	</car>
+	<car year="1997">
+		<make>Saturn</make>
+		<model>SC2</model>
+		<color>purple</color>
+	</car>
+</cars>

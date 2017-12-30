@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Modifying Styles</title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="../Scripts/jquery-1.6.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	 $('#TargetDiv').css({
+	 'background-color':'purple',
+	 color:'white',
+	 'font-size':'20pt',
+	 padding:'10px'
+	 })
+	 //Chaining
+	 .html('<b>Changed text</b>');
+});
+</script>
+</head>
+<body>
+<div class="divStyle" id="TargetDiv">
+Target Div
+</div>
+</body>
+</html>

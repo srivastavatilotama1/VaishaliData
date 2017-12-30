@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Employee Details</title>
+</head>
+<body>
+<table border="1">
+<tr>
+	<td align="justify">Name</td>
+	<td align="justify"><input type="text" name="name"></td>
+</tr>
+<tr>
+	<td align="justify">Employee Code</td>
+	<td align="justify"><input type="text" name="empcode"></td>
+</tr>
+<tr>
+	<td align="justify">Department</td>
+	<td align="justify"><input type="radio" name="dept">admin<br>
+	<input type="radio" name="dept">Technical<br>
+	<input type="radio" name="dept">HR<br>
+	<input type="radio" name="dept">Accounts</td>
+</tr>
+<tr>
+	<td align="justify">Date of joining</td>
+	<td align="justify">
+	<table>
+	<tr>
+		<td><input type="text" size="2" name="date">/</td>
+		<td><input type="text" size="2" name="month">/</td>
+		<td><input type="text" size="4" name="year"></td>
+	</tr>
+	<tr>
+		<td>dd</td>
+		<td>mm</td>
+		<td>yyyy</td>
+	</tr>
+	</table>	
+	<tr>
+		<td align="justify">Address</td>
+		<td align="justify"><textarea name="address" rows="5" cols="8"></textarea></td>
+	</tr>
+	<tr>
+		<td align="justify">Training Programmes Attended</td>
+		<td align="justify"><input type="checkbox" name="html_dhtml">HTML/DHTML<br>
+		<input type="checkbox" name="java">JAVA<br>
+		<input type="checkbox" name="dept">CLIENT/SERVER<br>
+		<input type="checkbox" name="dept">.NET</td>
+	</tr>
+	<tr>
+		<td align="justify">Training Programmes need to Attend</td>
+		<td align="justify"><select name="toattend" multiple="multiple">
+		<option value="JavaScript">JavaScript
+		<option value="UML">UML
+		<option value="JavaBeans">Java Beans
+		</td>
+		</select>
+	</tr>
+	<tr>
+	<td align="justify">Send the information at</td>
+	<td align="justify"><u>emp1@igate.com</u></td>
+</tr>
+</table>
+</body>
+</html>

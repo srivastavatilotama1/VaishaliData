@@ -1,0 +1,61 @@
+<script>
+
+var str="Hello world!";
+//look for "Hello"
+var patt=/hello/g;
+var result=patt.exec(str);
+document.write("Returned value: " + result);
+
+//look for "W3Schools"
+patt=/W3Schools/g;
+result=patt.exec(str);
+document.write("<br>Returned value: " + result);
+
+var qpt = "QualityPointTechnologies";
+var pattern = new RegExp("POIiNT");
+document.write("<br/>"+qpt.match(pattern));
+
+var person=new Object();
+person.firstname="John";
+person.lastname="Doe";
+person.age=50;
+person.eyecolor="blue"; 
+document.write(person.firstname + " is " + person.age + " years old.");
+
+
+// Create the regular expression pattern.
+   var re = new RegExp("d(b+)(d)","ig");
+   var str = "cdbBdbsbdbdz";
+
+   // Perform the search.
+   var arr = re.exec(str);
+
+   // Print the output.
+   var s = "" 
+   s += "$1: " + RegExp.$1 + "<br />";
+   s += "$2: " + RegExp.$2 + "<br />";
+   s += "$3: " + RegExp.$3 + "<br />";
+   s += "input: " + RegExp.input + "<br />";
+   s += "lastMatch: " + RegExp.lastMatch + "<br />";
+   s += "leftContext: " + RegExp.leftContext + "<br />";
+   s += "rightContext: " + RegExp.rightContext + "<br />"; 
+   s += "lastParen: " + RegExp.lastParen + "<br />";
+
+   document.write(s);
+ document.write("*************************");
+
+
+
+var qpt = "We are fast growing Software  IN Company located in Chennai, India.";
+var pattern = new RegExp("in","gi");
+//var pattern = new RegExp("in","i");
+
+
+document.write(pattern.exec(qpt) + " ");
+document.write(pattern.exec(qpt) + " ");
+document.write(pattern.exec(qpt) + " ");
+document.write(pattern.exec(qpt) + " ");
+
+
+
+</script>

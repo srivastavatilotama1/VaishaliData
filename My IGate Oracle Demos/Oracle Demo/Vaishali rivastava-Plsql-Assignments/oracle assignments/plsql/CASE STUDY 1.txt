@@ -1,0 +1,191 @@
+
+SQL> ed
+Wrote file afiedt.buf
+ CASE STUDY
+
+
+
+
+
+
+  1  CREATE OR REPLACE PACKAGE body bankfunction AS
+  2  PROCEDURE insertdata
+  3             (i_cust_name IN customer_masters.cust_name%TYPE,
+  4             i_address IN customer_masters.address%TYPE,
+  5             i_cust_type IN customer_masters.customer_type%TYPE,
+  6             i_acc_type IN account_masters.account_type%TYPE)
+  7  AS
+  8             v_cust_id NUMBER(6):=cust_id_seq.NEXTVAL;
+  9             v_date_of_creation DATE:=sysdate;
+ 10             v_acc_no NUMBER(6):=acc_no_seq.NEXTVAL;
+ 11  not_complete_exe EXCEPTION;
+ 12  BEGIN
+ 13             IF(i_cust_name=NULL OR i_address=NULL OR i_cust_type=NULL OR i_acc_type=NULL)
+ 14  THEN
+ 15  RAISE not_complete_exe;
+ 16  END IF;
+ 17             INSERT INTO customer_masters VALUES
+ 18             (v_cust_id,i_cust_name,i_address,v_date_of_creation,i_cust_type);
+ 19             INSERT INTO account_masters VALUES
+ 20             (v_acc_no,v_cust_id,i_acc_type,NULL);
+ 21             DBMS_OUTPUT.PUT_LINE('account created ! customer id:'||v_cust_id||'account number
+ 22                     :'||v_acc_no);
+ 23  EXCEPTION
+ 24                     WHEN not_complete_exe THEN
+ 25                     DBMS_OUTPUT.PUT_LINE('data not entered');
+ 26                     END INSERTDATA;
+ 27  PROCEDURE transfermoney
+ 28  (i_cust_id IN NUMBER,
+ 29  i_amount IN NUMBER ,
+ 30  i_acc_no IN NUMBER)
+ 31  AS
+ 32  v_from_acc_no account_masters.account_number%TYPE;
+ 33  v_cus_check account_masters.cust_id%TYPE;
+ 34  v_balance account_masters.ledger_balance%TYPE;
+ 35  no_input_exe EXCEPTION;
+ 36             v_dup_acc_no account_masters.account_number%TYPE;
+ 37             v_tran_no transaction_masters.transaction_id%TYPE;
+ 38             v_count NUMBER(10);
+ 39  BEGIN
+ 40  IF(i_cust_id=NULL OR i_amount=NULL OR i_acc_no=NULL)THEN
+ 41  RAISE no_input_exe;
+ 42  END IF;
+ 43  SELECT cust_id INTO v_cus_check
+ 44  FROM customer_masters
+ 45  WHERE cust_id=i_cust_id;
+ 46  SELECT account_number INTO v_from_acc_no
+ 47  FROM account_masters
+ 48  WHERE cust_id=i_cust_id;
+ 49  SELECT ledger_balance INTO v_balance
+ 50  FROM account_masters
+ 51  WHERE cust_id=i_cust_id;
+ 52  IF(v_balance<i_amount)THEN
+ 53  DBMS_OUTPUT.PUT_LINE('NOT enough balance!');
+ 54  ELSE
+ 55  v_tran_no:=trans_sq.NEXTVAL;
+ 56  INSERT INTO transaction_masters VALUES
+ 57  (v_tran_no,v_from_acc_no,sysdate,v_from_acc_no,i_acc_no,i_amount,'CR');
+ 58  SELECT COUNT(*) INTO v_count
+ 59  FROM account_masters
+ 60  WHERE account_number=i_acc_no;
+ 61  IF(v_count>0) THEN
+ 62  UPDATE account_masters SET ledger_balance=ledger_balance+i_amount
+ 63  WHERE account_number=i_acc_no;
+ 64  UPDATE account_masters SET ledger_balance=ledger_balance-i_amount
+ 65  WHERE cust_id=i_cust_id;
+ 66  ELSE
+ 67  UPDATE account_masters SET ledger_balance=ledger_balance-i_amount
+ 68  WHERE cust_id=i_cust_id;
+ 69  END IF;
+ 70  DBMS_OUTPUT.PUT_LINE('money transferred to another bank account transaction id :'||v_tran_no);
+ 71  END IF;
+ 72  EXCEPTION
+ 73  WHEN no_data_found THEN
+ 74  DBMS_OUTPUT.PUT_LINE('invalid customer id:');
+ 75  WHEN no_input_exe THEN
+ 76  DBMS_OUTPUT.PUT_LINE('invalid data entered:');
+ 77  END transfermoney;
+ 78* END bankfunction;
+SQL> /
+
+Package body created.
+
+SQL> EXECUTE bankfunction.insertdata('Mohit','NOIDA','ind','SAV');
+account created ! customer id:10000account number
+                   :50000
+
+PL/SQL procedure successfully completed.
+
+SQL> EXECUTE bankfunction.insertdata('Anuradha','delhi','nri','SAV');
+account created ! customer id:10001account number
+                   :50001
+
+PL/SQL procedure successfully completed.
+
+SQL> EXECUTE bankfunction.insertdata('angel','gurgoan','ind','sav');
+account created ! customer id:10002account number
+                   :50002
+
+PL/SQL procedure successfully completed.
+
+
+
+
+
+
+
+
+
+
+
+SQL> UPDATE account_masters SET ledger_balance=50000 WHERE account_number=50000;
+
+1 row updated.
+
+SQL> UPDATE account_masters SET ledger_balance=10000 WHERE account_number=50001;
+
+1 row updated.
+
+SQL> UPDATE account_masters SET ledger_balance=7000 WHERE account_number=50002;
+
+1 row updated.
+
+SQL> EXECUTE bankfunction.transfermoney(10000,1000,50001);
+money transferred to another bank account transaction id :50000
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT * from transaction_masters;
+
+TRANSACTION_ID ACCOUNT_NUMBER DATE_OF_T FROM_ACCOUNT_NUMBER TO_ACCOUNT_NUMBER     AMOUNT TR
+-------------- -------------- --------- ------------------- ----------------- ---------- --
+             1         100001 01-JAN-08              100002            100001       1000 cr
+             2         100002 03-JAN-08              100002            100003       1000 db
+             3         100003 05-JAN-08              100002            100003       1000 cr
+         50000          50000 28-AUG-14               50000             50001       1000 CR
+
+SQL> 
+
+
+
+
+SQL> EXECUTE bankfunction.transfermoney(10000,1000,50001);
+money transferred to another bank account transaction id :50000
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT * from transaction_masters;
+
+TRANSACTION_ID ACCOUNT_NUMBER DATE_OF_T FROM_ACCOUNT_NUMBER TO_ACCOUNT_NUMBER     AMOUNT TR
+-------------- -------------- --------- ------------------- ----------------- ---------- --
+             1         100001 01-JAN-08              100002            100001       1000 cr
+             2         100002 03-JAN-08              100002            100003       1000 db
+             3         100003 05-JAN-08              100002            100003       1000 cr
+         50000          50000 28-AUG-14               50000             50001       1000 CR
+
+SQL> EXECUTE bankfunction.transfermoney(10000,5000,50002);
+money transferred to another bank account transaction id :50001
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT * from transaction_masters;
+
+TRANSACTION_ID ACCOUNT_NUMBER DATE_OF_T FROM_ACCOUNT_NUMBER TO_ACCOUNT_NUMBER     AMOUNT TR
+-------------- -------------- --------- ------------------- ----------------- ---------- --
+             1         100001 01-JAN-08              100002            100001       1000 cr
+             2         100002 03-JAN-08              100002            100003       1000 db
+             3         100003 05-JAN-08              100002            100003       1000 cr
+         50000          50000 28-AUG-14               50000             50001       1000 CR
+         50001          50000 28-AUG-14               50000             50002       5000 CR
+
+SQL> EXECUTE bankfunction.transfermoney(10000,50000,50001);
+NOT enough balance!
+
+PL/SQL procedure successfully completed.
+
+SQL> EXECUTE bankfunction.transfermoney(100003,1500,1523);
+invalid customer id:
+
+PL/SQL procedure successfully completed.
+
+SQL> 

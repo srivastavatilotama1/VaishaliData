@@ -1,0 +1,16 @@
+<HTML>
+<HEAD><TITLE>Credit Card Registration Form</TITLE>
+<link rel="stylesheet" href="apply.css" type="text/css" media="screen" charset="utf-8">
+<script type="text/javascript" charset="utf-8" src="validate.js" ></script>
+</HEAD>
+<BODY>
+<form action="Success.html" onsubmit=" return validate();" method="post">
+<center><h2>Online Credit Card Application Form</h2></center>
+<h4>* Represents Mandatory Fields</h4>
+<div class='maindiv'>
+<div class='leftdiv'>
+<label>First Name:*</label><input type=text maxlength='15' size='15' id='fname' tabindex="1" alt=" " class="iClass"/><br><br>
+<div>
+<input type="submit" value="Submit" > 
+</div>
+</form></BODY></HTML>

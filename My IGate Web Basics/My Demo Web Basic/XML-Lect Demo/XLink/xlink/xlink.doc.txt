@@ -1,0 +1,182 @@
+XLink
+XLink provides a number of global attributes, which can be attached to any XML element, to define a link.
+
+In this section, we'll study:
+
+The global attributes provided by XLink, and how they work
+
+The XLink concept of simple links, and the concept of extended links, which are not available in HTML links
+
+What an arc is, and how it works
+
+As a demonstration, let's consider our familiar <name> example:
+
+<name xmlns="http://sernaferna.com/name">
+  <first>John</first>
+  <middle>Fitzgerald Johansen</middle>
+  <last>Doe</last>
+</name>
+We might create an application in which a user could search for information on an employee, and get back information in this format. Now let's suppose that John Doe has a home page, located at http://sernaferna.com/homepages/doe/, which we want to link to from our XML. We could do so by adding some XLink attributes to the <last> element, like this:
+
+<name xmlns="http://sernaferna.com/name"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+  <first>John</first>
+  <middle>Fitzgerald Johansen</middle>
+  <last xlink:type="simple" 
+        xlink:href="http://sernaferna.com/homepages/doe/">Doe</last>
+</name>
+Even though the <last> element is in the http://sernaferna.com/name namespace, we can make it an XLink linking element by adding the type and href global attributes from the XLink namespace.
+
+In the next couple of sections, we'll examine these XLink attributes, and how they work.
+
+XLink Attributes
+In order to provide the functionality mentioned above, XLink provides a number of global attributes that can be added to any element. This is in contrast to HTML, where only a few restricted elements serve as links (such as <a> and <img>).
+
+The namespace used for these global attributes is http://www.w3.org/1999/xlink. For the purposes of this chapter, however, we will usually only use the xlink: prefix to denote XLink attributes; the namespace declaration will be assumed. 
+
+The attributes are as follows:
+
+type specifies the type of XLink element being created
+
+href specifies the URI used to retrieve a resource
+
+role is used to specify the function of a link's resource in a machine-readable fashion
+
+title is used to specify the function of a link's resource in a human-readable fashion
+
+show specifies how the resource should be displayed, when retrieved
+
+actuate specifies when the specified resource should be retrieved
+
+The from and to attributes specify link directions, since XLink links are not necessarily one-way links
+
+The type Attribute
+Which attributes can be used on an element depends on the value of type, which is mandatory on any XML element being used to define a link. There are six types: 
+
+simple 
+
+extended 
+
+locator 
+
+arc 
+
+resource 
+
+title 
+
+The XLink specification provides a handy table, that summarizes which attributes are required (R), which are optional (O), and which are not allowed (X) for each XLink type:
+
+  simple
+ extended
+ locator
+ arc
+ resource
+ title
+ 
+type 
+ R
+ R
+ R
+ R
+ R
+ R
+ 
+href 
+ O
+ X
+ R
+ X
+ X
+ X
+ 
+role 
+ O
+ O
+ O
+ O
+ O
+ X
+ 
+title 
+ O
+ O
+ O
+ O
+ O
+ X
+ 
+show 
+ O
+ X
+ X
+ O
+ X
+ X
+ 
+actuate 
+ O
+ X
+ X
+ O
+ X
+ X
+ 
+from 
+ X
+ X
+ X
+ O
+ X
+ X
+ 
+to 
+ X
+ X
+ X
+ O
+ X
+ X
+ 
+
+Because the type attribute defines the type of XLink element being created, its value is used to refer to that type of element. That is, we refer to an element with xlink:type="simple" as a "simple-type element", and to an element with xlink:type="title" as a "title-type element".
+
+Simple-type and extended-type elements are used to define an entire link, while the other types of elements will be children of one of these elements. (Simple and extended links, and the differences between the two, will be covered later.) The locator, arc, resource, and title-type elements are all used in the context of an extended link, to provide more information about the link:
+
+Locator-type elements are used to indicate remote resources taking part in the link
+
+Arc-type elements are used to indicate the rules for traversing from one resource to another within the link
+
+Resource-type elements define the various resources taking part in the link
+
+Title-type elements can provide human-readable titles for a link
+
+The href Attribute
+The href XLink attribute is called the locator attribute, and it does exactly what its name implies: provides a URI where a resource can be located. Since there can be multiple resources involved in an XLink link, there can also be multiple locator attributes (on multiple elements) to provide the URIs to those resources.
+
+The syntax for the href attribute is the same as that for the href attribute in HTML's <a> element. For example, this HTML:
+
+<a href="http://sernaferna.com/home.htm">
+
+is similar to this XLink example:
+
+<myelement xlink:href="http://sernaferna.com/home.htm">
+
+For each of these href attributes a simple URL is provided, which points to the resource being identified.
+
+Semantic Attributes (role and title)
+The role and title attributes are used to label the functions of the various resources in the link: role in a machine-readable way, and title in a human-readable way.
+
+The role attribute provides a machine-readable label for a resource. In other words, role is used to give a resource a name which is easily understandable by a computer program.
+
+The value for the role attribute must be a QName, thus allowing you to distinguish roles you define from roles others define, by means of namespaces. For example:
+
+<customer xmlns:order="http://www.sernaferna.com/order"
+          xlink:type="resource"
+          xlink:role="order:customer">
+    John Doe
+</customer>
+
+In this example, we have a <customer> element, which is also a resource-type XLink element. We have given it the role of order:customer, so that any other XLink elements which need to refer to this resource can do so. Also, since we use QNames for the role attribute's value, we don't have to worry about collisions with others defining a role of customer, since our customer role is differentiated by the URI that the order: namespace prefix is bound to.
+
+The title

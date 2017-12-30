@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE address SYSTEM "C:\VaishaliTemp\IbmWorkspace\XML Demos\Address.dtd">
+<address>
+	<landmark>Near School</landmark>
+<!--	<street>MGRoad1</street>
+-->		<city>pune</city>
+	<state shortname="MS">Maharashtra</state>
+	<zip>8888</zip>
+</address>
+
+<!--
+***********************************************
+
+<!ELEMENT attributes (#PCDATA)>
+<!ATTLIST attributes 
+      aaa CDATA #IMPLIED
+      bbb NMTOKEN #REQUIRED
+      ccc NMTOKENS #REQUIRED>
+
+
+*****************************************************************************Valid
+The character # is not permitted in attributes of type NMTOKEN and NMTOKENS: 
+ <!DOCTYPE attributes SYSTEM "tutorial.dtd">
+<attributes aaa="#d1" bbb="#d1" ccc="#d1"/>
+**************************************************************	Invalid
+<!DOCTYPE attributes SYSTEM "tutorial.dtd">
+<attributes aaa="#d1" bbb="a1:12" ccc=" 3.4 div    -4"/>
+**************************************************************************
+
+The attributes id, code and X uniquely determine their element: 
+
+<!ELEMENT XXX (AAA+ , BBB+ , CCC+)>
+<!ELEMENT AAA (#PCDATA)>
+<!ELEMENT BBB (#PCDATA)>
+<!ELEMENT CCC (#PCDATA)>
+<!ATTLIST AAA 
+      id ID #REQUIRED>
+<!ATTLIST BBB 
+      code ID #IMPLIED
+      list NMTOKEN #IMPLIED>      
+<!ATTLIST CCC 
+      X ID #REQUIRED
+      Y NMTOKEN #IMPLIED>
+ 
+
+
+Valid documentsTop
+
+
+All ID values are unique : 
+
+ <!DOCTYPE XXX SYSTEM "tutorial.dtd">
+
+<XXX>
+   <AAA id="a1"/>
+   <AAA id="a2"/>
+   <AAA id="a3"/>
+   <BBB code="QWQ-123-14-6" list="14:5"/>
+   <CCC X="zero" Y="16" />
+</XXX>
+ 
+
+
+The attributes list and Y are of type NMTOKEN not ID. They can have therefore the same value as ID attributes or to have the same value in several elements : 
+
+ <!DOCTYPE XXX SYSTEM "tutorial.dtd">
+
+<XXX>
+   <AAA id="L12"/>
+   <BBB code="QW" list="L12"/>
+   <CCC X="x-0" Y="QW" />
+   <CCC X="x-1" Y="QW" />
+</XXX>
+ 
+
+
+Documents with errorsTop
+
+
+The ID attribute must not start with a number or contain a character not permitted in NMTOKEN: 
+
+ <!DOCTYPE XXX SYSTEM "tutorial.dtd">
+
+<XXX>
+   <AAA id="L12"/>
+   <BBB code="#QW" list="L12"/>
+   <CCC X="12" Y="QW" />
+</XXX>
+ 
+
+
+The ID attribute must have a unique value: 
+
+ <!DOCTYPE XXX SYSTEM "tutorial.dtd">
+
+<XXX>
+   <AAA id="L12"/>
+   <BBB code="QW" list="L12"/>
+   <CCC X="ZA" Y="QW" />
+   <CCC X="ZA" Y="QW" />
+</XXX>
+ 
+
+
+The ID attribute must have a unique value. Both id and X are of type ID: 
+
+ <!DOCTYPE XXX SYSTEM "tutorial.dtd">
+
+<XXX>
+   <AAA id="L12"/>
+   <BBB code="QW" list="L12"/>
+   <CCC X="L12" Y="QW" />
+</XXX>
+ 
+
+*****************
+
+IDREF
+DTD
+
+
+The attributes id and mark uniquely determine their element. The attributes ref refer to these elements: 
+
+<!ELEMENT XXX (AAA+ , BBB+, CCC+, DDD+)>
+<!ELEMENT AAA (#PCDATA)>
+<!ELEMENT BBB (#PCDATA)>
+<!ELEMENT CCC (#PCDATA)>
+<!ELEMENT DDD (#PCDATA)>
+<!ATTLIST AAA 
+      mark ID #REQUIRED>
+<!ATTLIST BBB 
+      id ID #REQUIRED>      
+<!ATTLIST CCC 
+      ref IDREF #REQUIRED>
+<!ATTLIST DDD 
+      ref IDREFS #REQUIRED>      
+ 
+
+
+Valid documentsTop
+
+
+All ID values are unique and all IDREF and IDREFS point to elements with relevant IDs: 
+
+ <!DOCTYPE XXX SYSTEM "tutorial.dtd">
+
+<XXX>
+   <AAA mark="a1"/>
+   <AAA mark="a2"/>
+   <AAA mark="a3"/>
+   <BBB id="b001" />
+   <CCC ref="a3" />
+   <DDD ref="a1 b001 a2" />
+</XXX>
+ 
+
+
+Documents with errorsTop
+
+
+There are no ID attributes with value a3 or b001: 
+
+ <!DOCTYPE XXX SYSTEM "tutorial.dtd">
+
+<XXX>
+   <AAA mark="a1"/>
+   <AAA mark="a2"/>   
+   <BBB id="b01" />
+   <CCC ref="a3" />
+   <DDD ref="a1 b001 a2" />
+</XXX>
+ 
+
+
+The attribute ref in element CCC is of type IDREF. It can contain only one reference: 
+
+ <!DOCTYPE XXX SYSTEM "tutorial.dtd">
+
+<XXX>
+   <AAA mark="a1"/>
+   <AAA mark="a2"/>
+   <AAA mark="a3"/>
+   <BBB id="b001" />
+   <CCC ref="a1 b001 a2" />
+   <DDD ref="a1 b001 a2" />
+</XXX>
+ 
+ 
+-->

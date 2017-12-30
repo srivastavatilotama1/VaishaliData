@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT IMAGES (IMAGE+) >
+<!ELEMENT IMAGE (#PCDATA) >
+<!NOTATION iPATH SYSTEM "C:\VaishaliTemp\IbmWorkspace\XMLDemos\a.bmp" >
+<!ATTLIST IMAGE SRC NOTATION (iPATH) #REQUIRED>

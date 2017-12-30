@@ -1,0 +1,60 @@
+<log4j:event logger="TestStuApp.class" timestamp="1445332956332" level="DEBUG" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is Debug Message  :bat.Batch@1141299]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445332956332" level="INFO" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is log message ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445332956332" level="WARN" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is warning message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445332956332" level="ERROR" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is error level message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445332956332" level="FATAL" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is fatal error message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445333077262" level="DEBUG" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is Debug Message  :bat.Batch@1b4fc33]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445333077262" level="INFO" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is log message ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445333077262" level="WARN" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is warning message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445333077262" level="ERROR" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is error level message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445333077262" level="FATAL" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is fatal error message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445335903022" level="DEBUG" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is Debug Message  :bat.Batch@11dcabf]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445335903037" level="INFO" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is log message ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445335903037" level="WARN" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is warning message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445335903037" level="ERROR" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is error level message]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="TestStuApp.class" timestamp="1445335903037" level="FATAL" thread="com.igate.vai.TestStuApp.main()">
+<log4j:message><![CDATA[This is fatal error message]]></log4j:message>
+</log4j:event>
+

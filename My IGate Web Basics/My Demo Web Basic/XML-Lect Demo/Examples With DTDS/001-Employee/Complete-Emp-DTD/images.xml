@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE experiment_a [
+ <!ENTITY a1 SYSTEM "a1.gif">
+  <!ENTITY a2 SYSTEM "a2.gif">
+  <!ELEMENT experiment_a (results)*>
+  <!ELEMENT results EMPTY>
+  <!ATTLIST results images ENTITY #REQUIRED>
+ 
+  ]>
+<experiment_a>
+  <results images="a1"/>
+</experiment_a>

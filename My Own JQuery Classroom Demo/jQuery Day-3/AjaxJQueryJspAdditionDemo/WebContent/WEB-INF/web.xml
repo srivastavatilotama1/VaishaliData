@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>AjaxJQueryJspAdditionDemo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>HelloServletController</servlet-name>
+    <servlet-class>com.ajax.controller.HelloServletController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServletController</servlet-name>
+    <url-pattern>/HelloServletController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InsertPersonServlet</display-name>
+    <servlet-name>InsertPersonServlet</servlet-name>
+    <servlet-class>com.ajax.controller.InsertPersonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsertPersonServlet</servlet-name>
+    <url-pattern>/InsertPersonServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

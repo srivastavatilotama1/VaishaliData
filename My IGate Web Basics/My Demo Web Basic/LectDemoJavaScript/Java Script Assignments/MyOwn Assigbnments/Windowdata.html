@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script >
+	var val;
+	 var newWin;
+function showWin()
+{
+	val=document.form1.nm.value;
+	newWin =window.open("","vai","height=200,width=300");
+	newWin.document.write("<html><head></head><body><b>"+val+"</b></body></html>")
+}
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form  name="form1">
+<input type="text"  id="nm" name="name" value=""></input><br/>
+<br/>
+<input type="button" name="submit" value="Submit" onclick="showWin()"></input>
+
+</form>
+</body>
+</html>

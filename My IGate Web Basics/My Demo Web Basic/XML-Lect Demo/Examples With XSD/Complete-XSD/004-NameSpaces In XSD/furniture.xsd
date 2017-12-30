@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.furniture.org/furniture" 
+xmlns:f="http://www.furniture.org/furniture" 
+elementFormDefault="qualified">
+
+<element name="table">
+	<complexType>
+		<sequence>
+			<element name="name" type="string"></element>
+			<element name="width" type="string"></element>
+			<element name="length" type="string"></element>
+		</sequence>
+	</complexType>
+
+</element>
+</schema>

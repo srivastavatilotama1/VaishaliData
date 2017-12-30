@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="products">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="product" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+
+							<xsd:element name="name" type="xsd:string" />
+							<xsd:element name="price" type="xsd:decimal" />
+						</xsd:sequence>
+						<xsd:attribute name="pid" type="xsd:integer" use="required"/>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			
+		</xsd:complexType>
+		<xsd:unique name="prodIDUnique">
+			<xsd:selector xpath="./product" />
+			<xsd:field xpath="@pid" />
+		</xsd:unique>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,138 @@
+LAB 6 SQL
+
+
+query1
+
+
+  1  INSERT INTO customermaster
+  2  VALUES(&customerid ,&custmername ,&address1,
+  3*   &address2 ,&gender ,&age ,&phoneno )
+SQL> /
+Enter value for customerid: 6000
+Enter value for custmername: 'JOHN'
+Enter value for address1: '#115 chicago'
+old   2: VALUES(&customerid ,&custmername ,&address1,
+new   2: VALUES(6000 ,'JOHN' ,'#115 chicago',
+Enter value for address2: '#115 chicago'
+Enter value for gender: 'M'
+Enter value for age: 25
+Enter value for phoneno: 7878776
+old   3:   &address2 ,&gender ,&age ,&phoneno )
+new   3:   '#115 chicago' ,'M' ,25 ,7878776 )
+
+1 row created.
+
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  INSERT INTO customermaster
+  2  VALUES(&customerid ,&custmername ,&address1,
+  3*   &address2 ,&gender ,&age ,&phoneno )
+SQL> /
+Enter value for customerid: 6001
+Enter value for custmername: 'JACK'
+Enter value for address1: '#116 FRANCE'
+old   2: VALUES(&customerid ,&custmername ,&address1,
+new   2: VALUES(6001 ,'JACK' ,'#116 FRANCE',
+Enter value for address2: '#116 FRANCE'
+Enter value for gender: 'M'
+Enter value for age: 45
+Enter value for phoneno: 431525
+old   3:   &address2 ,&gender ,&age ,&phoneno )
+new   3:   '#116 FRANCE' ,'M' ,45 ,431525 )
+
+1 row created.
+
+SQL> /
+Enter value for customerid: 6002
+Enter value for custmername: 'james'
+Enter value for address1: '#114 new york'
+old   2: VALUES(&customerid ,&custmername ,&address1,
+new   2: VALUES(6002 ,'james' ,'#114 new york',
+Enter value for address2: '#114 new york'
+Enter value for gender: 'M'
+Enter value for age: 45
+Enter value for phoneno: 431524
+old   3:   &address2 ,&gender ,&age ,&phoneno )
+new   3:   '#114 new york' ,'M' ,45 ,431524 )
+
+1 row created.
+
+
+
+
+*******************************************************************************************************************************************************
+query 2
+
+
+
+SQL> savepoint SP1;
+
+Savepoint created.
+
+*******************************************************************************************************************************************************
+query 3
+
+
+SQL> INSERT INTO customermaster
+  2  VALUES(&customerid ,&custmername ,&address1,
+  3    &address2 ,&gender ,&age ,&phoneno )
+  4  /
+Enter value for customerid: 6003
+Enter value for custmername: 'john'
+Enter value for address1: '#114 chicago'
+old   2: VALUES(&customerid ,&custmername ,&address1,
+new   2: VALUES(6003 ,'john' ,'#114 chicago',
+Enter value for address2: '#114 chicago'
+Enter value for gender: 'M'
+Enter value for age: 45
+Enter value for phoneno: 439525
+old   3:   &address2 ,&gender ,&age ,&phoneno )
+new   3:   '#114 chicago' ,'M' ,45 ,439525 )
+
+1 row created.
+
+
+CUSTOMERID CUSTMERNAME                    ADDRESS1                       ADDRESS2                       G        AGE    PHONENO
+---------- ------------------------------ ------------------------------ ---------------------------
+      1000 Allen                          #115 Chicago                   #115 chicago                   M         25    7878776
+      1001 George                         #116 France                    #116 France                    M         25    7878776
+      1002 Becker                         #114 New york                  #114 new york                  M         45     431525
+      6000 JOHN                           #115 chicago                   #115 chicago                   M         25    7878776
+      6001 JACK                           #116 FRANCE                    #116 FRANCE                    M         45     431525
+      6002 james                          #114 new york                  #114 new york                  M         45     431524
+      6003 john                           #114 chicago                   #114 chicago                   M         45     439525
+
+7 rows selected.
+
+
+*************************************************************************************************************************************
+
+
+query 4
+
+
+ rollback TO sp1;
+
+Rollback complete.
+
+SQL> SELECT * from customermaster;
+
+CUSTOMERID CUSTMERNAME                    ADDRESS1                       ADDRESS2                       G        AGE    PHONENO
+---------- ------------------------------ ------------------------------ ---------------------------
+      1000 Allen                          #115 Chicago                   #115 chicago                   M         25    7878776
+      1001 George                         #116 France                    #116 France                    M         25    7878776
+      1002 Becker                         #114 New york                  #114 new york                  M         45     431525
+      6000 JOHN                           #115 chicago                   #115 chicago                   M         25    7878776
+      6001 JACK                           #116 FRANCE                    #116 FRANCE                    M         45     431525
+      6002 james                          #114 new york                  #114 new york                  M         45     431524
+
+6 rows selected.
+
+SQL> 
+*******************************************************************************************************************************************************
+
+
+

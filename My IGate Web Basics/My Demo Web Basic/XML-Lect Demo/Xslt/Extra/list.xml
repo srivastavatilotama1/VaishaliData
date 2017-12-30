@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="list2.xsl"?>
+ <SalesReport>
+  <Header>
+   <InputDate>2006/09/09</InputDate>
+   <PropertyName>ABC Services Co., Ltd.</PropertyName>
+   <SalesPerson>Taro Yamada</SalesPerson>
+  </Header>
+  <Body>
+   <Results>
+    <ProductName>XML Database</ProductName>
+    <UnitPrice Units="US$">1230</UnitPrice>
+    <Volume>1</Volume>
+   </Results>
+   <Results>
+    <ProductName>XML Editor</ProductName>
+    <UnitPrice Units="US$">15</UnitPrice>
+    <Volume>10</Volume>
+   </Results>
+  </Body>
+ </SalesReport>

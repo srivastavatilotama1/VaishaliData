@@ -1,0 +1,16 @@
+function validate()
+	{
+	 var fname = document.getElementById("fname"); 
+	 var mname= document.getElementById("mname"); 
+		var lname= document.getElementById("lname"); 
+	if(fname.value.length==0||mname.value.length==0||lname.value.length==0)
+	{
+		alert("Mandatory fields should not be empty");
+		return false;
+	}
+			
+	else
+		{
+                document.getElementById('firstdiv').innerHTML=" ";
+      }
+}

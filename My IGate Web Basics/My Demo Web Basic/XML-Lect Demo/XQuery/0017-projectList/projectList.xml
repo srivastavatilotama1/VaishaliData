@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE projectList SYSTEM "C:\XML\projectList.dtd">
+<projectList>
+	<project projectNumber="">
+		<projectId/>
+			<projectName/>
+		<customer/>
+		<plannedStartDate/>
+		<plannedEndDate/>
+		<team>
+			<teamMember memberNumber="">
+				<employeeId/>
+				<firstName/>
+				<middleName/>
+				<lastName/>
+				<designation/>
+				<role/>
+			</teamMember>
+		</team>
+	</project>
+</projectList>

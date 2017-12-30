@@ -1,0 +1,117 @@
+<!--
+when we submit a form we see astatus in task bar.
+unless server gives response  client cannot
+do anything.
+Such applications are called as classic web application.
+client side scripting--executed on client machine.
+server side scripting -executed on server m/c and response in 
+in html format with http protocol.
+when we press refresh again same thing happens.
+and again dom structure is created.if any new
+node is added afterword  then we don't get it.
+
+This is a disadvantage  of classic web application.
+*******************************
+classic web application has synchronous approach.
+asynchronous means keeps on  sending the request 
+and i can continue with my work.
+******************
+loss of operation context  is lost.
+[dom manipulation using js is gone]
+*****************************
+instant feed bach is not available in classic web app.
+************************************
+Rich Internet Application
+AJax use client scripting that is JS 
+to get the data from web server.
+******************
+without refreshing page ajax change its contents.
+*****************************
+Ajax support only portion of scrren to 
+update the data from server.[Partial Page Update]
+************************
+classic web app are page driven whwere as 
+ajax is data driven app.
+**************************
+ajax engine converts xmlhttprequest to httprequest
+ and send to server
+****************
+open() is used to specify a type of request
+ get and true means  for asynchronous calls.
+**************
+Ie-mozila -firefox
+ -->
+<html>
+<head>
+<!-- <script language="javascript" src="../Scripts/jquery-2.0.0.js">  
+</script> -->
+<script type="text/javascript">
+var xmlHttp=null;
+function LoadXMLHTTP()  {
+
+	if(XMLHttpRequest)
+	{
+		//alert("supporetd..");
+		xmlHttp=new XMLHttpRequest();
+	}
+	else
+	{
+		//alert(" not supporetd..");
+		xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+  }
+  
+  function AddNumbers()
+  {
+	  var firstNumber=document.getElementById("txtFirstNumberId").value;
+	  var secondNumber=document.getElementById("txtSecondNumberId").value;
+	  alert(firstNumber);
+	  alert(secondNumber);
+	  
+	  var params="txtFirstNumber="+firstNumber+
+	  "&txtSecondNumber="+secondNumber;
+	   alert(params);
+	   var url="http://localhost:8081/AjaxJQueryJspAdditionDemo/Addition.jsp";
+  
+	   xmlHttp.open("GET",url+"?"+params,true);
+	   //call back method will be executed when response  will be send
+	   //readystate=loading(1) loaded(2) interactive(3) complete(4)
+	   xmlHttp.onreadystatechange=showResults;
+	   //send method id used to send request
+	   xmlHttp.send();
+  }
+  //call back method 4 times called
+  function showResults()
+  {
+	  alert ("Hi ");
+	  
+	  if(xmlHttp.readyState==4 && xmlHttp.status==200)
+		  {
+		 // document.forms[0].elements['txtResultId'].value=
+			//  xmlHttp.responseText;
+		  document.getElementById("txtResultId").value=xmlHttp.responseText;
+		  }
+  }
+</script>
+</head>
+<body onload="LoadXMLHTTP();">
+	<h3>Enter Details</h3>
+	<form >
+			First Number :<input type="text"  
+			id="txtFirstNumberId" 
+			name="txtFirstNumber"/><br/>
+			
+			Second Result:<input type="text" 
+			name="txtSecondNumber"  
+			id="txtSecondNumberId"/><br/>
+			
+			Result:<input type="text" name="txtResult" 
+			id="txtResultId"/><br/>
+			
+			
+		<input type="button" name="btnAdd"  value="ADD"
+		onclick="AddNumbers();"
+		/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+
+<head>
+	<script>
+		function register(name)
+		{  
+			var today = new Date() ; 
+			var expires = new Date() ; 
+			expires.setTime(today.getTime() + 1000*60*60*24*365)  ; setCookie("TheCoolJavaScriptPage", name, expires);
+		}
+		// Sets cookie values. Expiration date is optional
+		//function
+		setCookie(name, value, expire)
+		{   
+			document.cookie=name+"="+escape(value)+((expire==null)?"":(";expires="+expire.toGMTString()))
+		}
+		function getCookie(Name) 
+		{  
+			var search = Name + "=" ;  
+		
+			if (document.cookie.length > 0)
+			{ 
+				// if there are any cookies  
+				offset = document.cookie.indexOf(search) ;   
+				if (offset != -1) 
+				{ 
+					// if cookie exists     
+					offset += search.length     
+					// set index of beginning of value  
+					end = document.cookie.indexOf(";", offset)    
+					// set index of end of cookie value   
+					if (end == -1)
+						end = document.cookie.length
+						return unescape(document.cookie.substring(offset, end))  
+				}  
+			}
+		}
+	</script>
+</head>
+<BODY>
+<H1>Register Your Name with the Cookie-Meister</H1>
+<P>
+<SCRIPT>
+	var yourname = getCookie("TheCoolJavaScriptPage")
+	if (yourname != null)  
+		document.write("<P>Welcome Back, ", yourname)
+	else  
+		document.write("<P>You haven't been here in the last year...")
+</SCRIPT>
+
+<P> Enter your name. When you return to this page within a year, you will be greeted with a personalized greeting. 
+<BR>
+
+<FORM onSubmit="return false">Enter your name:
+<INPUT TYPE="text" NAME="username" SIZE= 10/><BR/>
+<INPUT TYPE="button" value="Register"   onclick="register(this.form.username.value);history.go(0)"/>
+
+</FORM>

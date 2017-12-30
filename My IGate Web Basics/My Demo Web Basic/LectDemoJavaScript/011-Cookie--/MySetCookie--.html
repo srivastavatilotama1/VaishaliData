@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script >
+
+/*
+
+Cookie Structure
+
+maximum size of cookie==4kb.
+cookies has by default a life span of the current browser.session.
+as soon as visitor close window ,cookies disappears. 
+max-age=60[in Seconds]
+cok="name=value;max-age=60;path=/;domain=yahoo.com"
+*/
+function setCookies()
+{
+	var val=document.form1.name.value;
+	 var mycookie="username="+val+";max-age="+(60);
+	document.cookie=mycookie;
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form  name="form1">
+<input type="text"  id="nm" name="name" value=""></input><br/>
+<br/>
+<input type="submit" name="submit" value="Submit" onclick="setCookies()"></input>
+</form>
+</body>
+</html>

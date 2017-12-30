@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE address SYSTEM "Address2.dtd">
+<address>
+	<buildingname>Arora Tower</buildingname>
+	<street>MGRead</street>
+	<city>pune</city>
+	<state>MS</state>
+</address>
+
+<!--
+
+<address>
+	<buildingnumber>34</buildingnumber>
+	<street>MGRead</street>
+	<city>pune</city>
+	<state>MS</state>
+</address>
+
+-->

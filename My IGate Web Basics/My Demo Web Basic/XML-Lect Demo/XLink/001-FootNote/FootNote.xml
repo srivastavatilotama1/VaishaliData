@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FOOTNOTE SYSTEM "C:\VaishaliTemp\IbmWorkspace\XML Demos\FootNote.dtd">
+<FOOTNOTE href="footnote.xml">hello</FOOTNOTE>
+<!--<FOOTNOTE xlink:form="Simple" href="footnote.xml" > 7 
+</FOOTNOTE>
+-->

@@ -1,0 +1,35 @@
+keytool -genkey -alias signFiles -keypass igate123 -keystore igatestore  -storepass store123
+
+jarsigner -keystore igatestore -signedjar sfileCount.jar fileCount.jar signFiles
+  Enter store password=store123
+  Enter key passwrod=igate123
+  
+  keytool -export -keystore igatestore -alias signFiles -file iGATE.cer  
+  enter store password:store123
+  
+  java -cp sfileCount.jar    FileCount "C://TestData/data.txt"
+  
+  java -cp sfileCount.jar    -Djava.security.manager FileCount "C://TestData/data.txt"
+  [get access controle exception]
+  
+  /////////import at receiver
+  //receiver extract certificate from cert file and keep in ilearnstore file.
+  
+  keytool -import -alias igatepatni -file iGATE.cer -keystore iLEARNstore
+  enter passwor=ilearnstore123
+  Retype password:ilearnstore123
+  
+  Trust This certificate : yes
+  policcy tool-edit
+ // key store url=file:/C:/iLEARNstore
+  
+  
+  signedby=igatepatni[public key]
+  
+    java -Djava.security.manager -Djava.security.policy=pp -cp sfileCount.jar  FileCount "C://TestData/data.txt"
+
+  
+  ****************************************************************
+  keytool -genkey -alias signFiles -keypass igate123 -keystore igatestore  -storepass store123
+  keytool -genkey -alias signFiles -keypass igatepatni123 -keystore igatepatnistore -storepass store123
+  

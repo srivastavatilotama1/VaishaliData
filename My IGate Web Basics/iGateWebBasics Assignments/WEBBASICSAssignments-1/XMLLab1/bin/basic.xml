@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<breakfast_menu>
+	<food>
+		<name>Roti</name>
+		<Price>$3</Price>
+		<description>made with pure wheat flour</description>
+	</food>
+	<food>
+		<name>Chicken 65</name>
+		<Price>$15</Price>
+		<description>Juicy chicken</description>
+	</food>
+	<food>
+		<name>Idly</name>
+		<Price>$5</Price>
+		<description>Healthy breakfast</description>
+	</food>
+</breakfast_menu>

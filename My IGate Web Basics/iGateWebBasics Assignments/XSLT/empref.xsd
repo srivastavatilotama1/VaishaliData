@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="empref"
+      elementFormDefault="qualified"     
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+<!-- Create Type for age -->
+  <xs:simpleType name="ageLimit">
+    <xs:restriction base="xs:int">
+      <xs:minExclusive value="18"/>
+      <xs:maxInclusive value="60"/>      
+    </xs:restriction>    
+  </xs:simpleType>
+  
+  <!--Create type for genter  -->
+
+  <xs:simpleType name="genderValue">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Female"/>
+      <xs:enumeration value="Male"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  
+  <!-- create a type for land line no-->
+  <xs:simpleType name="landlinePattern">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{2}-\d{3}-\d{6}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!---Create Type for title-->
+  <xs:simpleType name="titleVal">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Mr"/>
+      <xs:enumeration value="Mrs"/>     
+    </xs:restriction>    
+  </xs:simpleType>
+  
+  
+  <!--mobile pattern -->
+  <xs:simpleType name="mobilePattern">
+    <xs:restriction base="xs:integer">
+      <xs:pattern value="[0-9]{10}"/>     
+    </xs:restriction>    
+  </xs:simpleType>
+  
+
+  <!--fname tag defination-->
+  <xs:element  name="fname" type="xs:string"/>
+
+  <!--mname tag defination-->
+  <xs:element  name="mname" type="xs:string"/>
+
+  <!--lname tag defination-->
+  <xs:element  name="lname" type="xs:string"/>
+
+  <!--ename tag defination-->
+  <xs:element name="ename">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element  ref="fname"/>
+        <xs:element ref="mname"/>
+        <xs:element ref="lname"/> 
+      </xs:sequence>      
+    </xs:complexType>
+  </xs:element>
+
+  <!--age tag defination-->
+  <xs:element name="eage" type="ageLimit"/>
+
+  <!--sal tag defination-->
+  <xs:element name="esal" type="xs:double"/>
+
+  <!--gender tag defination-->
+  <xs:element name="gender" type="genderValue"/>
+  
+  <!--DOB tag defination-->
+  <xs:element name="DOJ" type="xs:date"/>
+  
+  <!--landline No tag defination-->
+  <xs:element name="landline" type="landlinePattern"/>
+  
+  <!-- Mobile no tag defination-->
+  <xs:element name="mobileno"  type="mobilePattern"/>
+     
+
+  
+  <!--  employee Tag Defination-->
+  <xs:element name="employee">
+    <xs:complexType>
+      <xs:sequence>
+         <xs:element ref="ename"/>
+        <xs:element ref="eage"/>
+        <xs:element ref="esal"/>
+        <xs:element ref="DOJ"/>
+        <xs:element ref="gender"/>
+        <xs:element ref="landline"/>
+        <xs:element ref="mobileno"/>
+      </xs:sequence>
+      <xs:attribute name="eid" type="xs:int" use="required"/>
+      <xs:attribute name="title" type="titleVal" use="optional" />
+    </xs:complexType>
+  </xs:element>
+  
+  <!--  root tag defination-->
+
+  <xs:element name="employees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="employee" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  
+</xs:schema>

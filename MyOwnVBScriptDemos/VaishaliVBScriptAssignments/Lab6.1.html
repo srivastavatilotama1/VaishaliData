@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=10"/>
+	<script language="Vbscript"  type="text/vbscript"> 
+	Sub result_OnClick
+				 userNameData=document.form1.txtUserName.value				
+				If(userNameData="")Then
+					Msgbox("Manadatory User name Field")
+				End If
+				
+				 passData=document.form1.txtPass.value="" 
+				If(passData="")Then
+					Msgbox("Manadatory Password Field")
+				End If
+				
+				 nameData=document.form1.txtName.value=""				
+				Set namePatternObj = New RegExp						
+				With namePatternObj
+							.Pattern    = "[\w]{3,10}"
+							.IgnoreCase = False
+							.Global     = True
+				End With 		
+				'Test method returns TRUE if a match is found
+				If namePatternObj.Test(nameData) Then
+							Msgbox("valid name")
+				Else
+							Msgbox("Min 3 and Maximum 20 char requir in  name")
+				End If
+		End Sub
+
+	</script>
+</head>
+<body>
+	<form name="form1">
+		<table border="2">
+			<div align="center">
+			<tr>
+				<td>User ID:</td>
+				<td><input type="text" name="txtUserName" id="txtUserIdId"></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="text" name="txtPass" id="txtPassId"></td>
+			</tr>
+			<tr>
+				<td>Confirm password:</td>
+					<td><input type="text"name="txtCongPass" id="3"></td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" name="txtName" id="4"></td>
+			</tr>
+			<tr>
+				<td>Gender:</td>
+				<td><input type="text" name="txtGen" id="5"></td>
+			</tr>
+			<tr>
+				<td>Date of birth:</td>
+				<td><input type="date" name="txtDob" id="6"></td>
+			</tr>
+			<tr>
+				<td>email Id:</td>
+				<td><input type="email" name="txtEmail" id="7"></td>
+			</tr>
+			<tr>
+				<td>Contact number:</td>
+				<td><input type="number" name="txtMobile"id="8"></td>
+			</tr>
+			<tr>
+				<td>address:</td>
+				<td><textarea type="textarea" name="txtAddress" ROWS="5" COLS="5" id="9"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="button" name="result" value="submit"></td>
+			</tr>
+			<tr>
+				<td><input type="Reset"></td>
+			</tr>
+		</div>
+	</table>
+	</form>
+</body>
+</html>

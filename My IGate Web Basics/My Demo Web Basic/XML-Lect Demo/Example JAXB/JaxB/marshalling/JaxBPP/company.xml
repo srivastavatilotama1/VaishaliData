@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kogent:Company xmlns:kogent="http://www.example.com/kogent" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/kogent company.xsd ">
+  <kogent:CompanyAddress>
+    <kogent:name>kogent:name</kogent:name>
+    <kogent:street>kogent:street</kogent:street>
+    <kogent:city>kogent:city</kogent:city>
+    <kogent:state>kogent:state</kogent:state>
+    <kogent:zipcode>kogent:zipcode</kogent:zipcode>
+    <kogent:phnum>kogent:phnum</kogent:phnum>
+  </kogent:CompanyAddress>
+  <kogent:departments>
+    <kogent:department deptname="computer">
+      <kogent:deptmanager>kogent:deptmanager</kogent:deptmanager>
+      <kogent:cost>0.0</kogent:cost>
+    </kogent:department>
+    
+     <kogent:department deptname="IT">
+      <kogent:deptmanager>kogent:deptmanager</kogent:deptmanager>
+      <kogent:cost>0.0</kogent:cost>
+    </kogent:department>
+  </kogent:departments>
+  
+</kogent:Company>

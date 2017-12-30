@@ -1,0 +1,30 @@
+<html>
+<head>
+<script language="javascript" src="./Scripts/jquery-2.0.0.js">
+</script>
+<script language="javascript">
+jQuery(document).ready(function ()
+{
+	//Retrieving the content from testDiv in html format
+	var data = $('#testDiv').html();
+	
+	//Applying the content to targetDiv in text format
+	$('#targetDiv1').text(data);
+	$('#targetDiv2').html(data);
+
+});
+
+</script>
+</head>
+<body>
+<div id="testDiv">
+<b>This is my Test Div text</b>
+</div>
+<div id="targetDiv1" >....</div>
+<div id="targetDiv2" >....</div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT root (h:table|f:table)*>
+<!ELEMENT h:table (h:tr)*>
+<!ELEMENT h:tr (h:td)*>
+<!ELEMENT h:td (#PCDATA)>
+<!ATTLIST h:table xmlns:h CDATA #IMPLIED>
+<!ELEMENT f:table (f:name,f:width,f:length)*>
+<!ELEMENT f:name (#PCDATA)>
+<!ELEMENT f:width (#PCDATA)>
+<!ELEMENT f:length (#PCDATA)>
+<!ATTLIST f:table xmlns:f CDATA #IMPLIED>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % coordinates "x CDATA #REQUIRED y CDATA #REQUIRED">
+<!ELEMENT circle (position)>
+	<!ATTLIST circle  	radius CDATA #REQUIRED >
+<!ELEMENT position EMPTY>
+	<!ATTLIST position	%coordinates; >
+	
+	
+	

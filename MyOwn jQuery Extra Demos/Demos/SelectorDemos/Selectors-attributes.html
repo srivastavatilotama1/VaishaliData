@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Selectors By Attributes</title>
+<script type="text/javascript" src="../Scripts/jquery-1.6.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	var collections = $('div[title]');
+	//var collections = $('input[type="text"]');
+	alert(collections.length);
+});
+</script>
+</head>
+<body>
+<div title="first">
+<span>Name : </span><input type="text"/>
+</div>
+<div title="second">
+<span>Password : </span><input type="password"/>
+</div>
+</body>
+</html>

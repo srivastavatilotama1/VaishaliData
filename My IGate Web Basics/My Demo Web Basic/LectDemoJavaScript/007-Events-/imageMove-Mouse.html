@@ -1,0 +1,77 @@
+ <html>
+<head>
+	<script language=javascript type='text/javascript'> 
+	//***********************************************
+/*You can also use this event in conjunction with several properties of the <body/> element, namely
+scrollLeft, which tells you how far the window has scrolled horizontally, and scrollTop, which tells
+you how far the window has scrolled vertically:
+
+
+*/
+		var IE = document.all?true:false;
+		//if (!IE)
+			// document.captureEvents(Event.MOUSEMOVE)
+			document.onmousemove = getMouseXY;
+			var tempX = 0;
+			var tempY = 0;
+
+		function getMouseXY(e) 
+			{
+				if (IE)
+				 { 
+					// grab the x-y pos.s if browser is IE
+					tempX = event.clientX + document.body.scrollLeft;
+					tempY = event.clientY + document.body.scrollTop;
+				}
+				else 
+				{  
+					// grab the x-y pos.s if browser is NS
+						tempX = e.pageX;
+					tempY = e.pageY;
+				}  
+				if (tempX < 0){tempX = 0;}
+				if (tempY < 0){tempY = 0;}  
+				document.Show.MouseX.value = tempX;
+				document.Show.MouseY.value = tempY;
+				
+			document.getElementById("img1").hspace=tempX
+			document.getElementById("img1").vspace=tempY	
+			return true;
+			}
+		function hideImage()
+		 { 
+			if (document.getElementById) 
+			{ 
+				document.getElementById('div').style.visibility = 'hidden'; 
+			} 
+		} 
+
+
+		function showImage()
+		 { 
+			if (document.getElementById) 
+			{ 
+				document.getElementById('div').style.visibility = 'visible'; 
+			} 
+		} 
+	
+	</script> 
+</head>
+<body onload="javascript:hideImage()">
+	<form name="Show">	
+		X <input type="text" name="MouseX" value="0" size="4"><br>
+		Y <input type="text" name="MouseY" value="0" size="4"><br>
+	</form>
+	<p><center>
+		<font face="arial, helvetica" size"-2">Free JavaScripts provided<br>
+			by <a href="http://javascriptsource.com">Vaishali</a></font>
+	</center><p>
+	<h2>Show and Hide Image in JavaScript</h2>
+
+	<div id="div"  style="position: absolute; left: 50px; top: 100px;"><img SRC="bh.jpg" BORDER="1" width="20" height="20" id="img1"> </div>
+	
+	<button onclick="javascript:hideImage()">Hide</button> 
+	<button onclick="javascript:showImage()">Show</button>
+	
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<project default="main" >
+    
+  <property
+        name="main-class"
+        value="com.patani.HelloAnt" />
+    <property
+        name="jar.dir"
+        value="C://myjar" />
+    <target
+        name="compile"
+        description="Compilation target" >
+        <javac srcdir="src" />
+    </target>
+
+    <target
+        name="compress"
+        depends="compile"
+        description="Compression target" >
+            <mkdir dir="${jar.dir}" />
+        <jar
+            basedir="bin/com/patani"
+            includes="*.class"
+            destfile="${jar.dir}/${myproject}.jar" >
+            <manifest>
+                <attribute
+                    name="Main-Class"
+                    value="${main-class}" />
+            </manifest>
+        </jar>
+    </target>
+
+    <target
+        name="run"
+        depends="compress" >
+        <java
+            fork="true"
+            jar="${jar.dir}/${myproject}.jar" />
+    </target>
+
+    <target
+        name="main"
+        depends="run"
+        description="Main target" >
+
+        <echo>
+            Building the .jar file.
+        
+        </echo>
+    </target>
+    
+    
+
+    
+   
+  
+    <target name="main" depends="compile, compress" description="Main target">
+        <echo>
+            Building the .jar file.
+        </echo>
+    </target>
+  
+    <target name="compile" description="Compilation target">
+        <javac srcdir="src"/>
+    </target>
+  
+  <target name="compress" description="Compression target">
+        <jar jarfile="Project.jar" basedir="bin/com/patani" includes="*.class" />
+  </target>
+
+
+</project> -->
+
+
+**************************************
+<?xml version="1.0" ?>
+<project default="main">
+    <target name="main" depends="compile, compress" description="Main target">
+        <echo>
+            Building the .jar file.
+        </echo>
+    </target>
+  
+    <target name="compile" description="Compilation target">
+        <javac srcdir="com/patani"/>
+    </target>   
+    
+      
+  
+ <!--  <target name="compress" description="Compression target">
+        <jar jarfile="Project.jar" basedir="com/patani" includes="*.class" />
+  </target> -->
+</project>

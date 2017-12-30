@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guitars xmlns="http://www.newInstance.com/about/guitars"     xmlns:xlink="http://www.w3.org/1999/xlink"> <guitar luthier="Bourgeois"     xlink:type="simple"     xlink:href="http://www.newInstance.com/about/guitars/bourgeoisOM"> 
+ <description xlink:type="simple"     xlink:href="http://www.newinstance.com/about/guitars/bourgeoisOM/pics/bougOM_front_full.jpg"     xlink:actuate="onLoad" xlink:show="embed">   This is a real beauty in a small body. Although this is an OM, I use it for   flatpicking bluegrass as well as for producing some beautiful fingerstyle sounds.  </description> 
+ 
+ 
+ </guitar> 
+ <guitar luthier="Bourgeois"     xlink:type="simple"     xlink:href="http://www.newInstance.com/about/guitars/bourgeoisD150">  <description xlink:type="simple"     xlink:href="http://www.newinstance.com/about/guitars/bourgeoisD150/pics/bougd150_con_rim2.jpg"     xlink:actuate="onLoad" xlink:show="embed">  
+ 
+  Here's the holy grail in process. Dana Bourgeois is building this Brazilian rosewood and   adirondack bluegrass monster right now. You'll know it's finished when you hear   a run and your windows shatter!  </description>
+  </guitar>
+  </guitars>

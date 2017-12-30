@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<xs:attribute name="lang" type="xs:string" fixed="EN"/>
+<xs:attribute name="lang" type="xs:string" default="EN"/>-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="ageNum">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:maxInclusive value="100"/>
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="employee">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="employeeName">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="gender" type="xs:string"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="age" type="ageNum"/>
+				<xs:element name="salary" type="xs:integer"/>
+			</xs:sequence>
+			<xs:attribute name="eid" type="xs:integer" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Employee SYSTEM "Employee1.dtd">
+<Employee>
+	<Emp_Id> E-001 </Emp_Id>
+	<Emp_Name> Vaishali </Emp_Name>
+	<Emp_E-mail> vai@yahoo.com </Emp_E-mail>
+</Employee>

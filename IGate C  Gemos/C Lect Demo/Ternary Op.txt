@@ -1,0 +1,15 @@
+int month, day=155 ;
+   int x, y ;
+     month = day / 30 ;
+   day = day % 30 ;
+   printf("No.of months=%d \n No.of Days = %d\n",month,day); 
+/* d to print an integer value. 
+In  output %d gets replaced by
+value of month and day */
+
+   printf("****************Ternary Op********");
+	 scanf("%d",&x); 
+   /*scanf() accepts the value from the user*/
+     y = (x>5 ? 3 : 4);
+
+	 printf("size of y is %d ",sizeof(y));

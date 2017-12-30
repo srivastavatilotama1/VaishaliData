@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.person.org/policeman"
+	xmlns:tns="http://www.person.org/policeman" elementFormDefault="qualified">
+
+	<element name="house" type="tns:House" />
+	<element name="policeman" type="tns:Policeman" />
+	<element name="doctor" type="tns:Doctor" />
+
+	<complexType name="Person" abstract="true">
+		<sequence>
+			<element name="firstname" nillable="false" type="string" />
+			<element name="lastname" type="string" nillable="false" />
+			<element name="age" type="integer" />
+		</sequence>
+	</complexType>
+
+	<complexType name="Policeman">
+		<complexContent>
+			<extension base="tns:Person">
+				<sequence>
+					<element name="precinct" type="string" />
+					<element name="precintCode" type="string" />
+					<element name="cation" type="string" minOccurs="0" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="Doctor">
+		<complexContent>
+			<extension base="tns:Person">
+				<sequence>
+					<element name="speciality" type="string" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="Persons">
+		<sequence>
+			<element name="person" type="tns:Person" minOccurs="0"		maxOccurs="unbounded">
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="House">
+		<all>
+			<element name="street" type="string" />
+			<element name="city" type="string" />
+			<element name="inhabitant" type="tns:Persons" />
+		</all>
+	</complexType>
+
+
+</schema>

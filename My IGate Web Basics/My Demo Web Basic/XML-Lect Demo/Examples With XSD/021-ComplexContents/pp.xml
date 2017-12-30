@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:house xmlns:tns="http://www.person.org/policeman"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.person.org/policeman policeman.xsd ">
+	<tns:street>tns:street</tns:street>
+	<tns:city>tns:city</tns:city>
+	<tns:inhabitant>
+		<tns:person xsi:type="tns:Policeman">
+			<tns:firstname>bbb</tns:firstname>
+			<tns:lastname>bbb</tns:lastname>
+			<tns:age>33</tns:age>
+			<tns:precinct>ddd</tns:precinct>
+			<tns:precintCode>fff</tns:precintCode>
+			<tns:cation>fff</tns:cation>
+		</tns:person>
+		<tns:person xsi:type="tns:Doctor">
+			<tns:firstname>vv</tns:firstname>
+			<tns:lastname>nn</tns:lastname>
+			<tns:age>22</tns:age>
+			<tns:speciality>ddd</tns:speciality>
+		</tns:person>
+	</tns:inhabitant>
+</tns:house>

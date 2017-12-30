@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="product.xsd">
+    <product pid="3">
+        
+        <name>Nike Soccer Ball</name>
+        <price>120</price>
+    </product>
+    <product pid="9">
+      
+        <name>Adidas Sports Shoes</name>
+        <price>600</price>
+    </product>
+</products>

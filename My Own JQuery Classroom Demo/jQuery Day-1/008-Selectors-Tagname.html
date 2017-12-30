@@ -1,0 +1,59 @@
+<!--
+jquery element naming convention is $paragraph
+//select the paragraph who has a contents Igate
+<<<$('p:contains("Igate")');>>>
+
+
+************json Object***********
+change font andbackgrount dolor of textbox
+<<<$(':text:first').css('background-color','pink').css('color','red');>>>
+**************same as json object********
+$(':text:first').css({'background-color':'cyan'}).css({'color':'green'});
+-->
+<html>
+<head>
+<title>Selectors By Tag Name</title>
+<style type="text/css">
+.blueDiv{background-color:blue; color:white;}
+.redDiv{background-color:red; color:white;}
+</style>
+<script language="javascript" src="../../Scripts/jquery-2.0.0.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function()
+{	
+	$paragraph=$('p');
+	//all  paragrpah  index gives index postion 
+	//and element gives that elemenr.
+var results="";
+	$($paragraph).each(function(index,element){
+		
+		//$(element).css('color','blue');
+		 results+=  $(element).text()+"<br/>";
+			});
+		$('#targetDiv').html(results);
+});
+</script>
+</head>
+<body>
+<p title="firstPara">First</p>
+<p title="secondPara" id="secondParaId">Second</p>
+FirstName:<input type="text"  name="txtFname" value=""/><br/>
+MiddleName:<input type="text"  name="txtMname" value=""/><br/>
+LastName:<input type="text"  name="txtLname" value=""/><br/>
+I Have:<input type="checkbox" name="chkVehicle" value="Bike"
+checked >Bike</input><br>
+Description:
+<textarea name="textDesc"></textarea>
+<input type="button"  name="btnLogin" value="Login"/><br/>
+<hr/>
+<hr/>
+<p title="text1">Para Text 1 - </p>
+<p title="text2">Para Text 2 - </p>
+<p title="text3">Para Text 3 - </p>
+<p title="text3">Igate </p>
+<hr/>
+<div id="targetDiv">
+</div>
+</body>
+</html>

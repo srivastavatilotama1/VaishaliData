@@ -1,0 +1,89 @@
+<!--  
+$('p')
+<<<This display all paragraphs>>>
+**************************
+$('*');
+<<<Gives all elements of html
+********************
+$('#blueDiv');
+<<dives para with id blueDiv>>>
+**************************************
+$('.redDiv');
+<<<this select all p with class =red div>>>
+*********************************
+
+$('div p');
+<<<select all the paragrph which are under the div tag>>>
+***************************
+$('div,p');
+<<<select all the paragrph along with div>>>
+***********************
+In chrome we get all tag name in 
+square bracket that means it is jquery object.
+
+[<p id="blueDiv">Second - </p>]--jquery object
+<p id="blueDiv">Second - </p>--- dom object
+we can use jquery method we can use on jquery object
+*********************
+
+display all para in blue clor
+('p').css('color','blue');
+****************************
+$('p').size();
+<<gives no of paragraph >
+*******************************
+get no of div tag
+$('div').length
+**********************
+Get data from div tag
+$('div').text();
+<<<First - >>>
+**********************
+in html format
+$('div').html();
+************************
+select first paragraph
+$('p:first');
+**************************
+will give a  second paragraph
+$('p:nth-child(2)');
+*************************
+get even paragraps
+$('p:even');
+*******************************
+change background color of even paragraph tag.
+$('p:even').css('background-color','cyan');
+
+**********************************************
+more than one property
+$('p:even').css('background-color','cyan').css('color','green');
+*************************************************
+-->
+<html>
+<head>
+<title>Selectors By Tag Name</title>
+<style type="text/css">
+.blueDiv{background-color:blue; color:white;}
+.redDiv{background-color:red; color:white;}
+</style>
+<script language="javascript" src="../../Scripts/jquery-2.0.0.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function()
+{	
+});
+</script>
+</head>
+<body>
+<h2 color="blue">Hello.........</h4>
+<div>
+	<p>First - </p>	
+</div>
+<p id="blueDiv">Second - </p>
+<p class="redDiv">Third -</p>
+<p class="redDiv">Fourth -</p>
+<h3  color="green">Hello.........</h4>
+
+<h4 >Hello.........</h4>
+</body>
+</html>

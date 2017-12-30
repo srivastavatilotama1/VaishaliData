@@ -1,0 +1,26 @@
+<pre>
+This    is   should be the  end of  my first     paragraph in HTML.
+
+This should be the start of my second 
+paragraph in HTML.</pre>
+
+And  this    should  be  my  third  paragraph in HTML.
+<BLOCKQUOTE>
+To Be, Or Not To Be: That Is The Question 
+</BLOCKQUOTE>
+
+IBM stands for International Business Machines.
+<hr color=“blue”>
+The HeadQuarter is located at:
+<ADDRESS>
+HSBC MITCON, <BR>PUNE, M.S.
+</ADDRESS>
+
+H<sub>2</sub>SO<sub>4</sub>
+
+<html>
+<body>
+<h2><b>&lt;MARQUEE&gt;</b> is used to scroll the enclosing text.</h2>
+</body>
+</html>
+

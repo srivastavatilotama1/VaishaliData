@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>lab9</title>
+ <script type="text/javascript">
+ function MatchClick()
+ {
+	 var re=new RegExp(document.write.form1.reg.value)
+	 var str=document.form1.str1.value;
+	 if(re.length==0)||(str.length==0)
+		 {
+		 	alert("enter details")
+		 }
+	 else  if(re.test(str))
+		 {
+		 	alert("successful match")
+		 }
+	 else
+		 {
+		 	alert("match not found")
+		 }
+ }
+function ShowMatch()
+{
+	 var re=new RegExp(document.write.form1.reg.value)
+	 var str=document.form1.str1.value;
+	 var match array=re.exec(str);
+	 alert(document.write(matchArray));
+	}
+ 
+ </script>
+</head>
+<body>
+<form name="form1">
+<table>
+	<tr>
+		<td>RegExp:<input type="text" name="Reg" value=""></td>
+	</tr>
+	
+	<tr>
+		<td>Subject String:<input type="text" name="str1" value=""></td>
+	</tr>
+</table>
+
+<input type="button"  value="Test Match" onClick="MatchClick">
+<input type="button"  value="Show Match" onClick="ShowMatch">
+</form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Vaishali/To%20Mail/XML/XML-Demo/Examples%20With%20XSD/Person/Person.xsd">
+	<Name>Fred</Name>
+   <HomeAddress>
+      <Line1>22 whatever place, someplace</Line1>
+      <Line2>sometown, ss1 6gy </Line2>
+   </HomeAddress>
+
+</Person>

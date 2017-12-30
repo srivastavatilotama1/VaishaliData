@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=10"/>
+	<script language="Vbscript"  type="text/vbscript"> 
+	Sub btnCalcCost_OnClick()
+				
+				dim qua
+				dim up
+				dim taxes
+				dim total
+				
+				qua=document.getElementById("txtQuantityId").value
+				
+				If  (IsNumeric(qua))Then				
+					up=document.getElementById("txtUnitPriceId").value
+					cost=qua*up
+					document.getElementById("txtSubTotalId").value=cost
+				
+					num=document.getElementById("txtSubTotalId").value
+					If num >40000 Then
+						taxes=20/100*cost
+						document.getElementById("txtTaxesId").value=taxes
+					Else
+						taxes=10/100*cost
+						document.getElementById("txtTaxesId").value=taxes
+					End If
+				
+					total=cost-taxes
+					document.getElementById("txtTotalCostId").value=total
+				
+				Else
+					MsgBox("Enter Number Only")
+					'document.getElementById("qtyErrorId").innerHTML="Qty Should be numeric only"
+				End If
+				
+			End Sub
+</script>
+</head>
+
+<body>
+		<div align="center">
+		<table>
+			<tr>
+				<td>Quantity</td>
+				<td><input type="text" required id="txtQuantityId"></td>
+				<td id="qtyErrorId"></td>
+			</tr>
+			
+			<tr>
+				<td>Unit Price</td>
+				<td><input type="text" pattern="[0-9]*" id="txtUnitPriceId"></td>
+			</tr>
+			
+			<tr>
+				<td><input type="button" name="btnCalcCost" 
+				value="Calculate cost"></td>
+			</tr>
+	
+			<tr>
+				<td>Subtotal</td>
+				<td><input type="text" id="txtSubTotalId"></td>
+			</tr>
+			
+			<tr>
+				<td>Taxes</td>
+				<td><input type="text" id="txtTaxesId"></td>
+			</tr>
+	
+			<tr>
+				<td>Total cost</td>
+				<td><input type="text" id="txtTotalCostId"></td>
+			</tr>
+		</table>
+
+</body>
+</html>

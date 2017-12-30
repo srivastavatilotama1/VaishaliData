@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="musicians" type="musType" />
+  <xs:complexType name="musType">
+    <xs:sequence>
+      <xs:element name="musician" type="mType" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="instrument" type="xs:string" />
+      <xs:element name="NoOfRecordings" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

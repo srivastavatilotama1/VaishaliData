@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<order OrderNumber="312597">
+  <date>2000/1/13</date>
+  <customer id="A216">Company A</customer>
+  <item>
+    <part-number warehouse="Warehouse 11">E16-25A</part-number>
+    <description>Production-Class Widget</description>
+    <quantity>16</quantity>
+  </item>
+</order>
+
+We've just added some attributes, for the sake of demonstrating how to address 
+them with XPath.
+
+How Do Templates Affect the Context Node?
+An important point to remember in XSLT is that whatever 
+the template uses for its match attribute becomes 
+the context node for that template. This means that 
+all XPath expressions within the template are relative 
+to that node. Take the following example:
+
+<xsl:template match="/order/item">
+    <xsl:value-of select="part-number"/>
+</xsl:template>
+
+This template will be instantiated for any <item> element that is a child of an <order> element that is a child of the document root. That <item> element is now the context node for this template, meaning that the XPath expression in the <xsl:value-of> attribute is actually only selecting the <part-number> element which is a child of the <item> element already selected for this template.
+

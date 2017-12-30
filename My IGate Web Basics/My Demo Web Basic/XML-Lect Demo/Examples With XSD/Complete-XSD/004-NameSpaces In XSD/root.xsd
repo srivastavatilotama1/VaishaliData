@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	xmlns:fr="http://www.fruit.org/fruit"
+	xmlns:f="http://www.furniture.org/furniture">
+	
+	<import namespace="http://www.furniture.org/furniture"
+schemaLocation="furniture.xsd"/>
+<import namespace="http://www.fruit.org/fruit"
+schemaLocation="fruit.xsd"/>
+	<element name="root">
+		<complexType>
+			<sequence>
+				<element ref="fr:table" maxOccurs="unbounded"/>
+				<element ref="f:table" maxOccurs="unbounded"/>
+				</sequence>
+		</complexType>
+
+	</element>
+
+
+</schema>
