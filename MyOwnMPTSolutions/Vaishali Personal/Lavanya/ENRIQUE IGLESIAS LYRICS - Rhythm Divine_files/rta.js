@@ -1,0 +1,1 @@
+cto_rtt = ''; (function(){document.cookie = 'cto_rtt=' + escape(cto_rtt) + '; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; domain=azlyrics.com';})();

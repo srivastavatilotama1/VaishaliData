@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Play this Song</title>
+  <script type="text/javascript">
+
+  function getCustParamValue(name) {
+    var params = unescape(window.location.search);
+    var q = params.substring(params.indexOf('cust_params=')+12);
+    var vars = q.split("&");
+    for (var i=0;i<vars.length;i++) {
+      var pair = unescape(vars[i]).split("=");
+      if (pair[0] == name) {
+        return unescape(pair[1]); break;
+      }
+    }
+  }
+
+  </script>
+  <script type="text/javascript">
+
+  var title=getCustParamValue("j_title")||"song";
+  var artist=getCustParamValue("j_artist")||"artist";
+  var clickurl="http://redirect.jango.com/ad=pid_azlyrics_aid_jangoplayer/www.jango.com/music/"+artist+"/"+title;
+
+  </script>
+
+  <style type="text/css">
+  html, body{padding:0;margin:0;width:100%;height:38px;offset:0;}
+  a {font-family:Verdana;outline:0;}
+  a:link {color: blue;cursor:pointer;text-decoration:none;font-family:Verdana;}
+  a:visited {color: blue;cursor:pointer;font-family:Verdana;}
+  a:hover {text-decoration:none;color:red}
+
+  #player {
+    height:38px;
+    width:100%;
+    margin:0px;
+    position: absolute;
+    top:0;left:0;
+    background:transparent url(http://cd02.static.jango.com/images/promo/jango_player_white_orangebutton_greycorners_326x38.gif) no-repeat top left;
+    z-index:10;
+  }
+  #jAdLink1, #jAdLink2{display:block;width:100%;height:100%;}
+  #player_right{
+    height:38px;
+    width:32px;
+    margin:0px;
+    position: absolute;
+    top:0;right:0;
+    background:transparent url(http://cd02.static.jango.com/images/promo/jango_player_white_orangebutton_greycorners_326x38.gif) no-repeat top right;
+    z-index:11;
+  }
+
+  #fillme{color:#000000; font-size:13px; display: block; line-height:38px; margin-left: 105px; width: 190px; overflow: hidden;}
+  body{margin: 0; padding: 0}
+  #pixel{display:inline;}
+  </style>
+
+</head>
+<body>
+  <div id="player">
+    <a target="jango" id="jAdLink1" href="http://redirect.jango.com/ad=pid_azlyrics_aid_jangoplayer/www.jango.com/music/ENRIQUE%20IGLESIAS/Rhythm%20Divine">
+      <span id="fillme">ENRIQUE IGLESIAS&nbsp;-&nbsp;Rhythm Divine</span>
+    </a>
+  </div>
+  <div id="player_right">
+    <a target="jango" id="jAdLink2" href="http://redirect.jango.com/ad=pid_azlyrics_aid_jangoplayer/www.jango.com/music/ENRIQUE%20IGLESIAS/Rhythm%20Divine">&nbsp;</a>
+  </div>
+
+
+<script type="text/javascript">
+
+  document.getElementById("fillme").innerHTML =  artist + '&nbsp;-&nbsp;' +  title;
+  document.getElementById("jAdLink1").href = clickurl;
+  document.getElementById("jAdLink2").href = clickurl;
+
+</script>
+&nbsp;<br>
+  <div id="pixel"><img src="az_data/all.gif" height="1" width="1"></div>
+
+
+
+</body></html>

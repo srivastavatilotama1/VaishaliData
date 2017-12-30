@@ -1,0 +1,1 @@
+cf.pixel('//srv.clickfuse.com/showads/track/imp.php?cid=31197614&aid=39381789&artist=ENRIQUE+IGLESIAS&song=Rhythm+Divine&search=&p=Windows&b=Firefox_34&cs=1&uri=http%3A%2F%2Fwww.azlyrics.com%2Flyrics%2Fenriqueiglesias%2Frhythmdivine.html&t=1438526899&subtag=&ldmo=&av=true');

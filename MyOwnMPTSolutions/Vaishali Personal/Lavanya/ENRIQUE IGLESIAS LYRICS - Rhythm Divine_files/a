@@ -1,0 +1,67 @@
+
+var _mxmMetadata = {};
+_mxmMetadata["artist"]="Enrique Iglesias";
+_mxmMetadata["track"]="Rhythm Divine";
+_mxmMetadata["api_application_id"]=1409608050492;
+_mxmMetadata["track_id"]=6200734;
+
+var _mxmPixel = document.createElement("img");
+
+			_mxmPixel.border='0';
+			_mxmPixel.width='0';
+			_mxmPixel.heigth='0';
+			_mxmPixel.alt='';
+			var myrand=Math.floor(Math.random()*99999999999);
+			_mxmPixel.src='http://tracking.musixmatch.com/p1.0/2BwfJcXxb+CDGFW2KwW+mtOBq3QD9oISUnaw7AxSzUSpo9TEKATU0Gxwx/DaLiE6cw5eNGrYtcMihwWiVj2OKiHAYe69zClQ66LhncxKTg1CeaUyy5i5ahQg6MZBrFUOest9lXiPM+uXPWGlbIHMm47H9FxYGx30Y+ZirTYxunrW31CvO0oUxxzpUdUSZeqagVKp8UwQIA3Ui6xYOT+zKWdSBdGhMAvsmuUvRfXQE9vhxc0DEju7tHwzfk6AQQFMybCcE59pZYnR2J7jb+cKlSrA6DODZBRMuXA4/kNguE2CH8vz8nUQQFxrwcY48SJOKeLmr8fDBsmsc4kQpMIhVG16BPR8D0qvzyUHN34cBJeqJsTCNim+xU+4DA07sxJP7lbLMYwKjL/p/XWMcBW21FpMiip53Y7UrQcqBxxFHTg=/?rnd='+myrand;
+			
+			document.getElementsByTagName('head')[0].appendChild(_mxmPixel);
+
+
+var google_tag_params = {      
+ua_is_windows:1,
+user_agent:"Mozilla\/5.0 (Windows NT 6.1; rv:34.0) Gecko\/20100101 Firefox\/34.0",
+api_account_id:2445580183802,
+api_application_id:1409608050492};
+var google_custom_params = window.google_tag_params;
+            var google_conversion_id = 996558311;
+            var google_conversion_label = "X12wCKng8AEQ54uZ2wM";
+            var google_remarketing_only = true;
+            var google_custom_params = window.google_tag_params;
+            
+
+
+				var _gaq = _gaq || [];
+
+			_gaq.push(
+					[
+					'_setCustomVar',
+					1,
+					'Artist',
+					"Enrique Iglesias"
+					]
+				 );
+
+			_gaq.push(
+					[
+					'_setCustomVar',
+					1,
+					'Track',
+					"Rhythm Divine"
+					]
+				 );
+            _gaq.push(
+                ['_setCustomVar',1,'TrackingMode','active']
+            );
+
+			_gaq.push(
+					['_setAccount', 'UA-27006971-1'],
+					['_trackPageview', '/'+ _mxmMetadata['api_application_id'] +'/lyricsview/' + _mxmMetadata['artist'] + '_' + '/' + _mxmMetadata['track'] + '_'+ _mxmMetadata['track_id'] 
+					] 
+				 );
+			(function() {
+			 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			 })();
+
+			
